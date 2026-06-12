@@ -1,0 +1,110 @@
+{
+  "tileset": {
+    "name": "FAangband AI Tiles",
+    "directory": "fa-ai",
+    "tile_size": 32,
+    "atlas": "32x32.png",
+    "pref": "graf-fai.prf",
+    "alpha": true
+  },
+  "tiles": [
+    {
+      "source": "terrain/unknown.png",
+      "row": 0, "col": 0,
+      "maps": ["feat:unknown grid:*"]
+    },
+    {
+      "source": "terrain/floor.png",
+      "row": 0, "col": 1,
+      "maps": ["feat:open floor:*"]
+    },
+    {
+      "source": "terrain/wall-granite.png",
+      "row": 0, "col": 2,
+      "maps": [
+        "feat:granite wall:*",
+        "feat:permanent wall:*",
+        "feat:magma vein:*",
+        "feat:quartz vein:*",
+        "feat:magma vein with treasure:*",
+        "feat:quartz vein with treasure:*",
+        "feat:secret door:*"
+      ]
+    },
+    {
+      "source": "terrain/door-closed.png",
+      "row": 0, "col": 3,
+      "maps": ["feat:closed door:*"]
+    },
+    {
+      "source": "terrain/door-open.png",
+      "row": 0, "col": 4,
+      "maps": ["feat:open door:*", "feat:broken door:*"]
+    },
+    {
+      "source": "terrain/stair-up.png",
+      "row": 0, "col": 5,
+      "maps": ["feat:up staircase:*"]
+    },
+    {
+      "source": "terrain/stair-down.png",
+      "row": 0, "col": 6,
+      "maps": ["feat:down staircase:*"]
+    },
+    {
+      "source": "terrain/rubble.png",
+      "row": 0, "col": 7,
+      "maps": ["feat:pile of rubble:*", "feat:pile of passable rubble:*"]
+    },
+    {
+      "source": "terrain/grass.png",
+      "row": 1, "col": 0,
+      "maps": ["feat:grass:*"]
+    },
+    {
+      "source": "terrain/road.png",
+      "row": 1, "col": 1,
+      "maps": [
+        "feat:road:*",
+        "feat:easy path north:*",
+        "feat:hard path north:*",
+        "feat:easy path east:*",
+        "feat:hard path east:*",
+        "feat:easy path south:*",
+        "feat:hard path south:*",
+        "feat:easy path west:*",
+        "feat:hard path west:*"
+      ]
+    },
+    {
+      "source": "terrain/trees.png",
+      "row": 1, "col": 2,
+      "maps": ["feat:lowland trees:*", "feat:highland trees:*"]
+    },
+    {
+      "source": "terrain/water.png",
+      "row": 1, "col": 3,
+      "maps": ["feat:water:*"]
+    },
+    {
+      "source": "terrain/lava.png",
+      "row": 1, "col": 4,
+      "maps": ["feat:lava:*"]
+    },
+    {
+      "source": "terrain/sand.png",
+      "row": 1, "col": 5,
+      "maps": ["feat:sand dune:*"]
+    },
+    {
+      "source": "terrain/empty.png",
+      "row": 1, "col": 6,
+      "maps": ["feat:empty space:*"]
+    },
+    {
+      "source": "player/player.png",
+      "row": 2, "col": 0,
+      "maps": ["monster:<player>"]
+    }
+  ]
+}
