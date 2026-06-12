@@ -151,6 +151,134 @@
       "source": "town/merchant.png",
       "row": 3, "col": 8,
       "maps": ["feat:Travelling Merchant:*"]
+    },
+    {
+      "source": "monsters/cat-scrawny.png",
+      "row": 4, "col": 0,
+      "chroma": true,
+      "maps": ["monster:scrawny cat"]
+    },
+    {
+      "source": "monsters/dog-scruffy.png",
+      "row": 4, "col": 1,
+      "chroma": true,
+      "maps": ["monster:scruffy little dog"]
+    },
+    {
+      "source": "monsters/townsfolk.png",
+      "row": 4, "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:aimless-looking merchant",
+        "monster:blubbering idiot",
+        "monster:boil-covered wretch",
+        "monster:filthy street urchin",
+        "monster:mangy-looking leper",
+        "monster:pitiful-looking beggar",
+        "monster:singing, happy drunk",
+        "monster:village idiot"
+      ]
+    },
+    {
+      "source": "monsters/ruffian.png",
+      "row": 4, "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:battle-scarred veteran",
+        "monster:mean-looking mercenary",
+        "monster:squint-eyed rogue",
+        "monster:cutpurse"
+      ]
+    },
+    {
+      "source": "monsters/kobold.png",
+      "row": 4, "col": 4,
+      "chroma": true,
+      "maps": ["monster:small kobold", "monster:kobold"]
+    },
+    {
+      "source": "monsters/dog-wild.png",
+      "row": 4, "col": 5,
+      "chroma": true,
+      "maps": ["monster:wild dog"]
+    },
+    {
+      "source": "monsters/floating-eye.png",
+      "row": 4, "col": 6,
+      "chroma": true,
+      "maps": ["monster:floating eye"]
+    },
+    {
+      "source": "monsters/fruit-bat.png",
+      "row": 4, "col": 7,
+      "chroma": true,
+      "maps": ["monster:fruit bat"]
+    },
+    {
+      "source": "monsters/centipede.png",
+      "row": 4, "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:giant white centipede",
+        "monster:giant yellow centipede",
+        "monster:metallic green centipede"
+      ]
+    },
+    {
+      "source": "monsters/worm-mass.png",
+      "row": 5, "col": 0,
+      "chroma": true,
+      "maps": ["monster:white worm mass", "monster:green worm mass"]
+    },
+    {
+      "source": "monsters/mushroom-patch.png",
+      "row": 5, "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:grey mushroom patch",
+        "monster:shrieker mushroom patch",
+        "monster:grey mold"
+      ]
+    },
+    {
+      "source": "monsters/snake-white.png",
+      "row": 5, "col": 2,
+      "chroma": true,
+      "maps": ["monster:large white snake"]
+    },
+    {
+      "source": "monsters/rock-lizard.png",
+      "row": 5, "col": 3,
+      "chroma": true,
+      "maps": ["monster:rock lizard"]
+    },
+    {
+      "source": "monsters/soldier-ant.png",
+      "row": 5, "col": 4,
+      "chroma": true,
+      "maps": ["monster:soldier ant", "monster:giant black ant"]
+    },
+    {
+      "source": "monsters/icky-thing.png",
+      "row": 5, "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:clear icky thing",
+        "monster:white icky thing",
+        "monster:blubbering icky thing"
+      ]
+    },
+    {
+      "source": "monsters/cave-spider.png",
+      "row": 5, "col": 6,
+      "chroma": true,
+      "maps": ["monster:cave spider"]
+    },
+    {
+      "source": "monsters/yeek-blue.png",
+      "row": 5, "col": 7,
+      "chroma": true,
+      "maps": ["monster:blue yeek"]
     }
   ]
 }
