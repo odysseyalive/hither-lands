@@ -104,7 +104,53 @@
     {
       "source": "player/player.png",
       "row": 2, "col": 0,
+      "chroma": true,
       "maps": ["monster:<player>"]
+    },
+    {
+      "source": "town/shop-general.png",
+      "row": 3, "col": 0,
+      "maps": ["feat:General Store:*"]
+    },
+    {
+      "source": "town/shop-armoury.png",
+      "row": 3, "col": 1,
+      "maps": ["feat:Armoury:*"]
+    },
+    {
+      "source": "town/shop-weapon.png",
+      "row": 3, "col": 2,
+      "maps": ["feat:Weapon Smiths:*"]
+    },
+    {
+      "source": "town/shop-bookseller.png",
+      "row": 3, "col": 3,
+      "maps": ["feat:Bookseller:*"]
+    },
+    {
+      "source": "town/shop-alchemy.png",
+      "row": 3, "col": 4,
+      "maps": ["feat:Alchemy Shop:*"]
+    },
+    {
+      "source": "town/shop-magic.png",
+      "row": 3, "col": 5,
+      "maps": ["feat:Magic Shop:*"]
+    },
+    {
+      "source": "town/shop-black-market.png",
+      "row": 3, "col": 6,
+      "maps": ["feat:Black Market:*"]
+    },
+    {
+      "source": "town/home.png",
+      "row": 3, "col": 7,
+      "maps": ["feat:Home:*"]
+    },
+    {
+      "source": "town/merchant.png",
+      "row": 3, "col": 8,
+      "maps": ["feat:Travelling Merchant:*"]
     }
   ]
 }
