@@ -194,7 +194,12 @@
       "source": "monsters/kobold.png",
       "row": 4, "col": 4,
       "chroma": true,
-      "maps": ["monster:small kobold", "monster:kobold"]
+      "maps": [
+        "monster:small kobold",
+        "monster:kobold",
+        "monster:large kobold",
+        "monster:kobold archer"
+      ]
     },
     {
       "source": "monsters/dog-wild.png",
@@ -206,13 +211,17 @@
       "source": "monsters/floating-eye.png",
       "row": 4, "col": 6,
       "chroma": true,
-      "maps": ["monster:floating eye"]
+      "maps": [
+        "monster:floating eye",
+        "monster:radiation eye",
+        "monster:disenchanter eye"
+      ]
     },
     {
       "source": "monsters/fruit-bat.png",
       "row": 4, "col": 7,
       "chroma": true,
-      "maps": ["monster:fruit bat"]
+      "maps": ["monster:fruit bat", "monster:giant brown bat"]
     },
     {
       "source": "monsters/centipede.png",
@@ -221,14 +230,23 @@
       "maps": [
         "monster:giant white centipede",
         "monster:giant yellow centipede",
-        "monster:metallic green centipede"
+        "monster:metallic green centipede",
+        "monster:metallic blue centipede",
+        "monster:metallic red centipede"
       ]
     },
     {
       "source": "monsters/worm-mass.png",
       "row": 5, "col": 0,
       "chroma": true,
-      "maps": ["monster:white worm mass", "monster:green worm mass"]
+      "maps": [
+        "monster:white worm mass",
+        "monster:green worm mass",
+        "monster:clear worm mass",
+        "monster:yellow worm mass",
+        "monster:blue worm mass",
+        "monster:red worm mass"
+      ]
     },
     {
       "source": "monsters/mushroom-patch.png",
@@ -237,26 +255,34 @@
       "maps": [
         "monster:grey mushroom patch",
         "monster:shrieker mushroom patch",
-        "monster:grey mold"
+        "monster:grey mold",
+        "monster:spotted mushroom patch",
+        "monster:purple mushroom patch",
+        "monster:yellow mold",
+        "monster:brown mold"
       ]
     },
     {
       "source": "monsters/snake-white.png",
       "row": 5, "col": 2,
       "chroma": true,
-      "maps": ["monster:large white snake"]
+      "maps": ["monster:large white snake", "monster:large grey snake"]
     },
     {
       "source": "monsters/rock-lizard.png",
       "row": 5, "col": 3,
       "chroma": true,
-      "maps": ["monster:rock lizard"]
+      "maps": ["monster:rock lizard", "monster:cave lizard"]
     },
     {
       "source": "monsters/soldier-ant.png",
       "row": 5, "col": 4,
       "chroma": true,
-      "maps": ["monster:soldier ant", "monster:giant black ant"]
+      "maps": [
+        "monster:soldier ant",
+        "monster:giant black ant",
+        "monster:giant white ant"
+      ]
     },
     {
       "source": "monsters/icky-thing.png",
@@ -265,7 +291,8 @@
       "maps": [
         "monster:clear icky thing",
         "monster:white icky thing",
-        "monster:blubbering icky thing"
+        "monster:blubbering icky thing",
+        "monster:grey icky thing"
       ]
     },
     {
@@ -279,6 +306,105 @@
       "row": 5, "col": 7,
       "chroma": true,
       "maps": ["monster:blue yeek"]
+    },
+    {
+      "source": "monsters/naga.png",
+      "row": 5, "col": 8,
+      "chroma": true,
+      "maps": ["monster:black naga", "monster:green naga"]
+    },
+    {
+      "source": "monsters/louse-white.png",
+      "row": 6, "col": 0,
+      "chroma": true,
+      "maps": ["monster:giant white louse"]
+    },
+    {
+      "source": "monsters/jelly.png",
+      "row": 6, "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:green ooze",
+        "monster:blue ooze",
+        "monster:silver jelly",
+        "monster:yellow jelly",
+        "monster:blue jelly",
+        "monster:green jelly",
+        "monster:rot jelly"
+      ]
+    },
+    {
+      "source": "monsters/ghost.png",
+      "row": 6, "col": 2,
+      "chroma": true,
+      "maps": ["monster:poltergeist", "monster:green glutton ghost"]
+    },
+    {
+      "source": "monsters/hobbit.png",
+      "row": 6, "col": 3,
+      "chroma": true,
+      "maps": ["monster:scruffy looking hobbit"]
+    },
+    {
+      "source": "monsters/creeping-coins.png",
+      "row": 6, "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:creeping copper coins",
+        "monster:creeping silver coins"
+      ]
+    },
+    {
+      "source": "monsters/traveler.png",
+      "row": 6, "col": 5,
+      "chroma": true,
+      "maps": ["monster:gallant", "monster:scout", "monster:tamer"]
+    },
+    {
+      "source": "monsters/rat-white.png",
+      "row": 6, "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:giant white rat",
+        "monster:giant white mouse",
+        "monster:silver mouse",
+        "monster:maddened weasel"
+      ]
+    },
+    {
+      "source": "monsters/dragonfly.png",
+      "row": 6, "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:giant green dragon fly",
+        "monster:giant white dragon fly",
+        "monster:giant black dragon fly",
+        "monster:giant gold dragon fly"
+      ]
+    },
+    {
+      "source": "monsters/snake-copper.png",
+      "row": 6, "col": 8,
+      "chroma": true,
+      "maps": ["monster:copperhead snake", "monster:rattlesnake"]
+    },
+    {
+      "source": "monsters/skeleton.png",
+      "row": 7, "col": 0,
+      "chroma": true,
+      "maps": ["monster:Skeleton", "monster:skeleton kobold"]
+    },
+    {
+      "source": "monsters/kobold-shaman.png",
+      "row": 7, "col": 1,
+      "chroma": true,
+      "maps": ["monster:kobold shaman"]
+    },
+    {
+      "source": "monsters/orc-snaga.png",
+      "row": 7, "col": 2,
+      "chroma": true,
+      "maps": ["monster:snaga"]
     }
   ]
 }
