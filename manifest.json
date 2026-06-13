@@ -5,7 +5,8 @@
     "tile_size": 32,
     "atlas": "32x32.png",
     "pref": "graf-fai.prf",
-    "alpha": true
+    "alpha": true,
+    "dark_colour": "#171310"
   },
   "tiles": [
     {
