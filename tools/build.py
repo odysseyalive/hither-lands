@@ -23,16 +23,33 @@ CHROMA = (255, 0, 255)
 CHROMA_TOL = 60
 
 
-def key_out_chroma(img):
+FAMILY_TOL = 50  # for "family" mode: how far magenta must dominate green
+
+
+def key_out_chroma(img, family=False):
+    """Make the magenta background transparent.
+
+    Tight mode (default): only near-pure #FF00FF. Safe for sprites that may
+    contain legitimate purple/magenta detail.
+
+    Family mode: any pixel where magenta dominates green (r-g and b-g both
+    large) — also removes the darkened-magenta drop shadows the generator
+    bakes under buildings. Do NOT use on art with genuine purple (the magic
+    shop therefore uses a deep-blue roof, which survives this key).
+    """
     img = img.convert("RGBA")
     px = img.load()
     w, h = img.size
     for y in range(h):
         for x in range(w):
             r, g, b, a = px[x, y]
-            if (abs(r - CHROMA[0]) < CHROMA_TOL
-                    and abs(g - CHROMA[1]) < CHROMA_TOL
-                    and abs(b - CHROMA[2]) < CHROMA_TOL):
+            if family:
+                hit = (r - g > FAMILY_TOL) and (b - g > FAMILY_TOL)
+            else:
+                hit = (abs(r - CHROMA[0]) < CHROMA_TOL
+                       and abs(g - CHROMA[1]) < CHROMA_TOL
+                       and abs(b - CHROMA[2]) < CHROMA_TOL)
+            if hit:
                 px[x, y] = (r, g, b, 0)
     return img
 
@@ -58,9 +75,26 @@ def main():
         if not src.is_file():
             sys.exit(f"missing source tile: {src}")
         img = Image.open(src)
-        if t.get("chroma"):
+        if t.get("chroma") == "family":
+            img = key_out_chroma(img, family=True)
+        elif t.get("chroma"):
             img = key_out_chroma(img)
         img = img.convert("RGBA").resize((ts, ts), Image.LANCZOS)
+        # A terrain feature (e.g. a building) fills its whole cell — the engine
+        # draws only one tile per grid square, so transparent corners would
+        # show the black terminal background. Bake a ground texture underneath
+        # so the tile is opaque and its edges match the surrounding floor.
+        # Reusing the same seamless texture the floor uses makes the join
+        # invisible. (Monster/player sprites omit "ground" and stay
+        # transparent, so the engine composites them over real terrain.)
+        if t.get("ground"):
+            ground_src = ROOT / "source-tiles" / t["ground"]
+            if not ground_src.is_file():
+                sys.exit(f"missing ground texture: {ground_src}")
+            base = Image.open(ground_src).convert("RGBA").resize(
+                (ts, ts), Image.LANCZOS)
+            base.alpha_composite(img)
+            img = base
         atlas.paste(img, (t["col"] * ts, t["row"] * ts))
 
     outdir = ROOT / "dist" / m["tileset"]["directory"]

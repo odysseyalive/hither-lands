@@ -10,17 +10,24 @@
   "tiles": [
     {
       "source": "terrain/unknown.png",
-      "row": 0, "col": 0,
-      "maps": ["feat:unknown grid:*"]
+      "row": 0,
+      "col": 0,
+      "maps": [
+        "feat:unknown grid:*"
+      ]
     },
     {
       "source": "terrain/floor.png",
-      "row": 0, "col": 1,
-      "maps": ["feat:open floor:*"]
+      "row": 0,
+      "col": 1,
+      "maps": [
+        "feat:open floor:*"
+      ]
     },
     {
       "source": "terrain/wall-granite.png",
-      "row": 0, "col": 2,
+      "row": 0,
+      "col": 2,
       "maps": [
         "feat:granite wall:*",
         "feat:permanent wall:*",
@@ -33,39 +40,67 @@
     },
     {
       "source": "terrain/door-closed.png",
-      "row": 0, "col": 3,
-      "maps": ["feat:closed door:*"]
+      "row": 0,
+      "col": 3,
+      "maps": [
+        "feat:closed door:*"
+      ]
     },
     {
       "source": "terrain/door-open.png",
-      "row": 0, "col": 4,
-      "maps": ["feat:open door:*", "feat:broken door:*"]
+      "row": 0,
+      "col": 4,
+      "maps": [
+        "feat:open door:*",
+        "feat:broken door:*"
+      ]
     },
     {
       "source": "terrain/stair-up.png",
-      "row": 0, "col": 5,
-      "maps": ["feat:up staircase:*"]
+      "row": 0,
+      "col": 5,
+      "maps": [
+        "feat:up staircase:*"
+      ]
     },
     {
       "source": "terrain/stair-down.png",
-      "row": 0, "col": 6,
-      "maps": ["feat:down staircase:*"]
+      "row": 0,
+      "col": 6,
+      "maps": [
+        "feat:down staircase:*"
+      ]
     },
     {
       "source": "terrain/rubble.png",
-      "row": 0, "col": 7,
-      "maps": ["feat:pile of rubble:*", "feat:pile of passable rubble:*"]
+      "row": 0,
+      "col": 7,
+      "maps": [
+        "feat:pile of rubble:*",
+        "feat:pile of passable rubble:*"
+      ]
     },
     {
       "source": "terrain/grass.png",
-      "row": 1, "col": 0,
-      "maps": ["feat:grass:*"]
+      "row": 1,
+      "col": 0,
+      "maps": [
+        "feat:grass:*"
+      ]
     },
     {
       "source": "terrain/road.png",
-      "row": 1, "col": 1,
+      "row": 1,
+      "col": 1,
       "maps": [
-        "feat:road:*",
+        "feat:road:*"
+      ]
+    },
+    {
+      "source": "terrain/path-sign.png",
+      "row": 7,
+      "col": 3,
+      "maps": [
         "feat:easy path north:*",
         "feat:hard path north:*",
         "feat:easy path east:*",
@@ -78,95 +113,166 @@
     },
     {
       "source": "terrain/trees.png",
-      "row": 1, "col": 2,
-      "maps": ["feat:lowland trees:*", "feat:highland trees:*"]
+      "row": 1,
+      "col": 2,
+      "maps": [
+        "feat:lowland trees:*",
+        "feat:highland trees:*"
+      ]
     },
     {
       "source": "terrain/water.png",
-      "row": 1, "col": 3,
-      "maps": ["feat:water:*"]
+      "row": 1,
+      "col": 3,
+      "maps": [
+        "feat:water:*"
+      ]
     },
     {
       "source": "terrain/lava.png",
-      "row": 1, "col": 4,
-      "maps": ["feat:lava:*"]
+      "row": 1,
+      "col": 4,
+      "maps": [
+        "feat:lava:*"
+      ]
     },
     {
       "source": "terrain/sand.png",
-      "row": 1, "col": 5,
-      "maps": ["feat:sand dune:*"]
+      "row": 1,
+      "col": 5,
+      "maps": [
+        "feat:sand dune:*"
+      ]
     },
     {
       "source": "terrain/empty.png",
-      "row": 1, "col": 6,
-      "maps": ["feat:empty space:*"]
+      "row": 1,
+      "col": 6,
+      "maps": [
+        "feat:empty space:*"
+      ]
     },
     {
       "source": "player/player.png",
-      "row": 2, "col": 0,
+      "row": 2,
+      "col": 0,
       "chroma": true,
-      "maps": ["monster:<player>"]
+      "maps": [
+        "monster:<player>"
+      ]
     },
     {
       "source": "town/shop-general.png",
-      "row": 3, "col": 0,
-      "maps": ["feat:General Store:*"]
+      "row": 3,
+      "col": 0,
+      "maps": [
+        "feat:General Store:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "town/shop-armoury.png",
-      "row": 3, "col": 1,
-      "maps": ["feat:Armoury:*"]
+      "row": 3,
+      "col": 1,
+      "maps": [
+        "feat:Armoury:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "town/shop-weapon.png",
-      "row": 3, "col": 2,
-      "maps": ["feat:Weapon Smiths:*"]
+      "row": 3,
+      "col": 2,
+      "maps": [
+        "feat:Weapon Smiths:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "town/shop-bookseller.png",
-      "row": 3, "col": 3,
-      "maps": ["feat:Bookseller:*"]
+      "row": 3,
+      "col": 3,
+      "maps": [
+        "feat:Bookseller:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "town/shop-alchemy.png",
-      "row": 3, "col": 4,
-      "maps": ["feat:Alchemy Shop:*"]
+      "row": 3,
+      "col": 4,
+      "maps": [
+        "feat:Alchemy Shop:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "town/shop-magic.png",
-      "row": 3, "col": 5,
-      "maps": ["feat:Magic Shop:*"]
+      "row": 3,
+      "col": 5,
+      "maps": [
+        "feat:Magic Shop:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "town/shop-black-market.png",
-      "row": 3, "col": 6,
-      "maps": ["feat:Black Market:*"]
+      "row": 3,
+      "col": 6,
+      "maps": [
+        "feat:Black Market:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "town/home.png",
-      "row": 3, "col": 7,
-      "maps": ["feat:Home:*"]
+      "row": 3,
+      "col": 7,
+      "maps": [
+        "feat:Home:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "town/merchant.png",
-      "row": 3, "col": 8,
-      "maps": ["feat:Travelling Merchant:*"]
+      "row": 3,
+      "col": 8,
+      "maps": [
+        "feat:Travelling Merchant:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "monsters/cat-scrawny.png",
-      "row": 4, "col": 0,
+      "row": 4,
+      "col": 0,
       "chroma": true,
-      "maps": ["monster:scrawny cat"]
+      "maps": [
+        "monster:scrawny cat"
+      ]
     },
     {
       "source": "monsters/dog-scruffy.png",
-      "row": 4, "col": 1,
+      "row": 4,
+      "col": 1,
       "chroma": true,
-      "maps": ["monster:scruffy little dog"]
+      "maps": [
+        "monster:scruffy little dog"
+      ]
     },
     {
       "source": "monsters/townsfolk.png",
-      "row": 4, "col": 2,
+      "row": 4,
+      "col": 2,
       "chroma": true,
       "maps": [
         "monster:aimless-looking merchant",
@@ -181,7 +287,8 @@
     },
     {
       "source": "monsters/ruffian.png",
-      "row": 4, "col": 3,
+      "row": 4,
+      "col": 3,
       "chroma": true,
       "maps": [
         "monster:battle-scarred veteran",
@@ -192,7 +299,8 @@
     },
     {
       "source": "monsters/kobold.png",
-      "row": 4, "col": 4,
+      "row": 4,
+      "col": 4,
       "chroma": true,
       "maps": [
         "monster:small kobold",
@@ -203,13 +311,17 @@
     },
     {
       "source": "monsters/dog-wild.png",
-      "row": 4, "col": 5,
+      "row": 4,
+      "col": 5,
       "chroma": true,
-      "maps": ["monster:wild dog"]
+      "maps": [
+        "monster:wild dog"
+      ]
     },
     {
       "source": "monsters/floating-eye.png",
-      "row": 4, "col": 6,
+      "row": 4,
+      "col": 6,
       "chroma": true,
       "maps": [
         "monster:floating eye",
@@ -219,13 +331,18 @@
     },
     {
       "source": "monsters/fruit-bat.png",
-      "row": 4, "col": 7,
+      "row": 4,
+      "col": 7,
       "chroma": true,
-      "maps": ["monster:fruit bat", "monster:giant brown bat"]
+      "maps": [
+        "monster:fruit bat",
+        "monster:giant brown bat"
+      ]
     },
     {
       "source": "monsters/centipede.png",
-      "row": 4, "col": 8,
+      "row": 4,
+      "col": 8,
       "chroma": true,
       "maps": [
         "monster:giant white centipede",
@@ -237,7 +354,8 @@
     },
     {
       "source": "monsters/worm-mass.png",
-      "row": 5, "col": 0,
+      "row": 5,
+      "col": 0,
       "chroma": true,
       "maps": [
         "monster:white worm mass",
@@ -250,7 +368,8 @@
     },
     {
       "source": "monsters/mushroom-patch.png",
-      "row": 5, "col": 1,
+      "row": 5,
+      "col": 1,
       "chroma": true,
       "maps": [
         "monster:grey mushroom patch",
@@ -264,19 +383,28 @@
     },
     {
       "source": "monsters/snake-white.png",
-      "row": 5, "col": 2,
+      "row": 5,
+      "col": 2,
       "chroma": true,
-      "maps": ["monster:large white snake", "monster:large grey snake"]
+      "maps": [
+        "monster:large white snake",
+        "monster:large grey snake"
+      ]
     },
     {
       "source": "monsters/rock-lizard.png",
-      "row": 5, "col": 3,
+      "row": 5,
+      "col": 3,
       "chroma": true,
-      "maps": ["monster:rock lizard", "monster:cave lizard"]
+      "maps": [
+        "monster:rock lizard",
+        "monster:cave lizard"
+      ]
     },
     {
       "source": "monsters/soldier-ant.png",
-      "row": 5, "col": 4,
+      "row": 5,
+      "col": 4,
       "chroma": true,
       "maps": [
         "monster:soldier ant",
@@ -286,7 +414,8 @@
     },
     {
       "source": "monsters/icky-thing.png",
-      "row": 5, "col": 5,
+      "row": 5,
+      "col": 5,
       "chroma": true,
       "maps": [
         "monster:clear icky thing",
@@ -297,31 +426,45 @@
     },
     {
       "source": "monsters/cave-spider.png",
-      "row": 5, "col": 6,
+      "row": 5,
+      "col": 6,
       "chroma": true,
-      "maps": ["monster:cave spider"]
+      "maps": [
+        "monster:cave spider"
+      ]
     },
     {
       "source": "monsters/yeek-blue.png",
-      "row": 5, "col": 7,
+      "row": 5,
+      "col": 7,
       "chroma": true,
-      "maps": ["monster:blue yeek"]
+      "maps": [
+        "monster:blue yeek"
+      ]
     },
     {
       "source": "monsters/naga.png",
-      "row": 5, "col": 8,
+      "row": 5,
+      "col": 8,
       "chroma": true,
-      "maps": ["monster:black naga", "monster:green naga"]
+      "maps": [
+        "monster:black naga",
+        "monster:green naga"
+      ]
     },
     {
       "source": "monsters/louse-white.png",
-      "row": 6, "col": 0,
+      "row": 6,
+      "col": 0,
       "chroma": true,
-      "maps": ["monster:giant white louse"]
+      "maps": [
+        "monster:giant white louse"
+      ]
     },
     {
       "source": "monsters/jelly.png",
-      "row": 6, "col": 1,
+      "row": 6,
+      "col": 1,
       "chroma": true,
       "maps": [
         "monster:green ooze",
@@ -335,19 +478,27 @@
     },
     {
       "source": "monsters/ghost.png",
-      "row": 6, "col": 2,
+      "row": 6,
+      "col": 2,
       "chroma": true,
-      "maps": ["monster:poltergeist", "monster:green glutton ghost"]
+      "maps": [
+        "monster:poltergeist",
+        "monster:green glutton ghost"
+      ]
     },
     {
       "source": "monsters/hobbit.png",
-      "row": 6, "col": 3,
+      "row": 6,
+      "col": 3,
       "chroma": true,
-      "maps": ["monster:scruffy looking hobbit"]
+      "maps": [
+        "monster:scruffy looking hobbit"
+      ]
     },
     {
       "source": "monsters/creeping-coins.png",
-      "row": 6, "col": 4,
+      "row": 6,
+      "col": 4,
       "chroma": true,
       "maps": [
         "monster:creeping copper coins",
@@ -356,13 +507,19 @@
     },
     {
       "source": "monsters/traveler.png",
-      "row": 6, "col": 5,
+      "row": 6,
+      "col": 5,
       "chroma": true,
-      "maps": ["monster:gallant", "monster:scout", "monster:tamer"]
+      "maps": [
+        "monster:gallant",
+        "monster:scout",
+        "monster:tamer"
+      ]
     },
     {
       "source": "monsters/rat-white.png",
-      "row": 6, "col": 6,
+      "row": 6,
+      "col": 6,
       "chroma": true,
       "maps": [
         "monster:giant white rat",
@@ -373,7 +530,8 @@
     },
     {
       "source": "monsters/dragonfly.png",
-      "row": 6, "col": 7,
+      "row": 6,
+      "col": 7,
       "chroma": true,
       "maps": [
         "monster:giant green dragon fly",
@@ -384,27 +542,59 @@
     },
     {
       "source": "monsters/snake-copper.png",
-      "row": 6, "col": 8,
+      "row": 6,
+      "col": 8,
       "chroma": true,
-      "maps": ["monster:copperhead snake", "monster:rattlesnake"]
+      "maps": [
+        "monster:copperhead snake",
+        "monster:rattlesnake"
+      ]
     },
     {
       "source": "monsters/skeleton.png",
-      "row": 7, "col": 0,
+      "row": 7,
+      "col": 0,
       "chroma": true,
-      "maps": ["monster:Skeleton", "monster:skeleton kobold"]
+      "maps": [
+        "monster:Skeleton",
+        "monster:skeleton kobold"
+      ]
     },
     {
       "source": "monsters/kobold-shaman.png",
-      "row": 7, "col": 1,
+      "row": 7,
+      "col": 1,
       "chroma": true,
-      "maps": ["monster:kobold shaman"]
+      "maps": [
+        "monster:kobold shaman"
+      ]
     },
     {
       "source": "monsters/orc-snaga.png",
-      "row": 7, "col": 2,
+      "row": 7,
+      "col": 2,
       "chroma": true,
-      "maps": ["monster:snaga"]
+      "maps": [
+        "monster:snaga"
+      ]
+    },
+    {
+      "source": "monsters/the-complainer.png",
+      "row": 7,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:The Complainer"
+      ]
+    },
+    {
+      "source": "monsters/pongo.png",
+      "row": 7,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:Pongo the Devious"
+      ]
     }
   ]
 }
