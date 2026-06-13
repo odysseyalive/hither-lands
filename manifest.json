@@ -1,6 +1,6 @@
 {
   "tileset": {
-    "name": "FAangband AI Tiles",
+    "name": "Hither Lands",
     "directory": "fa-ai",
     "tile_size": 32,
     "atlas": "32x32.png",
@@ -109,7 +109,9 @@
         "feat:hard path south:*",
         "feat:easy path west:*",
         "feat:hard path west:*"
-      ]
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     },
     {
       "source": "terrain/trees.png",
@@ -594,6 +596,803 @@
       "chroma": true,
       "maps": [
         "monster:Pongo the Devious"
+      ]
+    },
+    {
+      "source": "objects/potion.png",
+      "row": 8,
+      "col": 0,
+      "chroma": "family",
+      "maps": [],
+      "flavors": [
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251
+      ]
+    },
+    {
+      "source": "objects/scroll.png",
+      "row": 8,
+      "col": 1,
+      "chroma": "family",
+      "maps": [],
+      "flavors": [
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302
+      ]
+    },
+    {
+      "source": "objects/wand.png",
+      "row": 8,
+      "col": 2,
+      "chroma": "family",
+      "maps": [],
+      "flavors": [
+        10,
+        11,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137
+      ]
+    },
+    {
+      "source": "objects/rod.png",
+      "row": 8,
+      "col": 3,
+      "chroma": "family",
+      "maps": [],
+      "flavors": [
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172
+      ]
+    },
+    {
+      "source": "objects/staff.png",
+      "row": 8,
+      "col": 4,
+      "chroma": "family",
+      "maps": [],
+      "flavors": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ]
+    },
+    {
+      "source": "objects/mushroom.png",
+      "row": 8,
+      "col": 5,
+      "chroma": "family",
+      "maps": [],
+      "flavors": [
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192
+      ]
+    },
+    {
+      "source": "objects/sword.png",
+      "row": 8,
+      "col": 6,
+      "chroma": "family",
+      "maps": [
+        "object:sword:Main Gauche",
+        "object:sword:Rapier",
+        "object:sword:Short Sword",
+        "object:sword:Cutlass",
+        "object:sword:Tulwar",
+        "object:sword:Scimitar",
+        "object:sword:Long Sword",
+        "object:sword:Broad Sword",
+        "object:sword:Bastard Sword",
+        "object:sword:Katana",
+        "object:sword:Zweihander",
+        "object:sword:Executioner's Sword",
+        "object:sword:Valinorean Sword",
+        "object:sword:Whip"
+      ]
+    },
+    {
+      "source": "objects/polearm.png",
+      "row": 8,
+      "col": 7,
+      "chroma": "family",
+      "maps": [
+        "object:polearm:Spear",
+        "object:polearm:Thrusting Spear",
+        "object:polearm:Awl-Pike",
+        "object:polearm:Trident",
+        "object:polearm:Halberd",
+        "object:polearm:Pike",
+        "object:polearm:Throwing Axe",
+        "object:polearm:Beaked Axe",
+        "object:polearm:Broad Axe",
+        "object:polearm:Battle Axe",
+        "object:polearm:Lochaber Axe",
+        "object:polearm:Great Axe",
+        "object:polearm:Scythe",
+        "object:polearm:Glaive",
+        "object:polearm:Lance",
+        "object:polearm:Scythe of Slicing",
+        "object:polearm:Lucerne Hammer",
+        "object:polearm:Sling"
+      ]
+    },
+    {
+      "source": "objects/hafted.png",
+      "row": 8,
+      "col": 8,
+      "chroma": "family",
+      "maps": [
+        "object:hafted:Ball-and-Chain",
+        "object:hafted:Morning Star",
+        "object:hafted:Flail",
+        "object:hafted:Two-Handed Great Flail",
+        "object:hafted:Magestaff",
+        "object:hafted:Mace",
+        "object:hafted:Lead-Filled Mace",
+        "object:hafted:Quarterstaff",
+        "object:hafted:Throwing Hammer",
+        "object:hafted:War Hammer",
+        "object:hafted:Maul",
+        "object:hafted:Great Hammer",
+        "object:hafted:Storm Hammer",
+        "object:hafted:Mace of Disruption",
+        "object:hafted:Dart",
+        "object:hafted:Massive Iron Crown"
+      ]
+    },
+    {
+      "source": "objects/ring.png",
+      "row": 9,
+      "col": 0,
+      "chroma": "family",
+      "maps": [
+        "object:ring:Steel",
+        "object:ring:Pewter",
+        "object:ring:Galvorn",
+        "object:ring:Brass",
+        "object:ring:Bronze",
+        "object:ring:Copper",
+        "object:ring:Silver",
+        "object:ring:Gold",
+        "object:ring:Adamantite",
+        "object:ring:Mithril"
+      ]
+    },
+    {
+      "source": "objects/amulet.png",
+      "row": 9,
+      "col": 1,
+      "chroma": "family",
+      "maps": [
+        "object:amulet:Chalcedony",
+        "object:amulet:Malachite",
+        "object:amulet:Opal",
+        "object:amulet:Garnet",
+        "object:amulet:Pearl",
+        "object:amulet:Amethyst",
+        "object:amulet:Sapphire",
+        "object:amulet:Ruby",
+        "object:amulet:Emerald",
+        "object:amulet:Diamond"
+      ]
+    },
+    {
+      "source": "objects/soft-armor.png",
+      "row": 9,
+      "col": 2,
+      "chroma": "family",
+      "maps": [
+        "object:soft armor:Robe",
+        "object:soft armor:Soft Leather Armour",
+        "object:soft armor:Studded Leather Armour",
+        "object:soft armor:Hard Leather Armour",
+        "object:soft armor:Leather Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/hard-armor.png",
+      "row": 9,
+      "col": 3,
+      "chroma": "family",
+      "maps": [
+        "object:hard armor:Metal Scale Mail",
+        "object:hard armor:Chain Mail",
+        "object:hard armor:Augmented Chain Mail",
+        "object:hard armor:Bar Chain Mail",
+        "object:hard armor:Metal Brigandine Armour",
+        "object:hard armor:Partial Plate Armour",
+        "object:hard armor:Metal Lamellar Armour",
+        "object:hard armor:Full Plate Armour",
+        "object:hard armor:Ribbed Plate Armour",
+        "object:hard armor:Mithril Chain Mail",
+        "object:hard armor:Mithril Plate Mail",
+        "object:hard armor:Adamantite Plate Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor.png",
+      "row": 9,
+      "col": 4,
+      "chroma": "family",
+      "maps": [
+        "object:dragon armor:Black Dragon Scale Mail",
+        "object:dragon armor:Blue Dragon Scale Mail",
+        "object:dragon armor:White Dragon Scale Mail",
+        "object:dragon armor:Red Dragon Scale Mail",
+        "object:dragon armor:Green Dragon Scale Mail",
+        "object:dragon armor:Multi-Hued Dragon Scale Mail",
+        "object:dragon armor:Shining Dragon Scale Mail",
+        "object:dragon armor:Law Dragon Scale Mail",
+        "object:dragon armor:Gold Dragon Scale Mail",
+        "object:dragon armor:Chaos Dragon Scale Mail",
+        "object:dragon armor:Balance Dragon Scale Mail",
+        "object:dragon armor:Power Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/shield.png",
+      "row": 9,
+      "col": 5,
+      "chroma": "family",
+      "maps": [
+        "object:shield:Wicker Shield",
+        "object:shield:Small Metal Shield",
+        "object:shield:Leather Shield",
+        "object:shield:Large Metal Shield",
+        "object:shield:Knight's Shield",
+        "object:shield:Body Shield",
+        "object:shield:Shield of Deflection"
+      ]
+    },
+    {
+      "source": "objects/helm.png",
+      "row": 9,
+      "col": 6,
+      "chroma": "family",
+      "maps": [
+        "object:helm:Hard Leather Cap",
+        "object:helm:Metal Cap",
+        "object:helm:Iron Helm",
+        "object:helm:Steel Helm"
+      ]
+    },
+    {
+      "source": "objects/crown.png",
+      "row": 9,
+      "col": 7,
+      "chroma": "family",
+      "maps": [
+        "object:crown:Iron Crown",
+        "object:crown:Silver Crown",
+        "object:crown:Jewel Encrusted Crown",
+        "object:crown:Massive Iron Crown"
+      ]
+    },
+    {
+      "source": "objects/gloves.png",
+      "row": 9,
+      "col": 8,
+      "chroma": "family",
+      "maps": [
+        "object:gloves:Set of Leather Gloves",
+        "object:gloves:Set of Gauntlets",
+        "object:gloves:Set of Mithril Gauntlets",
+        "object:gloves:Set of Caestus",
+        "object:gloves:Set of Alchemist's Gloves"
+      ]
+    },
+    {
+      "source": "objects/boots.png",
+      "row": 10,
+      "col": 0,
+      "chroma": "family",
+      "maps": [
+        "object:boots:Pair of Leather Sandals",
+        "object:boots:Pair of Leather Boots",
+        "object:boots:Pair of Iron Shod Boots",
+        "object:boots:Pair of Steel Shod Boots",
+        "object:boots:Pair of Mithril Shod Boots",
+        "object:boots:Pair of Ethereal Slippers"
+      ]
+    },
+    {
+      "source": "objects/cloak.png",
+      "row": 10,
+      "col": 1,
+      "chroma": "family",
+      "maps": [
+        "object:cloak:Cloak",
+        "object:cloak:Fur Cloak",
+        "object:cloak:Elven Cloak",
+        "object:cloak:Shadow Cloak",
+        "object:cloak:Ethereal Cloak"
+      ]
+    },
+    {
+      "source": "objects/bow.png",
+      "row": 10,
+      "col": 2,
+      "chroma": "family",
+      "maps": [
+        "object:bow:Sling",
+        "object:bow:Short Bow",
+        "object:bow:Long Bow",
+        "object:bow:Light Crossbow",
+        "object:bow:Heavy Crossbow"
+      ]
+    },
+    {
+      "source": "objects/arrow.png",
+      "row": 10,
+      "col": 3,
+      "chroma": "family",
+      "maps": [
+        "object:arrow:Arrow",
+        "object:arrow:Seeker Arrow",
+        "object:arrow:Mithril Arrow"
+      ]
+    },
+    {
+      "source": "objects/bolt.png",
+      "row": 10,
+      "col": 4,
+      "chroma": "family",
+      "maps": [
+        "object:bolt:Bolt",
+        "object:bolt:Seeker Bolt",
+        "object:bolt:Mithril Bolt"
+      ]
+    },
+    {
+      "source": "objects/shot.png",
+      "row": 10,
+      "col": 5,
+      "chroma": "family",
+      "maps": [
+        "object:shot:Rounded Pebble",
+        "object:shot:Iron Shot",
+        "object:shot:Mithril Shot"
+      ]
+    },
+    {
+      "source": "objects/light.png",
+      "row": 10,
+      "col": 6,
+      "chroma": "family",
+      "maps": [
+        "object:light:Wooden Torch",
+        "object:light:Lantern"
+      ]
+    },
+    {
+      "source": "objects/food.png",
+      "row": 10,
+      "col": 7,
+      "chroma": "family",
+      "maps": [
+        "object:food:Hard Biscuit",
+        "object:food:Apple",
+        "object:food:Handful of Dried Fruits",
+        "object:food:Slime Mold",
+        "object:food:Ration of Food",
+        "object:food:Scrap of Flesh",
+        "object:food:Slice of Meat",
+        "object:food:Honey-cake",
+        "object:food:Piece of Elvish Waybread",
+        "object:food:Flask of Whisky",
+        "object:food:Pint of Fine Wine",
+        "object:food:Sip of Miruvor",
+        "object:food:Swig of Orcish Liquor",
+        "object:food:Draught of the Ents"
+      ]
+    },
+    {
+      "source": "objects/chest.png",
+      "row": 10,
+      "col": 8,
+      "chroma": "family",
+      "maps": [
+        "object:chest:Small wooden chest",
+        "object:chest:Large wooden chest",
+        "object:chest:Small iron chest",
+        "object:chest:Large iron chest",
+        "object:chest:Small steel chest",
+        "object:chest:Large steel chest",
+        "object:chest:Small jeweled chest",
+        "object:chest:Large jeweled chest"
+      ]
+    },
+    {
+      "source": "objects/digger.png",
+      "row": 11,
+      "col": 0,
+      "chroma": "family",
+      "maps": [
+        "object:digger:Shovel",
+        "object:digger:Pick",
+        "object:digger:Mattock"
+      ]
+    },
+    {
+      "source": "objects/flask.png",
+      "row": 11,
+      "col": 1,
+      "chroma": "family",
+      "maps": [
+        "object:flask:Flask of oil"
+      ]
+    },
+    {
+      "source": "objects/gold.png",
+      "row": 11,
+      "col": 2,
+      "chroma": "family",
+      "maps": [
+        "object:gold:copper",
+        "object:gold:silver",
+        "object:gold:garnets",
+        "object:gold:gold",
+        "object:gold:opals",
+        "object:gold:sapphires",
+        "object:gold:rubies",
+        "object:gold:diamonds",
+        "object:gold:emeralds",
+        "object:gold:mithril",
+        "object:gold:adamantite"
+      ]
+    },
+    {
+      "source": "traps/glyph.png",
+      "row": 12,
+      "col": 0,
+      "chroma": "family",
+      "maps": [
+        "trap:glyph of warding:*"
+      ]
+    },
+    {
+      "source": "traps/rune.png",
+      "row": 12,
+      "col": 1,
+      "chroma": "family",
+      "maps": [
+        "trap:rune of summon foe:*",
+        "trap:rune of summoning:*",
+        "trap:rune of necromancy:*",
+        "trap:rune of dragonsong:*",
+        "trap:hellhole:*",
+        "trap:teleport rune:*",
+        "trap:portal trap:*",
+        "trap:banishment trap:*",
+        "trap:stasis trap:*",
+        "trap:unmagic trap:*",
+        "trap:dispelling trap:*",
+        "trap:mana drain trap:*",
+        "trap:drain life trap:*",
+        "trap:immaterial trap:*",
+        "trap:mind blasting trap:*",
+        "trap:brain smashing trap:*",
+        "trap:siren:*",
+        "trap:aggravation trap:*"
+      ]
+    },
+    {
+      "source": "traps/trap-door.png",
+      "row": 12,
+      "col": 2,
+      "chroma": "family",
+      "maps": [
+        "trap:trap door:*"
+      ]
+    },
+    {
+      "source": "traps/pit.png",
+      "row": 12,
+      "col": 3,
+      "chroma": "family",
+      "maps": [
+        "trap:pit:*",
+        "trap:spiked pit:*",
+        "trap:poison pit:*"
+      ]
+    },
+    {
+      "source": "traps/dart-trap.png",
+      "row": 12,
+      "col": 4,
+      "chroma": "family",
+      "maps": [
+        "trap:slow dart:*",
+        "trap:strength loss dart:*",
+        "trap:dexterity loss dart:*",
+        "trap:constitution loss dart:*",
+        "trap:knife trap:*",
+        "trap:netted trap:*",
+        "trap:basic trap:*",
+        "trap:sturdy trap:*"
+      ]
+    },
+    {
+      "source": "traps/elemental-trap.png",
+      "row": 12,
+      "col": 5,
+      "chroma": "family",
+      "maps": [
+        "trap:fire trap:*",
+        "trap:acid trap:*",
+        "trap:electric trap:*",
+        "trap:explosive trap:*",
+        "trap:blast trap:*",
+        "trap:area blast trap:*",
+        "trap:mine trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-trap.png",
+      "row": 12,
+      "col": 6,
+      "chroma": "family",
+      "maps": [
+        "trap:blinding gas trap:*",
+        "trap:confusion gas trap:*",
+        "trap:poison gas trap:*",
+        "trap:sleep gas trap:*",
+        "trap:poison trap:*",
+        "trap:confusion trap:*",
+        "trap:blinding flash trap:*",
+        "trap:blinding trap:*",
+        "trap:petrifying trap:*"
+      ]
+    },
+    {
+      "source": "traps/rockfall.png",
+      "row": 12,
+      "col": 7,
+      "chroma": "family",
+      "maps": [
+        "trap:rock fall trap:*",
+        "trap:earthquake trap:*",
+        "trap:block fall trap:*",
+        "trap:falling branch:*"
+      ]
+    },
+    {
+      "source": "traps/web.png",
+      "row": 12,
+      "col": 8,
+      "chroma": "family",
+      "maps": [
+        "trap:web:*"
+      ]
+    },
+    {
+      "source": "traps/decoy.png",
+      "row": 13,
+      "col": 0,
+      "chroma": "family",
+      "maps": [
+        "trap:decoy:*"
       ]
     }
   ]

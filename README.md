@@ -1,4 +1,4 @@
-# FAangband-tiles
+# hither-lands
 
 A 32x32 graphical tileset for [FAangband](https://github.com/NickMcConnell/FAangband),
 distributed as a separate repo that installs into an FAangband source tree.
