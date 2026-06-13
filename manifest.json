@@ -1953,6 +1953,58 @@
       "maps": [
         "monster:Morgoth, Lord of Darkness"
       ]
+    },
+    {
+      "source": "objects/magic-book.png",
+      "row": 17,
+      "col": 3,
+      "chroma": "family",
+      "maps": [
+        "object:magic book:[Arcane Control]",
+        "object:magic book:[Attacks and Knowledge]",
+        "object:magic book:[First Spells]",
+        "object:magic book:[Magical Defences]",
+        "object:magic book:[Wizard's Tome of Power]"
+      ]
+    },
+    {
+      "source": "objects/nature-book.png",
+      "row": 17,
+      "col": 4,
+      "chroma": "family",
+      "maps": [
+        "object:nature book:[Creature Dominion]",
+        "object:nature book:[Gifts of Nature]",
+        "object:nature book:[Lesser Charms]",
+        "object:nature book:[Nature Craft]",
+        "object:nature book:[Wild Forces]"
+      ]
+    },
+    {
+      "source": "objects/prayer-book.png",
+      "row": 17,
+      "col": 5,
+      "chroma": "family",
+      "maps": [
+        "object:prayer book:[Battle Blessings]",
+        "object:prayer book:[Cleansing Power]",
+        "object:prayer book:[Healing and Sanctuary]",
+        "object:prayer book:[Novice's Handbook]",
+        "object:prayer book:[Wrath of the Valar]"
+      ]
+    },
+    {
+      "source": "objects/shadow-book.png",
+      "row": 17,
+      "col": 6,
+      "chroma": "family",
+      "maps": [
+        "object:shadow book:[Corruption of Spirit]",
+        "object:shadow book:[Dark Rituals]",
+        "object:shadow book:[Deadly Powers]",
+        "object:shadow book:[Fear and Torment]",
+        "object:shadow book:[Into the Shadows]"
+      ]
     }
   ]
 }
