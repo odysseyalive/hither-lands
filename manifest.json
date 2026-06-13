@@ -1394,6 +1394,565 @@
       "maps": [
         "trap:decoy:*"
       ]
+    },
+    {
+      "source": "monsters/dragon.png",
+      "row": 14,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:pseudo-dragon",
+        "monster:blue worm",
+        "monster:white worm",
+        "monster:green worm",
+        "monster:wyvern",
+        "monster:black worm",
+        "monster:gold worm",
+        "monster:red worm",
+        "monster:multi-hued worm",
+        "monster:shadow drake",
+        "monster:chaos drake",
+        "monster:law drake",
+        "monster:balance drake",
+        "monster:ethereal drake",
+        "monster:crystal drake",
+        "monster:cold drake",
+        "monster:lightning drake",
+        "monster:venom drake",
+        "monster:fire drake",
+        "monster:clamor drake",
+        "monster:corrosive drake",
+        "monster:Kavlax the Many-Headed",
+        "monster:elemental drake",
+        "monster:blue dragon",
+        "monster:white dragon",
+        "monster:green dragon",
+        "monster:death drake",
+        "monster:great crystal drake",
+        "monster:ethereal dragon",
+        "monster:black dragon",
+        "monster:red dragon",
+        "monster:gold dragon",
+        "monster:Itangast the Fire Drake",
+        "monster:multi-hued dragon",
+        "monster:Scatha the Worm",
+        "monster:dracolich",
+        "monster:dracolisk",
+        "monster:Glaurung, Father of the Dragons"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon.png",
+      "row": 14,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:winged dragon of bile",
+        "monster:winged dragon of ice",
+        "monster:winged dragon of storms",
+        "monster:winged dragon of fire",
+        "monster:winged dragon of chaos",
+        "monster:winged dragon of law",
+        "monster:winged dragon of Ilmen",
+        "monster:winged dragon of annihilation",
+        "monster:sky dragon",
+        "monster:winged dragon of balance",
+        "monster:winged dragon of many colours",
+        "monster:Smaug the Golden",
+        "monster:Ancalagon the Black",
+        "monster:winged dragon of power"
+      ]
+    },
+    {
+      "source": "monsters/troll.png",
+      "row": 14,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:forest troll",
+        "monster:stone troll",
+        "monster:troll scavenger",
+        "monster:snow troll",
+        "monster:cave troll",
+        "monster:troll priest",
+        "monster:troll blackguard",
+        "monster:hill troll",
+        "monster:olog",
+        "monster:mountain troll",
+        "monster:etten",
+        "monster:troll chieftain",
+        "monster:Rogrog the Black Troll",
+        "monster:storm troll"
+      ]
+    },
+    {
+      "source": "monsters/ogre.png",
+      "row": 14,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:ogre",
+        "monster:black ogre",
+        "monster:cave ogre",
+        "monster:ogre shaman",
+        "monster:ogre chieftain",
+        "monster:ogre mage",
+        "monster:Lokkak, the Ogre Chieftain"
+      ]
+    },
+    {
+      "source": "monsters/giant.png",
+      "row": 14,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:hill giant",
+        "monster:frost giant",
+        "monster:fire giant",
+        "monster:giant paladin",
+        "monster:stone giant",
+        "monster:cloud giant",
+        "monster:giant chieftain",
+        "monster:cyclops",
+        "monster:storm giant",
+        "monster:lesser titan",
+        "monster:Gilim, the Giant of Eruman",
+        "monster:greater titan",
+        "monster:Nan, the Giant"
+      ]
+    },
+    {
+      "source": "monsters/major-demon.png",
+      "row": 14,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:vrock",
+        "monster:glabrezu",
+        "monster:nalfeshnee",
+        "monster:marilith",
+        "monster:lesser Balrog",
+        "monster:hezrou",
+        "monster:barbazu",
+        "monster:bile demon",
+        "monster:osyluth",
+        "monster:gelugon",
+        "monster:horned reaper",
+        "monster:Krotus, the Dark Lord",
+        "monster:pit fiend",
+        "monster:fury",
+        "monster:Pazuzu, Lord of Air",
+        "monster:balrog",
+        "monster:Lungorthin, the Balrog of White Fire",
+        "monster:Gothmog, the High Captain of Balrogs"
+      ]
+    },
+    {
+      "source": "monsters/minor-demon.png",
+      "row": 14,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:lemure",
+        "monster:tengu",
+        "monster:homunculus",
+        "monster:quasit",
+        "monster:imp",
+        "monster:nruling",
+        "monster:Draebor, the Imp",
+        "monster:bodak",
+        "monster:death quasit"
+      ]
+    },
+    {
+      "source": "monsters/lich.png",
+      "row": 14,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:lich",
+        "monster:master lich",
+        "monster:demilich",
+        "monster:archlich",
+        "monster:black reaver",
+        "monster:Feagwath, the Undead Sorcerer",
+        "monster:Vecna, the Emperor Lich",
+        "monster:Lich"
+      ]
+    },
+    {
+      "source": "monsters/vampire.png",
+      "row": 14,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:vampire",
+        "monster:master vampire",
+        "monster:vampire lord",
+        "monster:elder vampire",
+        "monster:Thuringwethil, the Vampire Messenger",
+        "monster:Vampire-Sauron",
+        "monster:Vampire"
+      ]
+    },
+    {
+      "source": "monsters/wraith.png",
+      "row": 15,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:forest wight",
+        "monster:grave wight",
+        "monster:barrow wight",
+        "monster:emperor wight",
+        "monster:white wraith",
+        "monster:grey wraith",
+        "monster:black wraith",
+        "monster:nether wraith",
+        "monster:nightwing",
+        "monster:nightwalker",
+        "monster:Wight",
+        "monster:Nether Wraith",
+        "monster:Deathlord"
+      ]
+    },
+    {
+      "source": "monsters/hydra.png",
+      "row": 15,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:2-headed hydra",
+        "monster:3-headed hydra",
+        "monster:4-headed hydra",
+        "monster:5-headed hydra",
+        "monster:6-headed hydra",
+        "monster:7-headed hydra",
+        "monster:8-headed hydra",
+        "monster:9-headed hydra"
+      ]
+    },
+    {
+      "source": "monsters/zombie.png",
+      "row": 15,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:zombified kobold",
+        "monster:zombified orc",
+        "monster:zombified human",
+        "monster:mummified orc",
+        "monster:mummified human",
+        "monster:ghoul",
+        "monster:ghast",
+        "monster:mummified troll",
+        "monster:mummified chieftain",
+        "monster:Zombie",
+        "monster:Mummy"
+      ]
+    },
+    {
+      "source": "monsters/elemental.png",
+      "row": 15,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:air spirit",
+        "monster:water spirit",
+        "monster:earth spirit",
+        "monster:fire spirit",
+        "monster:fire elemental",
+        "monster:water elemental",
+        "monster:earth elemental",
+        "monster:air elemental",
+        "monster:invisible stalker",
+        "monster:ooze elemental",
+        "monster:smoke elemental",
+        "monster:ice elemental",
+        "monster:magma elemental",
+        "monster:will o' the wisp",
+        "monster:Vargo, Tyrant of Fire",
+        "monster:Waldern, King of Water",
+        "monster:Quaker, Master of Earth",
+        "monster:Ariel, Queen of Air",
+        "monster:great earth elemental",
+        "monster:great water elemental"
+      ]
+    },
+    {
+      "source": "monsters/vortex.png",
+      "row": 15,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:fire vortex",
+        "monster:water vortex",
+        "monster:cold vortex",
+        "monster:energy vortex",
+        "monster:nexus vortex",
+        "monster:plasma vortex",
+        "monster:shardstorm",
+        "monster:time vortex",
+        "monster:shimmering vortex",
+        "monster:chaos vortex",
+        "monster:aether vortex",
+        "monster:Wiruin, the Maelstrom",
+        "monster:storm of Unmagic"
+      ]
+    },
+    {
+      "source": "monsters/golem.png",
+      "row": 15,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:flesh golem",
+        "monster:clay golem",
+        "monster:stone golem",
+        "monster:iron golem",
+        "monster:pukelman",
+        "monster:mithril golem",
+        "monster:Eog golem",
+        "monster:silent watcher",
+        "monster:colbran",
+        "monster:colossus",
+        "monster:drolem",
+        "monster:bone golem",
+        "monster:bronze golem"
+      ]
+    },
+    {
+      "source": "monsters/zephyr-hound.png",
+      "row": 15,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:light hound",
+        "monster:dark hound",
+        "monster:clear hound",
+        "monster:fire hound",
+        "monster:cold hound",
+        "monster:energy hound",
+        "monster:earth hound",
+        "monster:air hound",
+        "monster:water hound",
+        "monster:vibration hound",
+        "monster:nexus hound",
+        "monster:gravity hound",
+        "monster:inertia hound",
+        "monster:impact hound",
+        "monster:multi-hued hound",
+        "monster:nether hound",
+        "monster:time hound",
+        "monster:plasma hound",
+        "monster:chaos hound",
+        "monster:hound of Tindalos",
+        "monster:aether hound"
+      ]
+    },
+    {
+      "source": "monsters/ainu.png",
+      "row": 15,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:Maia",
+        "monster:Maia of Nienna",
+        "monster:Maia of Mandos",
+        "monster:Maia of Orom\u00eb",
+        "monster:Maia of Yavanna",
+        "monster:Maia of Aul\u00eb",
+        "monster:Maia of Ulmo",
+        "monster:Maia of Manw\u00eb",
+        "monster:Maia of Varda",
+        "monster:Oss\u00eb, Herald of Ulmo",
+        "monster:Makar, the Warrior",
+        "monster:Sauron, the Sorcerer",
+        "monster:Me\u00e1ss\u00eb, the Bloody"
+      ]
+    },
+    {
+      "source": "monsters/quylthulg.png",
+      "row": 15,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:quylthulg",
+        "monster:nexus quylthulg",
+        "monster:swamp quylthulg",
+        "monster:rotting quylthulg",
+        "monster:demonic quylthulg",
+        "monster:draconic quylthulg",
+        "monster:greater demonic quylthulg",
+        "monster:greater draconic quylthulg",
+        "monster:greater rotting quylthulg",
+        "monster:master quylthulg",
+        "monster:Qlzqqlzuup, the Emperor Quylthulg"
+      ]
+    },
+    {
+      "source": "monsters/xorn.png",
+      "row": 16,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:umber hulk",
+        "monster:xorn",
+        "monster:xaren",
+        "monster:stone warden",
+        "monster:living dungeon"
+      ]
+    },
+    {
+      "source": "monsters/hybrid.png",
+      "row": 16,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:white harpy",
+        "monster:black harpy",
+        "monster:hippogriff",
+        "monster:griffon",
+        "monster:chimaera",
+        "monster:gorgimaera",
+        "monster:manticore",
+        "monster:minotaur",
+        "monster:Baphomet the Minotaur Lord",
+        "monster:jabberwock"
+      ]
+    },
+    {
+      "source": "monsters/killer-beetle.png",
+      "row": 16,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:killer brown beetle",
+        "monster:killer stag beetle",
+        "monster:killer red beetle",
+        "monster:killer fire beetle",
+        "monster:killer slicer beetle",
+        "monster:death watch beetle",
+        "monster:killer iridescent beetle",
+        "monster:killer white beetle",
+        "monster:The Defiler"
+      ]
+    },
+    {
+      "source": "monsters/bird.png",
+      "row": 16,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:crow",
+        "monster:crow of Ud\u00fbn",
+        "monster:craban",
+        "monster:blood falcon",
+        "monster:corvid of shadow",
+        "monster:falcon of Ered Engrin",
+        "monster:giant roc",
+        "monster:winged horror",
+        "monster:The Phoenix"
+      ]
+    },
+    {
+      "source": "monsters/tree.png",
+      "row": 16,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:old forest tree",
+        "monster:Old Man Willow",
+        "monster:huorn",
+        "monster:black-hearted huorn",
+        "monster:hasty ent"
+      ]
+    },
+    {
+      "source": "monsters/mimic.png",
+      "row": 16,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:potion mimic",
+        "monster:scroll mimic",
+        "monster:ring mimic",
+        "monster:chest mimic",
+        "monster:blade of slaughter",
+        "monster:mimic (large jeweled chest)"
+      ]
+    },
+    {
+      "source": "monsters/mold.png",
+      "row": 16,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:green mold",
+        "monster:hairy mold",
+        "monster:disenchanter mold",
+        "monster:red mold",
+        "monster:shimmering mold",
+        "monster:venom mold",
+        "monster:death mold"
+      ]
+    },
+    {
+      "source": "monsters/yeti.png",
+      "row": 16,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:yeti",
+        "monster:sasquatch"
+      ]
+    },
+    {
+      "source": "monsters/lurker.png",
+      "row": 16,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:lurker",
+        "monster:trapper"
+      ]
+    },
+    {
+      "source": "monsters/quadruped.png",
+      "row": 17,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:cave bear",
+        "monster:grizzly bear",
+        "monster:werebear",
+        "monster:catoblepas",
+        "monster:m\u00fbmak",
+        "monster:night mare"
+      ]
+    },
+    {
+      "source": "monsters/feline.png",
+      "row": 17,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:wild cat",
+        "monster:panther",
+        "monster:tiger",
+        "monster:sabre-tooth tiger",
+        "monster:nightstalker",
+        "monster:Tevildo, Prince of Cats"
+      ]
+    },
+    {
+      "source": "monsters/morgoth.png",
+      "row": 17,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:Morgoth, Lord of Darkness"
+      ]
     }
   ]
 }
