@@ -54,6 +54,44 @@ def key_out_chroma(img, family=False):
     return img
 
 
+def load_palette():
+    """Load the locked theme palette from palette.json (list of #rrggbb or [r,g,b])."""
+    p = ROOT / "palette.json"
+    if not p.is_file():
+        return None
+    data = json.loads(p.read_text())
+    cols = data["colors"] if isinstance(data, dict) else data
+    out = []
+    for c in cols:
+        if isinstance(c, str):
+            c = c.lstrip("#")
+            out.append(tuple(int(c[i:i + 2], 16) for i in (0, 2, 4)))
+        else:
+            out.append(tuple(c))
+    return out
+
+
+def snap_to_palette(img, palette):
+    """Quantize every pixel to the nearest locked-palette color, preserving alpha.
+
+    This is what actually enforces tileset cohesion — the image model only
+    biases toward the theme; this guarantees it. Re-running build after editing
+    palette.json re-themes the whole set without regenerating any art.
+    """
+    rgba = img.convert("RGBA")
+    alpha = rgba.split()[3]
+    palimg = Image.new("P", (1, 1))
+    flat = []
+    for c in palette:
+        flat += list(c)
+    flat += flat[:3] * (256 - len(palette))  # pad to a full 256-entry palette
+    palimg.putpalette(flat)
+    q = rgba.convert("RGB").quantize(
+        palette=palimg, dither=Image.Dither.NONE).convert("RGBA")
+    q.putalpha(alpha)
+    return q
+
+
 def main():
     m = json.loads((ROOT / "manifest.json").read_text())
     ts = m["tileset"]["tile_size"]
@@ -96,6 +134,16 @@ def main():
             base.alpha_composite(img)
             img = base
         atlas.paste(img, (t["col"] * ts, t["row"] * ts))
+
+    # Lock the whole atlas to the theme palette (art-direction rule 1). This is
+    # the cohesion guarantee: every tile snaps to the same colors.
+    palette = load_palette()
+    if palette:
+        atlas = snap_to_palette(atlas, palette)
+        print(f"palette: snapped to {len(palette)} locked colors")
+    else:
+        print("palette: WARNING — no palette.json; tiles are NOT palette-locked "
+              "(see /tileset art-direction rule 1)")
 
     outdir = ROOT / "dist" / m["tileset"]["directory"]
     outdir.mkdir(parents=True, exist_ok=True)
