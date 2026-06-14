@@ -2190,7 +2190,6 @@
       "chroma": true,
       "maps": [
         "monster:apprentice",
-        "monster:mage",
         "monster:illusionist"
       ]
     },
@@ -2200,7 +2199,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:necromancer",
         "monster:necromancer of Ered Engrin",
         "monster:animist"
       ]
@@ -2211,7 +2209,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:acolyte",
         "monster:priest",
         "monster:druid"
       ]
@@ -2233,7 +2230,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:giant red scorpion",
         "monster:giant yellow scorpion",
         "monster:giant white tick"
       ]
@@ -2244,7 +2240,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:abyss spider",
         "monster:spider of Gorgoroth",
         "monster:Mirkwood spider"
       ]
@@ -2314,7 +2309,6 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:stone troll",
         "monster:cave troll",
         "monster:hill troll"
       ]
@@ -2325,7 +2319,6 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:olog",
         "monster:troll priest",
         "monster:troll blackguard"
       ]
@@ -2450,7 +2443,6 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:green ooze",
         "monster:blue ooze",
         "monster:black ooze"
       ]
@@ -2490,7 +2482,6 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:energy vortex",
         "monster:shardstorm",
         "monster:storm of Unmagic"
       ]
@@ -5418,6 +5409,87 @@
       "chroma": true,
       "maps": [
         "monster:ranger"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-mage-single.png",
+      "row": 68,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:mage"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-necromancer.png",
+      "row": 68,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:necromancer"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-acolyte.png",
+      "row": 68,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:acolyte"
+      ]
+    },
+    {
+      "source": "monsters/scorpion-red.png",
+      "row": 68,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:giant red scorpion"
+      ]
+    },
+    {
+      "source": "monsters/spider-abyss.png",
+      "row": 68,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:abyss spider"
+      ]
+    },
+    {
+      "source": "monsters/troll-stone-single.png",
+      "row": 68,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:stone troll"
+      ]
+    },
+    {
+      "source": "monsters/troll-olog.png",
+      "row": 68,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:olog"
+      ]
+    },
+    {
+      "source": "monsters/ooze-green.png",
+      "row": 68,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:green ooze"
+      ]
+    },
+    {
+      "source": "monsters/vortex-energy-single.png",
+      "row": 69,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:energy vortex"
       ]
     }
   ],
