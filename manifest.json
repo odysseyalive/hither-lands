@@ -1622,8 +1622,7 @@
       "chroma": true,
       "maps": [
         "monster:white wraith",
-        "monster:grey wraith",
-        "monster:nightwing"
+        "monster:grey wraith"
       ]
     },
     {
@@ -1660,7 +1659,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:nexus vortex",
         "monster:time vortex",
         "monster:shimmering vortex"
       ]
@@ -1681,7 +1679,6 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:light hound",
         "monster:clear hound",
         "monster:air hound"
       ]
@@ -1702,7 +1699,6 @@
       "chroma": true,
       "maps": [
         "monster:quylthulg",
-        "monster:nexus quylthulg",
         "monster:swamp quylthulg"
       ]
     },
@@ -1712,7 +1708,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:umber hulk",
         "monster:xorn",
         "monster:xaren"
       ]
@@ -1734,7 +1729,6 @@
       "chroma": true,
       "maps": [
         "monster:killer brown beetle",
-        "monster:killer stag beetle",
         "monster:killer red beetle"
       ]
     },
@@ -1764,8 +1758,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:potion mimic",
-        "monster:scroll mimic",
         "monster:ring mimic"
       ]
     },
@@ -1805,7 +1797,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:cave bear",
         "monster:grizzly bear",
         "monster:werebear"
       ]
@@ -5274,6 +5265,87 @@
       "chroma": true,
       "maps": [
         "monster:tengu"
+      ]
+    },
+    {
+      "source": "monsters/wraith-nightwing.png",
+      "row": 67,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:nightwing"
+      ]
+    },
+    {
+      "source": "monsters/xorn-umberhulk.png",
+      "row": 67,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:umber hulk"
+      ]
+    },
+    {
+      "source": "monsters/quadruped-cavebear.png",
+      "row": 67,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:cave bear"
+      ]
+    },
+    {
+      "source": "monsters/mimic-potion.png",
+      "row": 67,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:potion mimic"
+      ]
+    },
+    {
+      "source": "monsters/vortex-nexus.png",
+      "row": 67,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:nexus vortex"
+      ]
+    },
+    {
+      "source": "monsters/beetle-stag.png",
+      "row": 67,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:killer stag beetle"
+      ]
+    },
+    {
+      "source": "monsters/mimic-scroll.png",
+      "row": 67,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:scroll mimic"
+      ]
+    },
+    {
+      "source": "monsters/hound-light.png",
+      "row": 67,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:light hound"
+      ]
+    },
+    {
+      "source": "monsters/quylthulg-nexus.png",
+      "row": 67,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:nexus quylthulg"
       ]
     }
   ],
