@@ -1263,22 +1263,7 @@
       "row": 10,
       "col": 7,
       "chroma": "family",
-      "maps": [
-        "object:food:Hard Biscuit",
-        "object:food:Apple",
-        "object:food:Handful of Dried Fruits",
-        "object:food:Slime Mold",
-        "object:food:Ration of Food",
-        "object:food:Scrap of Flesh",
-        "object:food:Slice of Meat",
-        "object:food:Honey-cake",
-        "object:food:Piece of Elvish Waybread",
-        "object:food:Flask of Whisky",
-        "object:food:Pint of Fine Wine",
-        "object:food:Sip of Miruvor",
-        "object:food:Swig of Orcish Liquor",
-        "object:food:Draught of the Ents"
-      ]
+      "maps": []
     },
     {
       "source": "objects/chest.png",
@@ -7349,6 +7334,132 @@
       "chroma": true,
       "maps": [
         "object:hafted:Mighty Hammer"
+      ]
+    },
+    {
+      "source": "objects/food-hard-biscuit.png",
+      "row": 83,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:food:Hard Biscuit"
+      ]
+    },
+    {
+      "source": "objects/food-apple.png",
+      "row": 83,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:food:Apple"
+      ]
+    },
+    {
+      "source": "objects/food-dried-fruits.png",
+      "row": 83,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:food:Handful of Dried Fruits"
+      ]
+    },
+    {
+      "source": "objects/food-slime-mold.png",
+      "row": 83,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:food:Slime Mold"
+      ]
+    },
+    {
+      "source": "objects/food-ration.png",
+      "row": 83,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:food:Ration of Food"
+      ]
+    },
+    {
+      "source": "objects/food-scrap-of-flesh.png",
+      "row": 83,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:food:Scrap of Flesh"
+      ]
+    },
+    {
+      "source": "objects/food-slice-of-meat.png",
+      "row": 84,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:food:Slice of Meat"
+      ]
+    },
+    {
+      "source": "objects/food-honey-cake.png",
+      "row": 84,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:food:Honey-cake"
+      ]
+    },
+    {
+      "source": "objects/food-elvish-waybread.png",
+      "row": 84,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:food:Piece of Elvish Waybread"
+      ]
+    },
+    {
+      "source": "objects/food-flask-of-whisky.png",
+      "row": 84,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:food:Flask of Whisky"
+      ]
+    },
+    {
+      "source": "objects/food-fine-wine.png",
+      "row": 84,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:food:Pint of Fine Wine"
+      ]
+    },
+    {
+      "source": "objects/food-miruvor.png",
+      "row": 84,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:food:Sip of Miruvor"
+      ]
+    },
+    {
+      "source": "objects/food-orcish-liquor.png",
+      "row": 84,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:food:Swig of Orcish Liquor"
+      ]
+    },
+    {
+      "source": "objects/food-ent-draught.png",
+      "row": 84,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:food:Draught of the Ents"
       ]
     }
   ],
