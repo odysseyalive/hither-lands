@@ -1631,7 +1631,6 @@
       "chroma": true,
       "maps": [
         "monster:vrock",
-        "monster:glabrezu",
         "monster:nalfeshnee",
         "monster:hezrou"
       ]
@@ -1644,8 +1643,7 @@
       "maps": [
         "monster:lemure",
         "monster:tengu",
-        "monster:homunculus",
-        "monster:quasit"
+        "monster:homunculus"
       ]
     },
     {
@@ -2146,8 +2144,7 @@
       "maps": [
         "monster:dark hound",
         "monster:nether hound",
-        "monster:time hound",
-        "monster:hound of Tindalos"
+        "monster:time hound"
       ]
     },
     {
@@ -2168,7 +2165,6 @@
       "chroma": true,
       "maps": [
         "monster:earth hound",
-        "monster:gravity hound",
         "monster:inertia hound",
         "monster:impact hound"
       ]
@@ -2281,8 +2277,7 @@
       "maps": [
         "monster:ranger",
         "monster:ranger chieftain",
-        "monster:Easterling archer",
-        "monster:beastmaster"
+        "monster:Easterling archer"
       ]
     },
     {
@@ -2353,7 +2348,6 @@
       "maps": [
         "monster:abyss spider",
         "monster:spider of Gorgoroth",
-        "monster:ancient spider",
         "monster:Mirkwood spider"
       ]
     },
@@ -2504,9 +2498,7 @@
       "chroma": true,
       "maps": [
         "monster:lesser titan",
-        "monster:greater titan",
-        "monster:Gilim, the Giant of Eruman",
-        "monster:Nan, the Giant"
+        "monster:greater titan"
       ]
     },
     {
@@ -2548,8 +2540,7 @@
       "maps": [
         "monster:green elf archer",
         "monster:E\u00f6l, the Dark Elven Smith",
-        "monster:F\u00ebanorian raider",
-        "monster:Maeglin, the Traitor of Gondolin"
+        "monster:F\u00ebanorian raider"
       ]
     },
     {
@@ -2820,7 +2811,6 @@
       "chroma": true,
       "maps": [
         "monster:red worm mass",
-        "monster:nether worm mass",
         "monster:abyss worm mass",
         "monster:disenchanter worm mass"
       ]
@@ -3660,6 +3650,88 @@
       "chroma": true,
       "maps": [
         "monster:spirit troll"
+      ]
+    },
+    {
+      "source": "monsters/hound-tindalos.png",
+      "row": 54,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:hound of Tindalos"
+      ]
+    },
+    {
+      "source": "monsters/hound-gravity.png",
+      "row": 54,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:gravity hound"
+      ]
+    },
+    {
+      "source": "monsters/demon-glabrezu.png",
+      "row": 54,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:glabrezu"
+      ]
+    },
+    {
+      "source": "monsters/demon-quasit.png",
+      "row": 54,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:quasit"
+      ]
+    },
+    {
+      "source": "monsters/spider-ancient.png",
+      "row": 55,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:ancient spider"
+      ]
+    },
+    {
+      "source": "monsters/worm-nether.png",
+      "row": 55,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:nether worm mass"
+      ]
+    },
+    {
+      "source": "monsters/beastmaster.png",
+      "row": 55,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:beastmaster"
+      ]
+    },
+    {
+      "source": "monsters/elf-maeglin.png",
+      "row": 55,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:Maeglin, the Traitor of Gondolin"
+      ]
+    },
+    {
+      "source": "monsters/titan-named.png",
+      "row": 55,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:Gilim, the Giant of Eruman",
+        "monster:Nan, the Giant"
       ]
     }
   ],
