@@ -2140,7 +2140,6 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:ranger chieftain",
         "monster:Easterling archer"
       ]
     },
@@ -2150,7 +2149,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:apprentice",
         "monster:illusionist"
       ]
     },
@@ -2160,7 +2158,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:necromancer of Ered Engrin",
         "monster:animist"
       ]
     },
@@ -2180,7 +2177,6 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:Ulfast, son of Ulfang",
         "monster:Ulwarth, Son of Ulfang"
       ]
     },
@@ -2852,7 +2848,6 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:mean-looking mercenary",
         "monster:Easterling assassin"
       ]
     },
@@ -2880,7 +2875,6 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:purple mushroom patch",
         "monster:clear mushroom patch"
       ]
     },
@@ -2917,7 +2911,6 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:shimmering mold",
         "monster:venom mold"
       ]
     },
@@ -2946,7 +2939,6 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:maddened weasel",
         "monster:giant grey rat"
       ]
     },
@@ -3462,8 +3454,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:Omarax, the Eye Tyrant",
-        "monster:beholder hive-mother"
+        "monster:Omarax, the Eye Tyrant"
       ]
     },
     {
@@ -6560,6 +6551,87 @@
       "chroma": true,
       "maps": [
         "monster:Ghost"
+      ]
+    },
+    {
+      "source": "monsters/beholder-hivemother.png",
+      "row": 77,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:beholder hive-mother"
+      ]
+    },
+    {
+      "source": "monsters/mold-shimmering.png",
+      "row": 77,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:shimmering mold"
+      ]
+    },
+    {
+      "source": "monsters/mushroom-purple.png",
+      "row": 77,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:purple mushroom patch"
+      ]
+    },
+    {
+      "source": "monsters/rat-weasel.png",
+      "row": 77,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:maddened weasel"
+      ]
+    },
+    {
+      "source": "monsters/rogue-mercenary.png",
+      "row": 77,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:mean-looking mercenary"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-ranger-chief.png",
+      "row": 77,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:ranger chieftain"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-necromancer.png",
+      "row": 77,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:necromancer of Ered Engrin"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-ulfast.png",
+      "row": 77,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:Ulfast, son of Ulfang"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-apprentice.png",
+      "row": 77,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:apprentice"
       ]
     }
   ],
