@@ -301,9 +301,7 @@
       "maps": [
         "monster:small kobold",
         "monster:kobold",
-        "monster:large kobold",
-        "monster:kobold archer",
-        "monster:Mugh\u00e2sh the Kobold Lord"
+        "monster:large kobold"
       ]
     },
     {
@@ -427,9 +425,7 @@
       "maps": [
         "monster:cave spider",
         "monster:wood spider",
-        "monster:giant spider",
-        "monster:giant tarantula",
-        "monster:phase spider"
+        "monster:giant spider"
       ]
     },
     {
@@ -439,10 +435,7 @@
       "chroma": true,
       "maps": [
         "monster:blue yeek",
-        "monster:terrified yeek",
-        "monster:Orfax, Son of Boldor",
-        "monster:master yeek",
-        "monster:Boldor, King of the Yeeks"
+        "monster:terrified yeek"
       ]
     },
     {
@@ -485,10 +478,7 @@
       "chroma": true,
       "maps": [
         "monster:apparition of hunger",
-        "monster:ghost",
-        "monster:phantom",
-        "monster:Ghost",
-        "monster:Phantom"
+        "monster:ghost"
       ]
     },
     {
@@ -1604,9 +1594,7 @@
       "maps": [
         "monster:winged dragon of bile",
         "monster:winged dragon of chaos",
-        "monster:winged dragon of balance",
-        "monster:winged dragon of many colours",
-        "monster:winged dragon of power"
+        "monster:winged dragon of balance"
       ]
     },
     {
@@ -1793,9 +1781,7 @@
       "maps": [
         "monster:umber hulk",
         "monster:xorn",
-        "monster:xaren",
-        "monster:stone warden",
-        "monster:living dungeon"
+        "monster:xaren"
       ]
     },
     {
@@ -2094,10 +2080,7 @@
       "chroma": true,
       "maps": [
         "monster:gold worm",
-        "monster:gold dragon",
-        "monster:ethereal drake",
-        "monster:ethereal dragon",
-        "monster:law drake"
+        "monster:gold dragon"
       ]
     },
     {
@@ -2219,11 +2202,8 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:banshee",
         "monster:moaning spirit",
-        "monster:lost soul",
-        "monster:The Phantom of Eilinel",
-        "monster:spectre"
+        "monster:lost soul"
       ]
     },
     {
@@ -2442,10 +2422,7 @@
       "chroma": true,
       "maps": [
         "monster:forest wight",
-        "monster:grave wight",
-        "monster:barrow wight",
-        "monster:emperor wight",
-        "monster:Wight"
+        "monster:grave wight"
       ]
     },
     {
@@ -3444,6 +3421,101 @@
         "monster:huorn",
         "monster:black-hearted huorn",
         "monster:hasty ent"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon-boss.png",
+      "row": 53,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:winged dragon of many colours",
+        "monster:winged dragon of power"
+      ]
+    },
+    {
+      "source": "monsters/dragon-ethereal.png",
+      "row": 53,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:ethereal drake",
+        "monster:ethereal dragon",
+        "monster:law drake"
+      ]
+    },
+    {
+      "source": "monsters/banshee.png",
+      "row": 53,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:banshee",
+        "monster:The Phantom of Eilinel",
+        "monster:spectre"
+      ]
+    },
+    {
+      "source": "monsters/wight-king.png",
+      "row": 53,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:barrow wight",
+        "monster:emperor wight",
+        "monster:Wight"
+      ]
+    },
+    {
+      "source": "monsters/phantom.png",
+      "row": 53,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:phantom",
+        "monster:Ghost",
+        "monster:Phantom"
+      ]
+    },
+    {
+      "source": "monsters/spider-phase.png",
+      "row": 53,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:giant tarantula",
+        "monster:phase spider"
+      ]
+    },
+    {
+      "source": "monsters/xorn-boss.png",
+      "row": 53,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:stone warden",
+        "monster:living dungeon"
+      ]
+    },
+    {
+      "source": "monsters/kobold-lord.png",
+      "row": 53,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:kobold archer",
+        "monster:Mugh\u00e2sh the Kobold Lord"
+      ]
+    },
+    {
+      "source": "monsters/yeek-shaman.png",
+      "row": 53,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:Orfax, Son of Boldor",
+        "monster:master yeek",
+        "monster:Boldor, King of the Yeeks"
       ]
     }
   ],
