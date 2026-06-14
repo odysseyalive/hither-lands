@@ -269,8 +269,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:scruffy little dog",
-        "monster:blink dog"
+        "monster:scruffy little dog"
       ]
     },
     {
@@ -1533,7 +1532,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:pseudo-dragon",
         "monster:wyvern"
       ]
     },
@@ -2028,8 +2026,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:cold hound",
-        "monster:water hound"
+        "monster:cold hound"
       ]
     },
     {
@@ -2269,7 +2266,6 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:forest wight",
         "monster:grave wight"
       ]
     },
@@ -2289,7 +2285,6 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:cave troll",
         "monster:hill troll"
       ]
     },
@@ -2699,7 +2694,6 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:basilisk",
         "monster:greater basilisk"
       ]
     },
@@ -2719,7 +2713,6 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:chimaera",
         "monster:gorgimaera"
       ]
     },
@@ -2818,7 +2811,6 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:imp",
         "monster:nruling"
       ]
     },
@@ -3560,8 +3552,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:corvid of shadow",
-        "monster:crow of Ud\u00fbn"
+        "monster:corvid of shadow"
       ]
     },
     {
@@ -6010,6 +6001,87 @@
       "chroma": true,
       "maps": [
         "monster:skeleton human"
+      ]
+    },
+    {
+      "source": "monsters/hound-water.png",
+      "row": 73,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:water hound"
+      ]
+    },
+    {
+      "source": "monsters/troll-cave.png",
+      "row": 73,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:cave troll"
+      ]
+    },
+    {
+      "source": "monsters/wraith-forest-wight.png",
+      "row": 73,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:forest wight"
+      ]
+    },
+    {
+      "source": "monsters/demon-imp-single.png",
+      "row": 73,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:imp"
+      ]
+    },
+    {
+      "source": "monsters/basilisk-single.png",
+      "row": 73,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:basilisk"
+      ]
+    },
+    {
+      "source": "monsters/chimera-single.png",
+      "row": 73,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:chimaera"
+      ]
+    },
+    {
+      "source": "monsters/dragon-pseudo.png",
+      "row": 73,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:pseudo-dragon"
+      ]
+    },
+    {
+      "source": "monsters/dog-blink.png",
+      "row": 73,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:blink dog"
+      ]
+    },
+    {
+      "source": "monsters/bird-crow-udun.png",
+      "row": 73,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:crow of Ud\u00fbn"
       ]
     }
   ],
