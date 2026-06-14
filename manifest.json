@@ -353,7 +353,6 @@
       "chroma": true,
       "maps": [
         "monster:white worm mass",
-        "monster:green worm mass",
         "monster:clear worm mass",
         "monster:yellow worm mass"
       ]
@@ -398,8 +397,7 @@
       "maps": [
         "monster:soldier ant",
         "monster:giant black ant",
-        "monster:giant white ant",
-        "monster:giant grey ant"
+        "monster:giant white ant"
       ]
     },
     {
@@ -1728,8 +1726,7 @@
       "maps": [
         "monster:light hound",
         "monster:clear hound",
-        "monster:air hound",
-        "monster:nexus hound"
+        "monster:air hound"
       ]
     },
     {
@@ -2243,8 +2240,7 @@
       "maps": [
         "monster:battle-scarred veteran",
         "monster:soldier",
-        "monster:warrior",
-        "monster:brigand"
+        "monster:warrior"
       ]
     },
     {
@@ -2806,7 +2802,6 @@
       "maps": [
         "monster:mummified orc",
         "monster:mummified human",
-        "monster:mummified troll",
         "monster:mummified chieftain"
       ]
     },
@@ -2827,7 +2822,6 @@
       "chroma": true,
       "maps": [
         "monster:rotting quylthulg",
-        "monster:demonic quylthulg",
         "monster:greater demonic quylthulg",
         "monster:greater rotting quylthulg"
       ]
@@ -2872,8 +2866,7 @@
       "maps": [
         "monster:giant red ant",
         "monster:giant silver ant",
-        "monster:giant army ant",
-        "monster:giant fire ant"
+        "monster:giant army ant"
       ]
     },
     {
@@ -2915,7 +2908,6 @@
       "chroma": true,
       "maps": [
         "monster:killer slicer beetle",
-        "monster:death watch beetle",
         "monster:killer iridescent beetle",
         "monster:killer white beetle"
       ]
@@ -2972,8 +2964,7 @@
       "maps": [
         "monster:5-headed hydra",
         "monster:6-headed hydra",
-        "monster:7-headed hydra",
-        "monster:8-headed hydra"
+        "monster:7-headed hydra"
       ]
     },
     {
@@ -4236,6 +4227,87 @@
       "chroma": true,
       "maps": [
         "monster:patriarch"
+      ]
+    },
+    {
+      "source": "monsters/mummy-troll.png",
+      "row": 59,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:mummified troll"
+      ]
+    },
+    {
+      "source": "monsters/ant-fire-giant.png",
+      "row": 59,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:giant fire ant"
+      ]
+    },
+    {
+      "source": "monsters/quylthulg-demonic.png",
+      "row": 59,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:demonic quylthulg"
+      ]
+    },
+    {
+      "source": "monsters/hound-nexus.png",
+      "row": 59,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:nexus hound"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-brigand.png",
+      "row": 59,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:brigand"
+      ]
+    },
+    {
+      "source": "monsters/beetle-deathwatch.png",
+      "row": 59,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:death watch beetle"
+      ]
+    },
+    {
+      "source": "monsters/worm-mass-green.png",
+      "row": 59,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:green worm mass"
+      ]
+    },
+    {
+      "source": "monsters/ant-grey.png",
+      "row": 59,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:giant grey ant"
+      ]
+    },
+    {
+      "source": "monsters/hydra-8head.png",
+      "row": 59,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:8-headed hydra"
       ]
     }
   ],
