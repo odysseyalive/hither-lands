@@ -321,8 +321,7 @@
       "maps": [
         "monster:floating eye",
         "monster:radiation eye",
-        "monster:disenchanter eye",
-        "monster:bloodshot eye"
+        "monster:disenchanter eye"
       ]
     },
     {
@@ -333,8 +332,7 @@
       "maps": [
         "monster:fruit bat",
         "monster:giant brown bat",
-        "monster:giant tan bat",
-        "monster:vampire bat"
+        "monster:giant tan bat"
       ]
     },
     {
@@ -536,8 +534,7 @@
       "maps": [
         "monster:giant green dragon fly",
         "monster:giant white dragon fly",
-        "monster:giant black dragon fly",
-        "monster:giant gold dragon fly"
+        "monster:giant black dragon fly"
       ]
     },
     {
@@ -556,10 +553,8 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:Skeleton",
         "monster:skeleton kobold",
-        "monster:skeleton orc",
-        "monster:skeleton human"
+        "monster:skeleton orc"
       ]
     },
     {
@@ -1626,8 +1621,7 @@
       "maps": [
         "monster:hill giant",
         "monster:giant paladin",
-        "monster:stone giant",
-        "monster:giant chieftain"
+        "monster:stone giant"
       ]
     },
     {
@@ -1682,8 +1676,7 @@
       "maps": [
         "monster:white wraith",
         "monster:grey wraith",
-        "monster:nightwing",
-        "monster:nightwalker"
+        "monster:nightwing"
       ]
     },
     {
@@ -1704,9 +1697,7 @@
       "chroma": true,
       "maps": [
         "monster:zombified kobold",
-        "monster:zombified orc",
-        "monster:zombified human",
-        "monster:Zombie"
+        "monster:zombified orc"
       ]
     },
     {
@@ -1735,8 +1726,7 @@
       "maps": [
         "monster:clay golem",
         "monster:stone golem",
-        "monster:pukelman",
-        "monster:silent watcher"
+        "monster:pukelman"
       ]
     },
     {
@@ -1792,8 +1782,7 @@
       "maps": [
         "monster:white harpy",
         "monster:black harpy",
-        "monster:hippogriff",
-        "monster:griffon"
+        "monster:hippogriff"
       ]
     },
     {
@@ -1804,8 +1793,7 @@
       "maps": [
         "monster:killer brown beetle",
         "monster:killer stag beetle",
-        "monster:killer red beetle",
-        "monster:killer fire beetle"
+        "monster:killer red beetle"
       ]
     },
     {
@@ -2214,7 +2202,6 @@
       "maps": [
         "monster:poltergeist",
         "monster:green glutton ghost",
-        "monster:spirit troll",
         "monster:Spirit"
       ]
     },
@@ -2248,8 +2235,7 @@
       "maps": [
         "monster:earth spirit",
         "monster:earth elemental",
-        "monster:Quaker, Master of Earth",
-        "monster:great earth elemental"
+        "monster:Quaker, Master of Earth"
       ]
     },
     {
@@ -2260,8 +2246,7 @@
       "maps": [
         "monster:air spirit",
         "monster:air elemental",
-        "monster:invisible stalker",
-        "monster:Ariel, Queen of Air"
+        "monster:invisible stalker"
       ]
     },
     {
@@ -2456,8 +2441,7 @@
       "maps": [
         "monster:olog",
         "monster:troll priest",
-        "monster:troll blackguard",
-        "monster:Rogrog the Black Troll"
+        "monster:troll blackguard"
       ]
     },
     {
@@ -2692,9 +2676,7 @@
       "chroma": true,
       "maps": [
         "monster:orc captain",
-        "monster:Othrod, Lord of the orcs",
-        "monster:Orcogar, son of Orcobal",
-        "monster:Orcobal the Mighty"
+        "monster:Othrod, Lord of the orcs"
       ]
     },
     {
@@ -2716,7 +2698,6 @@
       "maps": [
         "monster:warg",
         "monster:werewolf",
-        "monster:hellhound",
         "monster:werewolf of Sauron"
       ]
     },
@@ -2908,9 +2889,7 @@
       "chroma": true,
       "maps": [
         "monster:giant green frog",
-        "monster:giant red frog",
-        "monster:salamander",
-        "monster:giant salamander"
+        "monster:giant red frog"
       ]
     },
     {
@@ -2945,8 +2924,7 @@
       "maps": [
         "monster:chimaera",
         "monster:gorgimaera",
-        "monster:manticore",
-        "monster:jabberwock"
+        "monster:manticore"
       ]
     },
     {
@@ -3516,6 +3494,172 @@
         "monster:Orfax, Son of Boldor",
         "monster:master yeek",
         "monster:Boldor, King of the Yeeks"
+      ]
+    },
+    {
+      "source": "monsters/jabberwock.png",
+      "row": 53,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:jabberwock"
+      ]
+    },
+    {
+      "source": "monsters/griffon.png",
+      "row": 53,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:griffon"
+      ]
+    },
+    {
+      "source": "monsters/silent-watcher.png",
+      "row": 53,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:silent watcher"
+      ]
+    },
+    {
+      "source": "monsters/hellhound.png",
+      "row": 53,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:hellhound"
+      ]
+    },
+    {
+      "source": "monsters/vampire-bat.png",
+      "row": 53,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:vampire bat"
+      ]
+    },
+    {
+      "source": "monsters/zombie-human.png",
+      "row": 53,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:zombified human",
+        "monster:Zombie"
+      ]
+    },
+    {
+      "source": "monsters/salamander.png",
+      "row": 54,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:salamander",
+        "monster:giant salamander"
+      ]
+    },
+    {
+      "source": "monsters/skeleton-human.png",
+      "row": 54,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:skeleton human",
+        "monster:Skeleton"
+      ]
+    },
+    {
+      "source": "monsters/dragonfly-gold.png",
+      "row": 54,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:giant gold dragon fly"
+      ]
+    },
+    {
+      "source": "monsters/giant-chieftain.png",
+      "row": 54,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:giant chieftain"
+      ]
+    },
+    {
+      "source": "monsters/killer-fire-beetle.png",
+      "row": 54,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:killer fire beetle"
+      ]
+    },
+    {
+      "source": "monsters/eye-bloodshot.png",
+      "row": 54,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:bloodshot eye"
+      ]
+    },
+    {
+      "source": "monsters/troll-rogrog.png",
+      "row": 54,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:Rogrog the Black Troll"
+      ]
+    },
+    {
+      "source": "monsters/orc-boss.png",
+      "row": 54,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:Orcogar, son of Orcobal",
+        "monster:Orcobal the Mighty"
+      ]
+    },
+    {
+      "source": "monsters/nightwalker.png",
+      "row": 54,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:nightwalker"
+      ]
+    },
+    {
+      "source": "monsters/elemental-air-queen.png",
+      "row": 54,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:Ariel, Queen of Air"
+      ]
+    },
+    {
+      "source": "monsters/elemental-earth-great.png",
+      "row": 54,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:great earth elemental"
+      ]
+    },
+    {
+      "source": "monsters/spirit-troll.png",
+      "row": 54,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:spirit troll"
       ]
     }
   ],
