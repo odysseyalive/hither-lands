@@ -2298,7 +2298,6 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:black wraith",
         "monster:nether wraith",
         "monster:Nether Wraith"
       ]
@@ -2503,7 +2502,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:skeleton lord",
         "monster:skeleton troll",
         "monster:skeleton etten"
       ]
@@ -2598,7 +2596,6 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:grey mold",
         "monster:yellow mold",
         "monster:brown mold"
       ]
@@ -2666,7 +2663,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:red worm mass",
         "monster:abyss worm mass",
         "monster:disenchanter worm mass"
       ]
@@ -2687,7 +2683,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:mummified orc",
         "monster:mummified human",
         "monster:mummified chieftain"
       ]
@@ -2708,7 +2703,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:rotting quylthulg",
         "monster:greater demonic quylthulg",
         "monster:greater rotting quylthulg"
       ]
@@ -2719,7 +2713,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:draconic quylthulg",
         "monster:greater draconic quylthulg",
         "monster:master quylthulg"
       ]
@@ -2810,7 +2803,6 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:king cobra",
         "monster:black mamba",
         "monster:serpent of the brownlands"
       ]
@@ -2841,7 +2833,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:5-headed hydra",
         "monster:6-headed hydra",
         "monster:7-headed hydra"
       ]
@@ -5490,6 +5481,87 @@
       "chroma": true,
       "maps": [
         "monster:energy vortex"
+      ]
+    },
+    {
+      "source": "monsters/mold-grey.png",
+      "row": 69,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:grey mold"
+      ]
+    },
+    {
+      "source": "monsters/worm-hot-red.png",
+      "row": 69,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:red worm mass"
+      ]
+    },
+    {
+      "source": "monsters/mummy-orc.png",
+      "row": 69,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:mummified orc"
+      ]
+    },
+    {
+      "source": "monsters/quylthulg-rotting.png",
+      "row": 69,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:rotting quylthulg"
+      ]
+    },
+    {
+      "source": "monsters/quylthulg-draconic.png",
+      "row": 69,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:draconic quylthulg"
+      ]
+    },
+    {
+      "source": "monsters/wraith-black.png",
+      "row": 69,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:black wraith"
+      ]
+    },
+    {
+      "source": "monsters/snake-cobra.png",
+      "row": 69,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:king cobra"
+      ]
+    },
+    {
+      "source": "monsters/hydra-5head.png",
+      "row": 69,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:5-headed hydra"
+      ]
+    },
+    {
+      "source": "monsters/skeleton-lord.png",
+      "row": 69,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:skeleton lord"
       ]
     }
   ],
