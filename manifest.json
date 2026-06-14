@@ -1036,24 +1036,7 @@
       "row": 8,
       "col": 8,
       "chroma": "family",
-      "maps": [
-        "object:hafted:Ball-and-Chain",
-        "object:hafted:Morning Star",
-        "object:hafted:Flail",
-        "object:hafted:Two-Handed Great Flail",
-        "object:hafted:Magestaff",
-        "object:hafted:Mace",
-        "object:hafted:Lead-Filled Mace",
-        "object:hafted:Quarterstaff",
-        "object:hafted:Throwing Hammer",
-        "object:hafted:War Hammer",
-        "object:hafted:Maul",
-        "object:hafted:Great Hammer",
-        "object:hafted:Storm Hammer",
-        "object:hafted:Mace of Disruption",
-        "object:hafted:Massive Iron Crown",
-        "object:hafted:Mighty Hammer"
-      ]
+      "maps": []
     },
     {
       "source": "objects/ring.png",
@@ -7222,6 +7205,150 @@
       "chroma": true,
       "maps": [
         "object:polearm:Lucerne Hammer"
+      ]
+    },
+    {
+      "source": "objects/hafted-ball-and-chain.png",
+      "row": 82,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Ball-and-Chain"
+      ]
+    },
+    {
+      "source": "objects/hafted-morning-star.png",
+      "row": 82,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Morning Star"
+      ]
+    },
+    {
+      "source": "objects/hafted-flail.png",
+      "row": 82,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Flail"
+      ]
+    },
+    {
+      "source": "objects/hafted-great-flail.png",
+      "row": 82,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Two-Handed Great Flail"
+      ]
+    },
+    {
+      "source": "objects/hafted-magestaff.png",
+      "row": 82,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Magestaff"
+      ]
+    },
+    {
+      "source": "objects/hafted-mace.png",
+      "row": 82,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Mace"
+      ]
+    },
+    {
+      "source": "objects/hafted-lead-filled-mace.png",
+      "row": 83,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Lead-Filled Mace"
+      ]
+    },
+    {
+      "source": "objects/hafted-quarterstaff.png",
+      "row": 83,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Quarterstaff"
+      ]
+    },
+    {
+      "source": "objects/hafted-throwing-hammer.png",
+      "row": 83,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Throwing Hammer"
+      ]
+    },
+    {
+      "source": "objects/hafted-war-hammer.png",
+      "row": 83,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:hafted:War Hammer"
+      ]
+    },
+    {
+      "source": "objects/hafted-maul.png",
+      "row": 83,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Maul"
+      ]
+    },
+    {
+      "source": "objects/hafted-great-hammer.png",
+      "row": 83,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Great Hammer"
+      ]
+    },
+    {
+      "source": "objects/hafted-storm-hammer.png",
+      "row": 83,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Storm Hammer"
+      ]
+    },
+    {
+      "source": "objects/hafted-mace-of-disruption.png",
+      "row": 83,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Mace of Disruption"
+      ]
+    },
+    {
+      "source": "objects/hafted-massive-iron-crown.png",
+      "row": 83,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Massive Iron Crown"
+      ]
+    },
+    {
+      "source": "objects/hafted-mighty-hammer.png",
+      "row": 83,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Mighty Hammer"
       ]
     }
   ],
