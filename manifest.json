@@ -1572,7 +1572,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:hill giant",
         "monster:stone giant"
       ]
     },
@@ -1601,7 +1600,6 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:lich",
         "monster:Lich"
       ]
     },
@@ -1666,7 +1664,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:clay golem",
         "monster:pukelman"
       ]
     },
@@ -2112,8 +2109,7 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:fire spirit",
-        "monster:fire elemental"
+        "monster:fire spirit"
       ]
     },
     {
@@ -2122,8 +2118,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:water spirit",
-        "monster:water elemental"
+        "monster:water spirit"
       ]
     },
     {
@@ -2132,8 +2127,7 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:earth spirit",
-        "monster:earth elemental"
+        "monster:earth spirit"
       ]
     },
     {
@@ -2142,8 +2136,7 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:air spirit",
-        "monster:air elemental"
+        "monster:air spirit"
       ]
     },
     {
@@ -2309,7 +2302,6 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:troll priest",
         "monster:troll blackguard"
       ]
     },
@@ -2355,7 +2347,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:fire giant",
         "monster:cyclops"
       ]
     },
@@ -5866,6 +5857,87 @@
       "chroma": true,
       "maps": [
         "monster:vampire lord"
+      ]
+    },
+    {
+      "source": "monsters/elemental-fire-single.png",
+      "row": 72,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:fire elemental"
+      ]
+    },
+    {
+      "source": "monsters/elemental-earth-single.png",
+      "row": 72,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:earth elemental"
+      ]
+    },
+    {
+      "source": "monsters/elemental-water-single.png",
+      "row": 72,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:water elemental"
+      ]
+    },
+    {
+      "source": "monsters/elemental-air-single.png",
+      "row": 72,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:air elemental"
+      ]
+    },
+    {
+      "source": "monsters/lich-single.png",
+      "row": 72,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:lich"
+      ]
+    },
+    {
+      "source": "monsters/golem-clay.png",
+      "row": 72,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:clay golem"
+      ]
+    },
+    {
+      "source": "monsters/giant-hill.png",
+      "row": 72,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:hill giant"
+      ]
+    },
+    {
+      "source": "monsters/troll-priest.png",
+      "row": 72,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:troll priest"
+      ]
+    },
+    {
+      "source": "monsters/giant-fire-single.png",
+      "row": 72,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:fire giant"
       ]
     }
   ],
