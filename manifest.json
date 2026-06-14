@@ -531,8 +531,7 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:snaga",
-        "monster:cave orc"
+        "monster:snaga"
       ]
     },
     {
@@ -1564,9 +1563,7 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:ogre",
-        "monster:black ogre",
-        "monster:cave ogre"
+        "monster:ogre"
       ]
     },
     {
@@ -1585,9 +1582,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:vrock",
-        "monster:nalfeshnee",
-        "monster:hezrou"
+        "monster:vrock"
       ]
     },
     {
@@ -1597,7 +1592,6 @@
       "chroma": true,
       "maps": [
         "monster:lemure",
-        "monster:tengu",
         "monster:homunculus"
       ]
     },
@@ -5226,6 +5220,60 @@
       "chroma": true,
       "maps": [
         "monster:orc shaman"
+      ]
+    },
+    {
+      "source": "monsters/orc-cave.png",
+      "row": 67,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:cave orc"
+      ]
+    },
+    {
+      "source": "monsters/ogre-black.png",
+      "row": 67,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:black ogre"
+      ]
+    },
+    {
+      "source": "monsters/demon-nalfeshnee.png",
+      "row": 67,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:nalfeshnee"
+      ]
+    },
+    {
+      "source": "monsters/ogre-cave.png",
+      "row": 67,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:cave ogre"
+      ]
+    },
+    {
+      "source": "monsters/demon-hezrou.png",
+      "row": 67,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:hezrou"
+      ]
+    },
+    {
+      "source": "monsters/demon-tengu.png",
+      "row": 67,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:tengu"
       ]
     }
   ],
