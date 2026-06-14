@@ -1686,8 +1686,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:xorn",
-        "monster:xaren"
+        "monster:xorn"
       ]
     },
     {
@@ -1751,8 +1750,7 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:yeti",
-        "monster:sasquatch"
+        "monster:yeti"
       ]
     },
     {
@@ -2399,8 +2397,7 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:fire vortex",
-        "monster:plasma vortex"
+        "monster:fire vortex"
       ]
     },
     {
@@ -2409,8 +2406,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:cold vortex",
-        "monster:water vortex"
+        "monster:cold vortex"
       ]
     },
     {
@@ -2531,8 +2527,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:shambling mound",
-        "monster:memory moss"
+        "monster:shambling mound"
       ]
     },
     {
@@ -2586,8 +2581,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:abyss worm mass",
-        "monster:disenchanter worm mass"
+        "monster:abyss worm mass"
       ]
     },
     {
@@ -2624,7 +2618,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:greater demonic quylthulg",
         "monster:greater rotting quylthulg"
       ]
     },
@@ -2634,7 +2627,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:greater draconic quylthulg",
         "monster:master quylthulg"
       ]
     },
@@ -3033,7 +3025,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:winged dragon of many colours",
         "monster:winged dragon of power"
       ]
     },
@@ -6680,6 +6671,87 @@
       "chroma": true,
       "maps": [
         "monster:Vecna, the Emperor Lich"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon-many.png",
+      "row": 78,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:winged dragon of many colours"
+      ]
+    },
+    {
+      "source": "monsters/quylthulg-greater-draconic.png",
+      "row": 78,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:greater draconic quylthulg"
+      ]
+    },
+    {
+      "source": "monsters/quylthulg-greater-demonic.png",
+      "row": 78,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:greater demonic quylthulg"
+      ]
+    },
+    {
+      "source": "monsters/xaren.png",
+      "row": 78,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:xaren"
+      ]
+    },
+    {
+      "source": "monsters/sasquatch.png",
+      "row": 78,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:sasquatch"
+      ]
+    },
+    {
+      "source": "monsters/memory-moss.png",
+      "row": 78,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:memory moss"
+      ]
+    },
+    {
+      "source": "monsters/vortex-plasma.png",
+      "row": 78,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:plasma vortex"
+      ]
+    },
+    {
+      "source": "monsters/vortex-water.png",
+      "row": 78,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:water vortex"
+      ]
+    },
+    {
+      "source": "monsters/worm-disenchanter.png",
+      "row": 78,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:disenchanter worm mass"
       ]
     }
   ],
