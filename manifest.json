@@ -1616,7 +1616,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:3-headed hydra",
         "monster:4-headed hydra"
       ]
     },
@@ -1745,7 +1744,6 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:green mold",
         "monster:hairy mold"
       ]
     },
@@ -1765,7 +1763,6 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:lurker",
         "monster:trapper"
       ]
     },
@@ -2384,7 +2381,6 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:red jelly",
         "monster:grape jelly"
       ]
     },
@@ -2537,7 +2533,6 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:yellow mold",
         "monster:brown mold"
       ]
     },
@@ -2904,7 +2899,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:spotted jelly",
         "monster:blue jelly"
       ]
     },
@@ -6416,6 +6410,60 @@
       "chroma": true,
       "maps": [
         "monster:lemure"
+      ]
+    },
+    {
+      "source": "monsters/lurker-single.png",
+      "row": 76,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:lurker"
+      ]
+    },
+    {
+      "source": "monsters/hydra-3head.png",
+      "row": 76,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:3-headed hydra"
+      ]
+    },
+    {
+      "source": "monsters/jelly-spotted.png",
+      "row": 76,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:spotted jelly"
+      ]
+    },
+    {
+      "source": "monsters/jelly-red.png",
+      "row": 76,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:red jelly"
+      ]
+    },
+    {
+      "source": "monsters/mold-green.png",
+      "row": 76,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:green mold"
+      ]
+    },
+    {
+      "source": "monsters/mold-yellow.png",
+      "row": 76,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:yellow mold"
       ]
     }
   ],
