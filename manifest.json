@@ -405,8 +405,7 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:blue yeek",
-        "monster:terrified yeek"
+        "monster:blue yeek"
       ]
     },
     {
@@ -2180,8 +2179,7 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:giant yellow scorpion",
-        "monster:giant white tick"
+        "monster:giant yellow scorpion"
       ]
     },
     {
@@ -2190,8 +2188,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:spider of Gorgoroth",
-        "monster:Mirkwood spider"
+        "monster:spider of Gorgoroth"
       ]
     },
     {
@@ -2245,8 +2242,7 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:nether wraith",
-        "monster:Nether Wraith"
+        "monster:nether wraith"
       ]
     },
     {
@@ -2435,8 +2431,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:skeleton troll",
-        "monster:skeleton etten"
+        "monster:skeleton troll"
       ]
     },
     {
@@ -2590,8 +2585,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:purple worm",
-        "monster:wereworm"
+        "monster:purple worm"
       ]
     },
     {
@@ -6752,6 +6746,60 @@
       "chroma": true,
       "maps": [
         "monster:disenchanter worm mass"
+      ]
+    },
+    {
+      "source": "monsters/wereworm.png",
+      "row": 78,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:wereworm"
+      ]
+    },
+    {
+      "source": "monsters/skeleton-etten.png",
+      "row": 79,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:skeleton etten"
+      ]
+    },
+    {
+      "source": "monsters/wraith-nether-unique.png",
+      "row": 79,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:Nether Wraith"
+      ]
+    },
+    {
+      "source": "monsters/tick-white.png",
+      "row": 79,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:giant white tick"
+      ]
+    },
+    {
+      "source": "monsters/spider-mirkwood.png",
+      "row": 79,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:Mirkwood spider"
+      ]
+    },
+    {
+      "source": "monsters/yeek-terrified.png",
+      "row": 79,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:terrified yeek"
       ]
     }
   ],
