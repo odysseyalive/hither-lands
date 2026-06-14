@@ -2375,8 +2375,7 @@
       "maps": [
         "monster:pit fiend",
         "monster:horned reaper",
-        "monster:Krotus, the Dark Lord",
-        "monster:Pazuzu, Lord of Air"
+        "monster:Krotus, the Dark Lord"
       ]
     },
     {
@@ -2848,8 +2847,7 @@
       "maps": [
         "monster:draconic quylthulg",
         "monster:greater draconic quylthulg",
-        "monster:master quylthulg",
-        "monster:Qlzqqlzuup, the Emperor Quylthulg"
+        "monster:master quylthulg"
       ]
     },
     {
@@ -2937,8 +2935,7 @@
       "maps": [
         "monster:falcon of Ered Engrin",
         "monster:giant roc",
-        "monster:winged horror",
-        "monster:The Phoenix"
+        "monster:winged horror"
       ]
     },
     {
@@ -2949,8 +2946,7 @@
       "maps": [
         "monster:king cobra",
         "monster:black mamba",
-        "monster:serpent of the brownlands",
-        "monster:nightcrawler"
+        "monster:serpent of the brownlands"
       ]
     },
     {
@@ -3045,8 +3041,7 @@
       "maps": [
         "monster:master vampire",
         "monster:vampire lord",
-        "monster:elder vampire",
-        "monster:Thuringwethil, the Vampire Messenger"
+        "monster:elder vampire"
       ]
     },
     {
@@ -3057,8 +3052,7 @@
       "maps": [
         "monster:guardian naga",
         "monster:dark naga",
-        "monster:spirit naga",
-        "monster:gorgon"
+        "monster:spirit naga"
       ]
     },
     {
@@ -3069,8 +3063,7 @@
       "maps": [
         "monster:ogre shaman",
         "monster:ogre chieftain",
-        "monster:ogre mage",
-        "monster:Lokkak, the Ogre Chieftain"
+        "monster:ogre mage"
       ]
     },
     {
@@ -3118,8 +3111,7 @@
       "maps": [
         "monster:master thief",
         "monster:mean-looking mercenary",
-        "monster:Easterling assassin",
-        "monster:Harowen the Black Hand"
+        "monster:Easterling assassin"
       ]
     },
     {
@@ -3130,8 +3122,7 @@
       "maps": [
         "monster:sorcerer",
         "monster:enchantress",
-        "monster:shapeshifter",
-        "monster:Errata the Mage"
+        "monster:shapeshifter"
       ]
     },
     {
@@ -3996,6 +3987,87 @@
       "chroma": true,
       "maps": [
         "monster:bat of Gorgoroth"
+      ]
+    },
+    {
+      "source": "monsters/bird-phoenix.png",
+      "row": 57,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:The Phoenix"
+      ]
+    },
+    {
+      "source": "monsters/snake-nightcrawler.png",
+      "row": 57,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:nightcrawler"
+      ]
+    },
+    {
+      "source": "monsters/quylthulg-emperor.png",
+      "row": 57,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:Qlzqqlzuup, the Emperor Quylthulg"
+      ]
+    },
+    {
+      "source": "monsters/demon-pazuzu.png",
+      "row": 57,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:Pazuzu, Lord of Air"
+      ]
+    },
+    {
+      "source": "monsters/gorgon-bull.png",
+      "row": 57,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:gorgon"
+      ]
+    },
+    {
+      "source": "monsters/ogre-lokkak.png",
+      "row": 57,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:Lokkak, the Ogre Chieftain"
+      ]
+    },
+    {
+      "source": "monsters/rogue-harowen.png",
+      "row": 57,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:Harowen the Black Hand"
+      ]
+    },
+    {
+      "source": "monsters/mage-errata.png",
+      "row": 57,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:Errata the Mage"
+      ]
+    },
+    {
+      "source": "monsters/vampire-thuringwethil.png",
+      "row": 57,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:Thuringwethil, the Vampire Messenger"
       ]
     }
   ],
