@@ -435,8 +435,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:silver jelly",
-        "monster:white jelly"
+        "monster:silver jelly"
       ]
     },
     {
@@ -475,9 +474,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:gallant",
-        "monster:scout",
-        "monster:tamer"
+        "monster:gallant"
       ]
     },
     {
@@ -486,9 +483,7 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:giant white rat",
-        "monster:giant white mouse",
-        "monster:silver mouse"
+        "monster:giant white rat"
       ]
     },
     {
@@ -537,8 +532,7 @@
       "chroma": true,
       "maps": [
         "monster:snaga",
-        "monster:cave orc",
-        "monster:orc shaman"
+        "monster:cave orc"
       ]
     },
     {
@@ -5178,6 +5172,60 @@
       "chroma": true,
       "maps": [
         "monster:yellow jelly"
+      ]
+    },
+    {
+      "source": "monsters/jelly-white.png",
+      "row": 66,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:white jelly"
+      ]
+    },
+    {
+      "source": "monsters/traveler-tamer.png",
+      "row": 66,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:tamer"
+      ]
+    },
+    {
+      "source": "monsters/traveler-scout.png",
+      "row": 66,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:scout"
+      ]
+    },
+    {
+      "source": "monsters/mouse-silver.png",
+      "row": 66,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:silver mouse"
+      ]
+    },
+    {
+      "source": "monsters/mouse-white.png",
+      "row": 66,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:giant white mouse"
+      ]
+    },
+    {
+      "source": "monsters/orc-shaman.png",
+      "row": 66,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:orc shaman"
       ]
     }
   ],
