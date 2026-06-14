@@ -1078,14 +1078,7 @@
       "row": 9,
       "col": 3,
       "chroma": "family",
-      "maps": [
-        "object:hard armor:Metal Lamellar Armour",
-        "object:hard armor:Full Plate Armour",
-        "object:hard armor:Ribbed Plate Armour",
-        "object:hard armor:Mithril Chain Mail",
-        "object:hard armor:Mithril Plate Mail",
-        "object:hard armor:Adamantite Plate Mail"
-      ]
+      "maps": []
     },
     {
       "source": "objects/dragon-armor.png",
@@ -7603,6 +7596,60 @@
       "chroma": true,
       "maps": [
         "object:hard armor:Partial Plate Armour"
+      ]
+    },
+    {
+      "source": "objects/armor-lamellar.png",
+      "row": 85,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Metal Lamellar Armour"
+      ]
+    },
+    {
+      "source": "objects/armor-full-plate.png",
+      "row": 85,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Full Plate Armour"
+      ]
+    },
+    {
+      "source": "objects/armor-ribbed-plate.png",
+      "row": 85,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Ribbed Plate Armour"
+      ]
+    },
+    {
+      "source": "objects/armor-mithril-chain.png",
+      "row": 85,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Mithril Chain Mail"
+      ]
+    },
+    {
+      "source": "objects/armor-mithril-plate.png",
+      "row": 85,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Mithril Plate Mail"
+      ]
+    },
+    {
+      "source": "objects/armor-adamantite-plate.png",
+      "row": 85,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Adamantite Plate Mail"
       ]
     }
   ],
