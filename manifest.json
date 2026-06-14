@@ -1148,13 +1148,7 @@
       "row": 10,
       "col": 1,
       "chroma": "family",
-      "maps": [
-        "object:cloak:Cloak",
-        "object:cloak:Fur Cloak",
-        "object:cloak:Elven Cloak",
-        "object:cloak:Shadow Cloak",
-        "object:cloak:Ethereal Cloak"
-      ]
+      "maps": []
     },
     {
       "source": "objects/bow.png",
@@ -7887,6 +7881,51 @@
       "chroma": true,
       "maps": [
         "object:shield:Shield of Deflection"
+      ]
+    },
+    {
+      "source": "objects/cloak-plain.png",
+      "row": 87,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:cloak:Cloak"
+      ]
+    },
+    {
+      "source": "objects/cloak-fur.png",
+      "row": 87,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:cloak:Fur Cloak"
+      ]
+    },
+    {
+      "source": "objects/cloak-elven.png",
+      "row": 88,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:cloak:Elven Cloak"
+      ]
+    },
+    {
+      "source": "objects/cloak-shadow.png",
+      "row": 88,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:cloak:Shadow Cloak"
+      ]
+    },
+    {
+      "source": "objects/cloak-ethereal.png",
+      "row": 88,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:cloak:Ethereal Cloak"
       ]
     }
   ],
