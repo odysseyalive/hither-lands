@@ -495,9 +495,7 @@
       "maps": [
         "monster:creeping copper coins",
         "monster:creeping silver coins",
-        "monster:creeping gold coins",
-        "monster:creeping mithril coins",
-        "monster:creeping adamantite coins"
+        "monster:creeping gold coins"
       ]
     },
     {
@@ -1797,10 +1795,8 @@
       "chroma": true,
       "maps": [
         "monster:crow",
-        "monster:crow of Ud\u00fbn",
         "monster:craban",
-        "monster:blood falcon",
-        "monster:corvid of shadow"
+        "monster:blood falcon"
       ]
     },
     {
@@ -2383,7 +2379,6 @@
         "monster:pit fiend",
         "monster:horned reaper",
         "monster:Krotus, the Dark Lord",
-        "monster:marilith",
         "monster:Pazuzu, Lord of Air"
       ]
     },
@@ -2714,9 +2709,7 @@
       "maps": [
         "monster:gauth",
         "monster:beholder",
-        "monster:undead beholder",
-        "monster:beholder hive-mother",
-        "monster:Omarax, the Eye Tyrant"
+        "monster:undead beholder"
       ]
     },
     {
@@ -3203,8 +3196,7 @@
         "monster:chaos drake",
         "monster:balance drake",
         "monster:elemental drake",
-        "monster:clamor drake",
-        "monster:Kavlax the Many-Headed"
+        "monster:clamor drake"
       ]
     },
     {
@@ -3216,7 +3208,6 @@
         "monster:shadow drake",
         "monster:death drake",
         "monster:corrosive drake",
-        "monster:dracolich",
         "monster:dracolisk"
       ]
     },
@@ -3804,6 +3795,63 @@
       "chroma": true,
       "maps": [
         "monster:giant blue ant"
+      ]
+    },
+    {
+      "source": "monsters/beholder-boss.png",
+      "row": 55,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:Omarax, the Eye Tyrant",
+        "monster:beholder hive-mother"
+      ]
+    },
+    {
+      "source": "monsters/demon-marilith.png",
+      "row": 55,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:marilith"
+      ]
+    },
+    {
+      "source": "monsters/creeping-mithril.png",
+      "row": 56,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:creeping mithril coins",
+        "monster:creeping adamantite coins"
+      ]
+    },
+    {
+      "source": "monsters/bird-corvid.png",
+      "row": 56,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:corvid of shadow",
+        "monster:crow of Ud\u00fbn"
+      ]
+    },
+    {
+      "source": "monsters/dracolich.png",
+      "row": 56,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:dracolich"
+      ]
+    },
+    {
+      "source": "monsters/dragon-kavlax.png",
+      "row": 56,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:Kavlax the Many-Headed"
       ]
     }
   ],
