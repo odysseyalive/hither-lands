@@ -568,7 +568,6 @@
       "maps": [
         "monster:snaga",
         "monster:cave orc",
-        "monster:Balcmeg, the cave orc",
         "monster:orc shaman"
       ]
     },
@@ -2311,8 +2310,7 @@
       "maps": [
         "monster:Ulfast, son of Ulfang",
         "monster:Brodda, the Easterling",
-        "monster:Ulwarth, Son of Ulfang",
-        "monster:Uldor the Accursed"
+        "monster:Ulwarth, Son of Ulfang"
       ]
     },
     {
@@ -2969,8 +2967,7 @@
       "maps": [
         "monster:master lich",
         "monster:demilich",
-        "monster:archlich",
-        "monster:black reaver"
+        "monster:archlich"
       ]
     },
     {
@@ -3087,8 +3084,7 @@
       "maps": [
         "monster:paladin",
         "monster:blackguard",
-        "monster:black knight",
-        "monster:death knight"
+        "monster:black knight"
       ]
     },
     {
@@ -3133,8 +3129,7 @@
       "maps": [
         "monster:demonologist",
         "monster:witch",
-        "monster:lord of misrule",
-        "monster:lord of Ered Engrin"
+        "monster:lord of misrule"
       ]
     },
     {
@@ -3181,8 +3176,7 @@
       "maps": [
         "monster:shadow drake",
         "monster:death drake",
-        "monster:corrosive drake",
-        "monster:dracolisk"
+        "monster:corrosive drake"
       ]
     },
     {
@@ -4068,6 +4062,60 @@
       "chroma": true,
       "maps": [
         "monster:Thuringwethil, the Vampire Messenger"
+      ]
+    },
+    {
+      "source": "monsters/orc-balcmeg.png",
+      "row": 57,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:Balcmeg, the cave orc"
+      ]
+    },
+    {
+      "source": "monsters/easterling-uldor.png",
+      "row": 58,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:Uldor the Accursed"
+      ]
+    },
+    {
+      "source": "monsters/dragon-dracolisk.png",
+      "row": 58,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:dracolisk"
+      ]
+    },
+    {
+      "source": "monsters/lich-black-reaver.png",
+      "row": 58,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:black reaver"
+      ]
+    },
+    {
+      "source": "monsters/warrior-death-knight.png",
+      "row": 58,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:death knight"
+      ]
+    },
+    {
+      "source": "monsters/dark-lord-ered-engrin.png",
+      "row": 58,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:lord of Ered Engrin"
       ]
     }
   ],
