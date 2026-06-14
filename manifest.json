@@ -489,8 +489,7 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:giant green dragon fly",
-        "monster:giant white dragon fly"
+        "monster:giant green dragon fly"
       ]
     },
     {
@@ -2370,7 +2369,6 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:Ibun, Son of M\u00eem",
         "monster:Kh\u00eem, Son of M\u00eem"
       ]
     },
@@ -2591,8 +2589,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:Maia of Orom\u00eb",
-        "monster:Maia of Yavanna"
+        "monster:Maia of Orom\u00eb"
       ]
     },
     {
@@ -2704,9 +2701,7 @@
       "row": 50,
       "col": 9,
       "chroma": true,
-      "maps": [
-        "monster:gorgimaera"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/minotaur.png",
@@ -2732,8 +2727,7 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:killer slicer beetle",
-        "monster:killer white beetle"
+        "monster:killer slicer beetle"
       ]
     },
     {
@@ -2761,8 +2755,7 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:metallic green centipede",
-        "monster:metallic blue centipede"
+        "monster:metallic green centipede"
       ]
     },
     {
@@ -2907,8 +2900,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:demonologist",
-        "monster:witch"
+        "monster:demonologist"
       ]
     },
     {
@@ -3105,7 +3097,6 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:banshee",
         "monster:The Phantom of Eilinel"
       ]
     },
@@ -3480,8 +3471,7 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:Lorgan, Chief of the Easterlings",
-        "monster:Ulfang the Black"
+        "monster:Lorgan, Chief of the Easterlings"
       ]
     },
     {
@@ -6201,6 +6191,87 @@
       "chroma": true,
       "maps": [
         "monster:chaos drake"
+      ]
+    },
+    {
+      "source": "monsters/dragonfly-white.png",
+      "row": 74,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:giant white dragon fly"
+      ]
+    },
+    {
+      "source": "monsters/beetle-white.png",
+      "row": 74,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:killer white beetle"
+      ]
+    },
+    {
+      "source": "monsters/easterling-ulfang.png",
+      "row": 74,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:Ulfang the Black"
+      ]
+    },
+    {
+      "source": "monsters/chimera-gorgimaera.png",
+      "row": 74,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:gorgimaera"
+      ]
+    },
+    {
+      "source": "monsters/centipede-blue.png",
+      "row": 74,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:metallic blue centipede"
+      ]
+    },
+    {
+      "source": "monsters/dark-lord-witch.png",
+      "row": 74,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:witch"
+      ]
+    },
+    {
+      "source": "monsters/dwarf-ibun.png",
+      "row": 75,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:Ibun, Son of M\u00eem"
+      ]
+    },
+    {
+      "source": "monsters/banshee-single.png",
+      "row": 75,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:banshee"
+      ]
+    },
+    {
+      "source": "monsters/ainu-yavanna.png",
+      "row": 75,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:Maia of Yavanna"
       ]
     }
   ],
