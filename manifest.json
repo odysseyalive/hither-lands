@@ -2025,8 +2025,7 @@
       "chroma": true,
       "maps": [
         "monster:green worm",
-        "monster:green dragon",
-        "monster:venom drake"
+        "monster:green dragon"
       ]
     },
     {
@@ -2909,8 +2908,7 @@
       "chroma": true,
       "maps": [
         "monster:falcon of Ered Engrin",
-        "monster:giant roc",
-        "monster:winged horror"
+        "monster:giant roc"
       ]
     },
     {
@@ -2963,8 +2961,7 @@
       "chroma": true,
       "maps": [
         "monster:barbazu",
-        "monster:bile demon",
-        "monster:osyluth"
+        "monster:bile demon"
       ]
     },
     {
@@ -2974,8 +2971,7 @@
       "chroma": true,
       "maps": [
         "monster:imp",
-        "monster:nruling",
-        "monster:bodak"
+        "monster:nruling"
       ]
     },
     {
@@ -3127,8 +3123,7 @@
       "chroma": true,
       "maps": [
         "monster:chaos drake",
-        "monster:balance drake",
-        "monster:elemental drake"
+        "monster:balance drake"
       ]
     },
     {
@@ -3138,7 +3133,6 @@
       "chroma": true,
       "maps": [
         "monster:shadow drake",
-        "monster:death drake",
         "monster:corrosive drake"
       ]
     },
@@ -4436,6 +4430,60 @@
       "chroma": true,
       "maps": [
         "monster:lightning drake"
+      ]
+    },
+    {
+      "source": "monsters/drake-venom.png",
+      "row": 60,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:venom drake"
+      ]
+    },
+    {
+      "source": "monsters/drake-death.png",
+      "row": 60,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:death drake"
+      ]
+    },
+    {
+      "source": "monsters/demon-bodak.png",
+      "row": 60,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:bodak"
+      ]
+    },
+    {
+      "source": "monsters/drake-elemental.png",
+      "row": 61,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:elemental drake"
+      ]
+    },
+    {
+      "source": "monsters/demon-osyluth.png",
+      "row": 61,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:osyluth"
+      ]
+    },
+    {
+      "source": "monsters/bird-winged-horror.png",
+      "row": 61,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:winged horror"
       ]
     }
   ],
