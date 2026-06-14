@@ -2321,8 +2321,7 @@
       "maps": [
         "monster:giant red scorpion",
         "monster:giant yellow scorpion",
-        "monster:giant white tick",
-        "monster:giant fire tick"
+        "monster:giant white tick"
       ]
     },
     {
@@ -2635,8 +2634,7 @@
       "maps": [
         "monster:orc tracker",
         "monster:orc archer",
-        "monster:half-orc",
-        "monster:uruk"
+        "monster:half-orc"
       ]
     },
     {
@@ -2952,8 +2950,7 @@
       "maps": [
         "monster:metallic green centipede",
         "monster:metallic blue centipede",
-        "monster:metallic red centipede",
-        "monster:stegocentipede"
+        "monster:metallic red centipede"
       ]
     },
     {
@@ -2987,8 +2984,7 @@
       "maps": [
         "monster:barbazu",
         "monster:bile demon",
-        "monster:osyluth",
-        "monster:gelugon"
+        "monster:osyluth"
       ]
     },
     {
@@ -3089,7 +3085,6 @@
       "maps": [
         "monster:dr\u00faadan mage",
         "monster:dr\u00faadan druid",
-        "monster:patriarch",
         "monster:mystic"
       ]
     },
@@ -3145,7 +3140,6 @@
       "maps": [
         "monster:green jelly",
         "monster:spotted jelly",
-        "monster:ochre jelly",
         "monster:blue jelly"
       ]
     },
@@ -4188,6 +4182,60 @@
       "chroma": true,
       "maps": [
         "monster:shrieker mushroom patch"
+      ]
+    },
+    {
+      "source": "monsters/centipede-stego.png",
+      "row": 58,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:stegocentipede"
+      ]
+    },
+    {
+      "source": "monsters/orc-uruk.png",
+      "row": 58,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:uruk"
+      ]
+    },
+    {
+      "source": "monsters/demon-gelugon.png",
+      "row": 59,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:gelugon"
+      ]
+    },
+    {
+      "source": "monsters/jelly-ochre.png",
+      "row": 59,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:ochre jelly"
+      ]
+    },
+    {
+      "source": "monsters/tick-fire.png",
+      "row": 59,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:giant fire tick"
+      ]
+    },
+    {
+      "source": "monsters/priest-patriarch.png",
+      "row": 59,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:patriarch"
       ]
     }
   ],
