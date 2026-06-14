@@ -1135,10 +1135,7 @@
       "row": 10,
       "col": 6,
       "chroma": "family",
-      "maps": [
-        "object:light:Wooden Torch",
-        "object:light:Lantern"
-      ]
+      "maps": []
     },
     {
       "source": "objects/food.png",
@@ -1159,11 +1156,7 @@
       "row": 11,
       "col": 0,
       "chroma": "family",
-      "maps": [
-        "object:digger:Shovel",
-        "object:digger:Pick",
-        "object:digger:Mattock"
-      ]
+      "maps": []
     },
     {
       "source": "objects/flask.png",
@@ -8566,6 +8559,51 @@
       "chroma": true,
       "maps": [
         "object:shot:Mithril Shot"
+      ]
+    },
+    {
+      "source": "objects/digger-shovel.png",
+      "row": 93,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:digger:Shovel"
+      ]
+    },
+    {
+      "source": "objects/digger-pick.png",
+      "row": 93,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:digger:Pick"
+      ]
+    },
+    {
+      "source": "objects/digger-mattock.png",
+      "row": 93,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:digger:Mattock"
+      ]
+    },
+    {
+      "source": "objects/light-torch.png",
+      "row": 93,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:light:Wooden Torch"
+      ]
+    },
+    {
+      "source": "objects/light-lantern.png",
+      "row": 93,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:light:Lantern"
       ]
     }
   ],
