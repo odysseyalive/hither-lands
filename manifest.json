@@ -2245,7 +2245,6 @@
         "monster:battle-scarred veteran",
         "monster:soldier",
         "monster:warrior",
-        "monster:berserker",
         "monster:brigand"
       ]
     },
@@ -2324,7 +2323,6 @@
       "maps": [
         "monster:giant red scorpion",
         "monster:giant yellow scorpion",
-        "monster:giant black scorpion",
         "monster:giant white tick",
         "monster:giant fire tick"
       ]
@@ -2366,8 +2364,7 @@
       "maps": [
         "monster:lesser Balrog",
         "monster:balrog",
-        "monster:Lungorthin, the Balrog of White Fire",
-        "monster:Gothmog, the High Captain of Balrogs"
+        "monster:Lungorthin, the Balrog of White Fire"
       ]
     },
     {
@@ -2887,8 +2884,7 @@
         "monster:giant red ant",
         "monster:giant silver ant",
         "monster:giant army ant",
-        "monster:giant fire ant",
-        "monster:The Queen Ant"
+        "monster:giant fire ant"
       ]
     },
     {
@@ -2996,8 +2992,7 @@
         "monster:5-headed hydra",
         "monster:6-headed hydra",
         "monster:7-headed hydra",
-        "monster:8-headed hydra",
-        "monster:9-headed hydra"
+        "monster:8-headed hydra"
       ]
     },
     {
@@ -3048,7 +3043,6 @@
         "monster:giant flea",
         "monster:hummerhorn",
         "monster:neekerbreeker",
-        "monster:giant firefly",
         "monster:gnawing bug"
       ]
     },
@@ -3852,6 +3846,60 @@
       "chroma": true,
       "maps": [
         "monster:Kavlax the Many-Headed"
+      ]
+    },
+    {
+      "source": "monsters/scorpion-black.png",
+      "row": 56,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:giant black scorpion"
+      ]
+    },
+    {
+      "source": "monsters/berserker.png",
+      "row": 56,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:berserker"
+      ]
+    },
+    {
+      "source": "monsters/firefly.png",
+      "row": 56,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:giant firefly"
+      ]
+    },
+    {
+      "source": "monsters/balrog-gothmog.png",
+      "row": 56,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:Gothmog, the High Captain of Balrogs"
+      ]
+    },
+    {
+      "source": "monsters/ant-queen.png",
+      "row": 56,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:The Queen Ant"
+      ]
+    },
+    {
+      "source": "monsters/hydra-9head.png",
+      "row": 56,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:9-headed hydra"
       ]
     }
   ],
