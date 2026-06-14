@@ -2640,8 +2640,7 @@
         "monster:orc tracker",
         "monster:orc archer",
         "monster:half-orc",
-        "monster:uruk",
-        "monster:Lug, the hill orc"
+        "monster:uruk"
       ]
     },
     {
@@ -2816,8 +2815,7 @@
         "monster:mummified orc",
         "monster:mummified human",
         "monster:mummified troll",
-        "monster:mummified chieftain",
-        "monster:Mummy"
+        "monster:mummified chieftain"
       ]
     },
     {
@@ -2916,9 +2914,7 @@
       "maps": [
         "monster:blue dragon bat",
         "monster:red dragon bat",
-        "monster:disenchanter bat",
-        "monster:bat of Gorgoroth",
-        "monster:doombat"
+        "monster:disenchanter bat"
       ]
     },
     {
@@ -2930,8 +2926,7 @@
         "monster:killer slicer beetle",
         "monster:death watch beetle",
         "monster:killer iridescent beetle",
-        "monster:killer white beetle",
-        "monster:The Defiler"
+        "monster:killer white beetle"
       ]
     },
     {
@@ -2967,8 +2962,7 @@
         "monster:metallic green centipede",
         "monster:metallic blue centipede",
         "monster:metallic red centipede",
-        "monster:stegocentipede",
-        "monster:carrion crawler"
+        "monster:stegocentipede"
       ]
     },
     {
@@ -3004,8 +2998,7 @@
         "monster:barbazu",
         "monster:bile demon",
         "monster:osyluth",
-        "monster:gelugon",
-        "monster:fury"
+        "monster:gelugon"
       ]
     },
     {
@@ -3017,8 +3010,7 @@
         "monster:imp",
         "monster:nruling",
         "monster:Draebor, the Imp",
-        "monster:bodak",
-        "monster:death quasit"
+        "monster:bodak"
       ]
     },
     {
@@ -3029,7 +3021,6 @@
       "maps": [
         "monster:grey icky thing",
         "monster:green icky thing",
-        "monster:The Ickiness",
         "monster:bloodshot icky thing",
         "monster:blue icky thing"
       ]
@@ -3055,8 +3046,7 @@
         "monster:master vampire",
         "monster:vampire lord",
         "monster:elder vampire",
-        "monster:Thuringwethil, the Vampire Messenger",
-        "monster:Vampire-Sauron"
+        "monster:Thuringwethil, the Vampire Messenger"
       ]
     },
     {
@@ -3105,8 +3095,7 @@
         "monster:paladin",
         "monster:blackguard",
         "monster:black knight",
-        "monster:death knight",
-        "monster:Easterling champion"
+        "monster:death knight"
       ]
     },
     {
@@ -3214,8 +3203,7 @@
         "monster:disenchanter mold",
         "monster:red mold",
         "monster:shimmering mold",
-        "monster:venom mold",
-        "monster:death mold"
+        "monster:venom mold"
       ]
     },
     {
@@ -3900,6 +3888,114 @@
       "chroma": true,
       "maps": [
         "monster:9-headed hydra"
+      ]
+    },
+    {
+      "source": "monsters/vampire-sauron.png",
+      "row": 56,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:Vampire-Sauron"
+      ]
+    },
+    {
+      "source": "monsters/beetle-defiler.png",
+      "row": 56,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:The Defiler"
+      ]
+    },
+    {
+      "source": "monsters/carrion-crawler.png",
+      "row": 56,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:carrion crawler"
+      ]
+    },
+    {
+      "source": "monsters/demon-fury.png",
+      "row": 56,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:fury"
+      ]
+    },
+    {
+      "source": "monsters/demon-death-quasit.png",
+      "row": 56,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:death quasit"
+      ]
+    },
+    {
+      "source": "monsters/icky-thing-boss.png",
+      "row": 56,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:The Ickiness"
+      ]
+    },
+    {
+      "source": "monsters/bat-doom.png",
+      "row": 57,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:doombat"
+      ]
+    },
+    {
+      "source": "monsters/mummy-lord.png",
+      "row": 57,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:Mummy"
+      ]
+    },
+    {
+      "source": "monsters/mold-death-unique.png",
+      "row": 57,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:death mold"
+      ]
+    },
+    {
+      "source": "monsters/orc-lug.png",
+      "row": 57,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:Lug, the hill orc"
+      ]
+    },
+    {
+      "source": "monsters/easterling-champion.png",
+      "row": 57,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:Easterling champion"
+      ]
+    },
+    {
+      "source": "monsters/bat-gorgoroth.png",
+      "row": 57,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:bat of Gorgoroth"
       ]
     }
   ],
