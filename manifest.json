@@ -3050,8 +3050,7 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:giant tarantula",
-        "monster:phase spider"
+        "monster:giant tarantula"
       ]
     },
     {
@@ -3060,8 +3059,7 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:stone warden",
-        "monster:living dungeon"
+        "monster:stone warden"
       ]
     },
     {
@@ -3079,8 +3077,7 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:Orfax, Son of Boldor",
-        "monster:Boldor, King of the Yeeks"
+        "monster:Orfax, Son of Boldor"
       ]
     },
     {
@@ -3134,8 +3131,7 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:zombified human",
-        "monster:Zombie"
+        "monster:zombified human"
       ]
     },
     {
@@ -3144,8 +3140,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:salamander",
-        "monster:giant salamander"
+        "monster:salamander"
       ]
     },
     {
@@ -3208,8 +3203,7 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:Orcogar, son of Orcobal",
-        "monster:Orcobal the Mighty"
+        "monster:Orcogar, son of Orcobal"
       ]
     },
     {
@@ -3326,8 +3320,7 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:Gilim, the Giant of Eruman",
-        "monster:Nan, the Giant"
+        "monster:Gilim, the Giant of Eruman"
       ]
     },
     {
@@ -3363,8 +3356,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:serpent of chaos",
-        "monster:Serpent-Sauron"
+        "monster:serpent of chaos"
       ]
     },
     {
@@ -6920,6 +6912,78 @@
       "chroma": true,
       "maps": [
         "monster:Wight"
+      ]
+    },
+    {
+      "source": "monsters/spider-phase-single.png",
+      "row": 80,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:phase spider"
+      ]
+    },
+    {
+      "source": "monsters/living-dungeon.png",
+      "row": 80,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:living dungeon"
+      ]
+    },
+    {
+      "source": "monsters/yeek-boldor.png",
+      "row": 80,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:Boldor, King of the Yeeks"
+      ]
+    },
+    {
+      "source": "monsters/zombie-unique.png",
+      "row": 80,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:Zombie"
+      ]
+    },
+    {
+      "source": "monsters/salamander-giant.png",
+      "row": 80,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:giant salamander"
+      ]
+    },
+    {
+      "source": "monsters/orc-orcobal.png",
+      "row": 80,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:Orcobal the Mighty"
+      ]
+    },
+    {
+      "source": "monsters/titan-nan.png",
+      "row": 80,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:Nan, the Giant"
+      ]
+    },
+    {
+      "source": "monsters/serpent-sauron.png",
+      "row": 80,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:Serpent-Sauron"
       ]
     }
   ],
