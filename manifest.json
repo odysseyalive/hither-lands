@@ -396,8 +396,7 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:cave spider",
-        "monster:wood spider"
+        "monster:cave spider"
       ]
     },
     {
@@ -463,8 +462,7 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:creeping copper coins",
-        "monster:creeping silver coins"
+        "monster:creeping copper coins"
       ]
     },
     {
@@ -1531,9 +1529,7 @@
       "row": 14,
       "col": 0,
       "chroma": true,
-      "maps": [
-        "monster:wyvern"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/flying-dragon.png",
@@ -2256,7 +2252,6 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:pit fiend",
         "monster:horned reaper"
       ]
     },
@@ -2366,7 +2361,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:eastern dwarf",
         "monster:stonefoot warrior"
       ]
     },
@@ -2483,7 +2477,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:hand druj",
         "monster:eye druj"
       ]
     },
@@ -2703,7 +2696,6 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:giant red ant",
         "monster:giant army ant"
       ]
     },
@@ -2731,8 +2723,7 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:blue dragon bat",
-        "monster:red dragon bat"
+        "monster:blue dragon bat"
       ]
     },
     {
@@ -3542,8 +3533,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:creeping mithril coins",
-        "monster:creeping adamantite coins"
+        "monster:creeping mithril coins"
       ]
     },
     {
@@ -6082,6 +6072,87 @@
       "chroma": true,
       "maps": [
         "monster:crow of Ud\u00fbn"
+      ]
+    },
+    {
+      "source": "monsters/dragon-wyvern.png",
+      "row": 73,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:wyvern"
+      ]
+    },
+    {
+      "source": "monsters/ant-red.png",
+      "row": 73,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:giant red ant"
+      ]
+    },
+    {
+      "source": "monsters/druj-hand.png",
+      "row": 73,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:hand druj"
+      ]
+    },
+    {
+      "source": "monsters/spider-wood.png",
+      "row": 73,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:wood spider"
+      ]
+    },
+    {
+      "source": "monsters/dragon-bat-red.png",
+      "row": 73,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:red dragon bat"
+      ]
+    },
+    {
+      "source": "monsters/creeping-silver.png",
+      "row": 74,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:creeping silver coins"
+      ]
+    },
+    {
+      "source": "monsters/dwarf-eastern.png",
+      "row": 74,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:eastern dwarf"
+      ]
+    },
+    {
+      "source": "monsters/creeping-adamantite.png",
+      "row": 74,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:creeping adamantite coins"
+      ]
+    },
+    {
+      "source": "monsters/demon-pit-fiend.png",
+      "row": 74,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:pit fiend"
       ]
     }
   ],
