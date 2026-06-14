@@ -2431,7 +2431,6 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:rot jelly",
         "monster:red jelly",
         "monster:grape jelly"
       ]
@@ -2909,7 +2908,6 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:blubbering idiot",
         "monster:boil-covered wretch",
         "monster:pitiful-looking beggar"
       ]
@@ -2920,7 +2918,6 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:paladin",
         "monster:blackguard",
         "monster:black knight"
       ]
@@ -2953,7 +2950,6 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:sorcerer",
         "monster:enchantress",
         "monster:shapeshifter"
       ]
@@ -2985,7 +2981,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:green jelly",
         "monster:spotted jelly",
         "monster:blue jelly"
       ]
@@ -3016,7 +3011,6 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:disenchanter mold",
         "monster:shimmering mold",
         "monster:venom mold"
       ]
@@ -3036,7 +3030,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:etten",
         "monster:troll chieftain",
         "monster:mountain troll"
       ]
@@ -3048,8 +3041,7 @@
       "chroma": true,
       "maps": [
         "monster:maddened weasel",
-        "monster:giant grey rat",
-        "monster:wererat"
+        "monster:giant grey rat"
       ]
     },
     {
@@ -3059,7 +3051,6 @@
       "chroma": true,
       "maps": [
         "monster:catoblepas",
-        "monster:m\u00fbmak",
         "monster:night mare"
       ]
     },
@@ -5610,6 +5601,87 @@
       "chroma": true,
       "maps": [
         "monster:ogre shaman"
+      ]
+    },
+    {
+      "source": "monsters/townsfolk-idiot-blubbering.png",
+      "row": 70,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:blubbering idiot"
+      ]
+    },
+    {
+      "source": "monsters/warrior-paladin.png",
+      "row": 70,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:paladin"
+      ]
+    },
+    {
+      "source": "monsters/mage-sorcerer-single.png",
+      "row": 70,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:sorcerer"
+      ]
+    },
+    {
+      "source": "monsters/jelly-rot.png",
+      "row": 70,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:rot jelly"
+      ]
+    },
+    {
+      "source": "monsters/jelly-green.png",
+      "row": 70,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:green jelly"
+      ]
+    },
+    {
+      "source": "monsters/mold-disenchanter.png",
+      "row": 70,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:disenchanter mold"
+      ]
+    },
+    {
+      "source": "monsters/troll-etten.png",
+      "row": 70,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:etten"
+      ]
+    },
+    {
+      "source": "monsters/rat-wererat.png",
+      "row": 70,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:wererat"
+      ]
+    },
+    {
+      "source": "monsters/quadruped-mumak.png",
+      "row": 70,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:m\u00fbmak"
       ]
     }
   ],
