@@ -1211,16 +1211,7 @@
       "row": 10,
       "col": 8,
       "chroma": "family",
-      "maps": [
-        "object:chest:Small wooden chest",
-        "object:chest:Large wooden chest",
-        "object:chest:Small iron chest",
-        "object:chest:Large iron chest",
-        "object:chest:Small steel chest",
-        "object:chest:Large steel chest",
-        "object:chest:Small jeweled chest",
-        "object:chest:Large jeweled chest"
-      ]
+      "maps": []
     },
     {
       "source": "objects/digger.png",
@@ -7965,6 +7956,78 @@
       "chroma": true,
       "maps": [
         "object:gloves:Set of Alchemist's Gloves"
+      ]
+    },
+    {
+      "source": "objects/chest-small-wooden.png",
+      "row": 88,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:chest:Small wooden chest"
+      ]
+    },
+    {
+      "source": "objects/chest-large-wooden.png",
+      "row": 88,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:chest:Large wooden chest"
+      ]
+    },
+    {
+      "source": "objects/chest-small-iron.png",
+      "row": 88,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:chest:Small iron chest"
+      ]
+    },
+    {
+      "source": "objects/chest-large-iron.png",
+      "row": 88,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:chest:Large iron chest"
+      ]
+    },
+    {
+      "source": "objects/chest-small-steel.png",
+      "row": 88,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:chest:Small steel chest"
+      ]
+    },
+    {
+      "source": "objects/chest-large-steel.png",
+      "row": 88,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:chest:Large steel chest"
+      ]
+    },
+    {
+      "source": "objects/chest-small-jeweled.png",
+      "row": 88,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:chest:Small jeweled chest"
+      ]
+    },
+    {
+      "source": "objects/chest-large-jeweled.png",
+      "row": 88,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:chest:Large jeweled chest"
       ]
     }
   ],
