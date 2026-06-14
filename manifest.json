@@ -320,8 +320,7 @@
       "chroma": true,
       "maps": [
         "monster:floating eye",
-        "monster:radiation eye",
-        "monster:disenchanter eye"
+        "monster:radiation eye"
       ]
     },
     {
@@ -1608,7 +1607,6 @@
       "chroma": true,
       "maps": [
         "monster:hill giant",
-        "monster:giant paladin",
         "monster:stone giant"
       ]
     },
@@ -1711,7 +1709,6 @@
       "chroma": true,
       "maps": [
         "monster:clay golem",
-        "monster:stone golem",
         "monster:pukelman"
       ]
     },
@@ -2139,8 +2136,7 @@
       "chroma": true,
       "maps": [
         "monster:earth hound",
-        "monster:inertia hound",
-        "monster:impact hound"
+        "monster:inertia hound"
       ]
     },
     {
@@ -2150,7 +2146,6 @@
       "chroma": true,
       "maps": [
         "monster:shadow",
-        "monster:shade",
         "monster:dread"
       ]
     },
@@ -2171,7 +2166,6 @@
       "chroma": true,
       "maps": [
         "monster:poltergeist",
-        "monster:green glutton ghost",
         "monster:Spirit"
       ]
     },
@@ -2412,7 +2406,6 @@
       "chroma": true,
       "maps": [
         "monster:iron golem",
-        "monster:mithril golem",
         "monster:bronze golem"
       ]
     },
@@ -2433,8 +2426,7 @@
       "chroma": true,
       "maps": [
         "monster:frost giant",
-        "monster:cloud giant",
-        "monster:storm giant"
+        "monster:cloud giant"
       ]
     },
     {
@@ -3178,7 +3170,6 @@
       "chroma": true,
       "maps": [
         "monster:dreadmaster",
-        "monster:dreadlord",
         "monster:Tselakus, the Dreadlord"
       ]
     },
@@ -4819,6 +4810,87 @@
       "chroma": true,
       "maps": [
         "monster:petty-dwarven rogue"
+      ]
+    },
+    {
+      "source": "monsters/giant-storm.png",
+      "row": 63,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:storm giant"
+      ]
+    },
+    {
+      "source": "monsters/golem-mithril.png",
+      "row": 63,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:mithril golem"
+      ]
+    },
+    {
+      "source": "monsters/ghost-dreadlord.png",
+      "row": 63,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:dreadlord"
+      ]
+    },
+    {
+      "source": "monsters/golem-stone.png",
+      "row": 64,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:stone golem"
+      ]
+    },
+    {
+      "source": "monsters/eye-disenchanter.png",
+      "row": 64,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:disenchanter eye"
+      ]
+    },
+    {
+      "source": "monsters/giant-paladin.png",
+      "row": 64,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:giant paladin"
+      ]
+    },
+    {
+      "source": "monsters/hound-impact.png",
+      "row": 64,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:impact hound"
+      ]
+    },
+    {
+      "source": "monsters/ghost-shade.png",
+      "row": 64,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:shade"
+      ]
+    },
+    {
+      "source": "monsters/ghost-glutton.png",
+      "row": 64,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:green glutton ghost"
       ]
     }
   ],
