@@ -1859,8 +1859,7 @@
       "chroma": true,
       "maps": [
         "monster:wild cat",
-        "monster:panther",
-        "monster:tiger"
+        "monster:panther"
       ]
     },
     {
@@ -2184,8 +2183,7 @@
       "chroma": true,
       "maps": [
         "monster:fire spirit",
-        "monster:fire elemental",
-        "monster:smoke elemental"
+        "monster:fire elemental"
       ]
     },
     {
@@ -2195,8 +2193,7 @@
       "chroma": true,
       "maps": [
         "monster:water spirit",
-        "monster:water elemental",
-        "monster:ice elemental"
+        "monster:water elemental"
       ]
     },
     {
@@ -2206,8 +2203,7 @@
       "chroma": true,
       "maps": [
         "monster:earth spirit",
-        "monster:earth elemental",
-        "monster:Quaker, Master of Earth"
+        "monster:earth elemental"
       ]
     },
     {
@@ -2499,9 +2495,7 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:green elf archer",
-        "monster:E\u00f6l, the Dark Elven Smith",
-        "monster:F\u00ebanorian raider"
+        "monster:green elf archer"
       ]
     },
     {
@@ -2888,7 +2882,6 @@
       "chroma": true,
       "maps": [
         "monster:killer slicer beetle",
-        "monster:killer iridescent beetle",
         "monster:killer white beetle"
       ]
     },
@@ -3226,8 +3219,7 @@
       "chroma": true,
       "maps": [
         "monster:ooze elemental",
-        "monster:Waldern, King of Water",
-        "monster:great water elemental"
+        "monster:Waldern, King of Water"
       ]
     },
     {
@@ -3269,8 +3261,7 @@
       "chroma": true,
       "maps": [
         "monster:huorn",
-        "monster:black-hearted huorn",
-        "monster:hasty ent"
+        "monster:black-hearted huorn"
       ]
     },
     {
@@ -4628,6 +4619,87 @@
       "chroma": true,
       "maps": [
         "monster:spectator"
+      ]
+    },
+    {
+      "source": "monsters/ent-hasty.png",
+      "row": 62,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:hasty ent"
+      ]
+    },
+    {
+      "source": "monsters/elemental-ice.png",
+      "row": 62,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:ice elemental"
+      ]
+    },
+    {
+      "source": "monsters/feline-tiger.png",
+      "row": 62,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:tiger"
+      ]
+    },
+    {
+      "source": "monsters/elemental-smoke.png",
+      "row": 62,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:smoke elemental"
+      ]
+    },
+    {
+      "source": "monsters/beetle-iridescent.png",
+      "row": 62,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:killer iridescent beetle"
+      ]
+    },
+    {
+      "source": "monsters/elf-eol.png",
+      "row": 62,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:E\u00f6l, the Dark Elven Smith"
+      ]
+    },
+    {
+      "source": "monsters/elemental-quaker.png",
+      "row": 62,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:Quaker, Master of Earth"
+      ]
+    },
+    {
+      "source": "monsters/elemental-water-great.png",
+      "row": 62,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:great water elemental"
+      ]
+    },
+    {
+      "source": "monsters/elf-feanorian.png",
+      "row": 62,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:F\u00ebanorian raider"
       ]
     }
   ],
