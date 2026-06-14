@@ -2618,8 +2618,7 @@
       "chroma": true,
       "maps": [
         "monster:hand druj",
-        "monster:eye druj",
-        "monster:skull druj"
+        "monster:eye druj"
       ]
     },
     {
@@ -2694,8 +2693,7 @@
       "chroma": true,
       "maps": [
         "monster:gauth",
-        "monster:beholder",
-        "monster:undead beholder"
+        "monster:beholder"
       ]
     },
     {
@@ -2876,8 +2874,7 @@
       "chroma": true,
       "maps": [
         "monster:chimaera",
-        "monster:gorgimaera",
-        "monster:manticore"
+        "monster:gorgimaera"
       ]
     },
     {
@@ -2997,7 +2994,6 @@
       "maps": [
         "monster:grey icky thing",
         "monster:green icky thing",
-        "monster:bloodshot icky thing",
         "monster:blue icky thing"
       ]
     },
@@ -3052,8 +3048,6 @@
       "maps": [
         "monster:blubbering idiot",
         "monster:boil-covered wretch",
-        "monster:filthy street urchin",
-        "monster:mangy-looking leper",
         "monster:pitiful-looking beggar"
       ]
     },
@@ -3163,7 +3157,6 @@
       "chroma": true,
       "maps": [
         "monster:disenchanter mold",
-        "monster:red mold",
         "monster:shimmering mold",
         "monster:venom mold"
       ]
@@ -4308,6 +4301,69 @@
       "chroma": true,
       "maps": [
         "monster:8-headed hydra"
+      ]
+    },
+    {
+      "source": "monsters/icky-thing-bloodshot.png",
+      "row": 59,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:bloodshot icky thing"
+      ]
+    },
+    {
+      "source": "monsters/mold-red.png",
+      "row": 59,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:red mold"
+      ]
+    },
+    {
+      "source": "monsters/townsfolk-urchin.png",
+      "row": 59,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:filthy street urchin"
+      ]
+    },
+    {
+      "source": "monsters/townsfolk-leper.png",
+      "row": 60,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:mangy-looking leper"
+      ]
+    },
+    {
+      "source": "monsters/druj-skull.png",
+      "row": 60,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:skull druj"
+      ]
+    },
+    {
+      "source": "monsters/beholder-undead.png",
+      "row": 60,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:undead beholder"
+      ]
+    },
+    {
+      "source": "monsters/chimera-manticore.png",
+      "row": 60,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:manticore"
       ]
     }
   ],
