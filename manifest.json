@@ -12634,5 +12634,117 @@
       "race": "Beorning",
       "gender": "Female"
     }
+  ],
+  "shapes": [
+    {
+      "name": "fox",
+      "row": 109,
+      "col": 0
+    },
+    {
+      "name": "bear cub",
+      "row": 109,
+      "col": 1
+    },
+    {
+      "name": "eagle",
+      "row": 109,
+      "col": 2
+    },
+    {
+      "name": "shining dragon",
+      "row": 109,
+      "col": 3
+    },
+    {
+      "name": "law dragon",
+      "row": 109,
+      "col": 4
+    },
+    {
+      "name": "bear",
+      "row": 68,
+      "col": 0
+    },
+    {
+      "name": "great bear",
+      "row": 68,
+      "col": 0
+    },
+    {
+      "name": "bat",
+      "row": 65,
+      "col": 1
+    },
+    {
+      "name": "warg",
+      "row": 69,
+      "col": 12
+    },
+    {
+      "name": "vampire",
+      "row": 72,
+      "col": 14
+    },
+    {
+      "name": "werewolf",
+      "row": 72,
+      "col": 12
+    },
+    {
+      "name": "Pukel-man",
+      "row": 15,
+      "col": 5
+    },
+    {
+      "name": "black dragon",
+      "row": 71,
+      "col": 4
+    },
+    {
+      "name": "blue dragon",
+      "row": 71,
+      "col": 5
+    },
+    {
+      "name": "red dragon",
+      "row": 71,
+      "col": 6
+    },
+    {
+      "name": "white dragon",
+      "row": 71,
+      "col": 7
+    },
+    {
+      "name": "green dragon",
+      "row": 71,
+      "col": 8
+    },
+    {
+      "name": "gold dragon",
+      "row": 71,
+      "col": 9
+    },
+    {
+      "name": "multi-hued dragon",
+      "row": 71,
+      "col": 10
+    },
+    {
+      "name": "chaos dragon",
+      "row": 74,
+      "col": 9
+    },
+    {
+      "name": "balance dragon",
+      "row": 52,
+      "col": 1
+    },
+    {
+      "name": "power dragon",
+      "row": 53,
+      "col": 1
+    }
   ]
 }

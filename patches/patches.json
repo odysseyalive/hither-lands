@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "note": "Anchor-based, idempotent C patches for FAangband, applied by apply_patches.py. Authored by /fa-codepatch. Anchors are literal substrings that must match exactly once.",
+  "patches": [
+    {
+      "id": "shape-incl",
+      "file": "src/ui-prefs.c",
+      "anchor": "#include \"player.h\"\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:shape-incl",
+      "payload": "#include \"player-util.h\" /* HITHER-LANDS:shape-incl */\n",
+      "note": "lookup_player_shape() lives in player-util.h"
+    },
+    {
+      "id": "shape-decl",
+      "file": "src/ui-prefs.c",
+      "anchor": "uint8_t *monster_x_attr;\nwchar_t *monster_x_char;\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:shape-decl",
+      "payload": "/* HITHER-LANDS:shape-decl BEGIN */\nuint8_t *shape_x_attr;\nwchar_t *shape_x_char;\n/* HITHER-LANDS:shape-decl END */\n",
+      "note": "UI-layer per-shape tile override, indexed by shape sidx"
+    },
+    {
+      "id": "shape-parser",
+      "file": "src/ui-prefs.c",
+      "anchor": "static enum parser_error parse_prefs_monster_base(struct parser *p)\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:shape-parser",
+      "payload": "/* HITHER-LANDS:shape-parser BEGIN */\nstatic enum parser_error parse_prefs_shape(struct parser *p)\n{\n\tconst char *name;\n\tstruct player_shape *shape;\n\n\tstruct prefs_data *d = parser_priv(p);\n\tassert(d != NULL);\n\tif (d->bypass) return PARSE_ERROR_NONE;\n\n\tname = parser_getsym(p, \"name\");\n\tshape = lookup_player_shape(name);\n\tif (!shape)\n\t\treturn PARSE_ERROR_NO_KIND_FOUND;\n\n\tshape_x_attr[shape->sidx] = (uint8_t)parser_getint(p, \"attr\");\n\tshape_x_char[shape->sidx] = (wchar_t)parser_getint(p, \"char\");\n\n\treturn PARSE_ERROR_NONE;\n}\n/* HITHER-LANDS:shape-parser END */\n\n",
+      "note": "mirrors parse_prefs_monster; binds a graphic tile to a shape by name"
+    },
+    {
+      "id": "shape-reg",
+      "file": "src/ui-prefs.c",
+      "anchor": "\tparser_reg(p, \"monster sym name int attr int char\", parse_prefs_monster);\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:shape-reg",
+      "payload": "\t/* HITHER-LANDS:shape-reg BEGIN */\n\tparser_reg(p, \"shape sym name int attr int char\", parse_prefs_shape);\n\t/* HITHER-LANDS:shape-reg END */\n",
+      "note": "register `shape:` in init_parse_prefs"
+    },
+    {
+      "id": "shape-alloc",
+      "file": "src/ui-prefs.c",
+      "anchor": "\tmonster_x_attr = mem_zalloc(z_info->r_max * sizeof(uint8_t));\n\tmonster_x_char = mem_zalloc(z_info->r_max * sizeof(wchar_t));\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:shape-alloc",
+      "payload": "\t/* HITHER-LANDS:shape-alloc BEGIN */\n\tshape_x_attr = mem_zalloc(z_info->shape_max * sizeof(uint8_t));\n\tshape_x_char = mem_zalloc(z_info->shape_max * sizeof(wchar_t));\n\t/* HITHER-LANDS:shape-alloc END */\n",
+      "note": "alloc in textui_prefs_init"
+    },
+    {
+      "id": "shape-free",
+      "file": "src/ui-prefs.c",
+      "anchor": "\tmem_free(monster_x_attr);\n\tmem_free(monster_x_char);\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:shape-free",
+      "payload": "\t/* HITHER-LANDS:shape-free BEGIN */\n\tmem_free(shape_x_attr);\n\tmem_free(shape_x_char);\n\t/* HITHER-LANDS:shape-free END */\n",
+      "note": "free in textui_prefs_free"
+    },
+    {
+      "id": "shape-reset",
+      "file": "src/ui-prefs.c",
+      "anchor": "\t\tmonster_x_attr[i] = race->d_attr;\n\t\tmonster_x_char[i] = race->d_char;\n\t}\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:shape-reset",
+      "payload": "\n\t/* HITHER-LANDS:shape-reset BEGIN */\n\t/* Shapes carry no ASCII default; clear so only graphic prf sets them */\n\tfor (i = 0; i < z_info->shape_max; i++) {\n\t\tshape_x_attr[i] = 0;\n\t\tshape_x_char[i] = 0;\n\t}\n\t/* HITHER-LANDS:shape-reset END */\n",
+      "note": "reset overrides on pref reload so a tileset switch doesn't leak shapes"
+    },
+    {
+      "id": "shape-export",
+      "file": "src/ui-prefs.h",
+      "anchor": "extern uint8_t *monster_x_attr;\nextern wchar_t *monster_x_char;\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:shape-export",
+      "payload": "/* HITHER-LANDS:shape-export BEGIN */\nextern uint8_t *shape_x_attr;\nextern wchar_t *shape_x_char;\n/* HITHER-LANDS:shape-export END */\n",
+      "note": "extern declarations"
+    },
+    {
+      "id": "shape-render-grid",
+      "file": "src/ui-map.c",
+      "anchor": "\t\t/* Get the \"player\" char */\n\t\tc = monster_x_char[race->ridx];\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:shape-render-grid",
+      "payload": "\t\t/* HITHER-LANDS:shape-render-grid BEGIN */\n\t\tif (player->shape && shape_x_attr[player->shape->sidx]) {\n\t\t\ta = shape_x_attr[player->shape->sidx];\n\t\t\tc = shape_x_char[player->shape->sidx];\n\t\t}\n\t\t/* HITHER-LANDS:shape-render-grid END */\n",
+      "note": "override player tile with the shape tile when shapechanged"
+    },
+    {
+      "id": "shape-render-map",
+      "file": "src/ui-map.c",
+      "anchor": "\t/* Get the \"player\" tile */\n\ta = monster_x_attr[race->ridx];\n\tc = monster_x_char[race->ridx];\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:shape-render-map",
+      "payload": "\t/* HITHER-LANDS:shape-render-map BEGIN */\n\tif (player->shape && shape_x_attr[player->shape->sidx]) {\n\t\ta = shape_x_attr[player->shape->sidx];\n\t\tc = shape_x_char[player->shape->sidx];\n\t}\n\t/* HITHER-LANDS:shape-render-map END */\n",
+      "note": "same override for the minimap"
+    },
+    {
+      "id": "shape-redraw-assume",
+      "file": "src/effect-handler-general.c",
+      "anchor": "\tplayer->upkeep->redraw |= (PR_TITLE | PR_MISC);\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:shape-redraw-assume",
+      "payload": "\tplayer->upkeep->redraw |= (PR_TITLE | PR_MISC | PR_MAP); /* HITHER-LANDS:shape-redraw-assume */\n",
+      "note": "engine only adds a redraw flag; tile selection stays in the UI layer"
+    },
+    {
+      "id": "shape-redraw-resume",
+      "file": "src/player-util.c",
+      "anchor": "\tp->upkeep->redraw |= (PR_TITLE | PR_MISC);\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:shape-redraw-resume",
+      "payload": "\tp->upkeep->redraw |= (PR_TITLE | PR_MISC | PR_MAP); /* HITHER-LANDS:shape-redraw-resume */\n",
+      "note": "redraw map when reverting to normal form"
+    }
+  ]
+}
