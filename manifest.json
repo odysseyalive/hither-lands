@@ -1022,21 +1022,7 @@
       "row": 8,
       "col": 6,
       "chroma": "family",
-      "maps": [
-        "object:sword:Main Gauche",
-        "object:sword:Rapier",
-        "object:sword:Short Sword",
-        "object:sword:Cutlass",
-        "object:sword:Tulwar",
-        "object:sword:Scimitar",
-        "object:sword:Long Sword",
-        "object:sword:Broad Sword",
-        "object:sword:Bastard Sword",
-        "object:sword:Katana",
-        "object:sword:Zweihander",
-        "object:sword:Executioner's Sword",
-        "object:sword:Valinorean Sword"
-      ]
+      "maps": []
     },
     {
       "source": "objects/polearm.png",
@@ -6984,6 +6970,123 @@
       "chroma": true,
       "maps": [
         "monster:Serpent-Sauron"
+      ]
+    },
+    {
+      "source": "objects/sword-main-gauche.png",
+      "row": 80,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:sword:Main Gauche"
+      ]
+    },
+    {
+      "source": "objects/sword-rapier.png",
+      "row": 80,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:sword:Rapier"
+      ]
+    },
+    {
+      "source": "objects/sword-short.png",
+      "row": 80,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:sword:Short Sword"
+      ]
+    },
+    {
+      "source": "objects/sword-cutlass.png",
+      "row": 80,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:sword:Cutlass"
+      ]
+    },
+    {
+      "source": "objects/sword-tulwar.png",
+      "row": 81,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:sword:Tulwar"
+      ]
+    },
+    {
+      "source": "objects/sword-scimitar.png",
+      "row": 81,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:sword:Scimitar"
+      ]
+    },
+    {
+      "source": "objects/sword-long.png",
+      "row": 81,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:sword:Long Sword"
+      ]
+    },
+    {
+      "source": "objects/sword-broad.png",
+      "row": 81,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:sword:Broad Sword"
+      ]
+    },
+    {
+      "source": "objects/sword-bastard.png",
+      "row": 81,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:sword:Bastard Sword"
+      ]
+    },
+    {
+      "source": "objects/sword-katana.png",
+      "row": 81,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:sword:Katana"
+      ]
+    },
+    {
+      "source": "objects/sword-zweihander.png",
+      "row": 81,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:sword:Zweihander"
+      ]
+    },
+    {
+      "source": "objects/sword-executioners.png",
+      "row": 81,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:sword:Executioner's Sword"
+      ]
+    },
+    {
+      "source": "objects/sword-valinorean.png",
+      "row": 81,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:sword:Valinorean Sword"
       ]
     }
   ],
