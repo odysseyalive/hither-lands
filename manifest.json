@@ -1094,24 +1094,14 @@
       "row": 9,
       "col": 6,
       "chroma": "family",
-      "maps": [
-        "object:helm:Hard Leather Cap",
-        "object:helm:Metal Cap",
-        "object:helm:Iron Helm",
-        "object:helm:Steel Helm"
-      ]
+      "maps": []
     },
     {
       "source": "objects/crown.png",
       "row": 9,
       "col": 7,
       "chroma": "family",
-      "maps": [
-        "object:crown:Iron Crown",
-        "object:crown:Silver Crown",
-        "object:crown:Jewel Encrusted Crown",
-        "object:crown:Massive Iron Crown"
-      ]
+      "maps": []
     },
     {
       "source": "objects/gloves.png",
@@ -8059,6 +8049,78 @@
       "chroma": true,
       "maps": [
         "object:soft armor:Leather Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/helm-leather-cap.png",
+      "row": 89,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:helm:Hard Leather Cap"
+      ]
+    },
+    {
+      "source": "objects/helm-metal-cap.png",
+      "row": 89,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:helm:Metal Cap"
+      ]
+    },
+    {
+      "source": "objects/helm-iron.png",
+      "row": 89,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:helm:Iron Helm"
+      ]
+    },
+    {
+      "source": "objects/helm-steel.png",
+      "row": 89,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:helm:Steel Helm"
+      ]
+    },
+    {
+      "source": "objects/crown-iron.png",
+      "row": 89,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:crown:Iron Crown"
+      ]
+    },
+    {
+      "source": "objects/crown-silver.png",
+      "row": 89,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:crown:Silver Crown"
+      ]
+    },
+    {
+      "source": "objects/crown-jeweled.png",
+      "row": 89,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:crown:Jewel Encrusted Crown"
+      ]
+    },
+    {
+      "source": "objects/crown-massive-iron.png",
+      "row": 89,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:crown:Massive Iron Crown"
       ]
     }
   ],
