@@ -547,49 +547,7 @@
       "row": 8,
       "col": 0,
       "chroma": "family",
-      "maps": [
-        "object:potion:Strength",
-        "object:potion:Intelligence",
-        "object:potion:Wisdom",
-        "object:potion:Dexterity",
-        "object:potion:Constitution",
-        "object:potion:Augmentation",
-        "object:potion:Experience",
-        "object:potion:Cure Light Wounds",
-        "object:potion:Cure Serious Wounds",
-        "object:potion:Cure Critical Wounds",
-        "object:potion:Healing",
-        "object:potion:*Healing*",
-        "object:potion:Life",
-        "object:potion:Neutralize Poison",
-        "object:potion:Restore Mana",
-        "object:potion:Restore Life Levels",
-        "object:potion:Brawn",
-        "object:potion:Intellect",
-        "object:potion:Contemplation",
-        "object:potion:Nimbleness",
-        "object:potion:Toughness",
-        "object:potion:Enlightenment",
-        "object:potion:*Enlightenment*",
-        "object:potion:Speed",
-        "object:potion:Heroism",
-        "object:potion:Berserk Strength",
-        "object:potion:Boldness",
-        "object:potion:Resist Heat",
-        "object:potion:Resist Cold",
-        "object:potion:Resist Poison",
-        "object:potion:True Seeing",
-        "object:potion:Infravision",
-        "object:potion:Slime Mold Juice",
-        "object:potion:Sleep",
-        "object:potion:Blindness",
-        "object:potion:Confusion",
-        "object:potion:Poison",
-        "object:potion:Slowness",
-        "object:potion:Surprise",
-        "object:potion:Salt Water",
-        "object:potion:Dragon Breath"
-      ],
+      "maps": [],
       "flavors": [
         193,
         194,
@@ -8604,6 +8562,375 @@
       "chroma": true,
       "maps": [
         "object:light:Lantern"
+      ]
+    },
+    {
+      "source": "objects/potion-strength.png",
+      "row": 93,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:potion:Strength"
+      ]
+    },
+    {
+      "source": "objects/potion-intelligence.png",
+      "row": 93,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:potion:Intelligence"
+      ]
+    },
+    {
+      "source": "objects/potion-wisdom.png",
+      "row": 93,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:potion:Wisdom"
+      ]
+    },
+    {
+      "source": "objects/potion-dexterity.png",
+      "row": 93,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:potion:Dexterity"
+      ]
+    },
+    {
+      "source": "objects/potion-constitution.png",
+      "row": 93,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:potion:Constitution"
+      ]
+    },
+    {
+      "source": "objects/potion-augmentation.png",
+      "row": 93,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:potion:Augmentation"
+      ]
+    },
+    {
+      "source": "objects/potion-experience.png",
+      "row": 94,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:potion:Experience"
+      ]
+    },
+    {
+      "source": "objects/potion-cure-light-wounds.png",
+      "row": 94,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:potion:Cure Light Wounds"
+      ]
+    },
+    {
+      "source": "objects/potion-cure-serious-wounds.png",
+      "row": 94,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:potion:Cure Serious Wounds"
+      ]
+    },
+    {
+      "source": "objects/potion-cure-critical-wounds.png",
+      "row": 94,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:potion:Cure Critical Wounds"
+      ]
+    },
+    {
+      "source": "objects/potion-healing.png",
+      "row": 94,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:potion:Healing"
+      ]
+    },
+    {
+      "source": "objects/potion-star-healing.png",
+      "row": 94,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:potion:*Healing*"
+      ]
+    },
+    {
+      "source": "objects/potion-life.png",
+      "row": 94,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:potion:Life"
+      ]
+    },
+    {
+      "source": "objects/potion-neutralize-poison.png",
+      "row": 94,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:potion:Neutralize Poison"
+      ]
+    },
+    {
+      "source": "objects/potion-restore-mana.png",
+      "row": 94,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:potion:Restore Mana"
+      ]
+    },
+    {
+      "source": "objects/potion-restore-life-levels.png",
+      "row": 94,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:potion:Restore Life Levels"
+      ]
+    },
+    {
+      "source": "objects/potion-brawn.png",
+      "row": 94,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:potion:Brawn"
+      ]
+    },
+    {
+      "source": "objects/potion-intellect.png",
+      "row": 94,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:potion:Intellect"
+      ]
+    },
+    {
+      "source": "objects/potion-contemplation.png",
+      "row": 94,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:potion:Contemplation"
+      ]
+    },
+    {
+      "source": "objects/potion-nimbleness.png",
+      "row": 94,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:potion:Nimbleness"
+      ]
+    },
+    {
+      "source": "objects/potion-toughness.png",
+      "row": 94,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:potion:Toughness"
+      ]
+    },
+    {
+      "source": "objects/potion-enlightenment.png",
+      "row": 94,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:potion:Enlightenment"
+      ]
+    },
+    {
+      "source": "objects/potion-star-enlightenment.png",
+      "row": 95,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:potion:*Enlightenment*"
+      ]
+    },
+    {
+      "source": "objects/potion-speed.png",
+      "row": 95,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:potion:Speed"
+      ]
+    },
+    {
+      "source": "objects/potion-heroism.png",
+      "row": 95,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:potion:Heroism"
+      ]
+    },
+    {
+      "source": "objects/potion-berserk-strength.png",
+      "row": 95,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:potion:Berserk Strength"
+      ]
+    },
+    {
+      "source": "objects/potion-boldness.png",
+      "row": 95,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:potion:Boldness"
+      ]
+    },
+    {
+      "source": "objects/potion-resist-heat.png",
+      "row": 95,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:potion:Resist Heat"
+      ]
+    },
+    {
+      "source": "objects/potion-resist-cold.png",
+      "row": 95,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:potion:Resist Cold"
+      ]
+    },
+    {
+      "source": "objects/potion-resist-poison.png",
+      "row": 95,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:potion:Resist Poison"
+      ]
+    },
+    {
+      "source": "objects/potion-true-seeing.png",
+      "row": 95,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:potion:True Seeing"
+      ]
+    },
+    {
+      "source": "objects/potion-infravision.png",
+      "row": 95,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:potion:Infravision"
+      ]
+    },
+    {
+      "source": "objects/potion-slime-mold-juice.png",
+      "row": 95,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:potion:Slime Mold Juice"
+      ]
+    },
+    {
+      "source": "objects/potion-sleep.png",
+      "row": 95,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:potion:Sleep"
+      ]
+    },
+    {
+      "source": "objects/potion-blindness.png",
+      "row": 95,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:potion:Blindness"
+      ]
+    },
+    {
+      "source": "objects/potion-confusion.png",
+      "row": 95,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:potion:Confusion"
+      ]
+    },
+    {
+      "source": "objects/potion-poison.png",
+      "row": 95,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:potion:Poison"
+      ]
+    },
+    {
+      "source": "objects/potion-slowness.png",
+      "row": 95,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:potion:Slowness"
+      ]
+    },
+    {
+      "source": "objects/potion-surprise.png",
+      "row": 96,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:potion:Surprise"
+      ]
+    },
+    {
+      "source": "objects/potion-salt-water.png",
+      "row": 96,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:potion:Salt Water"
+      ]
+    },
+    {
+      "source": "objects/potion-dragon-breath.png",
+      "row": 96,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:potion:Dragon Breath"
       ]
     }
   ],
