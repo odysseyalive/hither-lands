@@ -1017,26 +1017,7 @@
       "row": 12,
       "col": 1,
       "chroma": "family",
-      "maps": [
-        "trap:rune of summon foe:*",
-        "trap:rune of summoning:*",
-        "trap:rune of necromancy:*",
-        "trap:rune of dragonsong:*",
-        "trap:hellhole:*",
-        "trap:teleport rune:*",
-        "trap:portal trap:*",
-        "trap:banishment trap:*",
-        "trap:stasis trap:*",
-        "trap:unmagic trap:*",
-        "trap:dispelling trap:*",
-        "trap:mana drain trap:*",
-        "trap:drain life trap:*",
-        "trap:immaterial trap:*",
-        "trap:mind blasting trap:*",
-        "trap:brain smashing trap:*",
-        "trap:siren:*",
-        "trap:aggravation trap:*"
-      ]
+      "maps": []
     },
     {
       "source": "traps/trap-door.png",
@@ -1052,71 +1033,35 @@
       "row": 12,
       "col": 3,
       "chroma": "family",
-      "maps": [
-        "trap:pit:*",
-        "trap:spiked pit:*",
-        "trap:poison pit:*"
-      ]
+      "maps": []
     },
     {
       "source": "traps/dart-trap.png",
       "row": 12,
       "col": 4,
       "chroma": "family",
-      "maps": [
-        "trap:slow dart:*",
-        "trap:strength loss dart:*",
-        "trap:dexterity loss dart:*",
-        "trap:constitution loss dart:*",
-        "trap:knife trap:*",
-        "trap:netted trap:*",
-        "trap:basic trap:*",
-        "trap:sturdy trap:*"
-      ]
+      "maps": []
     },
     {
       "source": "traps/elemental-trap.png",
       "row": 12,
       "col": 5,
       "chroma": "family",
-      "maps": [
-        "trap:fire trap:*",
-        "trap:acid trap:*",
-        "trap:electric trap:*",
-        "trap:explosive trap:*",
-        "trap:blast trap:*",
-        "trap:area blast trap:*",
-        "trap:mine trap:*"
-      ]
+      "maps": []
     },
     {
       "source": "traps/gas-trap.png",
       "row": 12,
       "col": 6,
       "chroma": "family",
-      "maps": [
-        "trap:blinding gas trap:*",
-        "trap:confusion gas trap:*",
-        "trap:poison gas trap:*",
-        "trap:sleep gas trap:*",
-        "trap:poison trap:*",
-        "trap:confusion trap:*",
-        "trap:blinding flash trap:*",
-        "trap:blinding trap:*",
-        "trap:petrifying trap:*"
-      ]
+      "maps": []
     },
     {
       "source": "traps/rockfall.png",
       "row": 12,
       "col": 7,
       "chroma": "family",
-      "maps": [
-        "trap:rock fall trap:*",
-        "trap:earthquake trap:*",
-        "trap:block fall trap:*",
-        "trap:falling branch:*"
-      ]
+      "maps": []
     },
     {
       "source": "traps/web.png",
@@ -9927,6 +9872,447 @@
       "chroma": true,
       "maps": [
         "object:staff:the Magi"
+      ]
+    },
+    {
+      "source": "traps/rune-summon-foe.png",
+      "row": 104,
+      "col": 0,
+      "chroma": "family",
+      "maps": [
+        "trap:rune of summon foe:*"
+      ]
+    },
+    {
+      "source": "traps/rune-summoning.png",
+      "row": 104,
+      "col": 1,
+      "chroma": "family",
+      "maps": [
+        "trap:rune of summoning:*"
+      ]
+    },
+    {
+      "source": "traps/rune-necromancy.png",
+      "row": 104,
+      "col": 2,
+      "chroma": "family",
+      "maps": [
+        "trap:rune of necromancy:*"
+      ]
+    },
+    {
+      "source": "traps/rune-dragonsong.png",
+      "row": 104,
+      "col": 3,
+      "chroma": "family",
+      "maps": [
+        "trap:rune of dragonsong:*"
+      ]
+    },
+    {
+      "source": "traps/rune-hellhole.png",
+      "row": 104,
+      "col": 4,
+      "chroma": "family",
+      "maps": [
+        "trap:hellhole:*"
+      ]
+    },
+    {
+      "source": "traps/rune-teleport.png",
+      "row": 104,
+      "col": 5,
+      "chroma": "family",
+      "maps": [
+        "trap:teleport rune:*"
+      ]
+    },
+    {
+      "source": "traps/rune-portal.png",
+      "row": 104,
+      "col": 6,
+      "chroma": "family",
+      "maps": [
+        "trap:portal trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-banishment.png",
+      "row": 104,
+      "col": 7,
+      "chroma": "family",
+      "maps": [
+        "trap:banishment trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-stasis.png",
+      "row": 104,
+      "col": 8,
+      "chroma": "family",
+      "maps": [
+        "trap:stasis trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-unmagic.png",
+      "row": 104,
+      "col": 9,
+      "chroma": "family",
+      "maps": [
+        "trap:unmagic trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-dispelling.png",
+      "row": 104,
+      "col": 10,
+      "chroma": "family",
+      "maps": [
+        "trap:dispelling trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-mana-drain.png",
+      "row": 104,
+      "col": 11,
+      "chroma": "family",
+      "maps": [
+        "trap:mana drain trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-drain-life.png",
+      "row": 104,
+      "col": 12,
+      "chroma": "family",
+      "maps": [
+        "trap:drain life trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-immaterial.png",
+      "row": 104,
+      "col": 13,
+      "chroma": "family",
+      "maps": [
+        "trap:immaterial trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-mind-blasting.png",
+      "row": 104,
+      "col": 14,
+      "chroma": "family",
+      "maps": [
+        "trap:mind blasting trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-brain-smashing.png",
+      "row": 104,
+      "col": 15,
+      "chroma": "family",
+      "maps": [
+        "trap:brain smashing trap:*"
+      ]
+    },
+    {
+      "source": "traps/rune-siren.png",
+      "row": 105,
+      "col": 0,
+      "chroma": "family",
+      "maps": [
+        "trap:siren:*"
+      ]
+    },
+    {
+      "source": "traps/rune-aggravation.png",
+      "row": 105,
+      "col": 1,
+      "chroma": "family",
+      "maps": [
+        "trap:aggravation trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-blinding.png",
+      "row": 105,
+      "col": 2,
+      "chroma": "family",
+      "maps": [
+        "trap:blinding gas trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-confusion.png",
+      "row": 105,
+      "col": 3,
+      "chroma": "family",
+      "maps": [
+        "trap:confusion gas trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-poison.png",
+      "row": 105,
+      "col": 4,
+      "chroma": "family",
+      "maps": [
+        "trap:poison gas trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-sleep.png",
+      "row": 105,
+      "col": 5,
+      "chroma": "family",
+      "maps": [
+        "trap:sleep gas trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-poison-trap.png",
+      "row": 105,
+      "col": 6,
+      "chroma": "family",
+      "maps": [
+        "trap:poison trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-confusion-trap.png",
+      "row": 105,
+      "col": 7,
+      "chroma": "family",
+      "maps": [
+        "trap:confusion trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-blinding-flash.png",
+      "row": 105,
+      "col": 8,
+      "chroma": "family",
+      "maps": [
+        "trap:blinding flash trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-blinding-trap.png",
+      "row": 105,
+      "col": 9,
+      "chroma": "family",
+      "maps": [
+        "trap:blinding trap:*"
+      ]
+    },
+    {
+      "source": "traps/gas-petrifying.png",
+      "row": 105,
+      "col": 10,
+      "chroma": "family",
+      "maps": [
+        "trap:petrifying trap:*"
+      ]
+    },
+    {
+      "source": "traps/dart-slow.png",
+      "row": 105,
+      "col": 11,
+      "chroma": "family",
+      "maps": [
+        "trap:slow dart:*"
+      ]
+    },
+    {
+      "source": "traps/dart-strength.png",
+      "row": 105,
+      "col": 12,
+      "chroma": "family",
+      "maps": [
+        "trap:strength loss dart:*"
+      ]
+    },
+    {
+      "source": "traps/dart-dexterity.png",
+      "row": 105,
+      "col": 13,
+      "chroma": "family",
+      "maps": [
+        "trap:dexterity loss dart:*"
+      ]
+    },
+    {
+      "source": "traps/dart-constitution.png",
+      "row": 105,
+      "col": 14,
+      "chroma": "family",
+      "maps": [
+        "trap:constitution loss dart:*"
+      ]
+    },
+    {
+      "source": "traps/dart-knife.png",
+      "row": 105,
+      "col": 15,
+      "chroma": "family",
+      "maps": [
+        "trap:knife trap:*"
+      ]
+    },
+    {
+      "source": "traps/dart-netted.png",
+      "row": 106,
+      "col": 0,
+      "chroma": "family",
+      "maps": [
+        "trap:netted trap:*"
+      ]
+    },
+    {
+      "source": "traps/dart-basic.png",
+      "row": 106,
+      "col": 1,
+      "chroma": "family",
+      "maps": [
+        "trap:basic trap:*"
+      ]
+    },
+    {
+      "source": "traps/dart-sturdy.png",
+      "row": 106,
+      "col": 2,
+      "chroma": "family",
+      "maps": [
+        "trap:sturdy trap:*"
+      ]
+    },
+    {
+      "source": "traps/elem-fire.png",
+      "row": 106,
+      "col": 3,
+      "chroma": "family",
+      "maps": [
+        "trap:fire trap:*"
+      ]
+    },
+    {
+      "source": "traps/elem-acid.png",
+      "row": 106,
+      "col": 4,
+      "chroma": "family",
+      "maps": [
+        "trap:acid trap:*"
+      ]
+    },
+    {
+      "source": "traps/elem-electric.png",
+      "row": 106,
+      "col": 5,
+      "chroma": "family",
+      "maps": [
+        "trap:electric trap:*"
+      ]
+    },
+    {
+      "source": "traps/elem-explosive.png",
+      "row": 106,
+      "col": 6,
+      "chroma": "family",
+      "maps": [
+        "trap:explosive trap:*"
+      ]
+    },
+    {
+      "source": "traps/elem-blast.png",
+      "row": 106,
+      "col": 7,
+      "chroma": "family",
+      "maps": [
+        "trap:blast trap:*"
+      ]
+    },
+    {
+      "source": "traps/elem-area-blast.png",
+      "row": 106,
+      "col": 8,
+      "chroma": "family",
+      "maps": [
+        "trap:area blast trap:*"
+      ]
+    },
+    {
+      "source": "traps/elem-mine.png",
+      "row": 106,
+      "col": 9,
+      "chroma": "family",
+      "maps": [
+        "trap:mine trap:*"
+      ]
+    },
+    {
+      "source": "traps/rockfall-rocks.png",
+      "row": 106,
+      "col": 10,
+      "chroma": "family",
+      "maps": [
+        "trap:rock fall trap:*"
+      ]
+    },
+    {
+      "source": "traps/rockfall-earthquake.png",
+      "row": 106,
+      "col": 11,
+      "chroma": "family",
+      "maps": [
+        "trap:earthquake trap:*"
+      ]
+    },
+    {
+      "source": "traps/rockfall-block.png",
+      "row": 106,
+      "col": 12,
+      "chroma": "family",
+      "maps": [
+        "trap:block fall trap:*"
+      ]
+    },
+    {
+      "source": "traps/rockfall-branch.png",
+      "row": 106,
+      "col": 13,
+      "chroma": "family",
+      "maps": [
+        "trap:falling branch:*"
+      ]
+    },
+    {
+      "source": "traps/pit-basic.png",
+      "row": 106,
+      "col": 14,
+      "chroma": "family",
+      "maps": [
+        "trap:pit:*"
+      ]
+    },
+    {
+      "source": "traps/pit-spiked.png",
+      "row": 106,
+      "col": 15,
+      "chroma": "family",
+      "maps": [
+        "trap:spiked pit:*"
+      ]
+    },
+    {
+      "source": "traps/pit-poison.png",
+      "row": 107,
+      "col": 0,
+      "chroma": "family",
+      "maps": [
+        "trap:poison pit:*"
       ]
     }
   ],
