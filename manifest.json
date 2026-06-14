@@ -1267,19 +1267,7 @@
       "row": 11,
       "col": 2,
       "chroma": "family",
-      "maps": [
-        "object:gold:copper",
-        "object:gold:silver",
-        "object:gold:garnets",
-        "object:gold:gold",
-        "object:gold:opals",
-        "object:gold:sapphires",
-        "object:gold:rubies",
-        "object:gold:diamonds",
-        "object:gold:emeralds",
-        "object:gold:mithril",
-        "object:gold:adamantite"
-      ]
+      "maps": []
     },
     {
       "source": "traps/glyph.png",
@@ -7745,6 +7733,105 @@
       "chroma": true,
       "maps": [
         "object:dragon armor:Power Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/gold-copper.png",
+      "row": 86,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:gold:copper"
+      ]
+    },
+    {
+      "source": "objects/gold-silver.png",
+      "row": 86,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:gold:silver"
+      ]
+    },
+    {
+      "source": "objects/gold-garnets.png",
+      "row": 86,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:gold:garnets"
+      ]
+    },
+    {
+      "source": "objects/gold-gold.png",
+      "row": 86,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:gold:gold"
+      ]
+    },
+    {
+      "source": "objects/gold-opals.png",
+      "row": 87,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:gold:opals"
+      ]
+    },
+    {
+      "source": "objects/gold-sapphires.png",
+      "row": 87,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:gold:sapphires"
+      ]
+    },
+    {
+      "source": "objects/gold-rubies.png",
+      "row": 87,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:gold:rubies"
+      ]
+    },
+    {
+      "source": "objects/gold-diamonds.png",
+      "row": 87,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:gold:diamonds"
+      ]
+    },
+    {
+      "source": "objects/gold-emeralds.png",
+      "row": 87,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:gold:emeralds"
+      ]
+    },
+    {
+      "source": "objects/gold-mithril.png",
+      "row": 87,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:gold:mithril"
+      ]
+    },
+    {
+      "source": "objects/gold-adamantite.png",
+      "row": 87,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:gold:adamantite"
       ]
     }
   ],
