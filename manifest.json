@@ -675,41 +675,7 @@
       "row": 8,
       "col": 2,
       "chroma": "family",
-      "maps": [
-        "object:wand:Magic Missile",
-        "object:wand:Lightning Bolts",
-        "object:wand:Frost Bolts",
-        "object:wand:Fire Bolts",
-        "object:wand:Acid Bolts",
-        "object:wand:Stinking Cloud",
-        "object:wand:Lightning Balls",
-        "object:wand:Cold Balls",
-        "object:wand:Fire Balls",
-        "object:wand:Acid Balls",
-        "object:wand:Slow Monster",
-        "object:wand:Confuse Monster",
-        "object:wand:Hold Monster",
-        "object:wand:Stun Monster",
-        "object:wand:Scare Monster",
-        "object:wand:Light",
-        "object:wand:Stone to Mud",
-        "object:wand:Polymorph",
-        "object:wand:Darkness",
-        "object:wand:Clone Monster",
-        "object:wand:Teleport Other",
-        "object:wand:Disable Traps",
-        "object:wand:Wonder",
-        "object:wand:Striking",
-        "object:wand:Storms",
-        "object:wand:Shrapnel",
-        "object:wand:Dragon's Flame",
-        "object:wand:Dragon's Frost",
-        "object:wand:Dragon's Breath",
-        "object:wand:Drain Life",
-        "object:wand:Annihilation",
-        "object:wand:Heal Monster",
-        "object:wand:Haste Monster"
-      ],
+      "maps": [],
       "flavors": [
         10,
         11,
@@ -9242,6 +9208,303 @@
       "chroma": true,
       "maps": [
         "object:scroll:Trap Creation"
+      ]
+    },
+    {
+      "source": "objects/wand-magic-missile.png",
+      "row": 98,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:wand:Magic Missile"
+      ]
+    },
+    {
+      "source": "objects/wand-lightning-bolts.png",
+      "row": 98,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:wand:Lightning Bolts"
+      ]
+    },
+    {
+      "source": "objects/wand-frost-bolts.png",
+      "row": 98,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:wand:Frost Bolts"
+      ]
+    },
+    {
+      "source": "objects/wand-fire-bolts.png",
+      "row": 98,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:wand:Fire Bolts"
+      ]
+    },
+    {
+      "source": "objects/wand-acid-bolts.png",
+      "row": 98,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:wand:Acid Bolts"
+      ]
+    },
+    {
+      "source": "objects/wand-stinking-cloud.png",
+      "row": 98,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:wand:Stinking Cloud"
+      ]
+    },
+    {
+      "source": "objects/wand-lightning-balls.png",
+      "row": 99,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:wand:Lightning Balls"
+      ]
+    },
+    {
+      "source": "objects/wand-cold-balls.png",
+      "row": 99,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:wand:Cold Balls"
+      ]
+    },
+    {
+      "source": "objects/wand-fire-balls.png",
+      "row": 99,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:wand:Fire Balls"
+      ]
+    },
+    {
+      "source": "objects/wand-acid-balls.png",
+      "row": 99,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:wand:Acid Balls"
+      ]
+    },
+    {
+      "source": "objects/wand-slow-monster.png",
+      "row": 99,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:wand:Slow Monster"
+      ]
+    },
+    {
+      "source": "objects/wand-confuse-monster.png",
+      "row": 99,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:wand:Confuse Monster"
+      ]
+    },
+    {
+      "source": "objects/wand-hold-monster.png",
+      "row": 99,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:wand:Hold Monster"
+      ]
+    },
+    {
+      "source": "objects/wand-stun-monster.png",
+      "row": 99,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:wand:Stun Monster"
+      ]
+    },
+    {
+      "source": "objects/wand-scare-monster.png",
+      "row": 99,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:wand:Scare Monster"
+      ]
+    },
+    {
+      "source": "objects/wand-light.png",
+      "row": 99,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:wand:Light"
+      ]
+    },
+    {
+      "source": "objects/wand-stone-to-mud.png",
+      "row": 99,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:wand:Stone to Mud"
+      ]
+    },
+    {
+      "source": "objects/wand-polymorph.png",
+      "row": 99,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:wand:Polymorph"
+      ]
+    },
+    {
+      "source": "objects/wand-darkness.png",
+      "row": 99,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:wand:Darkness"
+      ]
+    },
+    {
+      "source": "objects/wand-clone-monster.png",
+      "row": 99,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:wand:Clone Monster"
+      ]
+    },
+    {
+      "source": "objects/wand-teleport-other.png",
+      "row": 99,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:wand:Teleport Other"
+      ]
+    },
+    {
+      "source": "objects/wand-disable-traps.png",
+      "row": 99,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:wand:Disable Traps"
+      ]
+    },
+    {
+      "source": "objects/wand-wonder.png",
+      "row": 100,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:wand:Wonder"
+      ]
+    },
+    {
+      "source": "objects/wand-striking.png",
+      "row": 100,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:wand:Striking"
+      ]
+    },
+    {
+      "source": "objects/wand-storms.png",
+      "row": 100,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:wand:Storms"
+      ]
+    },
+    {
+      "source": "objects/wand-shrapnel.png",
+      "row": 100,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:wand:Shrapnel"
+      ]
+    },
+    {
+      "source": "objects/wand-dragons-flame.png",
+      "row": 100,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:wand:Dragon's Flame"
+      ]
+    },
+    {
+      "source": "objects/wand-dragons-frost.png",
+      "row": 100,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:wand:Dragon's Frost"
+      ]
+    },
+    {
+      "source": "objects/wand-dragons-breath.png",
+      "row": 100,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:wand:Dragon's Breath"
+      ]
+    },
+    {
+      "source": "objects/wand-drain-life.png",
+      "row": 100,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:wand:Drain Life"
+      ]
+    },
+    {
+      "source": "objects/wand-annihilation.png",
+      "row": 100,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:wand:Annihilation"
+      ]
+    },
+    {
+      "source": "objects/wand-heal-monster.png",
+      "row": 100,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:wand:Heal Monster"
+      ]
+    },
+    {
+      "source": "objects/wand-haste-monster.png",
+      "row": 100,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:wand:Haste Monster"
       ]
     }
   ],
