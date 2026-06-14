@@ -359,8 +359,7 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:large white snake",
-        "monster:large grey snake"
+        "monster:large white snake"
       ]
     },
     {
@@ -495,8 +494,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:copperhead snake",
-        "monster:rattlesnake"
+        "monster:copperhead snake"
       ]
     },
     {
@@ -505,8 +503,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:skeleton kobold",
-        "monster:skeleton orc"
+        "monster:skeleton kobold"
       ]
     },
     {
@@ -1623,8 +1620,7 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:zombified kobold",
-        "monster:zombified orc"
+        "monster:zombified kobold"
       ]
     },
     {
@@ -1721,8 +1717,7 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:old forest tree",
-        "monster:Old Man Willow"
+        "monster:old forest tree"
       ]
     },
     {
@@ -2411,8 +2406,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:shardstorm",
-        "monster:storm of Unmagic"
+        "monster:shardstorm"
       ]
     },
     {
@@ -6800,6 +6794,60 @@
       "chroma": true,
       "maps": [
         "monster:terrified yeek"
+      ]
+    },
+    {
+      "source": "monsters/snake-grey.png",
+      "row": 79,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:large grey snake"
+      ]
+    },
+    {
+      "source": "monsters/snake-rattle.png",
+      "row": 79,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:rattlesnake"
+      ]
+    },
+    {
+      "source": "monsters/skeleton-orc.png",
+      "row": 79,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:skeleton orc"
+      ]
+    },
+    {
+      "source": "monsters/zombie-orc.png",
+      "row": 79,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:zombified orc"
+      ]
+    },
+    {
+      "source": "monsters/tree-willow.png",
+      "row": 79,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:Old Man Willow"
+      ]
+    },
+    {
+      "source": "monsters/vortex-unmagic.png",
+      "row": 79,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:storm of Unmagic"
       ]
     }
   ],
