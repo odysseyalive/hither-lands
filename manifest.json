@@ -615,47 +615,7 @@
       "row": 8,
       "col": 1,
       "chroma": "family",
-      "maps": [
-        "object:scroll:Phase Door",
-        "object:scroll:Teleportation",
-        "object:scroll:Teleport Level",
-        "object:scroll:Magic Mapping",
-        "object:scroll:Treasure Detection",
-        "object:scroll:Detect Invisible",
-        "object:scroll:Identify Rune",
-        "object:scroll:Enchant Weapon To-Hit",
-        "object:scroll:Enchant Weapon To-Dam",
-        "object:scroll:Enchant Armour",
-        "object:scroll:*Enchant Weapon*",
-        "object:scroll:*Enchant Armour*",
-        "object:scroll:Remove Curse",
-        "object:scroll:*Remove Curse*",
-        "object:scroll:Summon Monster",
-        "object:scroll:Summon Undead",
-        "object:scroll:Acquirement",
-        "object:scroll:*Acquirement*",
-        "object:scroll:Dispel Undead",
-        "object:scroll:Banishment",
-        "object:scroll:Mass Banishment",
-        "object:scroll:Remove Hunger",
-        "object:scroll:Light",
-        "object:scroll:Word of Recall",
-        "object:scroll:Recharging",
-        "object:scroll:Door Destruction",
-        "object:scroll:Deep Descent",
-        "object:scroll:Blessing",
-        "object:scroll:Holy Chant",
-        "object:scroll:Holy Prayer",
-        "object:scroll:Protection from Evil",
-        "object:scroll:Monster Confusion",
-        "object:scroll:Rune of Protection",
-        "object:scroll:*Destruction*",
-        "object:scroll:Aggravate Monster",
-        "object:scroll:Curse Weapon",
-        "object:scroll:Curse Armour",
-        "object:scroll:Darkness",
-        "object:scroll:Trap Creation"
-      ],
+      "maps": [],
       "flavors": [
         252,
         253,
@@ -8931,6 +8891,357 @@
       "chroma": true,
       "maps": [
         "object:potion:Dragon Breath"
+      ]
+    },
+    {
+      "source": "objects/scroll-phase-door.png",
+      "row": 96,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Phase Door"
+      ]
+    },
+    {
+      "source": "objects/scroll-teleportation.png",
+      "row": 96,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Teleportation"
+      ]
+    },
+    {
+      "source": "objects/scroll-teleport-level.png",
+      "row": 96,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Teleport Level"
+      ]
+    },
+    {
+      "source": "objects/scroll-magic-mapping.png",
+      "row": 96,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Magic Mapping"
+      ]
+    },
+    {
+      "source": "objects/scroll-treasure-detection.png",
+      "row": 96,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Treasure Detection"
+      ]
+    },
+    {
+      "source": "objects/scroll-detect-invisible.png",
+      "row": 96,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Detect Invisible"
+      ]
+    },
+    {
+      "source": "objects/scroll-identify-rune.png",
+      "row": 96,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Identify Rune"
+      ]
+    },
+    {
+      "source": "objects/scroll-enchant-weapon-to-hit.png",
+      "row": 96,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Enchant Weapon To-Hit"
+      ]
+    },
+    {
+      "source": "objects/scroll-enchant-weapon-to-dam.png",
+      "row": 96,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Enchant Weapon To-Dam"
+      ]
+    },
+    {
+      "source": "objects/scroll-enchant-armour.png",
+      "row": 96,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Enchant Armour"
+      ]
+    },
+    {
+      "source": "objects/scroll-star-enchant-weapon.png",
+      "row": 96,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:scroll:*Enchant Weapon*"
+      ]
+    },
+    {
+      "source": "objects/scroll-star-enchant-armour.png",
+      "row": 96,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:scroll:*Enchant Armour*"
+      ]
+    },
+    {
+      "source": "objects/scroll-remove-curse.png",
+      "row": 96,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Remove Curse"
+      ]
+    },
+    {
+      "source": "objects/scroll-star-remove-curse.png",
+      "row": 97,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:scroll:*Remove Curse*"
+      ]
+    },
+    {
+      "source": "objects/scroll-summon-monster.png",
+      "row": 97,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Summon Monster"
+      ]
+    },
+    {
+      "source": "objects/scroll-summon-undead.png",
+      "row": 97,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Summon Undead"
+      ]
+    },
+    {
+      "source": "objects/scroll-acquirement.png",
+      "row": 97,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Acquirement"
+      ]
+    },
+    {
+      "source": "objects/scroll-star-acquirement.png",
+      "row": 97,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:scroll:*Acquirement*"
+      ]
+    },
+    {
+      "source": "objects/scroll-dispel-undead.png",
+      "row": 97,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Dispel Undead"
+      ]
+    },
+    {
+      "source": "objects/scroll-banishment.png",
+      "row": 97,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Banishment"
+      ]
+    },
+    {
+      "source": "objects/scroll-mass-banishment.png",
+      "row": 97,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Mass Banishment"
+      ]
+    },
+    {
+      "source": "objects/scroll-remove-hunger.png",
+      "row": 97,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Remove Hunger"
+      ]
+    },
+    {
+      "source": "objects/scroll-light.png",
+      "row": 97,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Light"
+      ]
+    },
+    {
+      "source": "objects/scroll-word-of-recall.png",
+      "row": 97,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Word of Recall"
+      ]
+    },
+    {
+      "source": "objects/scroll-recharging.png",
+      "row": 97,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Recharging"
+      ]
+    },
+    {
+      "source": "objects/scroll-door-destruction.png",
+      "row": 97,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Door Destruction"
+      ]
+    },
+    {
+      "source": "objects/scroll-deep-descent.png",
+      "row": 97,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Deep Descent"
+      ]
+    },
+    {
+      "source": "objects/scroll-blessing.png",
+      "row": 97,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Blessing"
+      ]
+    },
+    {
+      "source": "objects/scroll-holy-chant.png",
+      "row": 97,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Holy Chant"
+      ]
+    },
+    {
+      "source": "objects/scroll-holy-prayer.png",
+      "row": 98,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Holy Prayer"
+      ]
+    },
+    {
+      "source": "objects/scroll-protection-from-evil.png",
+      "row": 98,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Protection from Evil"
+      ]
+    },
+    {
+      "source": "objects/scroll-monster-confusion.png",
+      "row": 98,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Monster Confusion"
+      ]
+    },
+    {
+      "source": "objects/scroll-rune-of-protection.png",
+      "row": 98,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Rune of Protection"
+      ]
+    },
+    {
+      "source": "objects/scroll-star-destruction.png",
+      "row": 98,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:scroll:*Destruction*"
+      ]
+    },
+    {
+      "source": "objects/scroll-aggravate-monster.png",
+      "row": 98,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Aggravate Monster"
+      ]
+    },
+    {
+      "source": "objects/scroll-curse-weapon.png",
+      "row": 98,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Curse Weapon"
+      ]
+    },
+    {
+      "source": "objects/scroll-curse-armour.png",
+      "row": 98,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Curse Armour"
+      ]
+    },
+    {
+      "source": "objects/scroll-darkness.png",
+      "row": 98,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Darkness"
+      ]
+    },
+    {
+      "source": "objects/scroll-trap-creation.png",
+      "row": 98,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:scroll:Trap Creation"
       ]
     }
   ],
