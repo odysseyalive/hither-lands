@@ -1534,7 +1534,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:winged dragon of bile",
         "monster:winged dragon of balance"
       ]
     },
@@ -2120,7 +2119,6 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:battle-scarred veteran",
         "monster:soldier"
       ]
     },
@@ -2130,7 +2128,6 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:squint-eyed rogue",
         "monster:rogue"
       ]
     },
@@ -2167,7 +2164,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:priest",
         "monster:druid"
       ]
     },
@@ -2554,7 +2550,6 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:winged dragon of ice",
         "monster:winged dragon of Ilmen"
       ]
     },
@@ -3408,7 +3403,6 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:Vecna, the Emperor Lich",
         "monster:Feagwath, the Undead Sorcerer"
       ]
     },
@@ -6632,6 +6626,60 @@
       "chroma": true,
       "maps": [
         "monster:apprentice"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-priest-single.png",
+      "row": 78,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:priest"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-squinteye.png",
+      "row": 78,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:squint-eyed rogue"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-veteran.png",
+      "row": 78,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:battle-scarred veteran"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon-bile.png",
+      "row": 78,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:winged dragon of bile"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon-ice.png",
+      "row": 78,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:winged dragon of ice"
+      ]
+    },
+    {
+      "source": "monsters/lich-vecna.png",
+      "row": 78,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:Vecna, the Emperor Lich"
       ]
     }
   ],
