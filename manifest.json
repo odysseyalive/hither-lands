@@ -355,8 +355,7 @@
         "monster:white worm mass",
         "monster:green worm mass",
         "monster:clear worm mass",
-        "monster:yellow worm mass",
-        "monster:blue worm mass"
+        "monster:yellow worm mass"
       ]
     },
     {
@@ -400,8 +399,7 @@
         "monster:soldier ant",
         "monster:giant black ant",
         "monster:giant white ant",
-        "monster:giant grey ant",
-        "monster:giant blue ant"
+        "monster:giant grey ant"
       ]
     },
     {
@@ -486,9 +484,7 @@
       "chroma": true,
       "maps": [
         "monster:scruffy looking hobbit",
-        "monster:The Thief of the Mountains",
-        "monster:halfling slinger",
-        "monster:legendary hobbit rogue"
+        "monster:halfling slinger"
       ]
     },
     {
@@ -2023,8 +2019,7 @@
       "maps": [
         "monster:red worm",
         "monster:red dragon",
-        "monster:fire drake",
-        "monster:Itangast the Fire Drake"
+        "monster:fire drake"
       ]
     },
     {
@@ -2322,9 +2317,7 @@
         "monster:Ulfast, son of Ulfang",
         "monster:Brodda, the Easterling",
         "monster:Ulwarth, Son of Ulfang",
-        "monster:Uldor the Accursed",
-        "monster:Ulfang the Black",
-        "monster:Lorgan, Chief of the Easterlings"
+        "monster:Uldor the Accursed"
       ]
     },
     {
@@ -2412,8 +2405,7 @@
       "maps": [
         "monster:black wraith",
         "monster:nether wraith",
-        "monster:Nether Wraith",
-        "monster:Deathlord"
+        "monster:Nether Wraith"
       ]
     },
     {
@@ -2974,9 +2966,7 @@
         "monster:king cobra",
         "monster:black mamba",
         "monster:serpent of the brownlands",
-        "monster:nightcrawler",
-        "monster:serpent of chaos",
-        "monster:Serpent-Sauron"
+        "monster:nightcrawler"
       ]
     },
     {
@@ -3001,9 +2991,7 @@
         "monster:master lich",
         "monster:demilich",
         "monster:archlich",
-        "monster:black reaver",
-        "monster:Feagwath, the Undead Sorcerer",
-        "monster:Vecna, the Emperor Lich"
+        "monster:black reaver"
       ]
     },
     {
@@ -3143,9 +3131,7 @@
         "monster:dr\u00faadan mage",
         "monster:dr\u00faadan druid",
         "monster:patriarch",
-        "monster:mystic",
-        "monster:master mystic",
-        "monster:grand master mystic"
+        "monster:mystic"
       ]
     },
     {
@@ -3732,6 +3718,92 @@
       "maps": [
         "monster:Gilim, the Giant of Eruman",
         "monster:Nan, the Giant"
+      ]
+    },
+    {
+      "source": "monsters/deathlord.png",
+      "row": 55,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:Deathlord"
+      ]
+    },
+    {
+      "source": "monsters/dragon-itangast.png",
+      "row": 55,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:Itangast the Fire Drake"
+      ]
+    },
+    {
+      "source": "monsters/hobbit-rogue.png",
+      "row": 55,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:legendary hobbit rogue",
+        "monster:The Thief of the Mountains"
+      ]
+    },
+    {
+      "source": "monsters/serpent-chaos.png",
+      "row": 55,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:serpent of chaos",
+        "monster:Serpent-Sauron"
+      ]
+    },
+    {
+      "source": "monsters/lich-emperor.png",
+      "row": 55,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:Vecna, the Emperor Lich",
+        "monster:Feagwath, the Undead Sorcerer"
+      ]
+    },
+    {
+      "source": "monsters/mystic-master.png",
+      "row": 55,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:master mystic",
+        "monster:grand master mystic"
+      ]
+    },
+    {
+      "source": "monsters/easterling-chief.png",
+      "row": 55,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:Lorgan, Chief of the Easterlings",
+        "monster:Ulfang the Black"
+      ]
+    },
+    {
+      "source": "monsters/worm-blue.png",
+      "row": 55,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:blue worm mass"
+      ]
+    },
+    {
+      "source": "monsters/ant-blue.png",
+      "row": 55,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:giant blue ant"
       ]
     }
   ],
