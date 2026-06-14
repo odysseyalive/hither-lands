@@ -1079,12 +1079,6 @@
       "col": 3,
       "chroma": "family",
       "maps": [
-        "object:hard armor:Metal Scale Mail",
-        "object:hard armor:Chain Mail",
-        "object:hard armor:Augmented Chain Mail",
-        "object:hard armor:Bar Chain Mail",
-        "object:hard armor:Metal Brigandine Armour",
-        "object:hard armor:Partial Plate Armour",
         "object:hard armor:Metal Lamellar Armour",
         "object:hard armor:Full Plate Armour",
         "object:hard armor:Ribbed Plate Armour",
@@ -7555,6 +7549,60 @@
       "chroma": true,
       "maps": [
         "object:mushroom:Shadows"
+      ]
+    },
+    {
+      "source": "objects/armor-metal-scale-mail.png",
+      "row": 85,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Metal Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/armor-chain-mail.png",
+      "row": 85,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Chain Mail"
+      ]
+    },
+    {
+      "source": "objects/armor-augmented-chain-mail.png",
+      "row": 85,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Augmented Chain Mail"
+      ]
+    },
+    {
+      "source": "objects/armor-bar-chain-mail.png",
+      "row": 85,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Bar Chain Mail"
+      ]
+    },
+    {
+      "source": "objects/armor-brigandine.png",
+      "row": 85,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Metal Brigandine Armour"
+      ]
+    },
+    {
+      "source": "objects/armor-partial-plate.png",
+      "row": 85,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:hard armor:Partial Plate Armour"
       ]
     }
   ],
