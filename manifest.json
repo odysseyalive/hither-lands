@@ -1621,7 +1621,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:white wraith",
         "monster:grey wraith"
       ]
     },
@@ -1631,7 +1630,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:2-headed hydra",
         "monster:3-headed hydra",
         "monster:4-headed hydra"
       ]
@@ -1659,7 +1657,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:time vortex",
         "monster:shimmering vortex"
       ]
     },
@@ -1679,7 +1676,6 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:clear hound",
         "monster:air hound"
       ]
     },
@@ -1698,8 +1694,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:quylthulg",
-        "monster:swamp quylthulg"
+        "monster:quylthulg"
       ]
     },
     {
@@ -1797,7 +1792,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:grizzly bear",
         "monster:werebear"
       ]
     },
@@ -2166,8 +2160,7 @@
       "chroma": true,
       "maps": [
         "monster:battle-scarred veteran",
-        "monster:soldier",
-        "monster:warrior"
+        "monster:soldier"
       ]
     },
     {
@@ -2177,7 +2170,6 @@
       "chroma": true,
       "maps": [
         "monster:squint-eyed rogue",
-        "monster:cutpurse",
         "monster:rogue"
       ]
     },
@@ -2187,7 +2179,6 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:ranger",
         "monster:ranger chieftain",
         "monster:Easterling archer"
       ]
@@ -5346,6 +5337,87 @@
       "chroma": true,
       "maps": [
         "monster:nexus quylthulg"
+      ]
+    },
+    {
+      "source": "monsters/hydra-2head.png",
+      "row": 67,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:2-headed hydra"
+      ]
+    },
+    {
+      "source": "monsters/quadruped-grizzly.png",
+      "row": 68,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:grizzly bear"
+      ]
+    },
+    {
+      "source": "monsters/wraith-white.png",
+      "row": 68,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:white wraith"
+      ]
+    },
+    {
+      "source": "monsters/vortex-time.png",
+      "row": 68,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:time vortex"
+      ]
+    },
+    {
+      "source": "monsters/quylthulg-swamp.png",
+      "row": 68,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:swamp quylthulg"
+      ]
+    },
+    {
+      "source": "monsters/hound-clear.png",
+      "row": 68,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:clear hound"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-warrior-single.png",
+      "row": 68,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:warrior"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-cutpurse.png",
+      "row": 68,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:cutpurse"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-ranger.png",
+      "row": 68,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:ranger"
       ]
     }
   ],
