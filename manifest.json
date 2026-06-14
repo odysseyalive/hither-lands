@@ -29,15 +29,7 @@
       "source": "terrain/wall-granite.png",
       "row": 0,
       "col": 2,
-      "maps": [
-        "feat:granite wall:*",
-        "feat:permanent wall:*",
-        "feat:magma vein:*",
-        "feat:quartz vein:*",
-        "feat:magma vein with treasure:*",
-        "feat:quartz vein with treasure:*",
-        "feat:secret door:*"
-      ]
+      "maps": []
     },
     {
       "source": "terrain/door-closed.png",
@@ -51,10 +43,7 @@
       "source": "terrain/door-open.png",
       "row": 0,
       "col": 4,
-      "maps": [
-        "feat:open door:*",
-        "feat:broken door:*"
-      ]
+      "maps": []
     },
     {
       "source": "terrain/stair-up.png",
@@ -76,10 +65,7 @@
       "source": "terrain/rubble.png",
       "row": 0,
       "col": 7,
-      "maps": [
-        "feat:pile of rubble:*",
-        "feat:pile of passable rubble:*"
-      ]
+      "maps": []
     },
     {
       "source": "terrain/grass.png",
@@ -101,16 +87,7 @@
       "source": "terrain/path-sign.png",
       "row": 7,
       "col": 3,
-      "maps": [
-        "feat:easy path north:*",
-        "feat:hard path north:*",
-        "feat:easy path east:*",
-        "feat:hard path east:*",
-        "feat:easy path south:*",
-        "feat:hard path south:*",
-        "feat:easy path west:*",
-        "feat:hard path west:*"
-      ],
+      "maps": [],
       "chroma": "family",
       "ground": "terrain/road.png"
     },
@@ -118,10 +95,7 @@
       "source": "terrain/trees.png",
       "row": 1,
       "col": 2,
-      "maps": [
-        "feat:lowland trees:*",
-        "feat:highland trees:*"
-      ]
+      "maps": []
     },
     {
       "source": "terrain/water.png",
@@ -10314,6 +10288,190 @@
       "maps": [
         "trap:poison pit:*"
       ]
+    },
+    {
+      "source": "terrain/wall-granite-fitted.png",
+      "row": 107,
+      "col": 1,
+      "maps": [
+        "feat:granite wall:*"
+      ]
+    },
+    {
+      "source": "terrain/wall-permanent.png",
+      "row": 107,
+      "col": 2,
+      "maps": [
+        "feat:permanent wall:*"
+      ]
+    },
+    {
+      "source": "terrain/vein-magma.png",
+      "row": 107,
+      "col": 3,
+      "maps": [
+        "feat:magma vein:*"
+      ]
+    },
+    {
+      "source": "terrain/vein-quartz.png",
+      "row": 107,
+      "col": 4,
+      "maps": [
+        "feat:quartz vein:*"
+      ]
+    },
+    {
+      "source": "terrain/vein-magma-treasure.png",
+      "row": 107,
+      "col": 5,
+      "maps": [
+        "feat:magma vein with treasure:*"
+      ]
+    },
+    {
+      "source": "terrain/vein-quartz-treasure.png",
+      "row": 107,
+      "col": 6,
+      "maps": [
+        "feat:quartz vein with treasure:*"
+      ]
+    },
+    {
+      "source": "terrain/door-secret.png",
+      "row": 107,
+      "col": 7,
+      "maps": [
+        "feat:secret door:*"
+      ]
+    },
+    {
+      "source": "terrain/door-opened.png",
+      "row": 107,
+      "col": 8,
+      "maps": [
+        "feat:open door:*"
+      ]
+    },
+    {
+      "source": "terrain/door-broken.png",
+      "row": 107,
+      "col": 9,
+      "maps": [
+        "feat:broken door:*"
+      ]
+    },
+    {
+      "source": "terrain/rubble-pile.png",
+      "row": 107,
+      "col": 10,
+      "maps": [
+        "feat:pile of rubble:*"
+      ]
+    },
+    {
+      "source": "terrain/rubble-passable.png",
+      "row": 107,
+      "col": 11,
+      "maps": [
+        "feat:pile of passable rubble:*"
+      ]
+    },
+    {
+      "source": "terrain/trees-lowland.png",
+      "row": 107,
+      "col": 12,
+      "maps": [
+        "feat:lowland trees:*"
+      ]
+    },
+    {
+      "source": "terrain/trees-highland.png",
+      "row": 107,
+      "col": 13,
+      "maps": [
+        "feat:highland trees:*"
+      ]
+    },
+    {
+      "source": "terrain/sign-easy-north.png",
+      "row": 107,
+      "col": 14,
+      "maps": [
+        "feat:easy path north:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
+    },
+    {
+      "source": "terrain/sign-easy-east.png",
+      "row": 107,
+      "col": 15,
+      "maps": [
+        "feat:easy path east:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
+    },
+    {
+      "source": "terrain/sign-easy-south.png",
+      "row": 108,
+      "col": 0,
+      "maps": [
+        "feat:easy path south:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
+    },
+    {
+      "source": "terrain/sign-easy-west.png",
+      "row": 108,
+      "col": 1,
+      "maps": [
+        "feat:easy path west:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
+    },
+    {
+      "source": "terrain/sign-hard-north.png",
+      "row": 108,
+      "col": 2,
+      "maps": [
+        "feat:hard path north:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
+    },
+    {
+      "source": "terrain/sign-hard-east.png",
+      "row": 108,
+      "col": 3,
+      "maps": [
+        "feat:hard path east:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
+    },
+    {
+      "source": "terrain/sign-hard-south.png",
+      "row": 108,
+      "col": 4,
+      "maps": [
+        "feat:hard path south:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
+    },
+    {
+      "source": "terrain/sign-hard-west.png",
+      "row": 108,
+      "col": 5,
+      "maps": [
+        "feat:hard path west:*"
+      ],
+      "chroma": "family",
+      "ground": "terrain/road.png"
     }
   ],
   "player_variants": [
