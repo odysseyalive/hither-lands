@@ -1037,18 +1037,7 @@
       "row": 9,
       "col": 1,
       "chroma": "family",
-      "maps": [
-        "object:amulet:Chalcedony",
-        "object:amulet:Malachite",
-        "object:amulet:Opal",
-        "object:amulet:Garnet",
-        "object:amulet:Pearl",
-        "object:amulet:Amethyst",
-        "object:amulet:Sapphire",
-        "object:amulet:Ruby",
-        "object:amulet:Emerald",
-        "object:amulet:Diamond"
-      ]
+      "maps": []
     },
     {
       "source": "objects/soft-armor.png",
@@ -8262,6 +8251,96 @@
       "chroma": true,
       "maps": [
         "object:ring:Mithril"
+      ]
+    },
+    {
+      "source": "objects/amulet-chalcedony.png",
+      "row": 90,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Chalcedony"
+      ]
+    },
+    {
+      "source": "objects/amulet-malachite.png",
+      "row": 90,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Malachite"
+      ]
+    },
+    {
+      "source": "objects/amulet-opal.png",
+      "row": 91,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Opal"
+      ]
+    },
+    {
+      "source": "objects/amulet-garnet.png",
+      "row": 91,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Garnet"
+      ]
+    },
+    {
+      "source": "objects/amulet-pearl.png",
+      "row": 91,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Pearl"
+      ]
+    },
+    {
+      "source": "objects/amulet-amethyst.png",
+      "row": 91,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Amethyst"
+      ]
+    },
+    {
+      "source": "objects/amulet-sapphire.png",
+      "row": 91,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Sapphire"
+      ]
+    },
+    {
+      "source": "objects/amulet-ruby.png",
+      "row": 91,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Ruby"
+      ]
+    },
+    {
+      "source": "objects/amulet-emerald.png",
+      "row": 91,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Emerald"
+      ]
+    },
+    {
+      "source": "objects/amulet-diamond.png",
+      "row": 91,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:amulet:Diamond"
       ]
     }
   ],
