@@ -1575,7 +1575,6 @@
       "chroma": true,
       "maps": [
         "monster:winged dragon of bile",
-        "monster:winged dragon of chaos",
         "monster:winged dragon of balance"
       ]
     },
@@ -1730,7 +1729,6 @@
       "chroma": true,
       "maps": [
         "monster:Maia",
-        "monster:Maia of Nienna",
         "monster:Maia of Mandos"
       ]
     },
@@ -2404,10 +2402,7 @@
       "row": 47,
       "col": 15,
       "chroma": true,
-      "maps": [
-        "monster:iron golem",
-        "monster:bronze golem"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/golem-bone.png",
@@ -2425,8 +2420,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:frost giant",
-        "monster:cloud giant"
+        "monster:frost giant"
       ]
     },
     {
@@ -2691,9 +2685,7 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:winged dragon of fire",
-        "monster:winged dragon of storms",
-        "monster:sky dragon"
+        "monster:winged dragon of fire"
       ]
     },
     {
@@ -2703,8 +2695,7 @@
       "chroma": true,
       "maps": [
         "monster:winged dragon of ice",
-        "monster:winged dragon of Ilmen",
-        "monster:winged dragon of annihilation"
+        "monster:winged dragon of Ilmen"
       ]
     },
     {
@@ -3169,8 +3160,7 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:dreadmaster",
-        "monster:Tselakus, the Dreadlord"
+        "monster:dreadmaster"
       ]
     },
     {
@@ -4891,6 +4881,87 @@
       "chroma": true,
       "maps": [
         "monster:green glutton ghost"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon-sky.png",
+      "row": 64,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:sky dragon"
+      ]
+    },
+    {
+      "source": "monsters/golem-bronze.png",
+      "row": 64,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:bronze golem"
+      ]
+    },
+    {
+      "source": "monsters/ghost-tselakus.png",
+      "row": 64,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:Tselakus, the Dreadlord"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon-storm.png",
+      "row": 64,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:winged dragon of storms"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon-chaos.png",
+      "row": 64,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:winged dragon of chaos"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon-annihilation.png",
+      "row": 64,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:winged dragon of annihilation"
+      ]
+    },
+    {
+      "source": "monsters/giant-cloud.png",
+      "row": 64,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:cloud giant"
+      ]
+    },
+    {
+      "source": "monsters/golem-iron.png",
+      "row": 64,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:iron golem"
+      ]
+    },
+    {
+      "source": "monsters/ainu-nienna.png",
+      "row": 64,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:Maia of Nienna"
       ]
     }
   ],
