@@ -1123,13 +1123,7 @@
       "row": 9,
       "col": 8,
       "chroma": "family",
-      "maps": [
-        "object:gloves:Set of Leather Gloves",
-        "object:gloves:Set of Gauntlets",
-        "object:gloves:Set of Mithril Gauntlets",
-        "object:gloves:Set of Caestus",
-        "object:gloves:Set of Alchemist's Gloves"
-      ]
+      "maps": []
     },
     {
       "source": "objects/boots.png",
@@ -7926,6 +7920,51 @@
       "chroma": true,
       "maps": [
         "object:cloak:Ethereal Cloak"
+      ]
+    },
+    {
+      "source": "objects/gloves-leather.png",
+      "row": 88,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:gloves:Set of Leather Gloves"
+      ]
+    },
+    {
+      "source": "objects/gloves-gauntlets.png",
+      "row": 88,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:gloves:Set of Gauntlets"
+      ]
+    },
+    {
+      "source": "objects/gloves-mithril.png",
+      "row": 88,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:gloves:Set of Mithril Gauntlets"
+      ]
+    },
+    {
+      "source": "objects/gloves-caestus.png",
+      "row": 88,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:gloves:Set of Caestus"
+      ]
+    },
+    {
+      "source": "objects/gloves-alchemist.png",
+      "row": 88,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:gloves:Set of Alchemist's Gloves"
       ]
     }
   ],
