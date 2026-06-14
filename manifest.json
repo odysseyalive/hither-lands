@@ -1115,12 +1115,7 @@
       "row": 10,
       "col": 0,
       "chroma": "family",
-      "maps": [
-        "object:boots:Pair of Leather Boots",
-        "object:boots:Pair of Iron Shod Boots",
-        "object:boots:Pair of Steel Shod Boots",
-        "object:boots:Pair of Mithril Shod Boots"
-      ]
+      "maps": []
     },
     {
       "source": "objects/cloak.png",
@@ -1134,12 +1129,7 @@
       "row": 10,
       "col": 2,
       "chroma": "family",
-      "maps": [
-        "object:bow:Short Bow",
-        "object:bow:Long Bow",
-        "object:bow:Light Crossbow",
-        "object:bow:Heavy Crossbow"
-      ]
+      "maps": []
     },
     {
       "source": "objects/arrow.png",
@@ -8121,6 +8111,78 @@
       "chroma": true,
       "maps": [
         "object:crown:Massive Iron Crown"
+      ]
+    },
+    {
+      "source": "objects/boots-leather.png",
+      "row": 89,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:boots:Pair of Leather Boots"
+      ]
+    },
+    {
+      "source": "objects/boots-iron-shod.png",
+      "row": 89,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:boots:Pair of Iron Shod Boots"
+      ]
+    },
+    {
+      "source": "objects/boots-steel-shod.png",
+      "row": 89,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:boots:Pair of Steel Shod Boots"
+      ]
+    },
+    {
+      "source": "objects/boots-mithril-shod.png",
+      "row": 89,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:boots:Pair of Mithril Shod Boots"
+      ]
+    },
+    {
+      "source": "objects/bow-short.png",
+      "row": 90,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:bow:Short Bow"
+      ]
+    },
+    {
+      "source": "objects/bow-long.png",
+      "row": 90,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:bow:Long Bow"
+      ]
+    },
+    {
+      "source": "objects/crossbow-light.png",
+      "row": 90,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:bow:Light Crossbow"
+      ]
+    },
+    {
+      "source": "objects/crossbow-heavy.png",
+      "row": 90,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:bow:Heavy Crossbow"
       ]
     }
   ],
