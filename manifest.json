@@ -1066,12 +1066,7 @@
       "row": 9,
       "col": 2,
       "chroma": "family",
-      "maps": [
-        "object:soft armor:Soft Leather Armour",
-        "object:soft armor:Studded Leather Armour",
-        "object:soft armor:Hard Leather Armour",
-        "object:soft armor:Leather Scale Mail"
-      ]
+      "maps": []
     },
     {
       "source": "objects/hard-armor.png",
@@ -8028,6 +8023,42 @@
       "chroma": true,
       "maps": [
         "object:chest:Large jeweled chest"
+      ]
+    },
+    {
+      "source": "objects/soft-armor-soft-leather.png",
+      "row": 89,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:soft armor:Soft Leather Armour"
+      ]
+    },
+    {
+      "source": "objects/soft-armor-studded.png",
+      "row": 89,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:soft armor:Studded Leather Armour"
+      ]
+    },
+    {
+      "source": "objects/soft-armor-hard-leather.png",
+      "row": 89,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:soft armor:Hard Leather Armour"
+      ]
+    },
+    {
+      "source": "objects/soft-armor-leather-scale.png",
+      "row": 89,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:soft armor:Leather Scale Mail"
       ]
     }
   ],
