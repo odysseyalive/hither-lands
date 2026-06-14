@@ -2477,7 +2477,6 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:orc captain",
         "monster:Othrod, Lord of the orcs"
       ]
     },
@@ -2745,7 +2744,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:master lich",
         "monster:demilich"
       ]
     },
@@ -2782,7 +2780,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:green icky thing",
         "monster:blue icky thing"
       ]
     },
@@ -2820,7 +2817,6 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:ogre chieftain",
         "monster:ogre mage"
       ]
     },
@@ -2870,7 +2866,6 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:enchantress",
         "monster:shapeshifter"
       ]
     },
@@ -2965,7 +2960,6 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:catoblepas",
         "monster:night mare"
       ]
     },
@@ -6464,6 +6458,60 @@
       "chroma": true,
       "maps": [
         "monster:yellow mold"
+      ]
+    },
+    {
+      "source": "monsters/mage-enchantress.png",
+      "row": 76,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:enchantress"
+      ]
+    },
+    {
+      "source": "monsters/lich-master-single.png",
+      "row": 76,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:master lich"
+      ]
+    },
+    {
+      "source": "monsters/orc-captain-single.png",
+      "row": 76,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:orc captain"
+      ]
+    },
+    {
+      "source": "monsters/ogre-chieftain.png",
+      "row": 76,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:ogre chieftain"
+      ]
+    },
+    {
+      "source": "monsters/quadruped-catoblepas.png",
+      "row": 76,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:catoblepas"
+      ]
+    },
+    {
+      "source": "monsters/icky-green.png",
+      "row": 77,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:green icky thing"
       ]
     }
   ],
