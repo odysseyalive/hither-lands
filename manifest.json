@@ -1114,33 +1114,21 @@
       "row": 10,
       "col": 3,
       "chroma": "family",
-      "maps": [
-        "object:arrow:Arrow",
-        "object:arrow:Seeker Arrow",
-        "object:arrow:Mithril Arrow"
-      ]
+      "maps": []
     },
     {
       "source": "objects/bolt.png",
       "row": 10,
       "col": 4,
       "chroma": "family",
-      "maps": [
-        "object:bolt:Bolt",
-        "object:bolt:Seeker Bolt",
-        "object:bolt:Mithril Bolt"
-      ]
+      "maps": []
     },
     {
       "source": "objects/shot.png",
       "row": 10,
       "col": 5,
       "chroma": "family",
-      "maps": [
-        "object:shot:Rounded Pebble",
-        "object:shot:Iron Shot",
-        "object:shot:Mithril Shot"
-      ]
+      "maps": []
     },
     {
       "source": "objects/light.png",
@@ -8497,6 +8485,87 @@
       "chroma": true,
       "maps": [
         "object:shadow book:[Deadly Powers]"
+      ]
+    },
+    {
+      "source": "objects/arrow-basic.png",
+      "row": 92,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:arrow:Arrow"
+      ]
+    },
+    {
+      "source": "objects/arrow-seeker.png",
+      "row": 92,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:arrow:Seeker Arrow"
+      ]
+    },
+    {
+      "source": "objects/arrow-mithril.png",
+      "row": 92,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:arrow:Mithril Arrow"
+      ]
+    },
+    {
+      "source": "objects/bolt-basic.png",
+      "row": 92,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:bolt:Bolt"
+      ]
+    },
+    {
+      "source": "objects/bolt-seeker.png",
+      "row": 93,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:bolt:Seeker Bolt"
+      ]
+    },
+    {
+      "source": "objects/bolt-mithril.png",
+      "row": 93,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:bolt:Mithril Bolt"
+      ]
+    },
+    {
+      "source": "objects/shot-pebble.png",
+      "row": 93,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:shot:Rounded Pebble"
+      ]
+    },
+    {
+      "source": "objects/shot-iron.png",
+      "row": 93,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:shot:Iron Shot"
+      ]
+    },
+    {
+      "source": "objects/shot-mithril.png",
+      "row": 93,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:shot:Mithril Shot"
       ]
     }
   ],
