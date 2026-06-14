@@ -1766,8 +1766,7 @@
       "chroma": true,
       "maps": [
         "monster:white harpy",
-        "monster:black harpy",
-        "monster:hippogriff"
+        "monster:black harpy"
       ]
     },
     {
@@ -2122,8 +2121,7 @@
       "chroma": true,
       "maps": [
         "monster:dark hound",
-        "monster:nether hound",
-        "monster:time hound"
+        "monster:nether hound"
       ]
     },
     {
@@ -2219,8 +2217,7 @@
       "chroma": true,
       "maps": [
         "monster:air spirit",
-        "monster:air elemental",
-        "monster:invisible stalker"
+        "monster:air elemental"
       ]
     },
     {
@@ -2671,8 +2668,7 @@
       "chroma": true,
       "maps": [
         "monster:evil eye",
-        "monster:gazing eye",
-        "monster:spectator"
+        "monster:gazing eye"
       ]
     },
     {
@@ -2934,8 +2930,7 @@
       "chroma": true,
       "maps": [
         "monster:master lich",
-        "monster:demilich",
-        "monster:archlich"
+        "monster:demilich"
       ]
     },
     {
@@ -3008,8 +3003,7 @@
       "chroma": true,
       "maps": [
         "monster:guardian naga",
-        "monster:dark naga",
-        "monster:spirit naga"
+        "monster:dark naga"
       ]
     },
     {
@@ -3148,7 +3142,6 @@
       "chroma": true,
       "maps": [
         "monster:ironfist priest",
-        "monster:dark dwarven lord",
         "monster:stiffbeard sorcerer"
       ]
     },
@@ -3212,8 +3205,6 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:sabre-tooth tiger",
-        "monster:nightstalker",
         "monster:Tevildo, Prince of Cats"
       ]
     },
@@ -4556,6 +4547,87 @@
       "chroma": true,
       "maps": [
         "monster:aether hound"
+      ]
+    },
+    {
+      "source": "monsters/hippogriff.png",
+      "row": 61,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:hippogriff"
+      ]
+    },
+    {
+      "source": "monsters/lich-arch.png",
+      "row": 61,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:archlich"
+      ]
+    },
+    {
+      "source": "monsters/naga-spirit.png",
+      "row": 61,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:spirit naga"
+      ]
+    },
+    {
+      "source": "monsters/hound-time.png",
+      "row": 61,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:time hound"
+      ]
+    },
+    {
+      "source": "monsters/elemental-stalker.png",
+      "row": 62,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:invisible stalker"
+      ]
+    },
+    {
+      "source": "monsters/feline-nightstalker.png",
+      "row": 62,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:nightstalker"
+      ]
+    },
+    {
+      "source": "monsters/feline-sabretooth.png",
+      "row": 62,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:sabre-tooth tiger"
+      ]
+    },
+    {
+      "source": "monsters/dwarf-dark-lord.png",
+      "row": 62,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:dark dwarven lord"
+      ]
+    },
+    {
+      "source": "monsters/evil-eye-spectator.png",
+      "row": 62,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:spectator"
       ]
     }
   ],
