@@ -1030,18 +1030,7 @@
       "row": 9,
       "col": 0,
       "chroma": "family",
-      "maps": [
-        "object:ring:Steel",
-        "object:ring:Pewter",
-        "object:ring:Galvorn",
-        "object:ring:Brass",
-        "object:ring:Bronze",
-        "object:ring:Copper",
-        "object:ring:Silver",
-        "object:ring:Gold",
-        "object:ring:Adamantite",
-        "object:ring:Mithril"
-      ]
+      "maps": []
     },
     {
       "source": "objects/amulet.png",
@@ -8183,6 +8172,96 @@
       "chroma": true,
       "maps": [
         "object:bow:Heavy Crossbow"
+      ]
+    },
+    {
+      "source": "objects/ring-steel.png",
+      "row": 90,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:ring:Steel"
+      ]
+    },
+    {
+      "source": "objects/ring-pewter.png",
+      "row": 90,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:ring:Pewter"
+      ]
+    },
+    {
+      "source": "objects/ring-galvorn.png",
+      "row": 90,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:ring:Galvorn"
+      ]
+    },
+    {
+      "source": "objects/ring-brass.png",
+      "row": 90,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:ring:Brass"
+      ]
+    },
+    {
+      "source": "objects/ring-bronze.png",
+      "row": 90,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:ring:Bronze"
+      ]
+    },
+    {
+      "source": "objects/ring-copper.png",
+      "row": 90,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:ring:Copper"
+      ]
+    },
+    {
+      "source": "objects/ring-silver.png",
+      "row": 90,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:ring:Silver"
+      ]
+    },
+    {
+      "source": "objects/ring-gold.png",
+      "row": 90,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:ring:Gold"
+      ]
+    },
+    {
+      "source": "objects/ring-adamantite.png",
+      "row": 90,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:ring:Adamantite"
+      ]
+    },
+    {
+      "source": "objects/ring-mithril.png",
+      "row": 90,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:ring:Mithril"
       ]
     }
   ],
