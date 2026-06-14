@@ -2372,8 +2372,7 @@
       "chroma": true,
       "maps": [
         "monster:pit fiend",
-        "monster:horned reaper",
-        "monster:Krotus, the Dark Lord"
+        "monster:horned reaper"
       ]
     },
     {
@@ -2745,8 +2744,7 @@
       "maps": [
         "monster:winged dragon of ice",
         "monster:winged dragon of Ilmen",
-        "monster:winged dragon of annihilation",
-        "monster:winged dragon of law"
+        "monster:winged dragon of annihilation"
       ]
     },
     {
@@ -2767,8 +2765,7 @@
       "maps": [
         "monster:Maia of Aul\u00eb",
         "monster:Maia of Ulmo",
-        "monster:Maia of Manw\u00eb",
-        "monster:Maia of Varda"
+        "monster:Maia of Manw\u00eb"
       ]
     },
     {
@@ -3002,7 +2999,6 @@
       "maps": [
         "monster:imp",
         "monster:nruling",
-        "monster:Draebor, the Imp",
         "monster:bodak"
       ]
     },
@@ -3025,8 +3021,6 @@
       "chroma": true,
       "maps": [
         "monster:giant flea",
-        "monster:hummerhorn",
-        "monster:neekerbreeker",
         "monster:gnawing bug"
       ]
     },
@@ -3140,8 +3134,7 @@
       "maps": [
         "monster:purple mushroom patch",
         "monster:clear mushroom patch",
-        "monster:magic mushroom patch",
-        "monster:shrieker mushroom patch"
+        "monster:magic mushroom patch"
       ]
     },
     {
@@ -3164,8 +3157,7 @@
       "maps": [
         "monster:chaos drake",
         "monster:balance drake",
-        "monster:elemental drake",
-        "monster:clamor drake"
+        "monster:elemental drake"
       ]
     },
     {
@@ -3199,8 +3191,7 @@
       "maps": [
         "monster:ironfist priest",
         "monster:dark dwarven lord",
-        "monster:stiffbeard sorcerer",
-        "monster:blacklock mage"
+        "monster:stiffbeard sorcerer"
       ]
     },
     {
@@ -4116,6 +4107,87 @@
       "chroma": true,
       "maps": [
         "monster:lord of Ered Engrin"
+      ]
+    },
+    {
+      "source": "monsters/demon-draebor.png",
+      "row": 58,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:Draebor, the Imp"
+      ]
+    },
+    {
+      "source": "monsters/ainu-varda.png",
+      "row": 58,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:Maia of Varda"
+      ]
+    },
+    {
+      "source": "monsters/flying-dragon-law.png",
+      "row": 58,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:winged dragon of law"
+      ]
+    },
+    {
+      "source": "monsters/insect-hummerhorn.png",
+      "row": 58,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:hummerhorn"
+      ]
+    },
+    {
+      "source": "monsters/demon-krotus.png",
+      "row": 58,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:Krotus, the Dark Lord"
+      ]
+    },
+    {
+      "source": "monsters/drake-clamor.png",
+      "row": 58,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:clamor drake"
+      ]
+    },
+    {
+      "source": "monsters/dwarf-blacklock-mage.png",
+      "row": 58,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:blacklock mage"
+      ]
+    },
+    {
+      "source": "monsters/insect-neekerbreeker.png",
+      "row": 58,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:neekerbreeker"
+      ]
+    },
+    {
+      "source": "monsters/mushroom-shrieker.png",
+      "row": 58,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:shrieker mushroom patch"
       ]
     }
   ],
