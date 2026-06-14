@@ -2742,8 +2742,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:falcon of Ered Engrin",
-        "monster:giant roc"
+        "monster:falcon of Ered Engrin"
       ]
     },
     {
@@ -2792,7 +2791,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:barbazu",
         "monster:bile demon"
       ]
     },
@@ -2939,7 +2937,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:chaos drake",
         "monster:balance drake"
       ]
     },
@@ -2949,7 +2946,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:shadow drake",
         "monster:corrosive drake"
       ]
     },
@@ -3052,7 +3048,6 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:crystal drake",
         "monster:great crystal drake"
       ]
     },
@@ -3101,7 +3096,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:ethereal drake",
         "monster:law drake"
       ]
     },
@@ -6153,6 +6147,60 @@
       "chroma": true,
       "maps": [
         "monster:pit fiend"
+      ]
+    },
+    {
+      "source": "monsters/demon-barbazu.png",
+      "row": 74,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:barbazu"
+      ]
+    },
+    {
+      "source": "monsters/bird-roc.png",
+      "row": 74,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:giant roc"
+      ]
+    },
+    {
+      "source": "monsters/dragon-shadow-single.png",
+      "row": 74,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:shadow drake"
+      ]
+    },
+    {
+      "source": "monsters/dragon-ethereal-single.png",
+      "row": 74,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:ethereal drake"
+      ]
+    },
+    {
+      "source": "monsters/dragon-crystal-single.png",
+      "row": 74,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:crystal drake"
+      ]
+    },
+    {
+      "source": "monsters/dragon-chaos.png",
+      "row": 74,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:chaos drake"
       ]
     }
   ],
