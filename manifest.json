@@ -1858,8 +1858,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:wild cat",
-        "monster:panther"
+        "monster:wild cat"
       ]
     },
     {
@@ -2474,8 +2473,7 @@
       "chroma": true,
       "maps": [
         "monster:eastern dwarf",
-        "monster:stonefoot warrior",
-        "monster:petty-dwarven rogue"
+        "monster:stonefoot warrior"
       ]
     },
     {
@@ -2733,9 +2731,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:Maia of Aul\u00eb",
-        "monster:Maia of Ulmo",
-        "monster:Maia of Manw\u00eb"
+        "monster:Maia of Aul\u00eb"
       ]
     },
     {
@@ -2744,7 +2740,6 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:Makar, the Warrior",
         "monster:Me\u00e1ss\u00eb, the Bloody"
       ]
     },
@@ -2992,7 +2987,6 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:guardian naga",
         "monster:dark naga"
       ]
     },
@@ -4771,6 +4765,60 @@
       "chroma": true,
       "maps": [
         "monster:giant silver ant"
+      ]
+    },
+    {
+      "source": "monsters/ainu-makar.png",
+      "row": 63,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:Makar, the Warrior"
+      ]
+    },
+    {
+      "source": "monsters/naga-guardian.png",
+      "row": 63,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:guardian naga"
+      ]
+    },
+    {
+      "source": "monsters/feline-panther.png",
+      "row": 63,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:panther"
+      ]
+    },
+    {
+      "source": "monsters/ainu-manwe.png",
+      "row": 63,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:Maia of Manw\u00eb"
+      ]
+    },
+    {
+      "source": "monsters/ainu-ulmo.png",
+      "row": 63,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:Maia of Ulmo"
+      ]
+    },
+    {
+      "source": "monsters/dwarf-petty-rogue.png",
+      "row": 63,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:petty-dwarven rogue"
       ]
     }
   ],
