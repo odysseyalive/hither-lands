@@ -1553,7 +1553,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:forest troll",
         "monster:troll scavenger"
       ]
     },
@@ -1609,7 +1608,6 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:vampire",
         "monster:Vampire"
       ]
     },
@@ -1710,7 +1708,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:white harpy",
         "monster:black harpy"
       ]
     },
@@ -2311,7 +2308,6 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:snow troll",
         "monster:storm troll"
       ]
     },
@@ -2502,7 +2498,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:orc archer",
         "monster:half-orc"
       ]
     },
@@ -2522,7 +2517,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:wolf",
         "monster:wolf chieftain"
       ]
     },
@@ -2532,7 +2526,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:werewolf",
         "monster:werewolf of Sauron"
       ]
     },
@@ -2658,7 +2651,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:mummified human",
         "monster:mummified chieftain"
       ]
     },
@@ -3271,7 +3263,6 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:skeleton human",
         "monster:Skeleton"
       ]
     },
@@ -5938,6 +5929,87 @@
       "chroma": true,
       "maps": [
         "monster:fire giant"
+      ]
+    },
+    {
+      "source": "monsters/troll-forest.png",
+      "row": 72,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:forest troll"
+      ]
+    },
+    {
+      "source": "monsters/hybrid-white-harpy.png",
+      "row": 72,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:white harpy"
+      ]
+    },
+    {
+      "source": "monsters/wolf-common.png",
+      "row": 72,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:wolf"
+      ]
+    },
+    {
+      "source": "monsters/warg-werewolf.png",
+      "row": 72,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:werewolf"
+      ]
+    },
+    {
+      "source": "monsters/orc-archer.png",
+      "row": 72,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:orc archer"
+      ]
+    },
+    {
+      "source": "monsters/vampire-single.png",
+      "row": 72,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:vampire"
+      ]
+    },
+    {
+      "source": "monsters/troll-snow-single.png",
+      "row": 72,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:snow troll"
+      ]
+    },
+    {
+      "source": "monsters/mummy-single.png",
+      "row": 73,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:mummified human"
+      ]
+    },
+    {
+      "source": "monsters/skeleton-human-single.png",
+      "row": 73,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:skeleton human"
       ]
     }
   ],
