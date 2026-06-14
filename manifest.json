@@ -1934,8 +1934,7 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:blue worm",
-        "monster:blue dragon"
+        "monster:blue worm"
       ]
     },
     {
@@ -1944,8 +1943,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:red worm",
-        "monster:red dragon"
+        "monster:red worm"
       ]
     },
     {
@@ -1954,8 +1952,7 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:white worm",
-        "monster:white dragon"
+        "monster:white worm"
       ]
     },
     {
@@ -1964,8 +1961,7 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:green worm",
-        "monster:green dragon"
+        "monster:green worm"
       ]
     },
     {
@@ -1974,8 +1970,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:black worm",
-        "monster:black dragon"
+        "monster:black worm"
       ]
     },
     {
@@ -1984,8 +1979,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:gold worm",
-        "monster:gold dragon"
+        "monster:gold worm"
       ]
     },
     {
@@ -1994,8 +1988,7 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:multi-hued worm",
-        "monster:multi-hued dragon"
+        "monster:multi-hued worm"
       ]
     },
     {
@@ -2267,8 +2260,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:lesser Balrog",
-        "monster:balrog"
+        "monster:lesser Balrog"
       ]
     },
     {
@@ -2579,8 +2571,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:gauth",
-        "monster:beholder"
+        "monster:gauth"
       ]
     },
     {
@@ -2686,7 +2677,6 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:ghoul",
         "monster:ghast"
       ]
     },
@@ -2756,7 +2746,6 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:minotaur",
         "monster:Baphomet the Minotaur Lord"
       ]
     },
@@ -2876,7 +2865,6 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:vampire lord",
         "monster:elder vampire"
       ]
     },
@@ -2925,7 +2913,6 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:dr\u00faadan mage",
         "monster:dr\u00faadan druid",
         "monster:mystic"
       ]
@@ -2936,7 +2923,6 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:master thief",
         "monster:mean-looking mercenary",
         "monster:Easterling assassin"
       ]
@@ -5754,6 +5740,132 @@
       "chroma": true,
       "maps": [
         "monster:Draugluin, Sire of All Werewolves"
+      ]
+    },
+    {
+      "source": "monsters/rogue-master-thief.png",
+      "row": 71,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:master thief"
+      ]
+    },
+    {
+      "source": "monsters/priest-druadan-mage.png",
+      "row": 71,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:dr\u00faadan mage"
+      ]
+    },
+    {
+      "source": "monsters/dragon-black-single.png",
+      "row": 71,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:black dragon"
+      ]
+    },
+    {
+      "source": "monsters/dragon-blue-single.png",
+      "row": 71,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:blue dragon"
+      ]
+    },
+    {
+      "source": "monsters/dragon-red-single.png",
+      "row": 71,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:red dragon"
+      ]
+    },
+    {
+      "source": "monsters/dragon-white-single.png",
+      "row": 71,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:white dragon"
+      ]
+    },
+    {
+      "source": "monsters/dragon-green-single.png",
+      "row": 71,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:green dragon"
+      ]
+    },
+    {
+      "source": "monsters/dragon-gold-single.png",
+      "row": 71,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:gold dragon"
+      ]
+    },
+    {
+      "source": "monsters/dragon-multi-single.png",
+      "row": 71,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:multi-hued dragon"
+      ]
+    },
+    {
+      "source": "monsters/demon-balrog-single.png",
+      "row": 71,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:balrog"
+      ]
+    },
+    {
+      "source": "monsters/beholder-single.png",
+      "row": 71,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:beholder"
+      ]
+    },
+    {
+      "source": "monsters/ghoul-single.png",
+      "row": 71,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:ghoul"
+      ]
+    },
+    {
+      "source": "monsters/minotaur-single.png",
+      "row": 71,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:minotaur"
+      ]
+    },
+    {
+      "source": "monsters/vampire-lord-single.png",
+      "row": 71,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:vampire lord"
       ]
     }
   ],
