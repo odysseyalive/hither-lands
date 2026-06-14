@@ -1092,15 +1092,7 @@
       "row": 9,
       "col": 5,
       "chroma": "family",
-      "maps": [
-        "object:shield:Wicker Shield",
-        "object:shield:Small Metal Shield",
-        "object:shield:Leather Shield",
-        "object:shield:Large Metal Shield",
-        "object:shield:Knight's Shield",
-        "object:shield:Body Shield",
-        "object:shield:Shield of Deflection"
-      ]
+      "maps": []
     },
     {
       "source": "objects/helm.png",
@@ -7832,6 +7824,69 @@
       "chroma": true,
       "maps": [
         "object:gold:adamantite"
+      ]
+    },
+    {
+      "source": "objects/shield-wicker.png",
+      "row": 87,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:shield:Wicker Shield"
+      ]
+    },
+    {
+      "source": "objects/shield-small-metal.png",
+      "row": 87,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:shield:Small Metal Shield"
+      ]
+    },
+    {
+      "source": "objects/shield-leather.png",
+      "row": 87,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:shield:Leather Shield"
+      ]
+    },
+    {
+      "source": "objects/shield-large-metal.png",
+      "row": 87,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:shield:Large Metal Shield"
+      ]
+    },
+    {
+      "source": "objects/shield-knights.png",
+      "row": 87,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:shield:Knight's Shield"
+      ]
+    },
+    {
+      "source": "objects/shield-body.png",
+      "row": 87,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:shield:Body Shield"
+      ]
+    },
+    {
+      "source": "objects/shield-deflection.png",
+      "row": 87,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:shield:Shield of Deflection"
       ]
     }
   ],
