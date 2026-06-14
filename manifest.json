@@ -2220,7 +2220,6 @@
       "chroma": true,
       "maps": [
         "monster:Ulfast, son of Ulfang",
-        "monster:Brodda, the Easterling",
         "monster:Ulwarth, Son of Ulfang"
       ]
     },
@@ -2490,7 +2489,6 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:chaos vortex",
         "monster:aether vortex",
         "monster:Wiruin, the Maelstrom"
       ]
@@ -2561,7 +2559,6 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:Draugluin, Sire of All Werewolves",
         "monster:Wolf-Sauron",
         "monster:Carcharoth, the Jaws of Thirst"
       ]
@@ -2971,8 +2968,7 @@
       "chroma": true,
       "maps": [
         "monster:purple mushroom patch",
-        "monster:clear mushroom patch",
-        "monster:magic mushroom patch"
+        "monster:clear mushroom patch"
       ]
     },
     {
@@ -3114,7 +3110,6 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:chest mimic",
         "monster:blade of slaughter",
         "monster:mimic (large jeweled chest)"
       ]
@@ -3126,7 +3121,6 @@
       "chroma": true,
       "maps": [
         "monster:skeleton serpent",
-        "monster:floating skull",
         "monster:Cantoras, the Skeletal Lord"
       ]
     },
@@ -3175,7 +3169,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:barrow wight",
         "monster:emperor wight",
         "monster:Wight"
       ]
@@ -3186,7 +3179,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:phantom",
         "monster:Ghost",
         "monster:Phantom"
       ]
@@ -3228,7 +3220,6 @@
       "chroma": true,
       "maps": [
         "monster:Orfax, Son of Boldor",
-        "monster:master yeek",
         "monster:Boldor, King of the Yeeks"
       ]
     },
@@ -5682,6 +5673,87 @@
       "chroma": true,
       "maps": [
         "monster:m\u00fbmak"
+      ]
+    },
+    {
+      "source": "monsters/mimic-chest-single.png",
+      "row": 70,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:chest mimic"
+      ]
+    },
+    {
+      "source": "monsters/skeleton-floating-skull.png",
+      "row": 70,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:floating skull"
+      ]
+    },
+    {
+      "source": "monsters/wight-barrow.png",
+      "row": 70,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:barrow wight"
+      ]
+    },
+    {
+      "source": "monsters/phantom-single.png",
+      "row": 70,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:phantom"
+      ]
+    },
+    {
+      "source": "monsters/yeek-master.png",
+      "row": 70,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:master yeek"
+      ]
+    },
+    {
+      "source": "monsters/ruffian-brodda.png",
+      "row": 70,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:Brodda, the Easterling"
+      ]
+    },
+    {
+      "source": "monsters/mushroom-magic-single.png",
+      "row": 70,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:magic mushroom patch"
+      ]
+    },
+    {
+      "source": "monsters/vortex-chaos-single.png",
+      "row": 71,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:chaos vortex"
+      ]
+    },
+    {
+      "source": "monsters/wolf-draugluin.png",
+      "row": 71,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:Draugluin, Sire of All Werewolves"
       ]
     }
   ],
