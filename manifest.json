@@ -980,20 +980,7 @@
       "row": 8,
       "col": 5,
       "chroma": "family",
-      "maps": [
-        "object:mushroom:Second Sight",
-        "object:mushroom:Fast Recovery",
-        "object:mushroom:Vigor",
-        "object:mushroom:Clear Mind",
-        "object:mushroom:Emergency",
-        "object:mushroom:Terror",
-        "object:mushroom:Stoneskin",
-        "object:mushroom:Turbulence",
-        "object:mushroom:Debility",
-        "object:mushroom:Sprinting",
-        "object:mushroom:Purging",
-        "object:mushroom:Shadows"
-      ],
+      "maps": [],
       "flavors": [
         173,
         174,
@@ -7460,6 +7447,114 @@
       "chroma": true,
       "maps": [
         "object:food:Draught of the Ents"
+      ]
+    },
+    {
+      "source": "objects/mushroom-second-sight.png",
+      "row": 84,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Second Sight"
+      ]
+    },
+    {
+      "source": "objects/mushroom-fast-recovery.png",
+      "row": 84,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Fast Recovery"
+      ]
+    },
+    {
+      "source": "objects/mushroom-vigor.png",
+      "row": 84,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Vigor"
+      ]
+    },
+    {
+      "source": "objects/mushroom-clear-mind.png",
+      "row": 84,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Clear Mind"
+      ]
+    },
+    {
+      "source": "objects/mushroom-emergency.png",
+      "row": 84,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Emergency"
+      ]
+    },
+    {
+      "source": "objects/mushroom-terror.png",
+      "row": 84,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Terror"
+      ]
+    },
+    {
+      "source": "objects/mushroom-stoneskin.png",
+      "row": 84,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Stoneskin"
+      ]
+    },
+    {
+      "source": "objects/mushroom-turbulence.png",
+      "row": 84,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Turbulence"
+      ]
+    },
+    {
+      "source": "objects/mushroom-debility.png",
+      "row": 85,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Debility"
+      ]
+    },
+    {
+      "source": "objects/mushroom-sprinting.png",
+      "row": 85,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Sprinting"
+      ]
+    },
+    {
+      "source": "objects/mushroom-purging.png",
+      "row": 85,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Purging"
+      ]
+    },
+    {
+      "source": "objects/mushroom-shadows.png",
+      "row": 85,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:mushroom:Shadows"
       ]
     }
   ],
