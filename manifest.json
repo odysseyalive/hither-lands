@@ -418,8 +418,7 @@
       "chroma": true,
       "maps": [
         "monster:cave spider",
-        "monster:wood spider",
-        "monster:giant spider"
+        "monster:wood spider"
       ]
     },
     {
@@ -492,8 +491,7 @@
       "chroma": true,
       "maps": [
         "monster:creeping copper coins",
-        "monster:creeping silver coins",
-        "monster:creeping gold coins"
+        "monster:creeping silver coins"
       ]
     },
     {
@@ -525,8 +523,7 @@
       "chroma": true,
       "maps": [
         "monster:giant green dragon fly",
-        "monster:giant white dragon fly",
-        "monster:giant black dragon fly"
+        "monster:giant white dragon fly"
       ]
     },
     {
@@ -1791,8 +1788,7 @@
       "chroma": true,
       "maps": [
         "monster:crow",
-        "monster:craban",
-        "monster:blood falcon"
+        "monster:craban"
       ]
     },
     {
@@ -1999,8 +1995,7 @@
       "chroma": true,
       "maps": [
         "monster:blue worm",
-        "monster:blue dragon",
-        "monster:lightning drake"
+        "monster:blue dragon"
       ]
     },
     {
@@ -2010,8 +2005,7 @@
       "chroma": true,
       "maps": [
         "monster:red worm",
-        "monster:red dragon",
-        "monster:fire drake"
+        "monster:red dragon"
       ]
     },
     {
@@ -2021,8 +2015,7 @@
       "chroma": true,
       "maps": [
         "monster:white worm",
-        "monster:white dragon",
-        "monster:cold drake"
+        "monster:white dragon"
       ]
     },
     {
@@ -2938,8 +2931,7 @@
       "chroma": true,
       "maps": [
         "monster:metallic green centipede",
-        "monster:metallic blue centipede",
-        "monster:metallic red centipede"
+        "monster:metallic blue centipede"
       ]
     },
     {
@@ -3332,8 +3324,7 @@
       "chroma": true,
       "maps": [
         "monster:banshee",
-        "monster:The Phantom of Eilinel",
-        "monster:spectre"
+        "monster:The Phantom of Eilinel"
       ]
     },
     {
@@ -4364,6 +4355,87 @@
       "chroma": true,
       "maps": [
         "monster:manticore"
+      ]
+    },
+    {
+      "source": "monsters/bird-blood-falcon.png",
+      "row": 60,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:blood falcon"
+      ]
+    },
+    {
+      "source": "monsters/spectre.png",
+      "row": 60,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:spectre"
+      ]
+    },
+    {
+      "source": "monsters/coins-gold.png",
+      "row": 60,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:creeping gold coins"
+      ]
+    },
+    {
+      "source": "monsters/spider-giant.png",
+      "row": 60,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:giant spider"
+      ]
+    },
+    {
+      "source": "monsters/centipede-red.png",
+      "row": 60,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:metallic red centipede"
+      ]
+    },
+    {
+      "source": "monsters/dragonfly-black.png",
+      "row": 60,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:giant black dragon fly"
+      ]
+    },
+    {
+      "source": "monsters/drake-fire.png",
+      "row": 60,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:fire drake"
+      ]
+    },
+    {
+      "source": "monsters/drake-cold.png",
+      "row": 60,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:cold drake"
+      ]
+    },
+    {
+      "source": "monsters/drake-lightning.png",
+      "row": 60,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:lightning drake"
       ]
     }
   ],
