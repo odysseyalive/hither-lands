@@ -2348,8 +2348,7 @@
       "chroma": true,
       "maps": [
         "monster:lesser Balrog",
-        "monster:balrog",
-        "monster:Lungorthin, the Balrog of White Fire"
+        "monster:balrog"
       ]
     },
     {
@@ -2844,8 +2843,7 @@
       "chroma": true,
       "maps": [
         "monster:basilisk",
-        "monster:greater basilisk",
-        "monster:The Tarrasque"
+        "monster:greater basilisk"
       ]
     },
     {
@@ -2886,8 +2884,7 @@
       "chroma": true,
       "maps": [
         "monster:blue dragon bat",
-        "monster:red dragon bat",
-        "monster:disenchanter bat"
+        "monster:red dragon bat"
       ]
     },
     {
@@ -3090,8 +3087,7 @@
       "chroma": true,
       "maps": [
         "monster:demonologist",
-        "monster:witch",
-        "monster:lord of misrule"
+        "monster:witch"
       ]
     },
     {
@@ -3253,8 +3249,7 @@
       "chroma": true,
       "maps": [
         "monster:crystal drake",
-        "monster:great crystal drake",
-        "monster:Scatha the Worm"
+        "monster:great crystal drake"
       ]
     },
     {
@@ -3307,7 +3302,6 @@
       "chroma": true,
       "maps": [
         "monster:ethereal drake",
-        "monster:ethereal dragon",
         "monster:law drake"
       ]
     },
@@ -4484,6 +4478,60 @@
       "chroma": true,
       "maps": [
         "monster:winged horror"
+      ]
+    },
+    {
+      "source": "monsters/bat-disenchanter.png",
+      "row": 61,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:disenchanter bat"
+      ]
+    },
+    {
+      "source": "monsters/dragon-scatha.png",
+      "row": 61,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:Scatha the Worm"
+      ]
+    },
+    {
+      "source": "monsters/dark-lord-misrule.png",
+      "row": 61,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:lord of misrule"
+      ]
+    },
+    {
+      "source": "monsters/dragon-ethereal-full.png",
+      "row": 61,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:ethereal dragon"
+      ]
+    },
+    {
+      "source": "monsters/balrog-lungorthin.png",
+      "row": 61,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:Lungorthin, the Balrog of White Fire"
+      ]
+    },
+    {
+      "source": "monsters/tarrasque.png",
+      "row": 61,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:The Tarrasque"
       ]
     }
   ],
