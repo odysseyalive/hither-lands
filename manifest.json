@@ -300,8 +300,7 @@
       "chroma": true,
       "maps": [
         "monster:small kobold",
-        "monster:kobold",
-        "monster:large kobold"
+        "monster:kobold"
       ]
     },
     {
@@ -319,8 +318,7 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:floating eye",
-        "monster:radiation eye"
+        "monster:floating eye"
       ]
     },
     {
@@ -329,9 +327,7 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:fruit bat",
-        "monster:giant brown bat",
-        "monster:giant tan bat"
+        "monster:fruit bat"
       ]
     },
     {
@@ -341,7 +337,6 @@
       "chroma": true,
       "maps": [
         "monster:giant white centipede",
-        "monster:giant yellow centipede",
         "monster:giant clear centipede"
       ]
     },
@@ -363,7 +358,6 @@
       "chroma": true,
       "maps": [
         "monster:grey mushroom patch",
-        "monster:spotted mushroom patch",
         "monster:yellow mushroom patch"
       ]
     },
@@ -1728,8 +1722,7 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:Maia",
-        "monster:Maia of Mandos"
+        "monster:Maia"
       ]
     },
     {
@@ -2143,8 +2136,7 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:shadow",
-        "monster:dread"
+        "monster:shadow"
       ]
     },
     {
@@ -2163,8 +2155,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:poltergeist",
-        "monster:Spirit"
+        "monster:poltergeist"
       ]
     },
     {
@@ -4962,6 +4953,87 @@
       "chroma": true,
       "maps": [
         "monster:Maia of Nienna"
+      ]
+    },
+    {
+      "source": "monsters/ghost-spirit.png",
+      "row": 64,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:Spirit"
+      ]
+    },
+    {
+      "source": "monsters/ghost-dread.png",
+      "row": 65,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:dread"
+      ]
+    },
+    {
+      "source": "monsters/bat-brown.png",
+      "row": 65,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:giant brown bat"
+      ]
+    },
+    {
+      "source": "monsters/bat-tan.png",
+      "row": 65,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:giant tan bat"
+      ]
+    },
+    {
+      "source": "monsters/eye-radiation.png",
+      "row": 65,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:radiation eye"
+      ]
+    },
+    {
+      "source": "monsters/ainu-mandos.png",
+      "row": 65,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:Maia of Mandos"
+      ]
+    },
+    {
+      "source": "monsters/kobold-large.png",
+      "row": 65,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:large kobold"
+      ]
+    },
+    {
+      "source": "monsters/centipede-yellow.png",
+      "row": 65,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:giant yellow centipede"
+      ]
+    },
+    {
+      "source": "monsters/mushroom-spotted.png",
+      "row": 65,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:spotted mushroom patch"
       ]
     }
   ],
