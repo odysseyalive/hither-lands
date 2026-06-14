@@ -370,8 +370,7 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:rock lizard",
-        "monster:night lizard"
+        "monster:rock lizard"
       ]
     },
     {
@@ -380,8 +379,7 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:soldier ant",
-        "monster:giant white ant"
+        "monster:soldier ant"
       ]
     },
     {
@@ -390,9 +388,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:clear icky thing",
-        "monster:white icky thing",
-        "monster:blubbering icky thing"
+        "monster:clear icky thing"
       ]
     },
     {
@@ -421,9 +417,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:black naga",
-        "monster:green naga",
-        "monster:red naga"
+        "monster:black naga"
       ]
     },
     {
@@ -432,9 +426,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:giant white louse",
-        "monster:giant black louse",
-        "monster:giant fruit fly"
+        "monster:giant white louse"
       ]
     },
     {
@@ -444,7 +436,6 @@
       "chroma": true,
       "maps": [
         "monster:silver jelly",
-        "monster:yellow jelly",
         "monster:white jelly"
       ]
     },
@@ -5106,6 +5097,87 @@
       "chroma": true,
       "maps": [
         "monster:giant black ant"
+      ]
+    },
+    {
+      "source": "monsters/lizard-night.png",
+      "row": 66,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:night lizard"
+      ]
+    },
+    {
+      "source": "monsters/ant-white.png",
+      "row": 66,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:giant white ant"
+      ]
+    },
+    {
+      "source": "monsters/icky-thing-white.png",
+      "row": 66,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:white icky thing"
+      ]
+    },
+    {
+      "source": "monsters/icky-thing-blubbering.png",
+      "row": 66,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:blubbering icky thing"
+      ]
+    },
+    {
+      "source": "monsters/naga-green.png",
+      "row": 66,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:green naga"
+      ]
+    },
+    {
+      "source": "monsters/louse-black.png",
+      "row": 66,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:giant black louse"
+      ]
+    },
+    {
+      "source": "monsters/naga-red.png",
+      "row": 66,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:red naga"
+      ]
+    },
+    {
+      "source": "monsters/fruit-fly.png",
+      "row": 66,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:giant fruit fly"
+      ]
+    },
+    {
+      "source": "monsters/jelly-yellow.png",
+      "row": 66,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:yellow jelly"
       ]
     }
   ],
