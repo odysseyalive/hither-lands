@@ -2522,7 +2522,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:orc tracker",
         "monster:orc archer",
         "monster:half-orc"
       ]
@@ -2544,7 +2543,6 @@
       "chroma": true,
       "maps": [
         "monster:wolf",
-        "monster:white wolf",
         "monster:wolf chieftain"
       ]
     },
@@ -2554,7 +2552,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:warg",
         "monster:werewolf",
         "monster:werewolf of Sauron"
       ]
@@ -2863,7 +2860,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:grey icky thing",
         "monster:green icky thing",
         "monster:blue icky thing"
       ]
@@ -2884,7 +2880,6 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:master vampire",
         "monster:vampire lord",
         "monster:elder vampire"
       ]
@@ -2904,7 +2899,6 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:ogre shaman",
         "monster:ogre chieftain",
         "monster:ogre mage"
       ]
@@ -5562,6 +5556,60 @@
       "chroma": true,
       "maps": [
         "monster:skeleton lord"
+      ]
+    },
+    {
+      "source": "monsters/orc-tracker.png",
+      "row": 69,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:orc tracker"
+      ]
+    },
+    {
+      "source": "monsters/wolf-white.png",
+      "row": 69,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:white wolf"
+      ]
+    },
+    {
+      "source": "monsters/warg-single.png",
+      "row": 69,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:warg"
+      ]
+    },
+    {
+      "source": "monsters/icky-thing-grey.png",
+      "row": 69,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:grey icky thing"
+      ]
+    },
+    {
+      "source": "monsters/vampire-master.png",
+      "row": 69,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:master vampire"
+      ]
+    },
+    {
+      "source": "monsters/ogre-shaman.png",
+      "row": 69,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:ogre shaman"
       ]
     }
   ],
