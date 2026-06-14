@@ -442,8 +442,7 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:apparition of hunger",
-        "monster:ghost"
+        "monster:apparition of hunger"
       ]
     },
     {
@@ -1720,8 +1719,7 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:crow",
-        "monster:craban"
+        "monster:crow"
       ]
     },
     {
@@ -2011,7 +2009,6 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:fire hound",
         "monster:plasma hound"
       ]
     },
@@ -2040,7 +2037,6 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:dark hound",
         "monster:nether hound"
       ]
     },
@@ -2060,7 +2056,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:earth hound",
         "monster:inertia hound"
       ]
     },
@@ -2079,8 +2074,7 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:moaning spirit",
-        "monster:lost soul"
+        "monster:moaning spirit"
       ]
     },
     {
@@ -2313,8 +2307,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:bone golem",
-        "monster:flesh golem"
+        "monster:bone golem"
       ]
     },
     {
@@ -2531,7 +2524,6 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:evil eye",
         "monster:gazing eye"
       ]
     },
@@ -2674,8 +2666,7 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:giant green frog",
-        "monster:giant red frog"
+        "monster:giant green frog"
       ]
     },
     {
@@ -6272,6 +6263,87 @@
       "chroma": true,
       "maps": [
         "monster:Maia of Yavanna"
+      ]
+    },
+    {
+      "source": "monsters/bird-craban.png",
+      "row": 75,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:craban"
+      ]
+    },
+    {
+      "source": "monsters/evil-eye-single.png",
+      "row": 75,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:evil eye"
+      ]
+    },
+    {
+      "source": "monsters/frog-red.png",
+      "row": 75,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:giant red frog"
+      ]
+    },
+    {
+      "source": "monsters/ghost-lost-soul.png",
+      "row": 75,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:lost soul"
+      ]
+    },
+    {
+      "source": "monsters/ghost-single.png",
+      "row": 75,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "monster:ghost"
+      ]
+    },
+    {
+      "source": "monsters/golem-flesh.png",
+      "row": 75,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:flesh golem"
+      ]
+    },
+    {
+      "source": "monsters/hound-dark-single.png",
+      "row": 75,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:dark hound"
+      ]
+    },
+    {
+      "source": "monsters/hound-earth-single.png",
+      "row": 75,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:earth hound"
+      ]
+    },
+    {
+      "source": "monsters/hound-fire-single.png",
+      "row": 75,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:fire hound"
       ]
     }
   ],
