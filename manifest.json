@@ -765,32 +765,7 @@
       "row": 8,
       "col": 4,
       "chroma": "family",
-      "maps": [
-        "object:staff:Summoning",
-        "object:staff:Haste Monsters",
-        "object:staff:Darkness",
-        "object:staff:Earthquakes",
-        "object:staff:*Destruction*",
-        "object:staff:Confuse Monsters",
-        "object:staff:Slow Monsters",
-        "object:staff:Sleep Monsters",
-        "object:staff:Detect Invisible",
-        "object:staff:Detect Evil",
-        "object:staff:Mapping",
-        "object:staff:Curing",
-        "object:staff:Cure Light Wounds",
-        "object:staff:Healing",
-        "object:staff:Dispel Evil",
-        "object:staff:Banishment",
-        "object:staff:Power",
-        "object:staff:Holiness",
-        "object:staff:Light",
-        "object:staff:Starlight",
-        "object:staff:Teleportation",
-        "object:staff:Speed",
-        "object:staff:Remove Curse",
-        "object:staff:the Magi"
-      ],
+      "maps": [],
       "flavors": [
         68,
         69,
@@ -9736,6 +9711,222 @@
       "chroma": true,
       "maps": [
         "object:rod:Glaurung's Blood"
+      ]
+    },
+    {
+      "source": "objects/staff-light.png",
+      "row": 102,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:staff:Light"
+      ]
+    },
+    {
+      "source": "objects/staff-darkness.png",
+      "row": 102,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:staff:Darkness"
+      ]
+    },
+    {
+      "source": "objects/staff-teleportation.png",
+      "row": 102,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:staff:Teleportation"
+      ]
+    },
+    {
+      "source": "objects/staff-mapping.png",
+      "row": 102,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:staff:Mapping"
+      ]
+    },
+    {
+      "source": "objects/staff-detect-invisible.png",
+      "row": 102,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:staff:Detect Invisible"
+      ]
+    },
+    {
+      "source": "objects/staff-detect-evil.png",
+      "row": 102,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:staff:Detect Evil"
+      ]
+    },
+    {
+      "source": "objects/staff-slow-monsters.png",
+      "row": 102,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:staff:Slow Monsters"
+      ]
+    },
+    {
+      "source": "objects/staff-confuse-monsters.png",
+      "row": 102,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:staff:Confuse Monsters"
+      ]
+    },
+    {
+      "source": "objects/staff-sleep-monsters.png",
+      "row": 103,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:staff:Sleep Monsters"
+      ]
+    },
+    {
+      "source": "objects/staff-haste-monsters.png",
+      "row": 103,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:staff:Haste Monsters"
+      ]
+    },
+    {
+      "source": "objects/staff-cure-light-wounds.png",
+      "row": 103,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:staff:Cure Light Wounds"
+      ]
+    },
+    {
+      "source": "objects/staff-healing.png",
+      "row": 103,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:staff:Healing"
+      ]
+    },
+    {
+      "source": "objects/staff-curing.png",
+      "row": 103,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:staff:Curing"
+      ]
+    },
+    {
+      "source": "objects/staff-remove-curse.png",
+      "row": 103,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:staff:Remove Curse"
+      ]
+    },
+    {
+      "source": "objects/staff-banishment.png",
+      "row": 103,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:staff:Banishment"
+      ]
+    },
+    {
+      "source": "objects/staff-dispel-evil.png",
+      "row": 103,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:staff:Dispel Evil"
+      ]
+    },
+    {
+      "source": "objects/staff-earthquakes.png",
+      "row": 103,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:staff:Earthquakes"
+      ]
+    },
+    {
+      "source": "objects/staff-destruction.png",
+      "row": 103,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:staff:*Destruction*"
+      ]
+    },
+    {
+      "source": "objects/staff-summoning.png",
+      "row": 103,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:staff:Summoning"
+      ]
+    },
+    {
+      "source": "objects/staff-starlight.png",
+      "row": 103,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:staff:Starlight"
+      ]
+    },
+    {
+      "source": "objects/staff-holiness.png",
+      "row": 103,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:staff:Holiness"
+      ]
+    },
+    {
+      "source": "objects/staff-speed.png",
+      "row": 103,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:staff:Speed"
+      ]
+    },
+    {
+      "source": "objects/staff-power.png",
+      "row": 103,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:staff:Power"
+      ]
+    },
+    {
+      "source": "objects/staff-the-magi.png",
+      "row": 103,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:staff:the Magi"
       ]
     }
   ],
