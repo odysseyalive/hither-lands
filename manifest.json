@@ -279,9 +279,7 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:aimless-looking merchant",
-        "monster:singing, happy drunk",
-        "monster:village idiot"
+        "monster:aimless-looking merchant"
       ]
     },
     {
@@ -299,7 +297,6 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:small kobold",
         "monster:kobold"
       ]
     },
@@ -336,8 +333,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:giant white centipede",
-        "monster:giant clear centipede"
+        "monster:giant white centipede"
       ]
     },
     {
@@ -346,9 +342,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:white worm mass",
-        "monster:clear worm mass",
-        "monster:yellow worm mass"
+        "monster:white worm mass"
       ]
     },
     {
@@ -357,8 +351,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:grey mushroom patch",
-        "monster:yellow mushroom patch"
+        "monster:grey mushroom patch"
       ]
     },
     {
@@ -378,7 +371,6 @@
       "chroma": true,
       "maps": [
         "monster:rock lizard",
-        "monster:cave lizard",
         "monster:night lizard"
       ]
     },
@@ -389,7 +381,6 @@
       "chroma": true,
       "maps": [
         "monster:soldier ant",
-        "monster:giant black ant",
         "monster:giant white ant"
       ]
     },
@@ -5034,6 +5025,87 @@
       "chroma": true,
       "maps": [
         "monster:spotted mushroom patch"
+      ]
+    },
+    {
+      "source": "monsters/kobold-small.png",
+      "row": 65,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "monster:small kobold"
+      ]
+    },
+    {
+      "source": "monsters/centipede-clear.png",
+      "row": 65,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:giant clear centipede"
+      ]
+    },
+    {
+      "source": "monsters/mushroom-yellow.png",
+      "row": 65,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:yellow mushroom patch"
+      ]
+    },
+    {
+      "source": "monsters/worm-mass-clear.png",
+      "row": 65,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:clear worm mass"
+      ]
+    },
+    {
+      "source": "monsters/worm-mass-yellow.png",
+      "row": 65,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:yellow worm mass"
+      ]
+    },
+    {
+      "source": "monsters/townsfolk-drunk.png",
+      "row": 65,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:singing, happy drunk"
+      ]
+    },
+    {
+      "source": "monsters/townsfolk-idiot.png",
+      "row": 65,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:village idiot"
+      ]
+    },
+    {
+      "source": "monsters/lizard-cave.png",
+      "row": 65,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:cave lizard"
+      ]
+    },
+    {
+      "source": "monsters/ant-black.png",
+      "row": 66,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:giant black ant"
       ]
     }
   ],
