@@ -1029,25 +1029,7 @@
       "row": 8,
       "col": 7,
       "chroma": "family",
-      "maps": [
-        "object:polearm:Spear",
-        "object:polearm:Thrusting Spear",
-        "object:polearm:Awl-Pike",
-        "object:polearm:Trident",
-        "object:polearm:Halberd",
-        "object:polearm:Pike",
-        "object:polearm:Throwing Axe",
-        "object:polearm:Beaked Axe",
-        "object:polearm:Broad Axe",
-        "object:polearm:Battle Axe",
-        "object:polearm:Lochaber Axe",
-        "object:polearm:Great Axe",
-        "object:polearm:Scythe",
-        "object:polearm:Glaive",
-        "object:polearm:Lance",
-        "object:polearm:Scythe of Slicing",
-        "object:polearm:Lucerne Hammer"
-      ]
+      "maps": []
     },
     {
       "source": "objects/hafted.png",
@@ -7087,6 +7069,159 @@
       "chroma": true,
       "maps": [
         "object:sword:Valinorean Sword"
+      ]
+    },
+    {
+      "source": "objects/polearm-spear.png",
+      "row": 81,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Spear"
+      ]
+    },
+    {
+      "source": "objects/polearm-thrusting-spear.png",
+      "row": 81,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Thrusting Spear"
+      ]
+    },
+    {
+      "source": "objects/polearm-awl-pike.png",
+      "row": 81,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Awl-Pike"
+      ]
+    },
+    {
+      "source": "objects/polearm-trident.png",
+      "row": 81,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Trident"
+      ]
+    },
+    {
+      "source": "objects/polearm-halberd.png",
+      "row": 81,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Halberd"
+      ]
+    },
+    {
+      "source": "objects/polearm-pike.png",
+      "row": 81,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Pike"
+      ]
+    },
+    {
+      "source": "objects/polearm-throwing-axe.png",
+      "row": 81,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Throwing Axe"
+      ]
+    },
+    {
+      "source": "objects/polearm-beaked-axe.png",
+      "row": 82,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Beaked Axe"
+      ]
+    },
+    {
+      "source": "objects/polearm-broad-axe.png",
+      "row": 82,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Broad Axe"
+      ]
+    },
+    {
+      "source": "objects/polearm-battle-axe.png",
+      "row": 82,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Battle Axe"
+      ]
+    },
+    {
+      "source": "objects/polearm-lochaber-axe.png",
+      "row": 82,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Lochaber Axe"
+      ]
+    },
+    {
+      "source": "objects/polearm-great-axe.png",
+      "row": 82,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Great Axe"
+      ]
+    },
+    {
+      "source": "objects/polearm-scythe.png",
+      "row": 82,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Scythe"
+      ]
+    },
+    {
+      "source": "objects/polearm-glaive.png",
+      "row": 82,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Glaive"
+      ]
+    },
+    {
+      "source": "objects/polearm-lance.png",
+      "row": 82,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Lance"
+      ]
+    },
+    {
+      "source": "objects/polearm-scythe-of-slicing.png",
+      "row": 82,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Scythe of Slicing"
+      ]
+    },
+    {
+      "source": "objects/polearm-lucerne-hammer.png",
+      "row": 82,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Lucerne Hammer"
       ]
     }
   ],
