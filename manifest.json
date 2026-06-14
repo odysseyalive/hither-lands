@@ -269,7 +269,18 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:scruffy little dog"
+        "monster:scruffy little dog",
+        "monster:wolf",
+        "monster:white wolf",
+        "monster:warg",
+        "monster:blink dog",
+        "monster:werewolf",
+        "monster:wolf chieftain",
+        "monster:hellhound",
+        "monster:werewolf of Sauron",
+        "monster:Draugluin, Sire of All Werewolves",
+        "monster:Wolf-Sauron",
+        "monster:Carcharoth, the Jaws of Thirst"
       ]
     },
     {
@@ -297,7 +308,54 @@
         "monster:battle-scarred veteran",
         "monster:mean-looking mercenary",
         "monster:squint-eyed rogue",
-        "monster:cutpurse"
+        "monster:cutpurse",
+        "monster:soldier",
+        "monster:acolyte",
+        "monster:apprentice",
+        "monster:ruffian",
+        "monster:Ulfast, son of Ulfang",
+        "monster:Brodda, the Easterling",
+        "monster:witch",
+        "monster:drúadan mage",
+        "monster:beastmaster",
+        "monster:priest",
+        "monster:warrior",
+        "monster:illusionist",
+        "monster:druid",
+        "monster:rogue",
+        "monster:blackguard",
+        "monster:ranger",
+        "monster:paladin",
+        "monster:Easterling champion",
+        "monster:brigand",
+        "monster:necromancer",
+        "monster:Ulwarth, Son of Ulfang",
+        "monster:black knight",
+        "monster:Uldor the Accursed",
+        "monster:mage",
+        "monster:animist",
+        "monster:Easterling assassin",
+        "monster:drúadan druid",
+        "monster:mystic",
+        "monster:shapeshifter",
+        "monster:master thief",
+        "monster:Ulfang the Black",
+        "monster:necromancer of Ered Engrin",
+        "monster:Lorgan, Chief of the Easterlings",
+        "monster:demonologist",
+        "monster:death knight",
+        "monster:Easterling archer",
+        "monster:enchantress",
+        "monster:sorcerer",
+        "monster:patriarch",
+        "monster:ranger chieftain",
+        "monster:berserker",
+        "monster:lord of Ered Engrin",
+        "monster:master mystic",
+        "monster:Harowen the Black Hand",
+        "monster:lord of misrule",
+        "monster:grand master mystic",
+        "monster:Errata the Mage"
       ]
     },
     {
@@ -309,7 +367,8 @@
         "monster:small kobold",
         "monster:kobold",
         "monster:large kobold",
-        "monster:kobold archer"
+        "monster:kobold archer",
+        "monster:Mughâsh the Kobold Lord"
       ]
     },
     {
@@ -329,7 +388,16 @@
       "maps": [
         "monster:floating eye",
         "monster:radiation eye",
-        "monster:disenchanter eye"
+        "monster:disenchanter eye",
+        "monster:bloodshot eye",
+        "monster:evil eye",
+        "monster:gazing eye",
+        "monster:spectator",
+        "monster:gauth",
+        "monster:beholder",
+        "monster:undead beholder",
+        "monster:beholder hive-mother",
+        "monster:Omarax, the Eye Tyrant"
       ]
     },
     {
@@ -339,7 +407,14 @@
       "chroma": true,
       "maps": [
         "monster:fruit bat",
-        "monster:giant brown bat"
+        "monster:giant brown bat",
+        "monster:giant tan bat",
+        "monster:blue dragon bat",
+        "monster:red dragon bat",
+        "monster:vampire bat",
+        "monster:disenchanter bat",
+        "monster:bat of Gorgoroth",
+        "monster:doombat"
       ]
     },
     {
@@ -352,7 +427,10 @@
         "monster:giant yellow centipede",
         "monster:metallic green centipede",
         "monster:metallic blue centipede",
-        "monster:metallic red centipede"
+        "monster:metallic red centipede",
+        "monster:stegocentipede",
+        "monster:giant clear centipede",
+        "monster:carrion crawler"
       ]
     },
     {
@@ -366,7 +444,12 @@
         "monster:clear worm mass",
         "monster:yellow worm mass",
         "monster:blue worm mass",
-        "monster:red worm mass"
+        "monster:red worm mass",
+        "monster:nether worm mass",
+        "monster:abyss worm mass",
+        "monster:purple worm",
+        "monster:wereworm",
+        "monster:disenchanter worm mass"
       ]
     },
     {
@@ -381,7 +464,12 @@
         "monster:spotted mushroom patch",
         "monster:purple mushroom patch",
         "monster:yellow mold",
-        "monster:brown mold"
+        "monster:brown mold",
+        "monster:yellow mushroom patch",
+        "monster:clear mushroom patch",
+        "monster:magic mushroom patch",
+        "monster:shambling mound",
+        "monster:memory moss"
       ]
     },
     {
@@ -391,7 +479,13 @@
       "chroma": true,
       "maps": [
         "monster:large white snake",
-        "monster:large grey snake"
+        "monster:large grey snake",
+        "monster:king cobra",
+        "monster:black mamba",
+        "monster:serpent of the brownlands",
+        "monster:nightcrawler",
+        "monster:serpent of chaos",
+        "monster:Serpent-Sauron"
       ]
     },
     {
@@ -401,7 +495,15 @@
       "chroma": true,
       "maps": [
         "monster:rock lizard",
-        "monster:cave lizard"
+        "monster:cave lizard",
+        "monster:giant green frog",
+        "monster:salamander",
+        "monster:giant red frog",
+        "monster:night lizard",
+        "monster:giant salamander",
+        "monster:basilisk",
+        "monster:greater basilisk",
+        "monster:The Tarrasque"
       ]
     },
     {
@@ -412,7 +514,14 @@
       "maps": [
         "monster:soldier ant",
         "monster:giant black ant",
-        "monster:giant white ant"
+        "monster:giant white ant",
+        "monster:giant red ant",
+        "monster:giant silver ant",
+        "monster:giant grey ant",
+        "monster:giant blue ant",
+        "monster:giant army ant",
+        "monster:giant fire ant",
+        "monster:The Queen Ant"
       ]
     },
     {
@@ -424,7 +533,11 @@
         "monster:clear icky thing",
         "monster:white icky thing",
         "monster:blubbering icky thing",
-        "monster:grey icky thing"
+        "monster:grey icky thing",
+        "monster:green icky thing",
+        "monster:The Ickiness",
+        "monster:bloodshot icky thing",
+        "monster:blue icky thing"
       ]
     },
     {
@@ -433,7 +546,22 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:cave spider"
+        "monster:cave spider",
+        "monster:wood spider",
+        "monster:giant spider",
+        "monster:giant white tick",
+        "monster:giant tarantula",
+        "monster:giant red scorpion",
+        "monster:Mirkwood spider",
+        "monster:giant yellow scorpion",
+        "monster:phase spider",
+        "monster:giant fire tick",
+        "monster:giant black scorpion",
+        "monster:abyss spider",
+        "monster:ancient spider",
+        "monster:Shelob, Spider of Darkness",
+        "monster:spider of Gorgoroth",
+        "monster:Ungoliant, the Unlight"
       ]
     },
     {
@@ -442,7 +570,11 @@
       "col": 7,
       "chroma": true,
       "maps": [
-        "monster:blue yeek"
+        "monster:blue yeek",
+        "monster:terrified yeek",
+        "monster:Orfax, Son of Boldor",
+        "monster:master yeek",
+        "monster:Boldor, King of the Yeeks"
       ]
     },
     {
@@ -452,7 +584,12 @@
       "chroma": true,
       "maps": [
         "monster:black naga",
-        "monster:green naga"
+        "monster:green naga",
+        "monster:red naga",
+        "monster:guardian naga",
+        "monster:dark naga",
+        "monster:spirit naga",
+        "monster:gorgon"
       ]
     },
     {
@@ -461,7 +598,14 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:giant white louse"
+        "monster:giant white louse",
+        "monster:giant black louse",
+        "monster:giant fruit fly",
+        "monster:giant flea",
+        "monster:hummerhorn",
+        "monster:neekerbreeker",
+        "monster:giant firefly",
+        "monster:gnawing bug"
       ]
     },
     {
@@ -476,7 +620,14 @@
         "monster:yellow jelly",
         "monster:blue jelly",
         "monster:green jelly",
-        "monster:rot jelly"
+        "monster:rot jelly",
+        "monster:white jelly",
+        "monster:red jelly",
+        "monster:grape jelly",
+        "monster:spotted jelly",
+        "monster:ochre jelly",
+        "monster:gelatinous cube",
+        "monster:black ooze"
       ]
     },
     {
@@ -486,7 +637,25 @@
       "chroma": true,
       "maps": [
         "monster:poltergeist",
-        "monster:green glutton ghost"
+        "monster:green glutton ghost",
+        "monster:lost soul",
+        "monster:moaning spirit",
+        "monster:apparition of hunger",
+        "monster:banshee",
+        "monster:ghost",
+        "monster:shade",
+        "monster:spectre",
+        "monster:spirit troll",
+        "monster:phantom",
+        "monster:dread",
+        "monster:shadow",
+        "monster:The Phantom of Eilinel",
+        "monster:dreadmaster",
+        "monster:dreadlord",
+        "monster:Tselakus, the Dreadlord",
+        "monster:Spirit",
+        "monster:Ghost",
+        "monster:Phantom"
       ]
     },
     {
@@ -495,7 +664,25 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:scruffy looking hobbit"
+        "monster:scruffy looking hobbit",
+        "monster:The Thief of the Mountains",
+        "monster:eastern dwarf",
+        "monster:blacklock mage",
+        "monster:stonefoot warrior",
+        "monster:petty-dwarven rogue",
+        "monster:ironfist priest",
+        "monster:dark dwarven lord",
+        "monster:halfling slinger",
+        "monster:Ibun, Son of Mîm",
+        "monster:Khîm, Son of Mîm",
+        "monster:mind flayer",
+        "monster:green elf archer",
+        "monster:Mîm, Betrayer of Turin",
+        "monster:stiffbeard sorcerer",
+        "monster:Eöl, the Dark Elven Smith",
+        "monster:Fëanorian raider",
+        "monster:legendary hobbit rogue",
+        "monster:Maeglin, the Traitor of Gondolin"
       ]
     },
     {
@@ -505,7 +692,10 @@
       "chroma": true,
       "maps": [
         "monster:creeping copper coins",
-        "monster:creeping silver coins"
+        "monster:creeping silver coins",
+        "monster:creeping gold coins",
+        "monster:creeping mithril coins",
+        "monster:creeping adamantite coins"
       ]
     },
     {
@@ -528,7 +718,9 @@
         "monster:giant white rat",
         "monster:giant white mouse",
         "monster:silver mouse",
-        "monster:maddened weasel"
+        "monster:maddened weasel",
+        "monster:giant grey rat",
+        "monster:wererat"
       ]
     },
     {
@@ -560,7 +752,18 @@
       "chroma": true,
       "maps": [
         "monster:Skeleton",
-        "monster:skeleton kobold"
+        "monster:skeleton kobold",
+        "monster:skeleton orc",
+        "monster:skeleton human",
+        "monster:skeleton serpent",
+        "monster:skeleton lord",
+        "monster:floating skull",
+        "monster:skeleton troll",
+        "monster:skeleton etten",
+        "monster:hand druj",
+        "monster:eye druj",
+        "monster:skull druj",
+        "monster:Cantoras, the Skeletal Lord"
       ]
     },
     {
@@ -578,7 +781,19 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:snaga"
+        "monster:snaga",
+        "monster:cave orc",
+        "monster:orc tracker",
+        "monster:Balcmeg, the cave orc",
+        "monster:orc shaman",
+        "monster:Lug, the hill orc",
+        "monster:orc archer",
+        "monster:half-orc",
+        "monster:uruk",
+        "monster:orc captain",
+        "monster:Othrod, Lord of the orcs",
+        "monster:Orcogar, son of Orcobal",
+        "monster:Orcobal the Mighty"
       ]
     },
     {
@@ -604,7 +819,49 @@
       "row": 8,
       "col": 0,
       "chroma": "family",
-      "maps": [],
+      "maps": [
+        "object:potion:Strength",
+        "object:potion:Intelligence",
+        "object:potion:Wisdom",
+        "object:potion:Dexterity",
+        "object:potion:Constitution",
+        "object:potion:Augmentation",
+        "object:potion:Experience",
+        "object:potion:Cure Light Wounds",
+        "object:potion:Cure Serious Wounds",
+        "object:potion:Cure Critical Wounds",
+        "object:potion:Healing",
+        "object:potion:*Healing*",
+        "object:potion:Life",
+        "object:potion:Neutralize Poison",
+        "object:potion:Restore Mana",
+        "object:potion:Restore Life Levels",
+        "object:potion:Brawn",
+        "object:potion:Intellect",
+        "object:potion:Contemplation",
+        "object:potion:Nimbleness",
+        "object:potion:Toughness",
+        "object:potion:Enlightenment",
+        "object:potion:*Enlightenment*",
+        "object:potion:Speed",
+        "object:potion:Heroism",
+        "object:potion:Berserk Strength",
+        "object:potion:Boldness",
+        "object:potion:Resist Heat",
+        "object:potion:Resist Cold",
+        "object:potion:Resist Poison",
+        "object:potion:True Seeing",
+        "object:potion:Infravision",
+        "object:potion:Slime Mold Juice",
+        "object:potion:Sleep",
+        "object:potion:Blindness",
+        "object:potion:Confusion",
+        "object:potion:Poison",
+        "object:potion:Slowness",
+        "object:potion:Surprise",
+        "object:potion:Salt Water",
+        "object:potion:Dragon Breath"
+      ],
       "flavors": [
         193,
         194,
@@ -672,7 +929,47 @@
       "row": 8,
       "col": 1,
       "chroma": "family",
-      "maps": [],
+      "maps": [
+        "object:scroll:Phase Door",
+        "object:scroll:Teleportation",
+        "object:scroll:Teleport Level",
+        "object:scroll:Magic Mapping",
+        "object:scroll:Treasure Detection",
+        "object:scroll:Detect Invisible",
+        "object:scroll:Identify Rune",
+        "object:scroll:Enchant Weapon To-Hit",
+        "object:scroll:Enchant Weapon To-Dam",
+        "object:scroll:Enchant Armour",
+        "object:scroll:*Enchant Weapon*",
+        "object:scroll:*Enchant Armour*",
+        "object:scroll:Remove Curse",
+        "object:scroll:*Remove Curse*",
+        "object:scroll:Summon Monster",
+        "object:scroll:Summon Undead",
+        "object:scroll:Acquirement",
+        "object:scroll:*Acquirement*",
+        "object:scroll:Dispel Undead",
+        "object:scroll:Banishment",
+        "object:scroll:Mass Banishment",
+        "object:scroll:Remove Hunger",
+        "object:scroll:Light",
+        "object:scroll:Word of Recall",
+        "object:scroll:Recharging",
+        "object:scroll:Door Destruction",
+        "object:scroll:Deep Descent",
+        "object:scroll:Blessing",
+        "object:scroll:Holy Chant",
+        "object:scroll:Holy Prayer",
+        "object:scroll:Protection from Evil",
+        "object:scroll:Monster Confusion",
+        "object:scroll:Rune of Protection",
+        "object:scroll:*Destruction*",
+        "object:scroll:Aggravate Monster",
+        "object:scroll:Curse Weapon",
+        "object:scroll:Curse Armour",
+        "object:scroll:Darkness",
+        "object:scroll:Trap Creation"
+      ],
       "flavors": [
         252,
         253,
@@ -732,7 +1029,41 @@
       "row": 8,
       "col": 2,
       "chroma": "family",
-      "maps": [],
+      "maps": [
+        "object:wand:Magic Missile",
+        "object:wand:Lightning Bolts",
+        "object:wand:Frost Bolts",
+        "object:wand:Fire Bolts",
+        "object:wand:Acid Bolts",
+        "object:wand:Stinking Cloud",
+        "object:wand:Lightning Balls",
+        "object:wand:Cold Balls",
+        "object:wand:Fire Balls",
+        "object:wand:Acid Balls",
+        "object:wand:Slow Monster",
+        "object:wand:Confuse Monster",
+        "object:wand:Hold Monster",
+        "object:wand:Stun Monster",
+        "object:wand:Scare Monster",
+        "object:wand:Light",
+        "object:wand:Stone to Mud",
+        "object:wand:Polymorph",
+        "object:wand:Darkness",
+        "object:wand:Clone Monster",
+        "object:wand:Teleport Other",
+        "object:wand:Disable Traps",
+        "object:wand:Wonder",
+        "object:wand:Striking",
+        "object:wand:Storms",
+        "object:wand:Shrapnel",
+        "object:wand:Dragon's Flame",
+        "object:wand:Dragon's Frost",
+        "object:wand:Dragon's Breath",
+        "object:wand:Drain Life",
+        "object:wand:Annihilation",
+        "object:wand:Heal Monster",
+        "object:wand:Haste Monster"
+      ],
       "flavors": [
         10,
         11,
@@ -778,7 +1109,37 @@
       "row": 8,
       "col": 3,
       "chroma": "family",
-      "maps": [],
+      "maps": [
+        "object:rod:Treasure Location",
+        "object:rod:Detection",
+        "object:rod:Magic Mapping",
+        "object:rod:Probing",
+        "object:rod:Fire Bolts",
+        "object:rod:Frost Bolts",
+        "object:rod:Lightning Bolts",
+        "object:rod:Acid Bolts",
+        "object:rod:Fire Balls",
+        "object:rod:Cold Balls",
+        "object:rod:Lightning Balls",
+        "object:rod:Acid Balls",
+        "object:rod:Lightning Strike",
+        "object:rod:Northwinds",
+        "object:rod:Dragonfire",
+        "object:rod:Glaurung's Blood",
+        "object:rod:Slow Monster",
+        "object:rod:Hold Monster",
+        "object:rod:Curing",
+        "object:rod:Healing",
+        "object:rod:Restoration",
+        "object:rod:Polymorph",
+        "object:rod:Drain Life",
+        "object:rod:Teleport Other",
+        "object:rod:Disable Traps",
+        "object:rod:Light",
+        "object:rod:Illumination",
+        "object:rod:Recall",
+        "object:rod:Speed"
+      ],
       "flavors": [
         138,
         139,
@@ -822,7 +1183,32 @@
       "row": 8,
       "col": 4,
       "chroma": "family",
-      "maps": [],
+      "maps": [
+        "object:staff:Summoning",
+        "object:staff:Haste Monsters",
+        "object:staff:Darkness",
+        "object:staff:Earthquakes",
+        "object:staff:*Destruction*",
+        "object:staff:Confuse Monsters",
+        "object:staff:Slow Monsters",
+        "object:staff:Sleep Monsters",
+        "object:staff:Detect Invisible",
+        "object:staff:Detect Evil",
+        "object:staff:Mapping",
+        "object:staff:Curing",
+        "object:staff:Cure Light Wounds",
+        "object:staff:Healing",
+        "object:staff:Dispel Evil",
+        "object:staff:Banishment",
+        "object:staff:Power",
+        "object:staff:Holiness",
+        "object:staff:Light",
+        "object:staff:Starlight",
+        "object:staff:Teleportation",
+        "object:staff:Speed",
+        "object:staff:Remove Curse",
+        "object:staff:the Magi"
+      ],
       "flavors": [
         68,
         69,
@@ -866,7 +1252,20 @@
       "row": 8,
       "col": 5,
       "chroma": "family",
-      "maps": [],
+      "maps": [
+        "object:mushroom:Second Sight",
+        "object:mushroom:Fast Recovery",
+        "object:mushroom:Vigor",
+        "object:mushroom:Clear Mind",
+        "object:mushroom:Emergency",
+        "object:mushroom:Terror",
+        "object:mushroom:Stoneskin",
+        "object:mushroom:Turbulence",
+        "object:mushroom:Debility",
+        "object:mushroom:Sprinting",
+        "object:mushroom:Purging",
+        "object:mushroom:Shadows"
+      ],
       "flavors": [
         173,
         174,
@@ -908,8 +1307,7 @@
         "object:sword:Katana",
         "object:sword:Zweihander",
         "object:sword:Executioner's Sword",
-        "object:sword:Valinorean Sword",
-        "object:sword:Whip"
+        "object:sword:Valinorean Sword"
       ]
     },
     {
@@ -934,8 +1332,7 @@
         "object:polearm:Glaive",
         "object:polearm:Lance",
         "object:polearm:Scythe of Slicing",
-        "object:polearm:Lucerne Hammer",
-        "object:polearm:Sling"
+        "object:polearm:Lucerne Hammer"
       ]
     },
     {
@@ -958,8 +1355,8 @@
         "object:hafted:Great Hammer",
         "object:hafted:Storm Hammer",
         "object:hafted:Mace of Disruption",
-        "object:hafted:Dart",
-        "object:hafted:Massive Iron Crown"
+        "object:hafted:Massive Iron Crown",
+        "object:hafted:Mighty Hammer"
       ]
     },
     {
@@ -1004,7 +1401,6 @@
       "col": 2,
       "chroma": "family",
       "maps": [
-        "object:soft armor:Robe",
         "object:soft armor:Soft Leather Armour",
         "object:soft armor:Studded Leather Armour",
         "object:soft armor:Hard Leather Armour",
@@ -1109,12 +1505,10 @@
       "col": 0,
       "chroma": "family",
       "maps": [
-        "object:boots:Pair of Leather Sandals",
         "object:boots:Pair of Leather Boots",
         "object:boots:Pair of Iron Shod Boots",
         "object:boots:Pair of Steel Shod Boots",
-        "object:boots:Pair of Mithril Shod Boots",
-        "object:boots:Pair of Ethereal Slippers"
+        "object:boots:Pair of Mithril Shod Boots"
       ]
     },
     {
@@ -1136,7 +1530,6 @@
       "col": 2,
       "chroma": "family",
       "maps": [
-        "object:bow:Sling",
         "object:bow:Short Bow",
         "object:bow:Long Bow",
         "object:bow:Light Crossbow",
@@ -1760,16 +2153,16 @@
         "monster:Maia",
         "monster:Maia of Nienna",
         "monster:Maia of Mandos",
-        "monster:Maia of Orom\u00eb",
+        "monster:Maia of Oromë",
         "monster:Maia of Yavanna",
-        "monster:Maia of Aul\u00eb",
+        "monster:Maia of Aulë",
         "monster:Maia of Ulmo",
-        "monster:Maia of Manw\u00eb",
+        "monster:Maia of Manwë",
         "monster:Maia of Varda",
-        "monster:Oss\u00eb, Herald of Ulmo",
+        "monster:Ossë, Herald of Ulmo",
         "monster:Makar, the Warrior",
         "monster:Sauron, the Sorcerer",
-        "monster:Me\u00e1ss\u00eb, the Bloody"
+        "monster:Meássë, the Bloody"
       ]
     },
     {
@@ -1846,7 +2239,7 @@
       "chroma": true,
       "maps": [
         "monster:crow",
-        "monster:crow of Ud\u00fbn",
+        "monster:crow of Udûn",
         "monster:craban",
         "monster:blood falcon",
         "monster:corvid of shadow",
@@ -1928,7 +2321,7 @@
         "monster:grizzly bear",
         "monster:werebear",
         "monster:catoblepas",
-        "monster:m\u00fbmak",
+        "monster:mûmak",
         "monster:night mare"
       ]
     },
@@ -2006,6 +2399,2195 @@
         "object:shadow book:[Fear and Torment]",
         "object:shadow book:[Into the Shadows]"
       ]
+    },
+    {
+      "source": "objects/dagger.png",
+      "row": 17,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:sword:Dagger"
+      ]
+    },
+    {
+      "source": "objects/sandals.png",
+      "row": 17,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:boots:Pair of Leather Sandals"
+      ]
+    },
+    {
+      "source": "objects/slippers.png",
+      "row": 17,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:boots:Pair of Ethereal Slippers"
+      ]
+    },
+    {
+      "source": "objects/whip.png",
+      "row": 17,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:hafted:Whip"
+      ]
+    },
+    {
+      "source": "objects/robe.png",
+      "row": 17,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:soft armor:Robe"
+      ]
+    },
+    {
+      "source": "objects/sling.png",
+      "row": 17,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:bow:Sling"
+      ]
+    },
+    {
+      "source": "objects/dart.png",
+      "row": 17,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:polearm:Dart"
+      ]
+    }
+  ],
+  "player_variants": [
+    {
+      "source": "player/warrior-m.png",
+      "row": 18,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior"
+    },
+    {
+      "source": "player/warrior-f.png",
+      "row": 19,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "gender": "Female"
+    },
+    {
+      "source": "player/mage-m.png",
+      "row": 18,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage"
+    },
+    {
+      "source": "player/mage-f.png",
+      "row": 19,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druid-m.png",
+      "row": 18,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid"
+    },
+    {
+      "source": "player/druid-f.png",
+      "row": 19,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "gender": "Female"
+    },
+    {
+      "source": "player/priest-m.png",
+      "row": 18,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest"
+    },
+    {
+      "source": "player/priest-f.png",
+      "row": 19,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "gender": "Female"
+    },
+    {
+      "source": "player/necromancer-m.png",
+      "row": 18,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer"
+    },
+    {
+      "source": "player/necromancer-f.png",
+      "row": 19,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "gender": "Female"
+    },
+    {
+      "source": "player/paladin-m.png",
+      "row": 18,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin"
+    },
+    {
+      "source": "player/paladin-f.png",
+      "row": 19,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "gender": "Female"
+    },
+    {
+      "source": "player/rogue-m.png",
+      "row": 18,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue"
+    },
+    {
+      "source": "player/rogue-f.png",
+      "row": 19,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ranger-m.png",
+      "row": 18,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger"
+    },
+    {
+      "source": "player/ranger-f.png",
+      "row": 19,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "gender": "Female"
+    },
+    {
+      "source": "player/blackguard-m.png",
+      "row": 18,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard"
+    },
+    {
+      "source": "player/blackguard-f.png",
+      "row": 19,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/easterling-warrior-m.png",
+      "row": 20,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Easterling"
+    },
+    {
+      "source": "player/easterling-warrior-f.png",
+      "row": 21,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Easterling",
+      "gender": "Female"
+    },
+    {
+      "source": "player/easterling-mage-m.png",
+      "row": 20,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Easterling"
+    },
+    {
+      "source": "player/easterling-mage-f.png",
+      "row": 21,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Easterling",
+      "gender": "Female"
+    },
+    {
+      "source": "player/easterling-priest-m.png",
+      "row": 20,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Easterling"
+    },
+    {
+      "source": "player/easterling-priest-f.png",
+      "row": 21,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Easterling",
+      "gender": "Female"
+    },
+    {
+      "source": "player/easterling-priest-m.png",
+      "row": 20,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Easterling"
+    },
+    {
+      "source": "player/easterling-priest-f.png",
+      "row": 21,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Easterling",
+      "gender": "Female"
+    },
+    {
+      "source": "player/easterling-mage-m.png",
+      "row": 20,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Easterling"
+    },
+    {
+      "source": "player/easterling-mage-f.png",
+      "row": 21,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Easterling",
+      "gender": "Female"
+    },
+    {
+      "source": "player/easterling-paladin-m.png",
+      "row": 20,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Easterling"
+    },
+    {
+      "source": "player/easterling-paladin-f.png",
+      "row": 21,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Easterling",
+      "gender": "Female"
+    },
+    {
+      "source": "player/easterling-rogue-m.png",
+      "row": 20,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Easterling"
+    },
+    {
+      "source": "player/easterling-rogue-f.png",
+      "row": 21,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Easterling",
+      "gender": "Female"
+    },
+    {
+      "source": "player/easterling-ranger-m.png",
+      "row": 20,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Easterling"
+    },
+    {
+      "source": "player/easterling-ranger-f.png",
+      "row": 21,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Easterling",
+      "gender": "Female"
+    },
+    {
+      "source": "player/easterling-rogue-m.png",
+      "row": 20,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Easterling"
+    },
+    {
+      "source": "player/easterling-rogue-f.png",
+      "row": 21,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Easterling",
+      "gender": "Female"
+    },
+    {
+      "source": "player/green-elf-warrior-m.png",
+      "row": 22,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Green-Elf"
+    },
+    {
+      "source": "player/green-elf-warrior-f.png",
+      "row": 23,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Green-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/green-elf-mage-m.png",
+      "row": 22,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Green-Elf"
+    },
+    {
+      "source": "player/green-elf-mage-f.png",
+      "row": 23,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Green-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/green-elf-priest-m.png",
+      "row": 22,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Green-Elf"
+    },
+    {
+      "source": "player/green-elf-priest-f.png",
+      "row": 23,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Green-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/green-elf-priest-m.png",
+      "row": 22,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Green-Elf"
+    },
+    {
+      "source": "player/green-elf-priest-f.png",
+      "row": 23,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Green-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/green-elf-mage-m.png",
+      "row": 22,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Green-Elf"
+    },
+    {
+      "source": "player/green-elf-mage-f.png",
+      "row": 23,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Green-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/green-elf-paladin-m.png",
+      "row": 22,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Green-Elf"
+    },
+    {
+      "source": "player/green-elf-paladin-f.png",
+      "row": 23,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Green-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/green-elf-rogue-m.png",
+      "row": 22,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Green-Elf"
+    },
+    {
+      "source": "player/green-elf-rogue-f.png",
+      "row": 23,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Green-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/green-elf-ranger-m.png",
+      "row": 22,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Green-Elf"
+    },
+    {
+      "source": "player/green-elf-ranger-f.png",
+      "row": 23,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Green-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/green-elf-rogue-m.png",
+      "row": 22,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Green-Elf"
+    },
+    {
+      "source": "player/green-elf-rogue-f.png",
+      "row": 23,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Green-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/grey-elf-warrior-m.png",
+      "row": 24,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Grey-Elf"
+    },
+    {
+      "source": "player/grey-elf-warrior-f.png",
+      "row": 25,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Grey-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/grey-elf-mage-m.png",
+      "row": 24,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Grey-Elf"
+    },
+    {
+      "source": "player/grey-elf-mage-f.png",
+      "row": 25,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Grey-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/grey-elf-priest-m.png",
+      "row": 24,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Grey-Elf"
+    },
+    {
+      "source": "player/grey-elf-priest-f.png",
+      "row": 25,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Grey-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/grey-elf-priest-m.png",
+      "row": 24,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Grey-Elf"
+    },
+    {
+      "source": "player/grey-elf-priest-f.png",
+      "row": 25,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Grey-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/grey-elf-mage-m.png",
+      "row": 24,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Grey-Elf"
+    },
+    {
+      "source": "player/grey-elf-mage-f.png",
+      "row": 25,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Grey-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/grey-elf-paladin-m.png",
+      "row": 24,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Grey-Elf"
+    },
+    {
+      "source": "player/grey-elf-paladin-f.png",
+      "row": 25,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Grey-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/grey-elf-rogue-m.png",
+      "row": 24,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Grey-Elf"
+    },
+    {
+      "source": "player/grey-elf-rogue-f.png",
+      "row": 25,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Grey-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/grey-elf-ranger-m.png",
+      "row": 24,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Grey-Elf"
+    },
+    {
+      "source": "player/grey-elf-ranger-f.png",
+      "row": 25,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Grey-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/grey-elf-rogue-m.png",
+      "row": 24,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Grey-Elf"
+    },
+    {
+      "source": "player/grey-elf-rogue-f.png",
+      "row": 25,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Grey-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/hobbit-warrior-m.png",
+      "row": 26,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Hobbit"
+    },
+    {
+      "source": "player/hobbit-warrior-f.png",
+      "row": 27,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Hobbit",
+      "gender": "Female"
+    },
+    {
+      "source": "player/hobbit-mage-m.png",
+      "row": 26,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Hobbit"
+    },
+    {
+      "source": "player/hobbit-mage-f.png",
+      "row": 27,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Hobbit",
+      "gender": "Female"
+    },
+    {
+      "source": "player/hobbit-priest-m.png",
+      "row": 26,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Hobbit"
+    },
+    {
+      "source": "player/hobbit-priest-f.png",
+      "row": 27,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Hobbit",
+      "gender": "Female"
+    },
+    {
+      "source": "player/hobbit-priest-m.png",
+      "row": 26,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Hobbit"
+    },
+    {
+      "source": "player/hobbit-priest-f.png",
+      "row": 27,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Hobbit",
+      "gender": "Female"
+    },
+    {
+      "source": "player/hobbit-mage-m.png",
+      "row": 26,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Hobbit"
+    },
+    {
+      "source": "player/hobbit-mage-f.png",
+      "row": 27,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Hobbit",
+      "gender": "Female"
+    },
+    {
+      "source": "player/hobbit-paladin-m.png",
+      "row": 26,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Hobbit"
+    },
+    {
+      "source": "player/hobbit-paladin-f.png",
+      "row": 27,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Hobbit",
+      "gender": "Female"
+    },
+    {
+      "source": "player/hobbit-rogue-m.png",
+      "row": 26,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Hobbit"
+    },
+    {
+      "source": "player/hobbit-rogue-f.png",
+      "row": 27,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Hobbit",
+      "gender": "Female"
+    },
+    {
+      "source": "player/hobbit-ranger-m.png",
+      "row": 26,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Hobbit"
+    },
+    {
+      "source": "player/hobbit-ranger-f.png",
+      "row": 27,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Hobbit",
+      "gender": "Female"
+    },
+    {
+      "source": "player/hobbit-rogue-m.png",
+      "row": 26,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Hobbit"
+    },
+    {
+      "source": "player/hobbit-rogue-f.png",
+      "row": 27,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Hobbit",
+      "gender": "Female"
+    },
+    {
+      "source": "player/petty-dwarf-warrior-m.png",
+      "row": 28,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Petty-Dwarf"
+    },
+    {
+      "source": "player/petty-dwarf-warrior-f.png",
+      "row": 29,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Petty-Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/petty-dwarf-mage-m.png",
+      "row": 28,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Petty-Dwarf"
+    },
+    {
+      "source": "player/petty-dwarf-mage-f.png",
+      "row": 29,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Petty-Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/petty-dwarf-priest-m.png",
+      "row": 28,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Petty-Dwarf"
+    },
+    {
+      "source": "player/petty-dwarf-priest-f.png",
+      "row": 29,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Petty-Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/petty-dwarf-priest-m.png",
+      "row": 28,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Petty-Dwarf"
+    },
+    {
+      "source": "player/petty-dwarf-priest-f.png",
+      "row": 29,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Petty-Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/petty-dwarf-mage-m.png",
+      "row": 28,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Petty-Dwarf"
+    },
+    {
+      "source": "player/petty-dwarf-mage-f.png",
+      "row": 29,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Petty-Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/petty-dwarf-paladin-m.png",
+      "row": 28,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Petty-Dwarf"
+    },
+    {
+      "source": "player/petty-dwarf-paladin-f.png",
+      "row": 29,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Petty-Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/petty-dwarf-rogue-m.png",
+      "row": 28,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Petty-Dwarf"
+    },
+    {
+      "source": "player/petty-dwarf-rogue-f.png",
+      "row": 29,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Petty-Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/petty-dwarf-ranger-m.png",
+      "row": 28,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Petty-Dwarf"
+    },
+    {
+      "source": "player/petty-dwarf-ranger-f.png",
+      "row": 29,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Petty-Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/petty-dwarf-rogue-m.png",
+      "row": 28,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Petty-Dwarf"
+    },
+    {
+      "source": "player/petty-dwarf-rogue-f.png",
+      "row": 29,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Petty-Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dwarf-warrior-m.png",
+      "row": 30,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Dwarf"
+    },
+    {
+      "source": "player/dwarf-warrior-f.png",
+      "row": 31,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dwarf-mage-m.png",
+      "row": 30,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Dwarf"
+    },
+    {
+      "source": "player/dwarf-mage-f.png",
+      "row": 31,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dwarf-priest-m.png",
+      "row": 30,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Dwarf"
+    },
+    {
+      "source": "player/dwarf-priest-f.png",
+      "row": 31,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dwarf-priest-m.png",
+      "row": 30,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Dwarf"
+    },
+    {
+      "source": "player/dwarf-priest-f.png",
+      "row": 31,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dwarf-mage-m.png",
+      "row": 30,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Dwarf"
+    },
+    {
+      "source": "player/dwarf-mage-f.png",
+      "row": 31,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dwarf-paladin-m.png",
+      "row": 30,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Dwarf"
+    },
+    {
+      "source": "player/dwarf-paladin-f.png",
+      "row": 31,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dwarf-rogue-m.png",
+      "row": 30,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Dwarf"
+    },
+    {
+      "source": "player/dwarf-rogue-f.png",
+      "row": 31,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dwarf-ranger-m.png",
+      "row": 30,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Dwarf"
+    },
+    {
+      "source": "player/dwarf-ranger-f.png",
+      "row": 31,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dwarf-rogue-m.png",
+      "row": 30,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Dwarf"
+    },
+    {
+      "source": "player/dwarf-rogue-f.png",
+      "row": 31,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Dwarf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druadan-warrior-m.png",
+      "row": 32,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Drúadan"
+    },
+    {
+      "source": "player/druadan-warrior-f.png",
+      "row": 33,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Drúadan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druadan-mage-m.png",
+      "row": 32,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Drúadan"
+    },
+    {
+      "source": "player/druadan-mage-f.png",
+      "row": 33,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Drúadan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druadan-priest-m.png",
+      "row": 32,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Drúadan"
+    },
+    {
+      "source": "player/druadan-priest-f.png",
+      "row": 33,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Drúadan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druadan-priest-m.png",
+      "row": 32,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Drúadan"
+    },
+    {
+      "source": "player/druadan-priest-f.png",
+      "row": 33,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Drúadan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druadan-mage-m.png",
+      "row": 32,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Drúadan"
+    },
+    {
+      "source": "player/druadan-mage-f.png",
+      "row": 33,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Drúadan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druadan-paladin-m.png",
+      "row": 32,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Drúadan"
+    },
+    {
+      "source": "player/druadan-paladin-f.png",
+      "row": 33,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Drúadan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druadan-rogue-m.png",
+      "row": 32,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Drúadan"
+    },
+    {
+      "source": "player/druadan-rogue-f.png",
+      "row": 33,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Drúadan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druadan-ranger-m.png",
+      "row": 32,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Drúadan"
+    },
+    {
+      "source": "player/druadan-ranger-f.png",
+      "row": 33,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Drúadan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/druadan-rogue-m.png",
+      "row": 32,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Drúadan"
+    },
+    {
+      "source": "player/druadan-rogue-f.png",
+      "row": 33,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Drúadan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/longbeard-warrior-m.png",
+      "row": 34,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Longbeard"
+    },
+    {
+      "source": "player/longbeard-warrior-f.png",
+      "row": 35,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Longbeard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/longbeard-mage-m.png",
+      "row": 34,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Longbeard"
+    },
+    {
+      "source": "player/longbeard-mage-f.png",
+      "row": 35,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Longbeard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/longbeard-priest-m.png",
+      "row": 34,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Longbeard"
+    },
+    {
+      "source": "player/longbeard-priest-f.png",
+      "row": 35,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Longbeard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/longbeard-priest-m.png",
+      "row": 34,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Longbeard"
+    },
+    {
+      "source": "player/longbeard-priest-f.png",
+      "row": 35,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Longbeard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/longbeard-mage-m.png",
+      "row": 34,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Longbeard"
+    },
+    {
+      "source": "player/longbeard-mage-f.png",
+      "row": 35,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Longbeard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/longbeard-paladin-m.png",
+      "row": 34,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Longbeard"
+    },
+    {
+      "source": "player/longbeard-paladin-f.png",
+      "row": 35,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Longbeard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/longbeard-rogue-m.png",
+      "row": 34,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Longbeard"
+    },
+    {
+      "source": "player/longbeard-rogue-f.png",
+      "row": 35,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Longbeard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/longbeard-ranger-m.png",
+      "row": 34,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Longbeard"
+    },
+    {
+      "source": "player/longbeard-ranger-f.png",
+      "row": 35,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Longbeard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/longbeard-rogue-m.png",
+      "row": 34,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Longbeard"
+    },
+    {
+      "source": "player/longbeard-rogue-f.png",
+      "row": 35,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Longbeard",
+      "gender": "Female"
+    },
+    {
+      "source": "player/adan-warrior-m.png",
+      "row": 36,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Adan"
+    },
+    {
+      "source": "player/adan-warrior-f.png",
+      "row": 37,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Adan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/adan-mage-m.png",
+      "row": 36,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Adan"
+    },
+    {
+      "source": "player/adan-mage-f.png",
+      "row": 37,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Adan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/adan-priest-m.png",
+      "row": 36,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Adan"
+    },
+    {
+      "source": "player/adan-priest-f.png",
+      "row": 37,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Adan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/adan-priest-m.png",
+      "row": 36,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Adan"
+    },
+    {
+      "source": "player/adan-priest-f.png",
+      "row": 37,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Adan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/adan-mage-m.png",
+      "row": 36,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Adan"
+    },
+    {
+      "source": "player/adan-mage-f.png",
+      "row": 37,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Adan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/adan-paladin-m.png",
+      "row": 36,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Adan"
+    },
+    {
+      "source": "player/adan-paladin-f.png",
+      "row": 37,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Adan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/adan-rogue-m.png",
+      "row": 36,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Adan"
+    },
+    {
+      "source": "player/adan-rogue-f.png",
+      "row": 37,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Adan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/adan-ranger-m.png",
+      "row": 36,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Adan"
+    },
+    {
+      "source": "player/adan-ranger-f.png",
+      "row": 37,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Adan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/adan-rogue-m.png",
+      "row": 36,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Adan"
+    },
+    {
+      "source": "player/adan-rogue-f.png",
+      "row": 37,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Adan",
+      "gender": "Female"
+    },
+    {
+      "source": "player/high-elf-warrior-m.png",
+      "row": 38,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "High-Elf"
+    },
+    {
+      "source": "player/high-elf-warrior-f.png",
+      "row": 39,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "High-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/high-elf-mage-m.png",
+      "row": 38,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "High-Elf"
+    },
+    {
+      "source": "player/high-elf-mage-f.png",
+      "row": 39,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "High-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/high-elf-priest-m.png",
+      "row": 38,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "High-Elf"
+    },
+    {
+      "source": "player/high-elf-priest-f.png",
+      "row": 39,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "High-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/high-elf-priest-m.png",
+      "row": 38,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "High-Elf"
+    },
+    {
+      "source": "player/high-elf-priest-f.png",
+      "row": 39,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "High-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/high-elf-mage-m.png",
+      "row": 38,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "High-Elf"
+    },
+    {
+      "source": "player/high-elf-mage-f.png",
+      "row": 39,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "High-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/high-elf-paladin-m.png",
+      "row": 38,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "High-Elf"
+    },
+    {
+      "source": "player/high-elf-paladin-f.png",
+      "row": 39,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "High-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/high-elf-rogue-m.png",
+      "row": 38,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "High-Elf"
+    },
+    {
+      "source": "player/high-elf-rogue-f.png",
+      "row": 39,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "High-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/high-elf-ranger-m.png",
+      "row": 38,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "High-Elf"
+    },
+    {
+      "source": "player/high-elf-ranger-f.png",
+      "row": 39,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "High-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/high-elf-rogue-m.png",
+      "row": 38,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "High-Elf"
+    },
+    {
+      "source": "player/high-elf-rogue-f.png",
+      "row": 39,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "High-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dark-elf-warrior-m.png",
+      "row": 40,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Dark-Elf"
+    },
+    {
+      "source": "player/dark-elf-warrior-f.png",
+      "row": 41,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Dark-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dark-elf-mage-m.png",
+      "row": 40,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Dark-Elf"
+    },
+    {
+      "source": "player/dark-elf-mage-f.png",
+      "row": 41,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Dark-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dark-elf-priest-m.png",
+      "row": 40,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Dark-Elf"
+    },
+    {
+      "source": "player/dark-elf-priest-f.png",
+      "row": 41,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Dark-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dark-elf-priest-m.png",
+      "row": 40,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Dark-Elf"
+    },
+    {
+      "source": "player/dark-elf-priest-f.png",
+      "row": 41,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Dark-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dark-elf-mage-m.png",
+      "row": 40,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Dark-Elf"
+    },
+    {
+      "source": "player/dark-elf-mage-f.png",
+      "row": 41,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Dark-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dark-elf-paladin-m.png",
+      "row": 40,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Dark-Elf"
+    },
+    {
+      "source": "player/dark-elf-paladin-f.png",
+      "row": 41,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Dark-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dark-elf-rogue-m.png",
+      "row": 40,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Dark-Elf"
+    },
+    {
+      "source": "player/dark-elf-rogue-f.png",
+      "row": 41,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Dark-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dark-elf-ranger-m.png",
+      "row": 40,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Dark-Elf"
+    },
+    {
+      "source": "player/dark-elf-ranger-f.png",
+      "row": 41,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Dark-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/dark-elf-rogue-m.png",
+      "row": 40,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Dark-Elf"
+    },
+    {
+      "source": "player/dark-elf-rogue-f.png",
+      "row": 41,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Dark-Elf",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ent-warrior-m.png",
+      "row": 42,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Ent"
+    },
+    {
+      "source": "player/ent-warrior-f.png",
+      "row": 43,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Ent",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ent-mage-m.png",
+      "row": 42,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Ent"
+    },
+    {
+      "source": "player/ent-mage-f.png",
+      "row": 43,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Ent",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ent-priest-m.png",
+      "row": 42,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Ent"
+    },
+    {
+      "source": "player/ent-priest-f.png",
+      "row": 43,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Ent",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ent-priest-m.png",
+      "row": 42,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Ent"
+    },
+    {
+      "source": "player/ent-priest-f.png",
+      "row": 43,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Ent",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ent-mage-m.png",
+      "row": 42,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Ent"
+    },
+    {
+      "source": "player/ent-mage-f.png",
+      "row": 43,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Ent",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ent-paladin-m.png",
+      "row": 42,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Ent"
+    },
+    {
+      "source": "player/ent-paladin-f.png",
+      "row": 43,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Ent",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ent-rogue-m.png",
+      "row": 42,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Ent"
+    },
+    {
+      "source": "player/ent-rogue-f.png",
+      "row": 43,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Ent",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ent-ranger-m.png",
+      "row": 42,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Ent"
+    },
+    {
+      "source": "player/ent-ranger-f.png",
+      "row": 43,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Ent",
+      "gender": "Female"
+    },
+    {
+      "source": "player/ent-rogue-m.png",
+      "row": 42,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Ent"
+    },
+    {
+      "source": "player/ent-rogue-f.png",
+      "row": 43,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Ent",
+      "gender": "Female"
+    },
+    {
+      "source": "player/beorning-warrior-m.png",
+      "row": 44,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Beorning"
+    },
+    {
+      "source": "player/beorning-warrior-f.png",
+      "row": 45,
+      "col": 0,
+      "chroma": true,
+      "class": "Warrior",
+      "race": "Beorning",
+      "gender": "Female"
+    },
+    {
+      "source": "player/beorning-mage-m.png",
+      "row": 44,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Beorning"
+    },
+    {
+      "source": "player/beorning-mage-f.png",
+      "row": 45,
+      "col": 1,
+      "chroma": true,
+      "class": "Mage",
+      "race": "Beorning",
+      "gender": "Female"
+    },
+    {
+      "source": "player/beorning-priest-m.png",
+      "row": 44,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Beorning"
+    },
+    {
+      "source": "player/beorning-priest-f.png",
+      "row": 45,
+      "col": 2,
+      "chroma": true,
+      "class": "Druid",
+      "race": "Beorning",
+      "gender": "Female"
+    },
+    {
+      "source": "player/beorning-priest-m.png",
+      "row": 44,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Beorning"
+    },
+    {
+      "source": "player/beorning-priest-f.png",
+      "row": 45,
+      "col": 3,
+      "chroma": true,
+      "class": "Priest",
+      "race": "Beorning",
+      "gender": "Female"
+    },
+    {
+      "source": "player/beorning-mage-m.png",
+      "row": 44,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Beorning"
+    },
+    {
+      "source": "player/beorning-mage-f.png",
+      "row": 45,
+      "col": 4,
+      "chroma": true,
+      "class": "Necromancer",
+      "race": "Beorning",
+      "gender": "Female"
+    },
+    {
+      "source": "player/beorning-paladin-m.png",
+      "row": 44,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Beorning"
+    },
+    {
+      "source": "player/beorning-paladin-f.png",
+      "row": 45,
+      "col": 5,
+      "chroma": true,
+      "class": "Paladin",
+      "race": "Beorning",
+      "gender": "Female"
+    },
+    {
+      "source": "player/beorning-rogue-m.png",
+      "row": 44,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Beorning"
+    },
+    {
+      "source": "player/beorning-rogue-f.png",
+      "row": 45,
+      "col": 6,
+      "chroma": true,
+      "class": "Rogue",
+      "race": "Beorning",
+      "gender": "Female"
+    },
+    {
+      "source": "player/beorning-ranger-m.png",
+      "row": 44,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Beorning"
+    },
+    {
+      "source": "player/beorning-ranger-f.png",
+      "row": 45,
+      "col": 7,
+      "chroma": true,
+      "class": "Ranger",
+      "race": "Beorning",
+      "gender": "Female"
+    },
+    {
+      "source": "player/beorning-rogue-m.png",
+      "row": 44,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Beorning"
+    },
+    {
+      "source": "player/beorning-rogue-f.png",
+      "row": 45,
+      "col": 8,
+      "chroma": true,
+      "class": "Blackguard",
+      "race": "Beorning",
+      "gender": "Female"
     }
   ]
 }
