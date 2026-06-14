@@ -2415,8 +2415,7 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:aether vortex",
-        "monster:Wiruin, the Maelstrom"
+        "monster:aether vortex"
       ]
     },
     {
@@ -2479,8 +2478,7 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:Wolf-Sauron",
-        "monster:Carcharoth, the Jaws of Thirst"
+        "monster:Wolf-Sauron"
       ]
     },
     {
@@ -2694,8 +2692,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:black mamba",
-        "monster:serpent of the brownlands"
+        "monster:black mamba"
       ]
     },
     {
@@ -2794,8 +2791,7 @@
       "col": 9,
       "chroma": true,
       "maps": [
-        "monster:boil-covered wretch",
-        "monster:pitiful-looking beggar"
+        "monster:boil-covered wretch"
       ]
     },
     {
@@ -2804,8 +2800,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:blackguard",
-        "monster:black knight"
+        "monster:blackguard"
       ]
     },
     {
@@ -2904,8 +2899,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:troll chieftain",
-        "monster:mountain troll"
+        "monster:troll chieftain"
       ]
     },
     {
@@ -2984,8 +2978,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:blade of slaughter",
-        "monster:mimic (large jeweled chest)"
+        "monster:blade of slaughter"
       ]
     },
     {
@@ -2994,8 +2987,7 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:skeleton serpent",
-        "monster:Cantoras, the Skeletal Lord"
+        "monster:skeleton serpent"
       ]
     },
     {
@@ -3040,8 +3032,7 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:emperor wight",
-        "monster:Wight"
+        "monster:emperor wight"
       ]
     },
     {
@@ -6848,6 +6839,87 @@
       "chroma": true,
       "maps": [
         "monster:storm of Unmagic"
+      ]
+    },
+    {
+      "source": "monsters/vortex-wiruin.png",
+      "row": 79,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:Wiruin, the Maelstrom"
+      ]
+    },
+    {
+      "source": "monsters/wolf-carcharoth.png",
+      "row": 79,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "monster:Carcharoth, the Jaws of Thirst"
+      ]
+    },
+    {
+      "source": "monsters/snake-brownlands.png",
+      "row": 79,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "monster:serpent of the brownlands"
+      ]
+    },
+    {
+      "source": "monsters/townsfolk-beggar-pitiful.png",
+      "row": 79,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:pitiful-looking beggar"
+      ]
+    },
+    {
+      "source": "monsters/warrior-black-knight.png",
+      "row": 79,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:black knight"
+      ]
+    },
+    {
+      "source": "monsters/troll-mountain.png",
+      "row": 80,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:mountain troll"
+      ]
+    },
+    {
+      "source": "monsters/mimic-single.png",
+      "row": 80,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:mimic (large jeweled chest)"
+      ]
+    },
+    {
+      "source": "monsters/skeleton-cantoras.png",
+      "row": 80,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:Cantoras, the Skeletal Lord"
+      ]
+    },
+    {
+      "source": "monsters/wight-unique.png",
+      "row": 80,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:Wight"
       ]
     }
   ],
