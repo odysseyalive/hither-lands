@@ -721,37 +721,7 @@
       "row": 8,
       "col": 3,
       "chroma": "family",
-      "maps": [
-        "object:rod:Treasure Location",
-        "object:rod:Detection",
-        "object:rod:Magic Mapping",
-        "object:rod:Probing",
-        "object:rod:Fire Bolts",
-        "object:rod:Frost Bolts",
-        "object:rod:Lightning Bolts",
-        "object:rod:Acid Bolts",
-        "object:rod:Fire Balls",
-        "object:rod:Cold Balls",
-        "object:rod:Lightning Balls",
-        "object:rod:Acid Balls",
-        "object:rod:Lightning Strike",
-        "object:rod:Northwinds",
-        "object:rod:Dragonfire",
-        "object:rod:Glaurung's Blood",
-        "object:rod:Slow Monster",
-        "object:rod:Hold Monster",
-        "object:rod:Curing",
-        "object:rod:Healing",
-        "object:rod:Restoration",
-        "object:rod:Polymorph",
-        "object:rod:Drain Life",
-        "object:rod:Teleport Other",
-        "object:rod:Disable Traps",
-        "object:rod:Light",
-        "object:rod:Illumination",
-        "object:rod:Recall",
-        "object:rod:Speed"
-      ],
+      "maps": [],
       "flavors": [
         138,
         139,
@@ -9505,6 +9475,267 @@
       "chroma": true,
       "maps": [
         "object:wand:Haste Monster"
+      ]
+    },
+    {
+      "source": "objects/rod-detection.png",
+      "row": 100,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:rod:Detection"
+      ]
+    },
+    {
+      "source": "objects/rod-illumination.png",
+      "row": 100,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:rod:Illumination"
+      ]
+    },
+    {
+      "source": "objects/rod-magic-mapping.png",
+      "row": 100,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:rod:Magic Mapping"
+      ]
+    },
+    {
+      "source": "objects/rod-treasure-location.png",
+      "row": 100,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:rod:Treasure Location"
+      ]
+    },
+    {
+      "source": "objects/rod-light.png",
+      "row": 100,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:rod:Light"
+      ]
+    },
+    {
+      "source": "objects/rod-lightning-bolts.png",
+      "row": 101,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:rod:Lightning Bolts"
+      ]
+    },
+    {
+      "source": "objects/rod-frost-bolts.png",
+      "row": 101,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:rod:Frost Bolts"
+      ]
+    },
+    {
+      "source": "objects/rod-fire-bolts.png",
+      "row": 101,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:rod:Fire Bolts"
+      ]
+    },
+    {
+      "source": "objects/rod-acid-bolts.png",
+      "row": 101,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:rod:Acid Bolts"
+      ]
+    },
+    {
+      "source": "objects/rod-lightning-balls.png",
+      "row": 101,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:rod:Lightning Balls"
+      ]
+    },
+    {
+      "source": "objects/rod-cold-balls.png",
+      "row": 101,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:rod:Cold Balls"
+      ]
+    },
+    {
+      "source": "objects/rod-fire-balls.png",
+      "row": 101,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:rod:Fire Balls"
+      ]
+    },
+    {
+      "source": "objects/rod-acid-balls.png",
+      "row": 101,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:rod:Acid Balls"
+      ]
+    },
+    {
+      "source": "objects/rod-slow-monster.png",
+      "row": 101,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:rod:Slow Monster"
+      ]
+    },
+    {
+      "source": "objects/rod-hold-monster.png",
+      "row": 101,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:rod:Hold Monster"
+      ]
+    },
+    {
+      "source": "objects/rod-polymorph.png",
+      "row": 101,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:rod:Polymorph"
+      ]
+    },
+    {
+      "source": "objects/rod-teleport-other.png",
+      "row": 101,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:rod:Teleport Other"
+      ]
+    },
+    {
+      "source": "objects/rod-disable-traps.png",
+      "row": 101,
+      "col": 12,
+      "chroma": true,
+      "maps": [
+        "object:rod:Disable Traps"
+      ]
+    },
+    {
+      "source": "objects/rod-probing.png",
+      "row": 101,
+      "col": 13,
+      "chroma": true,
+      "maps": [
+        "object:rod:Probing"
+      ]
+    },
+    {
+      "source": "objects/rod-curing.png",
+      "row": 101,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "object:rod:Curing"
+      ]
+    },
+    {
+      "source": "objects/rod-healing.png",
+      "row": 101,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "object:rod:Healing"
+      ]
+    },
+    {
+      "source": "objects/rod-restoration.png",
+      "row": 102,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:rod:Restoration"
+      ]
+    },
+    {
+      "source": "objects/rod-recall.png",
+      "row": 102,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:rod:Recall"
+      ]
+    },
+    {
+      "source": "objects/rod-speed.png",
+      "row": 102,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:rod:Speed"
+      ]
+    },
+    {
+      "source": "objects/rod-drain-life.png",
+      "row": 102,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:rod:Drain Life"
+      ]
+    },
+    {
+      "source": "objects/rod-dragonfire.png",
+      "row": 102,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:rod:Dragonfire"
+      ]
+    },
+    {
+      "source": "objects/rod-lightning-strike.png",
+      "row": 102,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:rod:Lightning Strike"
+      ]
+    },
+    {
+      "source": "objects/rod-northwinds.png",
+      "row": 102,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:rod:Northwinds"
+      ]
+    },
+    {
+      "source": "objects/rod-glaurungs-blood.png",
+      "row": 102,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:rod:Glaurung's Blood"
       ]
     }
   ],
