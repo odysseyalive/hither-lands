@@ -2485,8 +2485,7 @@
       "chroma": true,
       "maps": [
         "monster:Ibun, Son of M\u00eem",
-        "monster:Kh\u00eem, Son of M\u00eem",
-        "monster:M\u00eem, Betrayer of Turin"
+        "monster:Kh\u00eem, Son of M\u00eem"
       ]
     },
     {
@@ -2745,7 +2744,6 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:Oss\u00eb, Herald of Ulmo",
         "monster:Makar, the Warrior",
         "monster:Me\u00e1ss\u00eb, the Bloody"
       ]
@@ -2841,7 +2839,6 @@
       "chroma": true,
       "maps": [
         "monster:giant red ant",
-        "monster:giant silver ant",
         "monster:giant army ant"
       ]
     },
@@ -3134,8 +3131,7 @@
       "col": 4,
       "chroma": true,
       "maps": [
-        "monster:ironfist priest",
-        "monster:stiffbeard sorcerer"
+        "monster:ironfist priest"
       ]
     },
     {
@@ -3197,9 +3193,7 @@
       "row": 52,
       "col": 10,
       "chroma": true,
-      "maps": [
-        "monster:Tevildo, Prince of Cats"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/elemental-fire-boss.png",
@@ -3207,9 +3201,7 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:magma elemental",
-        "monster:will o' the wisp",
-        "monster:Vargo, Tyrant of Fire"
+        "monster:magma elemental"
       ]
     },
     {
@@ -3218,8 +3210,7 @@
       "col": 12,
       "chroma": true,
       "maps": [
-        "monster:ooze elemental",
-        "monster:Waldern, King of Water"
+        "monster:ooze elemental"
       ]
     },
     {
@@ -3260,8 +3251,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:huorn",
-        "monster:black-hearted huorn"
+        "monster:huorn"
       ]
     },
     {
@@ -4700,6 +4690,87 @@
       "chroma": true,
       "maps": [
         "monster:F\u00ebanorian raider"
+      ]
+    },
+    {
+      "source": "monsters/elemental-vargo.png",
+      "row": 62,
+      "col": 14,
+      "chroma": true,
+      "maps": [
+        "monster:Vargo, Tyrant of Fire"
+      ]
+    },
+    {
+      "source": "monsters/elemental-waldern.png",
+      "row": 62,
+      "col": 15,
+      "chroma": true,
+      "maps": [
+        "monster:Waldern, King of Water"
+      ]
+    },
+    {
+      "source": "monsters/elemental-wisp.png",
+      "row": 63,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "monster:will o' the wisp"
+      ]
+    },
+    {
+      "source": "monsters/dwarf-mim-boss.png",
+      "row": 63,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:M\u00eem, Betrayer of Turin"
+      ]
+    },
+    {
+      "source": "monsters/dwarf-stiffbeard.png",
+      "row": 63,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:stiffbeard sorcerer"
+      ]
+    },
+    {
+      "source": "monsters/ent-huorn-black.png",
+      "row": 63,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:black-hearted huorn"
+      ]
+    },
+    {
+      "source": "monsters/feline-tevildo.png",
+      "row": 63,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:Tevildo, Prince of Cats"
+      ]
+    },
+    {
+      "source": "monsters/ainu-osse.png",
+      "row": 63,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:Oss\u00eb, Herald of Ulmo"
+      ]
+    },
+    {
+      "source": "monsters/ant-silver.png",
+      "row": 63,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:giant silver ant"
       ]
     }
   ],
