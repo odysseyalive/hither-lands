@@ -2133,8 +2133,7 @@
       "chroma": true,
       "maps": [
         "monster:multi-hued hound",
-        "monster:chaos hound",
-        "monster:aether hound"
+        "monster:chaos hound"
       ]
     },
     {
@@ -2432,8 +2431,7 @@
       "chroma": true,
       "maps": [
         "monster:bone golem",
-        "monster:flesh golem",
-        "monster:drolem"
+        "monster:flesh golem"
       ]
     },
     {
@@ -3194,8 +3192,7 @@
       "chroma": true,
       "maps": [
         "monster:Eog golem",
-        "monster:colbran",
-        "monster:colossus"
+        "monster:colbran"
       ]
     },
     {
@@ -4532,6 +4529,33 @@
       "chroma": true,
       "maps": [
         "monster:The Tarrasque"
+      ]
+    },
+    {
+      "source": "monsters/golem-drolem.png",
+      "row": 61,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "monster:drolem"
+      ]
+    },
+    {
+      "source": "monsters/golem-colossus.png",
+      "row": 61,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "monster:colossus"
+      ]
+    },
+    {
+      "source": "monsters/hound-aether.png",
+      "row": 61,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "monster:aether hound"
       ]
     }
   ],
