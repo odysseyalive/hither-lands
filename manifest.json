@@ -1706,7 +1706,6 @@
       "col": 2,
       "chroma": true,
       "maps": [
-        "monster:killer brown beetle",
         "monster:killer red beetle"
       ]
     },
@@ -2390,7 +2389,6 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:blue ooze",
         "monster:black ooze"
       ]
     },
@@ -2789,7 +2787,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:giant flea",
         "monster:gnawing bug"
       ]
     },
@@ -2846,7 +2843,6 @@
       "col": 11,
       "chroma": true,
       "maps": [
-        "monster:dr\u00faadan druid",
         "monster:mystic"
       ]
     },
@@ -3088,7 +3084,6 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:Ghost",
         "monster:Phantom"
       ]
     },
@@ -3431,7 +3426,6 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:master mystic",
         "monster:grand master mystic"
       ]
     },
@@ -6512,6 +6506,60 @@
       "chroma": true,
       "maps": [
         "monster:green icky thing"
+      ]
+    },
+    {
+      "source": "monsters/insect-flea.png",
+      "row": 77,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "monster:giant flea"
+      ]
+    },
+    {
+      "source": "monsters/beetle-brown.png",
+      "row": 77,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "monster:killer brown beetle"
+      ]
+    },
+    {
+      "source": "monsters/mystic-master-single.png",
+      "row": 77,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "monster:master mystic"
+      ]
+    },
+    {
+      "source": "monsters/ooze-blue.png",
+      "row": 77,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "monster:blue ooze"
+      ]
+    },
+    {
+      "source": "monsters/priest-druadan.png",
+      "row": 77,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "monster:dr\u00faadan druid"
+      ]
+    },
+    {
+      "source": "monsters/phantom-ghost.png",
+      "row": 77,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "monster:Ghost"
       ]
     }
   ],
