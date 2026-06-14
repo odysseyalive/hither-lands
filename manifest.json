@@ -1085,20 +1085,7 @@
       "row": 9,
       "col": 4,
       "chroma": "family",
-      "maps": [
-        "object:dragon armor:Black Dragon Scale Mail",
-        "object:dragon armor:Blue Dragon Scale Mail",
-        "object:dragon armor:White Dragon Scale Mail",
-        "object:dragon armor:Red Dragon Scale Mail",
-        "object:dragon armor:Green Dragon Scale Mail",
-        "object:dragon armor:Multi-Hued Dragon Scale Mail",
-        "object:dragon armor:Shining Dragon Scale Mail",
-        "object:dragon armor:Law Dragon Scale Mail",
-        "object:dragon armor:Gold Dragon Scale Mail",
-        "object:dragon armor:Chaos Dragon Scale Mail",
-        "object:dragon armor:Balance Dragon Scale Mail",
-        "object:dragon armor:Power Dragon Scale Mail"
-      ]
+      "maps": []
     },
     {
       "source": "objects/shield.png",
@@ -7650,6 +7637,114 @@
       "chroma": true,
       "maps": [
         "object:hard armor:Adamantite Plate Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-black.png",
+      "row": 86,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Black Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-blue.png",
+      "row": 86,
+      "col": 1,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Blue Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-white.png",
+      "row": 86,
+      "col": 2,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:White Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-red.png",
+      "row": 86,
+      "col": 3,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Red Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-green.png",
+      "row": 86,
+      "col": 4,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Green Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-multi-hued.png",
+      "row": 86,
+      "col": 5,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Multi-Hued Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-shining.png",
+      "row": 86,
+      "col": 6,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Shining Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-law.png",
+      "row": 86,
+      "col": 7,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Law Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-gold.png",
+      "row": 86,
+      "col": 8,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Gold Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-chaos.png",
+      "row": 86,
+      "col": 9,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Chaos Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-balance.png",
+      "row": 86,
+      "col": 10,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Balance Dragon Scale Mail"
+      ]
+    },
+    {
+      "source": "objects/dragon-armor-power.png",
+      "row": 86,
+      "col": 11,
+      "chroma": true,
+      "maps": [
+        "object:dragon armor:Power Dragon Scale Mail"
       ]
     }
   ],
