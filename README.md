@@ -54,10 +54,6 @@ cd FAangband && ./autogen.sh
 cd ../hither-lands
 ```
 
-```sh
-./install.sh
-```
-
 This builds the atlas from source tiles, copies it into `lib/tiles/`,
 registers the tileset in the build system, and applies any C source patches
 (e.g. shapechange tile display).
