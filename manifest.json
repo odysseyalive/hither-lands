@@ -10293,6 +10293,7 @@
       "source": "terrain/wall-granite-fitted.png",
       "row": 107,
       "col": 1,
+
       "maps": [
         "feat:granite wall:*"
       ]
@@ -10365,6 +10366,7 @@
       "source": "terrain/rubble-pile.png",
       "row": 107,
       "col": 10,
+
       "maps": [
         "feat:pile of rubble:*"
       ]
@@ -10373,6 +10375,7 @@
       "source": "terrain/rubble-passable.png",
       "row": 107,
       "col": 11,
+
       "maps": [
         "feat:pile of passable rubble:*"
       ]
@@ -10381,6 +10384,7 @@
       "source": "terrain/trees-lowland.png",
       "row": 107,
       "col": 12,
+
       "maps": [
         "feat:lowland trees:*"
       ]
@@ -10389,6 +10393,7 @@
       "source": "terrain/trees-highland.png",
       "row": 107,
       "col": 13,
+
       "maps": [
         "feat:highland trees:*"
       ]

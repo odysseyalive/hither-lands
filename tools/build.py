@@ -24,6 +24,7 @@ CHROMA_TOL = 60
 
 
 FAMILY_TOL = 50  # for "family" mode: how far magenta must dominate green
+BG_COLOR = (23, 19, 16)  # #171310 — the shared dark background
 
 
 def key_out_chroma(img, family=False):
@@ -51,6 +52,36 @@ def key_out_chroma(img, family=False):
                        and abs(b - CHROMA[2]) < CHROMA_TOL)
             if hit:
                 px[x, y] = (r, g, b, 0)
+    return img
+
+
+def apply_margin_fade(img, margin_frac=0.10, fade_frac=0.05):
+    """Fade scattered-element tiles to the dark background at all edges.
+
+    Guarantees the edge-containment rule (art-direction § 10) mechanically:
+    source tiles can be generated with full coverage, and the build enforces
+    the dark margin — same philosophy as palette snap enforcing the palette.
+    """
+    img = img.convert("RGBA")
+    px = img.load()
+    w, h = img.size
+    margin = int(w * margin_frac)
+    fade = int(w * fade_frac)
+    solid = margin - fade
+    for y in range(h):
+        for x in range(w):
+            dist = min(x, y, w - 1 - x, h - 1 - y)
+            if dist < solid:
+                px[x, y] = (*BG_COLOR, 255)
+            elif dist < margin:
+                t = (dist - solid) / fade if fade > 0 else 1.0
+                r, g, b, a = px[x, y]
+                px[x, y] = (
+                    int(BG_COLOR[0] * (1 - t) + r * t),
+                    int(BG_COLOR[1] * (1 - t) + g * t),
+                    int(BG_COLOR[2] * (1 - t) + b * t),
+                    255,
+                )
     return img
 
 
@@ -131,6 +162,8 @@ def main():
         elif t.get("chroma"):
             img = key_out_chroma(img)
         img = img.convert("RGBA").resize((ts, ts), Image.LANCZOS)
+        if t.get("margin"):
+            img = apply_margin_fade(img)
         # A terrain feature (e.g. a building) fills its whole cell — the engine
         # draws only one tile per grid square, so transparent corners would
         # show the black terminal background. Bake a ground texture underneath

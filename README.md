@@ -33,37 +33,46 @@ git clone https://github.com/NickMcConnell/FAangband.git
 git clone https://github.com/odysseyalive/hither-lands.git
 ```
 
-### 3. Bootstrap and configure FAangband
+### 3. Bootstrap FAangband
 
 ```sh
-cd FAangband
-./autogen.sh
+cd FAangband && ./autogen.sh
+```
+
+### 4. Configure FAangband with SDL2
+
+```sh
 ./configure --with-no-install --enable-sdl2
 ```
 
 `--with-no-install` runs the game in-place (data stays in the source tree).
 `--enable-sdl2` builds the graphical frontend that renders tiles.
 
-### 4. Install the tileset into the FAangband source tree
+### 5. Install the tileset into the FAangband source tree
 
 ```sh
-cd ../hither-lands
-./install.sh ../FAangband
+cd ../hither-lands && ./install.sh ../FAangband
 ```
 
 This builds the atlas from source tiles, copies it into `lib/tiles/`,
 registers the tileset in the build system, and applies any C source patches
-(e.g. shapechange tile display). The `--gender male|female` flag selects
-player sprite gender (default: male). This process takes a while, so be patient.
-There are over 1,400 tiles to integrate!
+(e.g. shapechange tile display).
 
-### 5. Build FAangband
+Use `--gender` to select player sprite gender (default: male):
+
+```sh
+./install.sh ../FAangband --gender female
+```
+
+This process takes a while — there are over 1,400 tiles to integrate.
+
+### 6. Build FAangband
 
 ```sh
 make -C ../FAangband
 ```
 
-### 6. Run
+### 7. Run
 
 ```sh
 ../FAangband/src/faangband -msdl2
