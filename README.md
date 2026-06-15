@@ -118,4 +118,4 @@ maxes at 128x128 (prf coordinates are single bytes from 0x80).
 
 ## License
 
-TODO: pick a license for the generated art before publishing.
+MIT
