@@ -413,18 +413,14 @@
       "row": 6,
       "col": 2,
       "chroma": true,
-      "maps": [
-        "monster:apparition of hunger"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/hobbit.png",
       "row": 6,
       "col": 3,
       "chroma": true,
-      "maps": [
-        "monster:halfling slinger"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/creeping-coins.png",
@@ -440,9 +436,7 @@
       "row": 6,
       "col": 5,
       "chroma": true,
-      "maps": [
-        "monster:gallant"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/rat-white.png",
@@ -458,9 +452,7 @@
       "row": 6,
       "col": 7,
       "chroma": true,
-      "maps": [
-        "monster:giant green dragon fly"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/snake-copper.png",
@@ -1157,9 +1149,7 @@
       "row": 15,
       "col": 2,
       "chroma": true,
-      "maps": [
-        "monster:zombified kobold"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/elemental.png",
@@ -1182,9 +1172,7 @@
       "row": 15,
       "col": 5,
       "chroma": true,
-      "maps": [
-        "monster:pukelman"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/zephyr-hound.png",
@@ -1227,9 +1215,7 @@
       "row": 16,
       "col": 1,
       "chroma": true,
-      "maps": [
-        "monster:black harpy"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/killer-beetle.png",
@@ -1241,7 +1227,7 @@
       ]
     },
     {
-      "source": "monsters/bird.png",
+      "source": "monsters/bird-crow.png",
       "row": 16,
       "col": 3,
       "chroma": true,
@@ -1299,9 +1285,7 @@
       "row": 17,
       "col": 0,
       "chroma": true,
-      "maps": [
-        "monster:werebear"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/feline.png",
@@ -1838,9 +1822,7 @@
       "row": 48,
       "col": 5,
       "chroma": true,
-      "maps": [
-        "monster:stonefoot warrior"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/dwarf-mim.png",
@@ -1848,7 +1830,7 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:Kh\u00eem, Son of M\u00eem"
+        "monster:Khîm, Son of Mîm"
       ]
     },
     {
@@ -1982,9 +1964,7 @@
       "row": 49,
       "col": 5,
       "chroma": true,
-      "maps": [
-        "monster:werewolf of Sauron"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/wolf-boss.png",
@@ -2009,9 +1989,7 @@
       "row": 49,
       "col": 8,
       "chroma": true,
-      "maps": [
-        "monster:gauth"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/mold.png",
@@ -2055,7 +2033,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:Maia of Orom\u00eb"
+        "monster:Maia of Oromë"
       ]
     },
     {
@@ -2064,7 +2042,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:Maia of Aul\u00eb"
+        "monster:Maia of Aulë"
       ]
     },
     {
@@ -2073,7 +2051,7 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:Me\u00e1ss\u00eb, the Bloody"
+        "monster:Meássë, the Bloody"
       ]
     },
     {
@@ -2099,18 +2077,14 @@
       "row": 50,
       "col": 2,
       "chroma": true,
-      "maps": [
-        "monster:mummified chieftain"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/ghoul.png",
       "row": 50,
       "col": 3,
       "chroma": true,
-      "maps": [
-        "monster:ghast"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/quylthulg-evil.png",
@@ -2509,9 +2483,7 @@
       "row": 53,
       "col": 0,
       "chroma": true,
-      "maps": [
-        "monster:huorn"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/flying-dragon-boss.png",
@@ -2536,9 +2508,7 @@
       "row": 53,
       "col": 3,
       "chroma": true,
-      "maps": [
-        "monster:The Phantom of Eilinel"
-      ]
+      "maps": []
     },
     {
       "source": "monsters/wight-king.png",
@@ -2582,7 +2552,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:Mugh\u00e2sh the Kobold Lord"
+        "monster:Mughâsh the Kobold Lord"
       ]
     },
     {
@@ -3896,7 +3866,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:E\u00f6l, the Dark Elven Smith"
+        "monster:Eöl, the Dark Elven Smith"
       ]
     },
     {
@@ -3923,7 +3893,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:F\u00ebanorian raider"
+        "monster:Fëanorian raider"
       ]
     },
     {
@@ -3959,7 +3929,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:M\u00eem, Betrayer of Turin"
+        "monster:Mîm, Betrayer of Turin"
       ]
     },
     {
@@ -3995,7 +3965,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:Oss\u00eb, Herald of Ulmo"
+        "monster:Ossë, Herald of Ulmo"
       ]
     },
     {
@@ -4040,7 +4010,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:Maia of Manw\u00eb"
+        "monster:Maia of Manwë"
       ]
     },
     {
@@ -5030,7 +5000,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:m\u00fbmak"
+        "monster:mûmak"
       ]
     },
     {
@@ -5129,7 +5099,7 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:dr\u00faadan mage"
+        "monster:drúadan mage"
       ]
     },
     {
@@ -5480,7 +5450,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:crow of Ud\u00fbn"
+        "monster:crow of Udûn"
       ]
     },
     {
@@ -5678,7 +5648,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:Ibun, Son of M\u00eem"
+        "monster:Ibun, Son of Mîm"
       ]
     },
     {
@@ -6011,7 +5981,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:dr\u00faadan druid"
+        "monster:drúadan druid"
       ]
     },
     {
@@ -10293,7 +10263,6 @@
       "source": "terrain/wall-granite-fitted.png",
       "row": 107,
       "col": 1,
-
       "maps": [
         "feat:granite wall:*"
       ]
@@ -10366,7 +10335,6 @@
       "source": "terrain/rubble-pile.png",
       "row": 107,
       "col": 10,
-
       "maps": [
         "feat:pile of rubble:*"
       ]
@@ -10375,7 +10343,6 @@
       "source": "terrain/rubble-passable.png",
       "row": 107,
       "col": 11,
-
       "maps": [
         "feat:pile of passable rubble:*"
       ]
@@ -10384,7 +10351,6 @@
       "source": "terrain/trees-lowland.png",
       "row": 107,
       "col": 12,
-
       "maps": [
         "feat:lowland trees:*"
       ]
@@ -10393,7 +10359,6 @@
       "source": "terrain/trees-highland.png",
       "row": 107,
       "col": 13,
-
       "maps": [
         "feat:highland trees:*"
       ]
@@ -10512,6 +10477,141 @@
       "col": 4,
       "chroma": true,
       "maps": []
+    },
+    {
+      "source": "monsters/hybrid-harpy.png",
+      "maps": [
+        "monster:black harpy"
+      ],
+      "row": 109,
+      "col": 5,
+      "chroma": true
+    },
+    {
+      "source": "monsters/quadruped-werebear.png",
+      "maps": [
+        "monster:werebear"
+      ],
+      "row": 109,
+      "col": 6,
+      "chroma": true
+    },
+    {
+      "source": "monsters/ghost-apparition-hunger.png",
+      "maps": [
+        "monster:apparition of hunger"
+      ],
+      "row": 109,
+      "col": 7,
+      "chroma": true
+    },
+    {
+      "source": "monsters/ghost-phantom-eilinel.png",
+      "maps": [
+        "monster:The Phantom of Eilinel"
+      ],
+      "row": 109,
+      "col": 8,
+      "chroma": true
+    },
+    {
+      "source": "monsters/canine-werewolf-sauron.png",
+      "maps": [
+        "monster:werewolf of Sauron"
+      ],
+      "row": 109,
+      "col": 9,
+      "chroma": true
+    },
+    {
+      "source": "monsters/eye-gauth.png",
+      "maps": [
+        "monster:gauth"
+      ],
+      "row": 109,
+      "col": 10,
+      "chroma": true
+    },
+    {
+      "source": "monsters/golem-pukelman.png",
+      "maps": [
+        "monster:pukelman"
+      ],
+      "row": 109,
+      "col": 11,
+      "chroma": true
+    },
+    {
+      "source": "monsters/zombie-ghast.png",
+      "maps": [
+        "monster:ghast"
+      ],
+      "row": 109,
+      "col": 12,
+      "chroma": true
+    },
+    {
+      "source": "monsters/tree-huorn.png",
+      "maps": [
+        "monster:huorn"
+      ],
+      "row": 109,
+      "col": 13,
+      "chroma": true
+    },
+    {
+      "source": "monsters/person-gallant.png",
+      "maps": [
+        "monster:gallant"
+      ],
+      "row": 109,
+      "col": 14,
+      "chroma": true
+    },
+    {
+      "source": "monsters/humanoid-stonefoot.png",
+      "maps": [
+        "monster:stonefoot warrior"
+      ],
+      "row": 109,
+      "col": 15,
+      "chroma": true
+    },
+    {
+      "source": "monsters/humanoid-halfling-slinger.png",
+      "maps": [
+        "monster:halfling slinger"
+      ],
+      "row": 110,
+      "col": 0,
+      "chroma": true
+    },
+    {
+      "source": "monsters/zombie-mummy-chief.png",
+      "maps": [
+        "monster:mummified chieftain"
+      ],
+      "row": 110,
+      "col": 1,
+      "chroma": true
+    },
+    {
+      "source": "monsters/zombie-kobold.png",
+      "maps": [
+        "monster:zombified kobold"
+      ],
+      "row": 110,
+      "col": 2,
+      "chroma": true
+    },
+    {
+      "source": "monsters/dragonfly-green.png",
+      "maps": [
+        "monster:giant green dragon fly"
+      ],
+      "row": 110,
+      "col": 3,
+      "chroma": true
     }
   ],
   "player_variants": [
@@ -11574,7 +11674,7 @@
       "col": 0,
       "chroma": true,
       "class": "Warrior",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-warrior-f.png",
@@ -11582,7 +11682,7 @@
       "col": 0,
       "chroma": true,
       "class": "Warrior",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11591,7 +11691,7 @@
       "col": 1,
       "chroma": true,
       "class": "Mage",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-mage-f.png",
@@ -11599,7 +11699,7 @@
       "col": 1,
       "chroma": true,
       "class": "Mage",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11608,7 +11708,7 @@
       "col": 2,
       "chroma": true,
       "class": "Druid",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-druid-f.png",
@@ -11616,7 +11716,7 @@
       "col": 2,
       "chroma": true,
       "class": "Druid",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11625,7 +11725,7 @@
       "col": 3,
       "chroma": true,
       "class": "Priest",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-priest-f.png",
@@ -11633,7 +11733,7 @@
       "col": 3,
       "chroma": true,
       "class": "Priest",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11642,7 +11742,7 @@
       "col": 4,
       "chroma": true,
       "class": "Necromancer",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-mage-f.png",
@@ -11650,7 +11750,7 @@
       "col": 4,
       "chroma": true,
       "class": "Necromancer",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11659,7 +11759,7 @@
       "col": 5,
       "chroma": true,
       "class": "Paladin",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-paladin-f.png",
@@ -11667,7 +11767,7 @@
       "col": 5,
       "chroma": true,
       "class": "Paladin",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11676,7 +11776,7 @@
       "col": 6,
       "chroma": true,
       "class": "Rogue",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-rogue-f.png",
@@ -11684,7 +11784,7 @@
       "col": 6,
       "chroma": true,
       "class": "Rogue",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11693,7 +11793,7 @@
       "col": 7,
       "chroma": true,
       "class": "Ranger",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-ranger-f.png",
@@ -11701,7 +11801,7 @@
       "col": 7,
       "chroma": true,
       "class": "Ranger",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11710,7 +11810,7 @@
       "col": 8,
       "chroma": true,
       "class": "Blackguard",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-rogue-f.png",
@@ -11718,7 +11818,7 @@
       "col": 8,
       "chroma": true,
       "class": "Blackguard",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {

@@ -51,7 +51,11 @@ cd FAangband && ./autogen.sh
 ### 5. Install the tileset into the FAangband source tree
 
 ```sh
-cd ../hither-lands && ./install.sh ../FAangband
+cd ../hither-lands
+```
+
+```sh
+./install.sh
 ```
 
 This builds the atlas from source tiles, copies it into `lib/tiles/`,
