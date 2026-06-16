@@ -135,51 +135,77 @@ def _progress(label, done, total):
         sys.stderr.write("\n")
 
 
+def render_tile_image(spec, source_rel, ts):
+    """Run one source tile through the chroma/resize/margin/ground pipeline.
+
+    Factored out so animation frames get exactly the same treatment as the
+    base tile (an animated tile is just N of these pasted in a row).
+    """
+    src = ROOT / "source-tiles" / source_rel
+    if not src.is_file():
+        sys.exit(f"missing source tile: {src}")
+    img = Image.open(src)
+    if spec.get("chroma") == "family":
+        img = key_out_chroma(img, family=True)
+    elif spec.get("chroma"):
+        img = key_out_chroma(img)
+    img = img.convert("RGBA").resize((ts, ts), Image.LANCZOS)
+    if spec.get("margin"):
+        img = apply_margin_fade(img)
+    # A terrain feature (e.g. a building) fills its whole cell — the engine
+    # draws only one tile per grid square, so transparent corners would show
+    # the black terminal background. Bake a ground texture underneath so the
+    # tile is opaque and its edges match the surrounding floor. (Monster/player
+    # sprites omit "ground" and stay transparent for compositing over terrain.)
+    if spec.get("ground"):
+        ground_src = ROOT / "source-tiles" / spec["ground"]
+        if not ground_src.is_file():
+            sys.exit(f"missing ground texture: {ground_src}")
+        base = Image.open(ground_src).convert("RGBA").resize(
+            (ts, ts), Image.LANCZOS)
+        base.alpha_composite(img)
+        img = base
+    return img
+
+
+def frame_sources(t):
+    """A tile's animation frames, in order. Static tiles return their one
+    source; an animated tile lists its frames in "frames" (frame 0 first,
+    placed at the base cell the prf maps to)."""
+    fr = t.get("frames")
+    if isinstance(fr, list) and fr:
+        return fr
+    return [t["source"]]
+
+
 def main():
     m = json.loads((ROOT / "manifest.json").read_text())
     ts = m["tileset"]["tile_size"]
     tiles = m["tiles"]
 
     rows = max(t["row"] for t in tiles) + 1
-    cols = max(t["col"] for t in tiles) + 1
+    # Animated tiles extend rightward into (col + frame) columns; size for that.
+    cols = max(t["col"] + len(frame_sources(t)) - 1 for t in tiles) + 1
     atlas = Image.new("RGBA", (cols * ts, rows * ts), (0, 0, 0, 0))
 
     seen = set()
+    anim_entries = []   # (row, col, nframes) for tiles with >1 frame
     n_tiles = len(tiles)
     for i, t in enumerate(tiles):
-        pos = (t["row"], t["col"])
-        if pos in seen:
-            sys.exit(f"manifest error: duplicate grid cell {pos}")
-        seen.add(pos)
-        if t["row"] > 0x7F or t["col"] > 0x7F:
-            sys.exit(f"manifest error: cell {pos} beyond the 128x128 prf limit")
-        src = ROOT / "source-tiles" / t["source"]
-        if not src.is_file():
-            sys.exit(f"missing source tile: {src}")
-        img = Image.open(src)
-        if t.get("chroma") == "family":
-            img = key_out_chroma(img, family=True)
-        elif t.get("chroma"):
-            img = key_out_chroma(img)
-        img = img.convert("RGBA").resize((ts, ts), Image.LANCZOS)
-        if t.get("margin"):
-            img = apply_margin_fade(img)
-        # A terrain feature (e.g. a building) fills its whole cell — the engine
-        # draws only one tile per grid square, so transparent corners would
-        # show the black terminal background. Bake a ground texture underneath
-        # so the tile is opaque and its edges match the surrounding floor.
-        # Reusing the same seamless texture the floor uses makes the join
-        # invisible. (Monster/player sprites omit "ground" and stay
-        # transparent, so the engine composites them over real terrain.)
-        if t.get("ground"):
-            ground_src = ROOT / "source-tiles" / t["ground"]
-            if not ground_src.is_file():
-                sys.exit(f"missing ground texture: {ground_src}")
-            base = Image.open(ground_src).convert("RGBA").resize(
-                (ts, ts), Image.LANCZOS)
-            base.alpha_composite(img)
-            img = base
-        atlas.paste(img, (t["col"] * ts, t["row"] * ts))
+        frames = frame_sources(t)
+        base_row, base_col = t["row"], t["col"]
+        for fi, fsrc in enumerate(frames):
+            col = base_col + fi
+            pos = (base_row, col)
+            if pos in seen:
+                detail = f" (frame {fi} of {frames[0]})" if len(frames) > 1 else ""
+                sys.exit(f"manifest error: duplicate grid cell {pos}{detail}")
+            seen.add(pos)
+            if base_row > 0x7F or col > 0x7F:
+                sys.exit(f"manifest error: cell {pos} beyond the 128x128 prf limit")
+            atlas.paste(render_tile_image(t, fsrc, ts), (col * ts, base_row * ts))
+        if len(frames) > 1:
+            anim_entries.append((base_row, base_col, len(frames)))
         _progress("tiles", i + 1, n_tiles)
 
     # Player variants: conditional player sprites keyed on $RACE/$CLASS/$GENDER.
@@ -355,6 +381,23 @@ def main():
     if has_flavors:
         (outdir / flavor_pref).write_text("\n".join(flvr) + "\n")
     (outdir / m["tileset"]["pref"]).write_text("\n".join(prf) + "\n")
+
+    # Animation table: frame counts per base cell, read by the SDL2 front-end
+    # (HITHER-LANDS:tile-anim patches). Frame k of a base tile lives at atlas
+    # column (col + k) of the same row. Listed in DATA so `make install`
+    # deploys it alongside the atlas/prf.
+    if anim_entries:
+        anim = [
+            "# File: anim.txt",
+            "# Generated by tools/build.py from manifest.json -- do not hand-edit.",
+            "# <row>:<col>:<frames>  (frame k is at atlas column col+k, same row)",
+            "",
+        ]
+        for r, c, n in anim_entries:
+            anim.append(f"{r}:{c}:{n}")
+        (outdir / "anim.txt").write_text("\n".join(anim) + "\n")
+        data_files += " anim.txt"
+        print(f"animation: {len(anim_entries)} animated tile(s) -> anim.txt")
 
     (outdir / "Makefile").write_text(
         "MKPATH=../../../mk/\n"

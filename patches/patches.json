@@ -109,6 +109,51 @@
       "sentinel": "HITHER-LANDS:shape-redraw-resume",
       "payload": "\tp->upkeep->redraw |= (PR_TITLE | PR_MISC | PR_MAP); /* HITHER-LANDS:shape-redraw-resume */\n",
       "note": "redraw map when reverting to normal form"
+    },
+    {
+      "id": "tile-anim-state",
+      "file": "src/main-sdl2.c",
+      "anchor": "/** does not SetRenderTarget */\nstatic void render_tile_rect_scaled(const struct subwindow *subwindow,\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:tile-anim-state",
+      "payload": "/* HITHER-LANDS:tile-anim-state BEGIN */\n/*\n * Animated-tile support (Hither Lands).  An animated tile occupies several\n * consecutive atlas columns -- one per frame, frame 0 at the base column the\n * prf maps to.  hl_tile_nframes[(row<<7)|col] is the frame count of a base\n * tile (0/1 == static).  The frame index comes from wall-clock time so water\n * shimmers / torches flicker even while the game waits for input.  This is\n * purely UI-layer state; the game engine is never told that tiles animate.\n */\n#define HL_ANIM_TABLE_SIZE (128 * 128)\n#define HL_ANIM_FRAME_MS   150u    /* wall-clock ms per animation frame */\nstatic uint8_t *hl_tile_nframes = NULL;\nstatic bool hl_tile_anim_active = false;\n\nstatic unsigned hl_anim_frame(void)\n{\n\treturn (unsigned)(SDL_GetTicks() / HL_ANIM_FRAME_MS);\n}\n\n/* Column shift for the current frame of an animated base tile (0 if static). */\nstatic int hl_anim_col_offset(int src_row, int src_col)\n{\n\tunsigned nf;\n\n\tif (!hl_tile_anim_active || hl_tile_nframes == NULL) return 0;\n\tif (src_row < 0 || src_row > 0x7f || src_col < 0 || src_col > 0x7f) return 0;\n\tnf = hl_tile_nframes[((unsigned)src_row << 7) | (unsigned)src_col];\n\tif (nf < 2) return 0;\n\treturn (int)(hl_anim_frame() % nf);\n}\n\n/*\n * Load <tileset dir>/anim.txt: lines \"row:col:frames\" (decimal); '#' comments\n * and blank lines are ignored.  A missing file simply means no animated tiles.\n */\nstatic void hl_load_tile_anim(const char *dir)\n{\n\tchar path[2048];\n\tang_file *fh;\n\tchar line[256];\n\n\thl_tile_anim_active = false;\n\tif (hl_tile_nframes == NULL) {\n\t\thl_tile_nframes = mem_zalloc(HL_ANIM_TABLE_SIZE * sizeof(uint8_t));\n\t} else {\n\t\tmemset(hl_tile_nframes, 0, HL_ANIM_TABLE_SIZE * sizeof(uint8_t));\n\t}\n\n\tpath_build(path, sizeof(path), dir, \"anim.txt\");\n\tfh = file_open(path, MODE_READ, FTYPE_TEXT);\n\tif (!fh) return;\n\n\twhile (file_getl(fh, line, sizeof(line))) {\n\t\tint row, col, nf;\n\t\tchar *s = line;\n\n\t\twhile (*s == ' ' || *s == '\\t') s++;\n\t\tif (*s == '#' || *s == '\\0') continue;\n\t\tif (sscanf(s, \"%d:%d:%d\", &row, &col, &nf) != 3) continue;\n\t\tif (row < 0 || row > 0x7f || col < 0 || col > 0x7f) continue;\n\t\tif (nf < 0 || nf > 255) continue;\n\t\thl_tile_nframes[((unsigned)row << 7) | (unsigned)col] = (uint8_t)nf;\n\t\tif (nf >= 2) hl_tile_anim_active = true;\n\t}\n\n\tfile_close(fh);\n}\n\n/*\n * Idle-time animation tick (called from the SDL2 input-wait loop).  When the\n * frame index has advanced, re-emit the map so animated cells re-bake at their\n * new frame, then present.  Cheap: only does work on a frame boundary.\n */\nstatic void hl_tile_anim_tick(struct my_app *a)\n{\n\tstatic unsigned hl_last_frame = 0;\n\tunsigned f;\n\tterm *old;\n\n\tif (!hl_tile_anim_active || !character_dungeon) return;\n\n\tf = hl_anim_frame();\n\tif (f == hl_last_frame) return;\n\thl_last_frame = f;\n\n\told = Term;\n\tTerm_activate(term_screen);\n\tTerm_redraw();\n\tTerm_activate(old);\n\n\tredraw_all_windows(a, false);\n}\n/* HITHER-LANDS:tile-anim-state END */\n\n",
+      "note": "SDL2-only animated-tile state: frame table, wall-clock frame index, anim.txt loader, idle tick. Pure UI layer."
+    },
+    {
+      "id": "tile-anim-rect",
+      "file": "src/main-sdl2.c",
+      "anchor": "\tSDL_Rect src = {0, 0, graphics->tile_pixel_w, graphics->tile_pixel_h};\n\n\tint src_row = a & 0x7f;\n\tint src_col = c & 0x7f;\n\n\tsrc.x = src_col * src.w;\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:tile-anim-rect",
+      "payload": "\tSDL_Rect src = {0, 0, graphics->tile_pixel_w, graphics->tile_pixel_h};\n\n\tint src_row = a & 0x7f;\n\tint src_col = c & 0x7f;\n\n\t/* HITHER-LANDS:tile-anim-rect BEGIN */\n\tsrc_col += hl_anim_col_offset(src_row, src_col);\n\t/* HITHER-LANDS:tile-anim-rect END */\n\tsrc.x = src_col * src.w;\n",
+      "note": "render_tile_rect_scaled (minimap): shift to the current frame's column"
+    },
+    {
+      "id": "tile-anim-font",
+      "file": "src/main-sdl2.c",
+      "anchor": "\tSDL_SetRenderTarget(subwindow->window->renderer, subwindow->texture);\n\n\tint src_row = a & 0x7f;\n\tint src_col = c & 0x7f;\n\n\tsrc.x = src_col * src.w;\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:tile-anim-font",
+      "payload": "\tSDL_SetRenderTarget(subwindow->window->renderer, subwindow->texture);\n\n\tint src_row = a & 0x7f;\n\tint src_col = c & 0x7f;\n\n\t/* HITHER-LANDS:tile-anim-font BEGIN */\n\tsrc_col += hl_anim_col_offset(src_row, src_col);\n\t/* HITHER-LANDS:tile-anim-font END */\n\tsrc.x = src_col * src.w;\n",
+      "note": "render_tile_font_scaled (main map): shift to the current frame's column"
+    },
+    {
+      "id": "tile-anim-load",
+      "file": "src/main-sdl2.c",
+      "anchor": "\t\twindow->graphics.overdraw_row = mode->overdrawRow;\n\t\twindow->graphics.overdraw_max = mode->overdrawMax;\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:tile-anim-load",
+      "payload": "\n\t\t/* HITHER-LANDS:tile-anim-load BEGIN */\n\t\thl_load_tile_anim(mode->path);\n\t\t/* HITHER-LANDS:tile-anim-load END */\n",
+      "note": "load the tileset's anim.txt when graphics are (re)loaded"
+    },
+    {
+      "id": "tile-anim-idle",
+      "file": "src/main-sdl2.c",
+      "anchor": "\t\t\t\tSDL_Delay(subwindow->window->delay);\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:tile-anim-idle",
+      "payload": "\n\t\t\t\t/* HITHER-LANDS:tile-anim-idle BEGIN */\n\t\t\t\thl_tile_anim_tick(subwindow->app);\n\t\t\t\t/* HITHER-LANDS:tile-anim-idle END */",
+      "note": "advance tile animation each idle iteration (work only on frame boundaries)"
     }
   ]
 }

@@ -100,9 +100,15 @@
     {
       "source": "terrain/water.png",
       "row": 1,
-      "col": 3,
+      "col": 7,
       "maps": [
         "feat:water:*"
+      ],
+      "frames": [
+        "terrain/water.png",
+        "terrain/water-f1.png",
+        "terrain/water-f2.png",
+        "terrain/water-f3.png"
       ]
     },
     {
