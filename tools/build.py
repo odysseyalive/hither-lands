@@ -2,17 +2,22 @@
 """Build the distributable tileset from manifest.json + source-tiles/.
 
 Outputs into dist/<directory>/:
-  - the 32x32 atlas PNG (tiles composited at their manifest grid positions)
+  - the <N>x<N> atlas PNG (tiles composited at their manifest grid positions)
   - the graf-*.prf mapping file
   - a buildsys Makefile so FAangband's `make install` deploys the tileset
 plus dist/list-stanza.txt, the lib/tiles/list.txt entry with @SERIAL@ left
 for install.sh to fill in.
 
-Source tiles may be any size; they are downscaled to tile_size. A tile with
+Source tiles may be any size; they are downscaled to the tile size. A tile with
 "chroma": true has near-magenta (255,0,255) pixels keyed to transparent —
 use this for AI-generated renders, which can't emit an alpha channel.
+
+Tile size defaults to manifest `tileset.tile_size`; --size N overrides it (the
+atlas is named <N>x<N>.png to match, and the list.txt registration follows).
 """
+import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -21,6 +26,11 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent.parent
 CHROMA = (255, 0, 255)
 CHROMA_TOL = 60
+
+# Many GPUs cap a single texture at 8192px. A taller/wider atlas can silently
+# fail to upload in the SDL2 front-end, so warn at build time (mostly relevant
+# at --size 128, where the atlas grows quadratically).
+MAX_TEXTURE = 8192
 
 
 FAMILY_TOL = 50  # for "family" mode: how far magenta must dominate green
@@ -178,8 +188,26 @@ def frame_sources(t):
     return [t["source"]]
 
 
+def parse_args():
+    ap = argparse.ArgumentParser(
+        description="Build the FAangband tileset from manifest.json + source-tiles/.")
+    ap.add_argument(
+        "--size", type=int, default=None, metavar="N",
+        help="override tile size in pixels (e.g. 32, 64, 128); default is the "
+             "manifest tile_size. The atlas is named <N>x<N>.png to match.")
+    return ap.parse_args()
+
+
 def main():
+    args = parse_args()
     m = json.loads((ROOT / "manifest.json").read_text())
+    # --size overrides the manifest tile_size; derive the atlas filename from it
+    # so the on-disk name and the list.txt `size:` registration stay consistent.
+    if args.size is not None:
+        if args.size < 1:
+            sys.exit(f"--size must be a positive integer (got {args.size})")
+        m["tileset"]["tile_size"] = args.size
+        m["tileset"]["atlas"] = f"{args.size}x{args.size}.png"
     ts = m["tileset"]["tile_size"]
     tiles = m["tiles"]
 
@@ -254,6 +282,16 @@ def main():
 
     outdir = ROOT / "dist" / m["tileset"]["directory"]
     outdir.mkdir(parents=True, exist_ok=True)
+    # Drop atlases left by a previous build at a different --size, so dist/ (and
+    # the wholesale copy install.sh does) never carries an orphaned PNG.
+    for old in outdir.glob("*.png"):
+        if re.fullmatch(r"\d+x\d+\.png", old.name) and old.name != m["tileset"]["atlas"]:
+            old.unlink()
+    if atlas.width > MAX_TEXTURE or atlas.height > MAX_TEXTURE:
+        print(f"WARNING: atlas is {atlas.width}x{atlas.height}px, over the "
+              f"{MAX_TEXTURE}px texture limit on some GPUs -- it may fail to "
+              f"load in the SDL2 front-end. Consider a smaller --size.",
+              file=sys.stderr)
     atlas.save(outdir / m["tileset"]["atlas"])
 
     prf = [

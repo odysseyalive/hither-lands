@@ -1,6 +1,6 @@
 # Hither Lands
 
-A 32x32 AI-generated graphical tileset for
+A 64x64 AI-generated graphical tileset for
 [FAangband](https://github.com/NickMcConnell/FAangband) (First Age Angband),
 a single-player roguelike. Over **1,400 tiles** covering fauna, terrain,
 objects, player variants, and shapechange forms — all palette-locked to a
@@ -36,7 +36,11 @@ git clone https://github.com/odysseyalive/hither-lands.git
 ### 3. Bootstrap FAangband
 
 ```sh
-cd FAangband && ./autogen.sh
+cd FAangband
+```
+
+```sh
+./autogen.sh
 ```
 
 ### 4. Configure FAangband with SDL2
@@ -45,8 +49,11 @@ cd FAangband && ./autogen.sh
 ./configure --with-no-install --enable-sdl2
 ```
 
-`--with-no-install` runs the game in-place (data stays in the source tree).
-`--enable-sdl2` builds the graphical frontend that renders tiles.
+- `--with-no-install` runs the game in place: it reads its data — tiles included —
+  directly from this source tree's `lib/`, so there's no separate install step and
+  no `sudo`. (`configure.ac` sets the data path to `${PWD}/lib/`.)
+- `--enable-sdl2` builds the SDL2 graphical frontend that renders the tiles.
+  Without it you only get the curses/text frontend, which shows ASCII, not tiles.
 
 ### 5. Install the tileset into the FAangband source tree
 
@@ -64,13 +71,33 @@ Use `--gender` to select player sprite gender (default: male):
 ./install.sh ../FAangband --gender female
 ```
 
+Use `--size` to select the tile resolution — `32`, `64` (default), or `128`:
+
+```sh
+./install.sh ../FAangband --size 32
+```
+
+The source tiles are ~1024px native, so `64` and `128` render with real added
+detail rather than upscaling. The whole set rebuilds at the chosen size and the
+`list.txt` registration is written to match — no engine change is needed, since
+FAangband reads each graphics mode's tile dimensions from its registration.
+
+> **Note on `--size 128`:** the atlas grows quadratically and exceeds the 8192px
+> texture limit on some GPUs, where it may silently fail to load in the SDL2
+> frontend. `build.py` prints a warning when this happens. `32` and `64` are
+> well within limits.
+
 This process takes a while — there are over 1,400 tiles to integrate.
 
 ### 6. Build FAangband
 
 ```sh
-make -C ../FAangband install
+make -C ../FAangband
 ```
+
+A plain `make` is all you need — the in-place build reads tiles straight from this
+tree's `lib/`, so there's no `make install`. **Rebuild after every `install.sh`,**
+since it may apply C source patches that must be compiled in.
 
 ### 7. Run
 
@@ -78,9 +105,41 @@ make -C ../FAangband install
 ../FAangband/src/faangband -msdl2
 ```
 
-Select **Hither Lands** in the graphics options menu (`=` > Graphics).
+Run the in-place binary from this tree. Select **Hither Lands** in the graphics
+options menu (`=` > Graphics).
 
 Tiles render only in the SDL2 (or X11) frontend, never in curses (`-mgcu`).
+
+## Troubleshooting
+
+**A rebuilt tileset looks unchanged in-game (e.g. `--size 128` looks identical
+to `--size 64`).** Almost always you are launching a *different* binary than the
+one this tree builds. `install.sh` writes into the source tree's `lib/tiles/`,
+and a `--with-no-install` build reads exactly that (`${PWD}/lib/`). But a
+separately *installed* binary — e.g. one built with `--prefix=$HOME/.local` and
+`make install`, sitting in `~/.local/bin/faangband` — reads its **own** copy
+under `~/.local/share/faangband/tiles/` and never sees your rebuild. Fixes:
+
+- Run the in-place binary, `../FAangband/src/faangband`, not an installed one; or
+- If you do use a prefixed install, re-run `install.sh ../FAangband` **and**
+  `make -C ../FAangband install` after every tileset change, and launch the
+  binary from that prefix. Build location and run location must match.
+
+To confirm what's actually deployed, compare the registration and atlas the game
+reads:
+
+```sh
+grep -A4 '^directory:fa-ai' <data-dir>/tiles/list.txt   # size: line = active resolution
+```
+
+**Higher `--size` shows no extra detail.** Tiles are scaled to their on-screen
+cell at draw time — `font_cell × tile_multiplier` pixels. If that destination is
+small (a small font, tile multiplier 1), a 128px tile is downscaled to the same
+on-screen size as a 64px or even 32px one, so they look the same. To actually see
+the added detail, enlarge the font and/or raise the tile multiplier (Tiles →
+Size in the SDL2 menu) so tiles render at roughly their native pixel size. At
+ordinary zoom, **64 (the default) is the sweet spot**; `128` only pays off when
+tiles are drawn large (big font, hi-DPI) and otherwise just costs ~4× the memory.
 
 ## Layout
 
@@ -91,8 +150,9 @@ Tiles render only in the SDL2 (or X11) frontend, never in curses (`-mgcu`).
 - `palette.json` — the locked 21-color theme palette. `build.py` snaps every
   tile to these colors at build time. Edit this to re-theme the whole set
   without regenerating art.
-- `tools/build.py` — composites the 32x32 atlas PNG, the `graf-*.prf` mapping
-  file, and build-system files into `dist/`.
+- `tools/build.py` — composites the atlas PNG (64x64 by default; `--size`
+  selects 32 or 128), the `graf-*.prf` mapping file, and build-system files
+  into `dist/`.
 - `tools/make_placeholders.py` — draws placeholder tiles for manifest entries
   with no source image yet (never overwrites real art).
 - `install.sh` — builds the tileset, copies it into an FAangband source tree,

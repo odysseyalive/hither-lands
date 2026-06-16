@@ -2,8 +2,8 @@
   "tileset": {
     "name": "Hither Lands",
     "directory": "fa-ai",
-    "tile_size": 32,
-    "atlas": "32x32.png",
+    "tile_size": 64,
+    "atlas": "64x64.png",
     "pref": "graf-fai.prf",
     "alpha": true,
     "dark_colour": "#171310"
