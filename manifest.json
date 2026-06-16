@@ -10124,83 +10124,131 @@
     },
     {
       "source": "terrain/sign-easy-north.png",
-      "row": 107,
-      "col": 14,
+      "row": 118,
+      "col": 0,
       "maps": [
         "feat:easy path north:*"
       ],
       "chroma": "family",
-      "ground": "terrain/road.png"
+      "ground": "terrain/road.png",
+      "frames": [
+        "terrain/sign-easy-north.png",
+        "terrain/sign-easy-north-f1.png",
+        "terrain/sign-easy-north-f2.png",
+        "terrain/sign-easy-north-f3.png"
+      ]
     },
     {
       "source": "terrain/sign-easy-east.png",
-      "row": 107,
-      "col": 15,
+      "row": 118,
+      "col": 4,
       "maps": [
         "feat:easy path east:*"
       ],
       "chroma": "family",
-      "ground": "terrain/road.png"
+      "ground": "terrain/road.png",
+      "frames": [
+        "terrain/sign-easy-east.png",
+        "terrain/sign-easy-east-f1.png",
+        "terrain/sign-easy-east-f2.png",
+        "terrain/sign-easy-east-f3.png"
+      ]
     },
     {
       "source": "terrain/sign-easy-south.png",
-      "row": 108,
-      "col": 0,
+      "row": 118,
+      "col": 8,
       "maps": [
         "feat:easy path south:*"
       ],
       "chroma": "family",
-      "ground": "terrain/road.png"
+      "ground": "terrain/road.png",
+      "frames": [
+        "terrain/sign-easy-south.png",
+        "terrain/sign-easy-south-f1.png",
+        "terrain/sign-easy-south-f2.png",
+        "terrain/sign-easy-south-f3.png"
+      ]
     },
     {
       "source": "terrain/sign-easy-west.png",
-      "row": 108,
-      "col": 1,
+      "row": 118,
+      "col": 12,
       "maps": [
         "feat:easy path west:*"
       ],
       "chroma": "family",
-      "ground": "terrain/road.png"
+      "ground": "terrain/road.png",
+      "frames": [
+        "terrain/sign-easy-west.png",
+        "terrain/sign-easy-west-f1.png",
+        "terrain/sign-easy-west-f2.png",
+        "terrain/sign-easy-west-f3.png"
+      ]
     },
     {
       "source": "terrain/sign-hard-north.png",
-      "row": 108,
-      "col": 2,
+      "row": 119,
+      "col": 0,
       "maps": [
         "feat:hard path north:*"
       ],
       "chroma": "family",
-      "ground": "terrain/road.png"
+      "ground": "terrain/road.png",
+      "frames": [
+        "terrain/sign-hard-north.png",
+        "terrain/sign-hard-north-f1.png",
+        "terrain/sign-hard-north-f2.png",
+        "terrain/sign-hard-north-f3.png"
+      ]
     },
     {
       "source": "terrain/sign-hard-east.png",
-      "row": 108,
-      "col": 3,
+      "row": 119,
+      "col": 4,
       "maps": [
         "feat:hard path east:*"
       ],
       "chroma": "family",
-      "ground": "terrain/road.png"
+      "ground": "terrain/road.png",
+      "frames": [
+        "terrain/sign-hard-east.png",
+        "terrain/sign-hard-east-f1.png",
+        "terrain/sign-hard-east-f2.png",
+        "terrain/sign-hard-east-f3.png"
+      ]
     },
     {
       "source": "terrain/sign-hard-south.png",
-      "row": 108,
-      "col": 4,
+      "row": 119,
+      "col": 8,
       "maps": [
         "feat:hard path south:*"
       ],
       "chroma": "family",
-      "ground": "terrain/road.png"
+      "ground": "terrain/road.png",
+      "frames": [
+        "terrain/sign-hard-south.png",
+        "terrain/sign-hard-south-f1.png",
+        "terrain/sign-hard-south-f2.png",
+        "terrain/sign-hard-south-f3.png"
+      ]
     },
     {
       "source": "terrain/sign-hard-west.png",
-      "row": 108,
-      "col": 5,
+      "row": 119,
+      "col": 12,
       "maps": [
         "feat:hard path west:*"
       ],
       "chroma": "family",
-      "ground": "terrain/road.png"
+      "ground": "terrain/road.png",
+      "frames": [
+        "terrain/sign-hard-west.png",
+        "terrain/sign-hard-west-f1.png",
+        "terrain/sign-hard-west-f2.png",
+        "terrain/sign-hard-west-f3.png"
+      ]
     },
     {
       "source": "monsters/hybrid-harpy.png",
