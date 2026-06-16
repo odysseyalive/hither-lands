@@ -26,24 +26,12 @@
       ]
     },
     {
-      "source": "terrain/wall-granite.png",
-      "row": 0,
-      "col": 2,
-      "maps": []
-    },
-    {
       "source": "terrain/door-closed.png",
       "row": 0,
       "col": 3,
       "maps": [
         "feat:closed door:*"
       ]
-    },
-    {
-      "source": "terrain/door-open.png",
-      "row": 0,
-      "col": 4,
-      "maps": []
     },
     {
       "source": "terrain/stair-up.png",
@@ -62,12 +50,6 @@
       ]
     },
     {
-      "source": "terrain/rubble.png",
-      "row": 0,
-      "col": 7,
-      "maps": []
-    },
-    {
       "source": "terrain/grass.png",
       "row": 1,
       "col": 0,
@@ -82,20 +64,6 @@
       "maps": [
         "feat:road:*"
       ]
-    },
-    {
-      "source": "terrain/path-sign.png",
-      "row": 7,
-      "col": 3,
-      "maps": [],
-      "chroma": "family",
-      "ground": "terrain/road.png"
-    },
-    {
-      "source": "terrain/trees.png",
-      "row": 1,
-      "col": 2,
-      "maps": []
     },
     {
       "source": "terrain/water.png",
@@ -421,20 +389,6 @@
       ]
     },
     {
-      "source": "monsters/ghost.png",
-      "row": 6,
-      "col": 2,
-      "chroma": true,
-      "maps": []
-    },
-    {
-      "source": "monsters/hobbit.png",
-      "row": 6,
-      "col": 3,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/creeping-coins.png",
       "row": 6,
       "col": 4,
@@ -444,13 +398,6 @@
       ]
     },
     {
-      "source": "monsters/traveler.png",
-      "row": 6,
-      "col": 5,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/rat-white.png",
       "row": 6,
       "col": 6,
@@ -458,13 +405,6 @@
       "maps": [
         "monster:giant white rat"
       ]
-    },
-    {
-      "source": "monsters/dragonfly.png",
-      "row": 6,
-      "col": 7,
-      "chroma": true,
-      "maps": []
     },
     {
       "source": "monsters/snake-copper.png",
@@ -812,160 +752,6 @@
       ]
     },
     {
-      "source": "objects/sword.png",
-      "row": 8,
-      "col": 6,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/polearm.png",
-      "row": 8,
-      "col": 7,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/hafted.png",
-      "row": 8,
-      "col": 8,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/ring.png",
-      "row": 9,
-      "col": 0,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/amulet.png",
-      "row": 9,
-      "col": 1,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/soft-armor.png",
-      "row": 9,
-      "col": 2,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/hard-armor.png",
-      "row": 9,
-      "col": 3,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/dragon-armor.png",
-      "row": 9,
-      "col": 4,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/shield.png",
-      "row": 9,
-      "col": 5,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/helm.png",
-      "row": 9,
-      "col": 6,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/crown.png",
-      "row": 9,
-      "col": 7,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/gloves.png",
-      "row": 9,
-      "col": 8,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/boots.png",
-      "row": 10,
-      "col": 0,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/cloak.png",
-      "row": 10,
-      "col": 1,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/bow.png",
-      "row": 10,
-      "col": 2,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/arrow.png",
-      "row": 10,
-      "col": 3,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/bolt.png",
-      "row": 10,
-      "col": 4,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/shot.png",
-      "row": 10,
-      "col": 5,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/light.png",
-      "row": 10,
-      "col": 6,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/food.png",
-      "row": 10,
-      "col": 7,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/chest.png",
-      "row": 10,
-      "col": 8,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/digger.png",
-      "row": 11,
-      "col": 0,
-      "chroma": "family",
-      "maps": []
-    },
-    {
       "source": "objects/flask.png",
       "row": 11,
       "col": 1,
@@ -973,13 +759,6 @@
       "maps": [
         "object:flask:Flask of oil"
       ]
-    },
-    {
-      "source": "objects/gold.png",
-      "row": 11,
-      "col": 2,
-      "chroma": "family",
-      "maps": []
     },
     {
       "source": "traps/glyph.png",
@@ -991,13 +770,6 @@
       ]
     },
     {
-      "source": "traps/rune.png",
-      "row": 12,
-      "col": 1,
-      "chroma": "family",
-      "maps": []
-    },
-    {
       "source": "traps/trap-door.png",
       "row": 12,
       "col": 2,
@@ -1005,41 +777,6 @@
       "maps": [
         "trap:trap door:*"
       ]
-    },
-    {
-      "source": "traps/pit.png",
-      "row": 12,
-      "col": 3,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "traps/dart-trap.png",
-      "row": 12,
-      "col": 4,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "traps/elemental-trap.png",
-      "row": 12,
-      "col": 5,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "traps/gas-trap.png",
-      "row": 12,
-      "col": 6,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "traps/rockfall.png",
-      "row": 12,
-      "col": 7,
-      "chroma": "family",
-      "maps": []
     },
     {
       "source": "traps/web.png",
@@ -1058,13 +795,6 @@
       "maps": [
         "trap:decoy:*"
       ]
-    },
-    {
-      "source": "monsters/dragon.png",
-      "row": 14,
-      "col": 0,
-      "chroma": true,
-      "maps": []
     },
     {
       "source": "monsters/flying-dragon.png",
@@ -1157,20 +887,6 @@
       ]
     },
     {
-      "source": "monsters/zombie.png",
-      "row": 15,
-      "col": 2,
-      "chroma": true,
-      "maps": []
-    },
-    {
-      "source": "monsters/elemental.png",
-      "row": 15,
-      "col": 3,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/vortex.png",
       "row": 15,
       "col": 4,
@@ -1178,13 +894,6 @@
       "maps": [
         "monster:shimmering vortex"
       ]
-    },
-    {
-      "source": "monsters/golem.png",
-      "row": 15,
-      "col": 5,
-      "chroma": true,
-      "maps": []
     },
     {
       "source": "monsters/zephyr-hound.png",
@@ -1221,13 +930,6 @@
       "maps": [
         "monster:xorn"
       ]
-    },
-    {
-      "source": "monsters/hybrid.png",
-      "row": 16,
-      "col": 1,
-      "chroma": true,
-      "maps": []
     },
     {
       "source": "monsters/killer-beetle.png",
@@ -1293,13 +995,6 @@
       ]
     },
     {
-      "source": "monsters/quadruped.png",
-      "row": 17,
-      "col": 0,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/feline.png",
       "row": 17,
       "col": 1,
@@ -1322,34 +1017,6 @@
         "monsters/morgoth-f2.png",
         "monsters/morgoth-f3.png"
       ]
-    },
-    {
-      "source": "objects/magic-book.png",
-      "row": 17,
-      "col": 3,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/nature-book.png",
-      "row": 17,
-      "col": 4,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/prayer-book.png",
-      "row": 17,
-      "col": 5,
-      "chroma": "family",
-      "maps": []
-    },
-    {
-      "source": "objects/shadow-book.png",
-      "row": 17,
-      "col": 6,
-      "chroma": "family",
-      "maps": []
     },
     {
       "source": "objects/dagger.png",
@@ -1814,13 +1481,6 @@
       ]
     },
     {
-      "source": "monsters/golem-metal.png",
-      "row": 47,
-      "col": 15,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/golem-bone.png",
       "row": 48,
       "col": 0,
@@ -1872,19 +1532,12 @@
       ]
     },
     {
-      "source": "monsters/dwarf.png",
-      "row": 48,
-      "col": 5,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/dwarf-mim.png",
       "row": 48,
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:Khîm, Son of Mîm"
+        "monster:Kh\u00eem, Son of M\u00eem"
       ]
     },
     {
@@ -2014,13 +1667,6 @@
       ]
     },
     {
-      "source": "monsters/warg.png",
-      "row": 49,
-      "col": 5,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/wolf-boss.png",
       "row": 113,
       "col": 8,
@@ -2043,13 +1689,6 @@
       "maps": [
         "monster:gazing eye"
       ]
-    },
-    {
-      "source": "monsters/beholder.png",
-      "row": 49,
-      "col": 8,
-      "chroma": true,
-      "maps": []
     },
     {
       "source": "monsters/mold.png",
@@ -2093,7 +1732,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:Maia of Oromë"
+        "monster:Maia of Orom\u00eb"
       ]
     },
     {
@@ -2102,7 +1741,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:Maia of Aulë"
+        "monster:Maia of Aul\u00eb"
       ]
     },
     {
@@ -2111,7 +1750,7 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:Meássë, the Bloody"
+        "monster:Me\u00e1ss\u00eb, the Bloody"
       ]
     },
     {
@@ -2131,20 +1770,6 @@
       "maps": [
         "monster:purple worm"
       ]
-    },
-    {
-      "source": "monsters/mummy.png",
-      "row": 50,
-      "col": 2,
-      "chroma": true,
-      "maps": []
-    },
-    {
-      "source": "monsters/ghoul.png",
-      "row": 50,
-      "col": 3,
-      "chroma": true,
-      "maps": []
     },
     {
       "source": "monsters/quylthulg-evil.png",
@@ -2190,13 +1815,6 @@
       "maps": [
         "monster:giant army ant"
       ]
-    },
-    {
-      "source": "monsters/chimera.png",
-      "row": 50,
-      "col": 9,
-      "chroma": true,
-      "maps": []
     },
     {
       "source": "monsters/minotaur.png",
@@ -2487,13 +2105,6 @@
       ]
     },
     {
-      "source": "monsters/feline-boss.png",
-      "row": 52,
-      "col": 10,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/elemental-fire-boss.png",
       "row": 52,
       "col": 11,
@@ -2539,13 +2150,6 @@
       ]
     },
     {
-      "source": "monsters/ent.png",
-      "row": 53,
-      "col": 0,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/flying-dragon-boss.png",
       "row": 53,
       "col": 1,
@@ -2562,13 +2166,6 @@
       "maps": [
         "monster:law drake"
       ]
-    },
-    {
-      "source": "monsters/banshee.png",
-      "row": 53,
-      "col": 3,
-      "chroma": true,
-      "maps": []
     },
     {
       "source": "monsters/wight-king.png",
@@ -2612,7 +2209,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:Mughâsh the Kobold Lord"
+        "monster:Mugh\u00e2sh the Kobold Lord"
       ]
     },
     {
@@ -3968,7 +3565,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:Eöl, the Dark Elven Smith"
+        "monster:E\u00f6l, the Dark Elven Smith"
       ],
       "frames": [
         "monsters/elf-eol.png",
@@ -4001,7 +3598,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:Fëanorian raider"
+        "monster:F\u00ebanorian raider"
       ]
     },
     {
@@ -4037,7 +3634,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:Mîm, Betrayer of Turin"
+        "monster:M\u00eem, Betrayer of Turin"
       ]
     },
     {
@@ -4073,7 +3670,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:Ossë, Herald of Ulmo"
+        "monster:Oss\u00eb, Herald of Ulmo"
       ]
     },
     {
@@ -4118,7 +3715,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:Maia of Manwë"
+        "monster:Maia of Manw\u00eb"
       ]
     },
     {
@@ -5108,7 +4705,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:mûmak"
+        "monster:m\u00fbmak"
       ]
     },
     {
@@ -5213,7 +4810,7 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:drúadan mage"
+        "monster:dr\u00faadan mage"
       ]
     },
     {
@@ -5564,7 +5161,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:crow of Udûn"
+        "monster:crow of Ud\u00fbn"
       ]
     },
     {
@@ -5762,7 +5359,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:Ibun, Son of Mîm"
+        "monster:Ibun, Son of M\u00eem"
       ]
     },
     {
@@ -6095,7 +5692,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:drúadan druid"
+        "monster:dr\u00faadan druid"
       ]
     },
     {
@@ -10576,41 +10173,6 @@
       "ground": "terrain/road.png"
     },
     {
-      "source": "shapes/fox.png",
-      "row": 109,
-      "col": 0,
-      "chroma": true,
-      "maps": []
-    },
-    {
-      "source": "shapes/bear-cub.png",
-      "row": 109,
-      "col": 1,
-      "chroma": true,
-      "maps": []
-    },
-    {
-      "source": "shapes/eagle.png",
-      "row": 109,
-      "col": 2,
-      "chroma": true,
-      "maps": []
-    },
-    {
-      "source": "shapes/dragon-shining.png",
-      "row": 109,
-      "col": 3,
-      "chroma": true,
-      "maps": []
-    },
-    {
-      "source": "shapes/dragon-law.png",
-      "row": 109,
-      "col": 4,
-      "chroma": true,
-      "maps": []
-    },
-    {
       "source": "monsters/hybrid-harpy.png",
       "maps": [
         "monster:black harpy"
@@ -11806,7 +11368,7 @@
       "col": 0,
       "chroma": true,
       "class": "Warrior",
-      "race": "Drúadan"
+      "race": "Dr\u00faadan"
     },
     {
       "source": "player/druadan-warrior-f.png",
@@ -11814,7 +11376,7 @@
       "col": 0,
       "chroma": true,
       "class": "Warrior",
-      "race": "Drúadan",
+      "race": "Dr\u00faadan",
       "gender": "Female"
     },
     {
@@ -11823,7 +11385,7 @@
       "col": 1,
       "chroma": true,
       "class": "Mage",
-      "race": "Drúadan"
+      "race": "Dr\u00faadan"
     },
     {
       "source": "player/druadan-mage-f.png",
@@ -11831,7 +11393,7 @@
       "col": 1,
       "chroma": true,
       "class": "Mage",
-      "race": "Drúadan",
+      "race": "Dr\u00faadan",
       "gender": "Female"
     },
     {
@@ -11840,7 +11402,7 @@
       "col": 2,
       "chroma": true,
       "class": "Druid",
-      "race": "Drúadan"
+      "race": "Dr\u00faadan"
     },
     {
       "source": "player/druadan-druid-f.png",
@@ -11848,7 +11410,7 @@
       "col": 2,
       "chroma": true,
       "class": "Druid",
-      "race": "Drúadan",
+      "race": "Dr\u00faadan",
       "gender": "Female"
     },
     {
@@ -11857,7 +11419,7 @@
       "col": 3,
       "chroma": true,
       "class": "Priest",
-      "race": "Drúadan"
+      "race": "Dr\u00faadan"
     },
     {
       "source": "player/druadan-priest-f.png",
@@ -11865,7 +11427,7 @@
       "col": 3,
       "chroma": true,
       "class": "Priest",
-      "race": "Drúadan",
+      "race": "Dr\u00faadan",
       "gender": "Female"
     },
     {
@@ -11874,7 +11436,7 @@
       "col": 4,
       "chroma": true,
       "class": "Necromancer",
-      "race": "Drúadan"
+      "race": "Dr\u00faadan"
     },
     {
       "source": "player/druadan-mage-f.png",
@@ -11882,7 +11444,7 @@
       "col": 4,
       "chroma": true,
       "class": "Necromancer",
-      "race": "Drúadan",
+      "race": "Dr\u00faadan",
       "gender": "Female"
     },
     {
@@ -11891,7 +11453,7 @@
       "col": 5,
       "chroma": true,
       "class": "Paladin",
-      "race": "Drúadan"
+      "race": "Dr\u00faadan"
     },
     {
       "source": "player/druadan-paladin-f.png",
@@ -11899,7 +11461,7 @@
       "col": 5,
       "chroma": true,
       "class": "Paladin",
-      "race": "Drúadan",
+      "race": "Dr\u00faadan",
       "gender": "Female"
     },
     {
@@ -11908,7 +11470,7 @@
       "col": 6,
       "chroma": true,
       "class": "Rogue",
-      "race": "Drúadan"
+      "race": "Dr\u00faadan"
     },
     {
       "source": "player/druadan-rogue-f.png",
@@ -11916,7 +11478,7 @@
       "col": 6,
       "chroma": true,
       "class": "Rogue",
-      "race": "Drúadan",
+      "race": "Dr\u00faadan",
       "gender": "Female"
     },
     {
@@ -11925,7 +11487,7 @@
       "col": 7,
       "chroma": true,
       "class": "Ranger",
-      "race": "Drúadan"
+      "race": "Dr\u00faadan"
     },
     {
       "source": "player/druadan-ranger-f.png",
@@ -11933,7 +11495,7 @@
       "col": 7,
       "chroma": true,
       "class": "Ranger",
-      "race": "Drúadan",
+      "race": "Dr\u00faadan",
       "gender": "Female"
     },
     {
@@ -11942,7 +11504,7 @@
       "col": 8,
       "chroma": true,
       "class": "Blackguard",
-      "race": "Drúadan"
+      "race": "Dr\u00faadan"
     },
     {
       "source": "player/druadan-rogue-f.png",
@@ -11950,7 +11512,7 @@
       "col": 8,
       "chroma": true,
       "class": "Blackguard",
-      "race": "Drúadan",
+      "race": "Dr\u00faadan",
       "gender": "Female"
     },
     {
