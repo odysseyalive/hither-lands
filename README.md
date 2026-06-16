@@ -101,7 +101,10 @@ make -C ../FAangband
 
 A plain `make` is all you need — the in-place build reads tiles straight from this
 tree's `lib/`, so there's no `make install`. **Rebuild after every `install.sh`,**
-since it may apply C source patches that must be compiled in.
+because it makes two small graphics-only additions to the game's code that have to
+be compiled in: **animated tiles** (so things like torches flicker and water
+ripples) and **shapeshift sprites** (so your character shows a matching picture
+when it transforms into another form). Neither changes how the game plays.
 
 ### 7. Run
 
