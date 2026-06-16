@@ -114,9 +114,15 @@
     {
       "source": "terrain/lava.png",
       "row": 1,
-      "col": 4,
+      "col": 11,
       "maps": [
         "feat:lava:*"
+      ],
+      "frames": [
+        "terrain/lava.png",
+        "terrain/lava-f1.png",
+        "terrain/lava-f2.png",
+        "terrain/lava-f3.png"
       ]
     },
     {
@@ -1304,11 +1310,17 @@
     },
     {
       "source": "monsters/morgoth.png",
-      "row": 17,
-      "col": 2,
+      "row": 111,
+      "col": 0,
       "chroma": true,
       "maps": [
         "monster:Morgoth, Lord of Darkness"
+      ],
+      "frames": [
+        "monsters/morgoth.png",
+        "monsters/morgoth-f1.png",
+        "monsters/morgoth-f2.png",
+        "monsters/morgoth-f3.png"
       ]
     },
     {
@@ -1467,29 +1479,47 @@
     },
     {
       "source": "monsters/dragon-glaurung.png",
-      "row": 15,
-      "col": 9,
+      "row": 111,
+      "col": 12,
       "chroma": true,
       "maps": [
         "monster:Glaurung, Father of the Dragons"
+      ],
+      "frames": [
+        "monsters/dragon-glaurung.png",
+        "monsters/dragon-glaurung-f1.png",
+        "monsters/dragon-glaurung-f2.png",
+        "monsters/dragon-glaurung-f3.png"
       ]
     },
     {
       "source": "monsters/dragon-ancalagon.png",
-      "row": 15,
-      "col": 10,
+      "row": 112,
+      "col": 0,
       "chroma": true,
       "maps": [
         "monster:Ancalagon the Black"
+      ],
+      "frames": [
+        "monsters/dragon-ancalagon.png",
+        "monsters/dragon-ancalagon-f1.png",
+        "monsters/dragon-ancalagon-f2.png",
+        "monsters/dragon-ancalagon-f3.png"
       ]
     },
     {
       "source": "monsters/dragon-smaug.png",
-      "row": 15,
-      "col": 11,
+      "row": 112,
+      "col": 4,
       "chroma": true,
       "maps": [
         "monster:Smaug the Golden"
+      ],
+      "frames": [
+        "monsters/dragon-smaug.png",
+        "monsters/dragon-smaug-f1.png",
+        "monsters/dragon-smaug-f2.png",
+        "monsters/dragon-smaug-f3.png"
       ]
     },
     {
@@ -1692,20 +1722,32 @@
     },
     {
       "source": "monsters/spider-shelob.png",
-      "row": 47,
-      "col": 6,
+      "row": 112,
+      "col": 12,
       "chroma": true,
       "maps": [
         "monster:Shelob, Spider of Darkness"
+      ],
+      "frames": [
+        "monsters/spider-shelob.png",
+        "monsters/spider-shelob-f1.png",
+        "monsters/spider-shelob-f2.png",
+        "monsters/spider-shelob-f3.png"
       ]
     },
     {
       "source": "monsters/spider-ungoliant.png",
-      "row": 47,
-      "col": 7,
+      "row": 112,
+      "col": 8,
       "chroma": true,
       "maps": [
         "monster:Ungoliant, the Unlight"
+      ],
+      "frames": [
+        "monsters/spider-ungoliant.png",
+        "monsters/spider-ungoliant-f1.png",
+        "monsters/spider-ungoliant-f2.png",
+        "monsters/spider-ungoliant-f3.png"
       ]
     },
     {
@@ -1816,11 +1858,17 @@
     },
     {
       "source": "monsters/ainu-sauron.png",
-      "row": 48,
+      "row": 111,
       "col": 4,
       "chroma": true,
       "maps": [
         "monster:Sauron, the Sorcerer"
+      ],
+      "frames": [
+        "monsters/ainu-sauron.png",
+        "monsters/ainu-sauron-f1.png",
+        "monsters/ainu-sauron-f2.png",
+        "monsters/ainu-sauron-f3.png"
       ]
     },
     {
@@ -1974,11 +2022,17 @@
     },
     {
       "source": "monsters/wolf-boss.png",
-      "row": 49,
-      "col": 6,
+      "row": 113,
+      "col": 8,
       "chroma": true,
       "maps": [
         "monster:Wolf-Sauron"
+      ],
+      "frames": [
+        "monsters/wolf-boss.png",
+        "monsters/wolf-boss-f1.png",
+        "monsters/wolf-boss-f2.png",
+        "monsters/wolf-boss-f3.png"
       ]
     },
     {
@@ -2797,11 +2851,17 @@
     },
     {
       "source": "monsters/elf-maeglin.png",
-      "row": 55,
-      "col": 3,
+      "row": 114,
+      "col": 4,
       "chroma": true,
       "maps": [
         "monster:Maeglin, the Traitor of Gondolin"
+      ],
+      "frames": [
+        "monsters/elf-maeglin.png",
+        "monsters/elf-maeglin-f1.png",
+        "monsters/elf-maeglin-f2.png",
+        "monsters/elf-maeglin-f3.png"
       ]
     },
     {
@@ -2977,11 +3037,17 @@
     },
     {
       "source": "monsters/balrog-gothmog.png",
-      "row": 56,
-      "col": 7,
+      "row": 111,
+      "col": 8,
       "chroma": true,
       "maps": [
         "monster:Gothmog, the High Captain of Balrogs"
+      ],
+      "frames": [
+        "monsters/balrog-gothmog.png",
+        "monsters/balrog-gothmog-f1.png",
+        "monsters/balrog-gothmog-f2.png",
+        "monsters/balrog-gothmog-f3.png"
       ]
     },
     {
@@ -3004,11 +3070,17 @@
     },
     {
       "source": "monsters/vampire-sauron.png",
-      "row": 56,
-      "col": 10,
+      "row": 115,
+      "col": 8,
       "chroma": true,
       "maps": [
         "monster:Vampire-Sauron"
+      ],
+      "frames": [
+        "monsters/vampire-sauron.png",
+        "monsters/vampire-sauron-f1.png",
+        "monsters/vampire-sauron-f2.png",
+        "monsters/vampire-sauron-f3.png"
       ]
     },
     {
@@ -3112,11 +3184,17 @@
     },
     {
       "source": "monsters/bird-phoenix.png",
-      "row": 57,
-      "col": 6,
+      "row": 114,
+      "col": 12,
       "chroma": true,
       "maps": [
         "monster:The Phoenix"
+      ],
+      "frames": [
+        "monsters/bird-phoenix.png",
+        "monsters/bird-phoenix-f1.png",
+        "monsters/bird-phoenix-f2.png",
+        "monsters/bird-phoenix-f3.png"
       ]
     },
     {
@@ -3184,11 +3262,17 @@
     },
     {
       "source": "monsters/vampire-thuringwethil.png",
-      "row": 57,
-      "col": 14,
+      "row": 113,
+      "col": 12,
       "chroma": true,
       "maps": [
         "monster:Thuringwethil, the Vampire Messenger"
+      ],
+      "frames": [
+        "monsters/vampire-thuringwethil.png",
+        "monsters/vampire-thuringwethil-f1.png",
+        "monsters/vampire-thuringwethil-f2.png",
+        "monsters/vampire-thuringwethil-f3.png"
       ]
     },
     {
@@ -3697,20 +3781,32 @@
     },
     {
       "source": "monsters/balrog-lungorthin.png",
-      "row": 61,
-      "col": 7,
+      "row": 114,
+      "col": 0,
       "chroma": true,
       "maps": [
         "monster:Lungorthin, the Balrog of White Fire"
+      ],
+      "frames": [
+        "monsters/balrog-lungorthin.png",
+        "monsters/balrog-lungorthin-f1.png",
+        "monsters/balrog-lungorthin-f2.png",
+        "monsters/balrog-lungorthin-f3.png"
       ]
     },
     {
       "source": "monsters/tarrasque.png",
-      "row": 61,
-      "col": 8,
+      "row": 115,
+      "col": 0,
       "chroma": true,
       "maps": [
         "monster:The Tarrasque"
+      ],
+      "frames": [
+        "monsters/tarrasque.png",
+        "monsters/tarrasque-f1.png",
+        "monsters/tarrasque-f2.png",
+        "monsters/tarrasque-f3.png"
       ]
     },
     {
@@ -3868,11 +3964,17 @@
     },
     {
       "source": "monsters/elf-eol.png",
-      "row": 62,
-      "col": 10,
+      "row": 114,
+      "col": 8,
       "chroma": true,
       "maps": [
         "monster:Eöl, the Dark Elven Smith"
+      ],
+      "frames": [
+        "monsters/elf-eol.png",
+        "monsters/elf-eol-f1.png",
+        "monsters/elf-eol-f2.png",
+        "monsters/elf-eol-f3.png"
       ]
     },
     {
@@ -5083,11 +5185,17 @@
     },
     {
       "source": "monsters/wolf-draugluin.png",
-      "row": 71,
-      "col": 1,
+      "row": 113,
+      "col": 4,
       "chroma": true,
       "maps": [
         "monster:Draugluin, Sire of All Werewolves"
+      ],
+      "frames": [
+        "monsters/wolf-draugluin.png",
+        "monsters/wolf-draugluin-f1.png",
+        "monsters/wolf-draugluin-f2.png",
+        "monsters/wolf-draugluin-f3.png"
       ]
     },
     {
@@ -6127,11 +6235,17 @@
     },
     {
       "source": "monsters/lich-vecna.png",
-      "row": 78,
-      "col": 5,
+      "row": 115,
+      "col": 4,
       "chroma": true,
       "maps": [
         "monster:Vecna, the Emperor Lich"
+      ],
+      "frames": [
+        "monsters/lich-vecna.png",
+        "monsters/lich-vecna-f1.png",
+        "monsters/lich-vecna-f2.png",
+        "monsters/lich-vecna-f3.png"
       ]
     },
     {
@@ -6334,11 +6448,17 @@
     },
     {
       "source": "monsters/wolf-carcharoth.png",
-      "row": 79,
-      "col": 12,
+      "row": 113,
+      "col": 0,
       "chroma": true,
       "maps": [
         "monster:Carcharoth, the Jaws of Thirst"
+      ],
+      "frames": [
+        "monsters/wolf-carcharoth.png",
+        "monsters/wolf-carcharoth-f1.png",
+        "monsters/wolf-carcharoth-f2.png",
+        "monsters/wolf-carcharoth-f3.png"
       ]
     },
     {
@@ -6469,11 +6589,17 @@
     },
     {
       "source": "monsters/serpent-sauron.png",
-      "row": 80,
-      "col": 11,
+      "row": 115,
+      "col": 12,
       "chroma": true,
       "maps": [
         "monster:Serpent-Sauron"
+      ],
+      "frames": [
+        "monsters/serpent-sauron.png",
+        "monsters/serpent-sauron-f1.png",
+        "monsters/serpent-sauron-f2.png",
+        "monsters/serpent-sauron-f3.png"
       ]
     },
     {
