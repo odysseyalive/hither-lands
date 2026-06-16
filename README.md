@@ -96,7 +96,7 @@ This process takes a while — there are over 1,400 tiles to integrate.
 ### 6. Build FAangband
 
 ```sh
-make -C ../FAangband
+make -C ../FAangband install
 ```
 
 A plain `make` is all you need — the in-place build reads tiles straight from this
