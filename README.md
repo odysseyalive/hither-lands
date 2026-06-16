@@ -46,12 +46,16 @@ cd FAangband
 ### 4. Configure FAangband with SDL2
 
 ```sh
-./configure --with-no-install --enable-sdl2
+./configure --prefix=$HOME/.local --bindir=$HOME/.local/bin --enable-sdl2
 ```
 
-- `--with-no-install` runs the game in place: it reads its data — tiles included —
-  directly from this source tree's `lib/`, so there's no separate install step and
-  no `sudo`. (`configure.ac` sets the data path to `${PWD}/lib/`.)
+- `--prefix=$HOME/.local` installs into your home directory instead of a system
+  path, so **no `sudo` is needed**. `make install` then deploys the game's data —
+  tiles, fonts, gamedata — to `~/.local/share/faangband/`, which is where the
+  installed game reads it at runtime.
+- `--bindir=$HOME/.local/bin` puts the `faangband` binary on your `PATH`. This
+  prefix's default is `~/.local/games`, which usually isn't on `PATH`;
+  `~/.local/bin` normally is, so afterward you can just run `faangband`.
 - `--enable-sdl2` builds the SDL2 graphical frontend that renders the tiles.
   Without it you only get the curses/text frontend, which shows ASCII, not tiles.
 
@@ -74,7 +78,7 @@ Use `--gender` to select player sprite gender (default: male):
 Use `--size` to select the tile resolution — `32`, `64` (default), or `128`:
 
 ```sh
-./install.sh ../FAangband --size 32
+./install.sh ../FAangband --size 64
 ```
 
 The source tiles are ~1024px native, so `64` and `128` render with real added
