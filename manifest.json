@@ -39,6 +39,12 @@
       "col": 5,
       "maps": [
         "feat:up staircase:*"
+      ],
+      "frames": [
+        "terrain/stair-up.png",
+        "terrain/stair-up-f1.png",
+        "terrain/stair-up-f2.png",
+        "terrain/stair-up-f3.png"
       ]
     },
     {
