@@ -154,6 +154,141 @@
       "sentinel": "HITHER-LANDS:tile-anim-idle",
       "payload": "\n\t\t\t\t/* HITHER-LANDS:tile-anim-idle BEGIN */\n\t\t\t\thl_tile_anim_tick(subwindow->app);\n\t\t\t\t/* HITHER-LANDS:tile-anim-idle END */",
       "note": "advance tile animation each idle iteration (work only on frame boundaries)"
+    },
+    {
+      "id": "prace-decl",
+      "file": "src/ui-prefs.c",
+      "anchor": "/* HITHER-LANDS:shape-decl END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-decl",
+      "payload": "/* HITHER-LANDS:prace-decl BEGIN */\nuint8_t *prace_x_attr;\nwchar_t *prace_x_char;\n/* HITHER-LANDS:prace-decl END */\n",
+      "note": "UI-layer per-player-race tile override for PLAYER-flag monsters, indexed by player_race ridx"
+    },
+    {
+      "id": "prace-export",
+      "file": "src/ui-prefs.h",
+      "anchor": "/* HITHER-LANDS:shape-export END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-export",
+      "payload": "/* HITHER-LANDS:prace-export BEGIN */\nextern uint8_t *prace_x_attr;\nextern wchar_t *prace_x_char;\n/* HITHER-LANDS:prace-export END */\n",
+      "note": "extern declarations"
+    },
+    {
+      "id": "prace-parser",
+      "file": "src/ui-prefs.c",
+      "anchor": "/* HITHER-LANDS:shape-parser END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-parser",
+      "payload": "\n/* HITHER-LANDS:prace-parser BEGIN */\nstatic enum parser_error parse_prefs_prace(struct parser *p)\n{\n\tconst char *name;\n\tstruct player_race *r;\n\n\tstruct prefs_data *d = parser_priv(p);\n\tassert(d != NULL);\n\tif (d->bypass) return PARSE_ERROR_NONE;\n\n\tname = parser_getsym(p, \"name\");\n\tfor (r = races; r; r = r->next)\n\t\tif (streq(r->name, name)) break;\n\tif (!r)\n\t\treturn PARSE_ERROR_NO_KIND_FOUND;\n\n\tprace_x_attr[r->ridx] = (uint8_t)parser_getint(p, \"attr\");\n\tprace_x_char[r->ridx] = (wchar_t)parser_getint(p, \"char\");\n\n\treturn PARSE_ERROR_NONE;\n}\n/* HITHER-LANDS:prace-parser END */\n",
+      "note": "binds a graphic tile to a playable race by name; looks up the races list (extern in player.h)"
+    },
+    {
+      "id": "prace-reg",
+      "file": "src/ui-prefs.c",
+      "anchor": "\t/* HITHER-LANDS:shape-reg END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-reg",
+      "payload": "\t/* HITHER-LANDS:prace-reg BEGIN */\n\tparser_reg(p, \"prace sym name int attr int char\", parse_prefs_prace);\n\t/* HITHER-LANDS:prace-reg END */\n",
+      "note": "register `prace:` in init_parse_prefs"
+    },
+    {
+      "id": "prace-alloc",
+      "file": "src/ui-prefs.c",
+      "anchor": "\t/* HITHER-LANDS:shape-alloc END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-alloc",
+      "payload": "\t/* HITHER-LANDS:prace-alloc BEGIN */\n\tprace_x_attr = mem_zalloc(z_info->p_race_max * sizeof(uint8_t));\n\tprace_x_char = mem_zalloc(z_info->p_race_max * sizeof(wchar_t));\n\t/* HITHER-LANDS:prace-alloc END */\n",
+      "note": "alloc in textui_prefs_init, sized by z_info->p_race_max"
+    },
+    {
+      "id": "prace-free",
+      "file": "src/ui-prefs.c",
+      "anchor": "\t/* HITHER-LANDS:shape-free END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-free",
+      "payload": "\t/* HITHER-LANDS:prace-free BEGIN */\n\tmem_free(prace_x_attr);\n\tmem_free(prace_x_char);\n\t/* HITHER-LANDS:prace-free END */\n",
+      "note": "free in textui_prefs_free"
+    },
+    {
+      "id": "prace-reset",
+      "file": "src/ui-prefs.c",
+      "anchor": "\t/* HITHER-LANDS:shape-reset END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-reset",
+      "payload": "\n\t/* HITHER-LANDS:prace-reset BEGIN */\n\t/* Player-race monster tiles carry no ASCII default; clear so only graphic prf sets them */\n\tfor (i = 0; i < z_info->p_race_max; i++) {\n\t\tprace_x_attr[i] = 0;\n\t\tprace_x_char[i] = 0;\n\t}\n\t/* HITHER-LANDS:prace-reset END */\n",
+      "note": "reset overrides on pref reload so a tileset switch doesn't leak race tiles"
+    },
+    {
+      "id": "prace-female-decl",
+      "file": "src/ui-prefs.c",
+      "anchor": "/* HITHER-LANDS:prace-decl END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-female-decl",
+      "payload": "/* HITHER-LANDS:prace-female-decl BEGIN */\nuint8_t *prace_female_x_attr;\nwchar_t *prace_female_x_char;\n/* HITHER-LANDS:prace-female-decl END */\n",
+      "note": "female counterpart of prace_x_attr/char; used when the monster's base race has RF_FEMALE"
+    },
+    {
+      "id": "prace-female-export",
+      "file": "src/ui-prefs.h",
+      "anchor": "/* HITHER-LANDS:prace-export END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-female-export",
+      "payload": "/* HITHER-LANDS:prace-female-export BEGIN */\nextern uint8_t *prace_female_x_attr;\nextern wchar_t *prace_female_x_char;\n/* HITHER-LANDS:prace-female-export END */\n",
+      "note": "extern declarations"
+    },
+    {
+      "id": "prace-female-parser",
+      "file": "src/ui-prefs.c",
+      "anchor": "/* HITHER-LANDS:prace-parser END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-female-parser",
+      "payload": "\n/* HITHER-LANDS:prace-female-parser BEGIN */\nstatic enum parser_error parse_prefs_prace_female(struct parser *p)\n{\n\tconst char *name;\n\tstruct player_race *r;\n\n\tstruct prefs_data *d = parser_priv(p);\n\tassert(d != NULL);\n\tif (d->bypass) return PARSE_ERROR_NONE;\n\n\tname = parser_getsym(p, \"name\");\n\tfor (r = races; r; r = r->next)\n\t\tif (streq(r->name, name)) break;\n\tif (!r)\n\t\treturn PARSE_ERROR_NO_KIND_FOUND;\n\n\tprace_female_x_attr[r->ridx] = (uint8_t)parser_getint(p, \"attr\");\n\tprace_female_x_char[r->ridx] = (wchar_t)parser_getint(p, \"char\");\n\n\treturn PARSE_ERROR_NONE;\n}\n/* HITHER-LANDS:prace-female-parser END */\n",
+      "note": "binds a graphic tile to a playable race's FEMALE variant by name; mirrors parse_prefs_prace"
+    },
+    {
+      "id": "prace-female-reg",
+      "file": "src/ui-prefs.c",
+      "anchor": "\t/* HITHER-LANDS:prace-reg END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-female-reg",
+      "payload": "\t/* HITHER-LANDS:prace-female-reg BEGIN */\n\tparser_reg(p, \"prace-female sym name int attr int char\", parse_prefs_prace_female);\n\t/* HITHER-LANDS:prace-female-reg END */\n",
+      "note": "register `prace-female:` in init_parse_prefs (hyphenated directive, like monster-base)"
+    },
+    {
+      "id": "prace-female-alloc",
+      "file": "src/ui-prefs.c",
+      "anchor": "\t/* HITHER-LANDS:prace-alloc END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-female-alloc",
+      "payload": "\t/* HITHER-LANDS:prace-female-alloc BEGIN */\n\tprace_female_x_attr = mem_zalloc(z_info->p_race_max * sizeof(uint8_t));\n\tprace_female_x_char = mem_zalloc(z_info->p_race_max * sizeof(wchar_t));\n\t/* HITHER-LANDS:prace-female-alloc END */\n",
+      "note": "alloc in textui_prefs_init, sized by z_info->p_race_max"
+    },
+    {
+      "id": "prace-female-free",
+      "file": "src/ui-prefs.c",
+      "anchor": "\t/* HITHER-LANDS:prace-free END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-female-free",
+      "payload": "\t/* HITHER-LANDS:prace-female-free BEGIN */\n\tmem_free(prace_female_x_attr);\n\tmem_free(prace_female_x_char);\n\t/* HITHER-LANDS:prace-female-free END */\n",
+      "note": "free in textui_prefs_free"
+    },
+    {
+      "id": "prace-female-reset",
+      "file": "src/ui-prefs.c",
+      "anchor": "\t/* HITHER-LANDS:prace-reset END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-female-reset",
+      "payload": "\n\t/* HITHER-LANDS:prace-female-reset BEGIN */\n\tfor (i = 0; i < z_info->p_race_max; i++) {\n\t\tprace_female_x_attr[i] = 0;\n\t\tprace_female_x_char[i] = 0;\n\t}\n\t/* HITHER-LANDS:prace-female-reset END */\n",
+      "note": "reset female overrides on pref reload so a tileset switch doesn't leak race tiles"
+    },
+    {
+      "id": "prace-render-grid",
+      "file": "src/ui-map.c",
+      "anchor": "\t\t\tda = monster_x_attr[mon->race->ridx];\n\t\t\tdc = monster_x_char[mon->race->ridx];\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:prace-render-grid",
+      "payload": "\t\t\t/* HITHER-LANDS:prace-render-grid BEGIN */\n\t\t\t/* PLAYER-flag monsters carry an assigned playable race; show its tile.\n\t\t\t * Gender: RF_FEMALE pins female; an arbitrary RF_MALE profession\n\t\t\t * randomises per-monster from a stable midx hash; neuter -> base tile. */\n\t\t\tif (mon->player_race) {\n\t\t\t\tunsigned pr = mon->player_race->ridx;\n\t\t\t\tbool female = false;\n\t\t\t\tif (rf_has(mon->race->flags, RF_FEMALE)) {\n\t\t\t\t\tfemale = true;\n\t\t\t\t} else if (rf_has(mon->race->flags, RF_MALE)) {\n\t\t\t\t\tfemale = (((unsigned)mon->midx * 2654435761u) >> 8) & 1u;\n\t\t\t\t}\n\t\t\t\tif (female && prace_female_x_attr[pr]) {\n\t\t\t\t\tda = prace_female_x_attr[pr];\n\t\t\t\t\tdc = prace_female_x_char[pr];\n\t\t\t\t} else if (prace_x_attr[pr]) {\n\t\t\t\t\tda = prace_x_attr[pr];\n\t\t\t\t\tdc = prace_x_char[pr];\n\t\t\t\t}\n\t\t\t}\n\t\t\t/* HITHER-LANDS:prace-render-grid END */\n",
+      "note": "core override (gender-aware): grid_data_as_text picks the assigned player-race tile; RF_FEMALE pins female, RF_MALE professions randomise per-monster via a stable midx hash, neuter falls to base. Feeds all front-ends incl. SDL2"
     }
   ]
 }

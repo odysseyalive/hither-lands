@@ -415,6 +415,32 @@ def main():
                 f"%:{xtra_pref}"]
         data_files += f" {xtra_pref} {stem}-male.prf {stem}-female.prf"
 
+        # Per-race tiles for PLAYER-flag monsters (e.g. "Ent cutpurse"): reuse
+        # each race's Warrior player sprite. Unlike the player's own tile, these
+        # must load regardless of the install-time player gender (a monster's
+        # gender is its own), so they go in the always-loaded graphics prf rather
+        # than the gendered xtra files. prace: = male/default row; prace-female:
+        # = female row; the engine (ui-map.c HITHER-LANDS:prace-render-grid) picks
+        # per monster -- RF_FEMALE pins female, RF_MALE professions randomise.
+        prace_male, prace_female = {}, {}
+        for pv in pvars:
+            if pv.get("class") != "Warrior" or not pv.get("race"):
+                continue
+            cell = (0x80 + pv["row"], 0x80 + pv["col"])
+            if pv.get("gender") == "Female":
+                prace_female[pv["race"]] = cell
+            else:
+                prace_male[pv["race"]] = cell
+        if prace_male or prace_female:
+            prf += ["", "# Per-race tiles for PLAYER-flag monsters (race-prefixed",
+                    "# persons like 'Ent cutpurse'): reuse each race's Warrior sprite."]
+            for race in sorted(prace_male):
+                a, c = prace_male[race]
+                prf.append(f"prace:{race}:0x{a:02X}:0x{c:02X}")
+            for race in sorted(prace_female):
+                a, c = prace_female[race]
+                prf.append(f"prace-female:{race}:0x{a:02X}:0x{c:02X}")
+
     # Write all prf/data files now that all sections are assembled.
     if has_flavors:
         (outdir / flavor_pref).write_text("\n".join(flvr) + "\n")
