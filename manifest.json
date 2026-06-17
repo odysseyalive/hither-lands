@@ -50,7 +50,7 @@
     {
       "source": "terrain/stair-down.png",
       "row": 0,
-      "col": 6,
+      "col": 9,
       "maps": [
         "feat:down staircase:*"
       ],
