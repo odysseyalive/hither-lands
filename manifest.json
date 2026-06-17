@@ -10016,12 +10016,6 @@
       "col": 0,
       "maps": [
         "feat:magma vein:*"
-      ],
-      "frames": [
-        "terrain/vein-magma.png",
-        "terrain/vein-magma-f1.png",
-        "terrain/vein-magma-f2.png",
-        "terrain/vein-magma-f3.png"
       ]
     },
     {
@@ -10030,12 +10024,6 @@
       "col": 8,
       "maps": [
         "feat:quartz vein:*"
-      ],
-      "frames": [
-        "terrain/vein-quartz.png",
-        "terrain/vein-quartz-f1.png",
-        "terrain/vein-quartz-f2.png",
-        "terrain/vein-quartz-f3.png"
       ]
     },
     {
@@ -10044,12 +10032,6 @@
       "col": 4,
       "maps": [
         "feat:magma vein with treasure:*"
-      ],
-      "frames": [
-        "terrain/vein-magma-treasure.png",
-        "terrain/vein-magma-treasure-f1.png",
-        "terrain/vein-magma-treasure-f2.png",
-        "terrain/vein-magma-treasure-f3.png"
       ]
     },
     {
@@ -10058,12 +10040,6 @@
       "col": 12,
       "maps": [
         "feat:quartz vein with treasure:*"
-      ],
-      "frames": [
-        "terrain/vein-quartz-treasure.png",
-        "terrain/vein-quartz-treasure-f1.png",
-        "terrain/vein-quartz-treasure-f2.png",
-        "terrain/vein-quartz-treasure-f3.png"
       ]
     },
     {
