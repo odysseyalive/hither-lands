@@ -289,6 +289,96 @@
       "sentinel": "HITHER-LANDS:prace-render-grid",
       "payload": "\t\t\t/* HITHER-LANDS:prace-render-grid BEGIN */\n\t\t\t/* PLAYER-flag monsters carry an assigned playable race; show its tile.\n\t\t\t * Gender: RF_FEMALE pins female; an arbitrary RF_MALE profession\n\t\t\t * randomises per-monster from a stable midx hash; neuter -> base tile. */\n\t\t\tif (mon->player_race) {\n\t\t\t\tunsigned pr = mon->player_race->ridx;\n\t\t\t\tbool female = false;\n\t\t\t\tif (rf_has(mon->race->flags, RF_FEMALE)) {\n\t\t\t\t\tfemale = true;\n\t\t\t\t} else if (rf_has(mon->race->flags, RF_MALE)) {\n\t\t\t\t\tfemale = (((unsigned)mon->midx * 2654435761u) >> 8) & 1u;\n\t\t\t\t}\n\t\t\t\tif (female && prace_female_x_attr[pr]) {\n\t\t\t\t\tda = prace_female_x_attr[pr];\n\t\t\t\t\tdc = prace_female_x_char[pr];\n\t\t\t\t} else if (prace_x_attr[pr]) {\n\t\t\t\t\tda = prace_x_attr[pr];\n\t\t\t\t\tdc = prace_x_char[pr];\n\t\t\t\t}\n\t\t\t}\n\t\t\t/* HITHER-LANDS:prace-render-grid END */\n",
       "note": "core override (gender-aware): grid_data_as_text picks the assigned player-race tile; RF_FEMALE pins female, RF_MALE professions randomise per-monster via a stable midx hash, neuter falls to base. Feeds all front-ends incl. SDL2"
+    },
+    {
+      "id": "ally-seek-fn",
+      "file": "src/mon-move.c",
+      "anchor": "/**\n * Process a monster's turn\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:ally-seek-fn",
+      "payload": "/* HITHER-LANDS:ally-seek-fn BEGIN */\n/*\n * Active-ally faction behaviour (Hither Lands).\n *\n * A player-race monster that is well-disposed to the player is recorded as\n * neutral (target.midx == 0) and otherwise just stands idle.  Here it instead\n * seeks out the player's enemies: each turn, while still neutral, it acquires\n * the nearest monster that is itself hostile to the player (target.midx == -1)\n * and within its hearing range, then targets it so the existing\n * monster-vs-monster movement and combat paths take over.  When that enemy\n * dies, update_mon() resets our target to 0, so we reacquire next turn.\n *\n * This never sets target.midx to -1, so an ally never turns on the player;\n * provocation (being attacked or robbed) is handled elsewhere and still flips\n * the monster hostile as before.  Pure engine logic, no UI or savefile change.\n */\nstatic void hl_ally_seek_enemy(struct monster *mon)\n{\n\tint i, best = 0, best_dis = 0;\n\n\t/* Only player-race monsters can be allies, and only while neutral. */\n\tif (!mon->player_race || mon->target.midx != 0) return;\n\n\tfor (i = 1; i < cave_monster_max(cave); i++) {\n\t\tstruct monster *foe = cave_monster(cave, i);\n\t\tint dis;\n\n\t\tif (foe == mon || !foe->race) continue;\n\n\t\t/* Only fight monsters that are hostile to the player. */\n\t\tif (foe->target.midx != -1) continue;\n\n\t\tdis = distance(mon->grid, foe->grid);\n\t\tif (dis > mon->race->hearing) continue;\n\n\t\tif (!best || dis < best_dis) {\n\t\t\tbest = i;\n\t\t\tbest_dis = dis;\n\t\t}\n\t}\n\n\tif (best) {\n\t\tmon->target.midx = best;\n\t\tmonster_make_heatmaps(cave, cave_monster(cave, best));\n\t}\n}\n/* HITHER-LANDS:ally-seek-fn END */\n\n",
+      "note": "engine-layer: nearest-player-enemy acquisition for neutral player-race monsters, making them active allies. Reuses monster_make_heatmaps + the monster-vs-monster combat path. Inserted before monster_turn's doc comment in mon-move.c"
+    },
+    {
+      "id": "ally-seek-call",
+      "file": "src/mon-move.c",
+      "anchor": "\t/* Attempt a ranged attack */\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:ally-seek-call",
+      "payload": "\t/* HITHER-LANDS:ally-seek-call BEGIN */\n\thl_ally_seek_enemy(mon);\n\t/* HITHER-LANDS:ally-seek-call END */\n\n",
+      "note": "call the ally-retarget helper near the top of monster_turn, before ranged attack and get_move, so an ally both shoots and pathfinds toward its target this turn"
+    },
+    {
+      "id": "ally-look-text",
+      "file": "src/target.c",
+      "anchor": "\t\tif (mon->target.midx < 0) {\n\t\t\t/* Hostile monsters */\n\t\t\tmy_strcat(buf, \", hostile\", max);\n\t\t} else {\n\t\t\t/* Not hostile to the player */\n\t\t\tmy_strcat(buf, \", neutral\", max);\n\t\t}",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:ally-look-text",
+      "payload": "\t\t/* HITHER-LANDS:ally-look-text BEGIN */\n\t\tif (mon->target.midx < 0) {\n\t\t\t/* Hostile monsters */\n\t\t\tmy_strcat(buf, \", hostile\", max);\n\t\t} else if (mon->target.midx > 0) {\n\t\t\t/* Actively fighting the player's enemies */\n\t\t\tmy_strcat(buf, \", allied\", max);\n\t\t} else {\n\t\t\t/* Not hostile, but idle */\n\t\t\tmy_strcat(buf, \", neutral\", max);\n\t\t}\n\t\t/* HITHER-LANDS:ally-look-text END */",
+      "note": "look/examine text: split the old binary hostile/neutral into hostile (midx<0) / allied (midx>0) / neutral (midx==0). Original block preserved inside the sentinel for reversibility"
+    },
+    {
+      "id": "ally-map-tint",
+      "file": "src/ui-map.c",
+      "anchor": "\t\t\t/* Store the drawing attr so we can use it elsewhere */\n\t\t\tmon->attr = a;",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:ally-map-tint",
+      "payload": "\t\t\t/* HITHER-LANDS:ally-map-tint BEGIN */\n\t\t\t/* In ASCII, recolour player-race monsters by disposition so active\n\t\t\t * allies (bright green) and idle neutrals (green) stand out from\n\t\t\t * hostiles.  Graphics mode packs the tile index into the attr, so\n\t\t\t * leave it untouched there. */\n\t\t\tif (use_graphics == GRAPHICS_NONE && mon->player_race) {\n\t\t\t\tif (mon->target.midx > 0) {\n\t\t\t\t\ta = COLOUR_L_GREEN;\n\t\t\t\t} else if (mon->target.midx == 0) {\n\t\t\t\t\ta = COLOUR_GREEN;\n\t\t\t\t}\n\t\t\t}\n\t\t\t/* HITHER-LANDS:ally-map-tint END */\n\n",
+      "note": "ASCII-only disposition colour for player-race monsters (L_GREEN allied, GREEN idle-neutral); guarded by use_graphics==GRAPHICS_NONE because in tiles mode attr is a tile index, not a colour"
+    },
+    {
+      "id": "ally-list-field",
+      "file": "src/mon-list.h",
+      "anchor": "\tuint16_t neutral[MONSTER_LIST_SECTION_MAX];\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:ally-list-field",
+      "payload": "\t/* HITHER-LANDS:ally-list-field BEGIN */\n\tuint16_t allied[MONSTER_LIST_SECTION_MAX];\n\t/* HITHER-LANDS:ally-list-field END */\n",
+      "note": "per-entry allied counter parallel to neutral, in monster_list_entry_s"
+    },
+    {
+      "id": "ally-list-count",
+      "file": "src/mon-list.c",
+      "anchor": "\t\tif (mon->target.midx >= 0)\n\t\t\tentry->neutral[field]++;",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:ally-list-count",
+      "payload": "\t\t/* HITHER-LANDS:ally-list-count BEGIN */\n\t\tif (mon->target.midx > 0)\n\t\t\tentry->allied[field]++;\n\t\telse if (mon->target.midx == 0)\n\t\t\tentry->neutral[field]++;\n\t\t/* HITHER-LANDS:ally-list-count END */",
+      "note": "split the old midx>=0 neutral tally into allied (midx>0) vs neutral (midx==0); hostiles (midx<0) still counted in neither"
+    },
+    {
+      "id": "ally-list-buf",
+      "file": "src/ui-mon-list.c",
+      "anchor": "\t\tchar asleep[20] = { '\\0' };",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:ally-list-buf",
+      "payload": "\t\tchar asleep[40] = { '\\0' }; /* HITHER-LANDS:ally-list-buf (was [20]; room for the allied tag) */",
+      "note": "enlarge the status-tag buffer so an appended ' (N allied)' tag does not truncate the asleep/neutral tag"
+    },
+    {
+      "id": "ally-list-decl",
+      "file": "src/ui-mon-list.c",
+      "anchor": "\t\tuint16_t neutral_in_section = 0;\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:ally-list-decl",
+      "payload": "\t\t/* HITHER-LANDS:ally-list-decl BEGIN */\n\t\tuint16_t allied_in_section = 0;\n\t\t/* HITHER-LANDS:ally-list-decl END */\n",
+      "note": "local for the per-section allied count"
+    },
+    {
+      "id": "ally-list-fetch",
+      "file": "src/ui-mon-list.c",
+      "anchor": "\t\tneutral_in_section = list->entries[index].neutral[section];\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:ally-list-fetch",
+      "payload": "\t\t/* HITHER-LANDS:ally-list-fetch BEGIN */\n\t\tallied_in_section = list->entries[index].allied[section];\n\t\t/* HITHER-LANDS:ally-list-fetch END */\n",
+      "note": "read the allied count for this entry/section"
+    },
+    {
+      "id": "ally-list-render",
+      "file": "src/ui-mon-list.c",
+      "anchor": "\t\t/* Clip the monster name to fit, and append the sleep tag. */",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:ally-list-render",
+      "payload": "\t\t/* HITHER-LANDS:ally-list-render BEGIN */\n\t\t/* Allied monsters (fighting the player's enemies) get their own tag. */\n\t\tif (allied_in_section > 0) {\n\t\t\tchar allied_tag[24];\n\t\t\tif (count_in_section == 1) {\n\t\t\t\tstrnfmt(allied_tag, sizeof(allied_tag), \" (allied)\");\n\t\t\t} else {\n\t\t\t\tstrnfmt(allied_tag, sizeof(allied_tag), \" (%d allied)\",\n\t\t\t\t\t\tallied_in_section);\n\t\t\t}\n\t\t\tmy_strcat(asleep, allied_tag, sizeof(asleep));\n\t\t}\n\t\t/* HITHER-LANDS:ally-list-render END */\n\n",
+      "note": "append a ' (N allied)' / ' (allied)' tag to the per-row status string when the entry has allied monsters in this section"
     }
   ]
 }
