@@ -379,6 +379,78 @@
       "sentinel": "HITHER-LANDS:ally-list-render",
       "payload": "\t\t/* HITHER-LANDS:ally-list-render BEGIN */\n\t\t/* Allied monsters (fighting the player's enemies) get their own tag. */\n\t\tif (allied_in_section > 0) {\n\t\t\tchar allied_tag[24];\n\t\t\tif (count_in_section == 1) {\n\t\t\t\tstrnfmt(allied_tag, sizeof(allied_tag), \" (allied)\");\n\t\t\t} else {\n\t\t\t\tstrnfmt(allied_tag, sizeof(allied_tag), \" (%d allied)\",\n\t\t\t\t\t\tallied_in_section);\n\t\t\t}\n\t\t\tmy_strcat(asleep, allied_tag, sizeof(asleep));\n\t\t}\n\t\t/* HITHER-LANDS:ally-list-render END */\n\n",
       "note": "append a ' (N allied)' / ' (allied)' tag to the per-row status string when the entry has allied monsters in this section"
+    },
+    {
+      "id": "recruit-mflag",
+      "file": "src/list-mon-temp-flags.h",
+      "anchor": "MFLAG(WARY,\t\t\"Monster is wary of traps\")\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:recruit-mflag",
+      "payload": "/* HITHER-LANDS:recruit-mflag BEGIN */\nMFLAG(FOLLOWER,\t\"Monster is a recruited follower of the player\")\n/* HITHER-LANDS:recruit-mflag END */\n",
+      "note": "Phase 1 recruit: persistent follower marker, appended at end of the temp-flag list so existing flag values don't shift. Rides the self-describing mflag save block (no savefile version bump)"
+    },
+    {
+      "id": "recruit-cmd",
+      "file": "src/cmd-core.h",
+      "anchor": "\tCMD_COMMAND_MONSTER\n} cmd_code;",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:recruit-cmd",
+      "payload": "\tCMD_COMMAND_MONSTER,\n\tCMD_RECRUIT /* HITHER-LANDS:recruit-cmd */\n} cmd_code;",
+      "note": "add CMD_RECRUIT to the cmd_code enum (appended last, comma added to the prior entry)"
+    },
+    {
+      "id": "recruit-gamecmd",
+      "file": "src/cmd-core.c",
+      "anchor": "\t{ CMD_STEAL, \"steal\", do_cmd_steal, false, true, 0 },\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:recruit-gamecmd",
+      "payload": "\t/* HITHER-LANDS:recruit-gamecmd BEGIN */\n\t{ CMD_RECRUIT, \"recruit\", do_cmd_recruit, false, true, 0 },\n\t/* HITHER-LANDS:recruit-gamecmd END */\n",
+      "note": "register CMD_RECRUIT -> do_cmd_recruit in game_cmds[] (takes a turn, no aim arg)"
+    },
+    {
+      "id": "recruit-decl",
+      "file": "src/cmds.h",
+      "anchor": "void do_cmd_steal(struct command *cmd);\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:recruit-decl",
+      "payload": "/* HITHER-LANDS:recruit-decl BEGIN */\nvoid do_cmd_recruit(struct command *cmd);\n/* HITHER-LANDS:recruit-decl END */\n",
+      "note": "declare do_cmd_recruit"
+    },
+    {
+      "id": "recruit-fn",
+      "file": "src/cmd-cave.c",
+      "anchor": "static void do_cmd_steal_aux(int dir)\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:recruit-fn",
+      "payload": "/* HITHER-LANDS:recruit-fn BEGIN */\n/*\n * Recruit / parley with an adjacent monster (Hither Lands, Phase 1).\n *\n * Walk up to a well-disposed player-race monster and try to persuade it to\n * follow you.  Eligibility: a neutral (target.midx == 0) monster of a playable\n * race, not already a follower, with you under your follower cap (1 + lev/15).\n * Persuasion uses the same save throw as the Command effect; a bad failure\n * gives offence and turns the monster hostile.  Aiming at an existing follower\n * releases it.\n */\nstatic void do_cmd_recruit_aux(int dir)\n{\n\tstruct loc grid = loc_sum(player->grid, ddgrid[dir]);\n\tstruct monster *mon = square_monster(cave, grid);\n\tchar m_name[80];\n\tint i, followers = 0, cap;\n\n\t/* Need somebody to talk to */\n\tif (!mon) {\n\t\tmsg(\"There is nobody there to parley with.\");\n\t\treturn;\n\t}\n\n\tmonster_desc(m_name, sizeof(m_name), mon, MDESC_CAPITAL | MDESC_COMMA);\n\n\t/* Parleying takes a turn */\n\tplayer->upkeep->energy_use = z_info->move_energy;\n\n\t/* Dismiss an existing follower */\n\tif (mflag_has(mon->mflag, MFLAG_FOLLOWER)) {\n\t\tmflag_off(mon->mflag, MFLAG_FOLLOWER);\n\t\tmsg(\"%s stops following you.\", m_name);\n\t\treturn;\n\t}\n\n\t/* Only well-disposed player-race folk will consider joining */\n\tif (!mon->player_race || (mon->target.midx != 0)) {\n\t\tmsg(\"%s refuses to join you.\", m_name);\n\t\treturn;\n\t}\n\n\t/* Enforce the follower cap */\n\tcap = 1 + player->lev / 15;\n\tfor (i = 1; i < cave_monster_max(cave); i++) {\n\t\tstruct monster *m = cave_monster(cave, i);\n\t\tif (m->race && mflag_has(m->mflag, MFLAG_FOLLOWER)) followers++;\n\t}\n\tif (followers >= cap) {\n\t\tmsg(\"You cannot lead any more followers.\");\n\t\treturn;\n\t}\n\n\t/* Persuasion roll (as for the Command effect) */\n\tif (randint1(player->lev) < randint1(mon->race->level)) {\n\t\t/* A heavy failure gives offence */\n\t\tif (mon->race->level > player->lev + 5) {\n\t\t\tmon->target.midx = -1;\n\t\t\tmonster_wake(mon, false, 100);\n\t\t\tmsg(\"%s takes offence and turns hostile!\", m_name);\n\t\t} else {\n\t\t\tmsg(\"%s is unconvinced.\", m_name);\n\t\t}\n\t\treturn;\n\t}\n\n\t/* Success */\n\tmflag_on(mon->mflag, MFLAG_FOLLOWER);\n\tmonster_wake(mon, false, 100);\n\tmsg(\"%s agrees to follow you.\", m_name);\n}\n\nvoid do_cmd_recruit(struct command *cmd)\n{\n\tint dir;\n\n\tif (cmd_get_direction(cmd, \"direction\", &dir, false) != CMD_OK)\n\t\treturn;\n\n\tdo_cmd_recruit_aux(dir);\n}\n/* HITHER-LANDS:recruit-fn END */\n\n",
+      "note": "Phase 1 recruit implementation, modeled on do_cmd_steal: adjacency by direction, eligibility, follower cap, Command-style save throw, anger-on-heavy-fail, release-an-existing-follower. Inserted before do_cmd_steal_aux"
+    },
+    {
+      "id": "recruit-key",
+      "file": "src/ui-game.c",
+      "anchor": "\t{ \"Steal from a monster\", { 's' }, CMD_STEAL, NULL, NULL, 0, NULL, NULL, NULL, 0 },\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:recruit-key",
+      "payload": "\t/* HITHER-LANDS:recruit-key BEGIN */\n\t{ \"Recruit a monster\", { 'j' }, CMD_RECRUIT, NULL, NULL, 0, NULL, NULL, NULL, 0 },\n\t/* HITHER-LANDS:recruit-key END */\n",
+      "note": "bind 'j' (standard keyset only, free in main context; like steal's 's' it leaves the roguelike-keyset slot unset) to CMD_RECRUIT, in cmd_hidden next to steal"
+    },
+    {
+      "id": "recruit-follow",
+      "file": "src/mon-move.c",
+      "anchor": "\t\tmonster_make_heatmaps(cave, cave_monster(cave, best));\n\t}\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:recruit-follow",
+      "payload": "\t/* HITHER-LANDS:recruit-follow BEGIN */\n\t/* A follower with no enemy to fight heads toward the player. */\n\tif (mflag_has(mon->mflag, MFLAG_FOLLOWER) && mon->target.midx == 0) {\n\t\tmon->target.grid = player->grid;\n\t}\n\t/* HITHER-LANDS:recruit-follow END */\n",
+      "note": "follow-me movement: inside hl_ally_seek_enemy, after enemy acquisition, a follower with no enemy target (midx==0) steers target.grid to the player so get_move paths toward them without attacking (midx never -1)"
+    },
+    {
+      "id": "recruit-look",
+      "file": "src/target.c",
+      "anchor": "\t\t/* HITHER-LANDS:ally-look-text END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:recruit-look",
+      "payload": "\t\t/* HITHER-LANDS:recruit-look BEGIN */\n\t\tif (rf_has(mon->race->flags, RF_PLAYER) &&\n\t\t\t\tmflag_has(mon->mflag, MFLAG_FOLLOWER)) {\n\t\t\tmy_strcat(buf, \", following\", max);\n\t\t}\n\t\t/* HITHER-LANDS:recruit-look END */\n",
+      "note": "append ', following' to the look/examine text for a recruited follower"
     }
   ]
 }
