@@ -67,25 +67,48 @@ def splice(rec, text, idx):
 def main():
     patches = DATA["patches"]
 
-    # Pass 1: classify every patch against the live tree. Abort before ANY
-    # write if a patch can't locate cleanly -- never half-patch then compile.
-    plan = []
-    failed = False
+    # Group records by file, preserving patches.json order within each file.
+    # Both passes iterate this same grouping so pass-1's classification and
+    # pass-2's application run the identical cumulative sequence.
+    by_file = {}
     for rec in patches:
-        path = os.path.join(FA_DIR, rec["file"])
+        by_file.setdefault(rec["file"], []).append(rec)
+
+    # Pass 1: classify CUMULATIVELY -- exactly as pass 2 applies. A record may
+    # legitimately anchor on an earlier sibling's injected sentinel/payload (a
+    # chained anchor); classifying against the raw file would wrongly report it
+    # MISSING. So we splice each READY record into an IN-MEMORY copy as we go --
+    # never to disk -- so a later chained anchor sees its sibling, mirroring what
+    # pass 2 does. Abort before ANY write if a record is genuinely
+    # MISSING/AMBIGUOUS -- never half-patch then compile. The simulated text is
+    # discarded; pass 2 re-reads each file from disk.
+    state_by_id = {}
+    failed = False
+    for relpath, recs in by_file.items():
+        path = os.path.join(FA_DIR, relpath)
         if not os.path.isfile(path):
-            print(f"{RED}MISSING FILE{RST} {rec['id']}: {rec['file']} not found")
+            for rec in recs:
+                state_by_id[rec["id"]] = "MISSINGFILE"
             failed = True
-            plan.append((rec, None, "MISSINGFILE", None))
             continue
         with open(path, encoding="utf-8") as fh:
             text = fh.read()
-        state, pos = classify(rec, text)
-        plan.append((rec, text, state, pos))
+        for rec in recs:
+            state, pos = classify(rec, text)
+            state_by_id[rec["id"]] = state
+            if state == "READY":
+                text = splice(rec, text, pos)   # in-memory dry run; discarded
+            elif state in ("MISSING", "AMBIGUOUS"):
+                failed = True
+
+    # Report in patches.json order (stable, matches historical output).
+    for rec in patches:
+        state = state_by_id[rec["id"]]
+        if state == "MISSINGFILE":
+            print(f"{RED}MISSING FILE{RST} {rec['id']}: {rec['file']} not found")
+            continue
         colour = {"ALREADY": DIM, "READY": GRN, "MISSING": RED, "AMBIGUOUS": RED}[state]
         print(f"{colour}{state:<9}{RST} {rec['id']:<22} {DIM}{rec['file']}{RST}")
-        if state in ("MISSING", "AMBIGUOUS"):
-            failed = True
 
     if failed:
         print(f"\n{RED}ABORTED{RST}: one or more anchors could not be located "
@@ -97,13 +120,10 @@ def main():
         print(f"\n{DIM}status only -- no changes written{RST}")
         return 0
 
-    # Pass 2: apply READY patches. Group by file so multiple inserts into one
-    # file each re-locate their anchor against the freshly-updated text.
+    # Pass 2: apply READY patches. Reuse the same file grouping; each insert
+    # re-locates its anchor against the freshly-updated text (cumulative), and
+    # the final pass-2 abort below stays as a defensive guard.
     applied = 0
-    by_file = {}
-    for rec, text, state, pos in plan:
-        by_file.setdefault(rec["file"], []).append(rec)
-
     for relpath, recs in by_file.items():
         path = os.path.join(FA_DIR, relpath)
         with open(path, encoding="utf-8") as fh:
@@ -130,8 +150,8 @@ def main():
                 fh.write(text)
             os.replace(tmp, path)
 
-    print(f"\n{GRN}done{RST}: {applied} applied, "
-          f"{sum(1 for _,_,s,_ in plan if s=='ALREADY')} already present.")
+    already = sum(1 for s in state_by_id.values() if s == "ALREADY")
+    print(f"\n{GRN}done{RST}: {applied} applied, {already} already present.")
     return 0
 
 

@@ -51,7 +51,10 @@ XTRA_STEM="${XTRA%.prf}"            # xtra-fai
 TILES_DIR="$FA_DIR/lib/tiles"
 DIST="$HERE/dist/$DIRNAME"
 
-[ -d "$DIST" ] || { echo "error: $DIST not built -- run tools/build.py first" >&2; exit 1; }
+# Validate the target is a real FAangband tree before doing any work. The
+# tileset itself is built by step 1 below (it need not exist yet -- dist/ is
+# generated and git-ignored), so we do NOT pre-check $DIST here; step 1 creates
+# it and we sanity-check its output afterward.
 [ -f "$TILES_DIR/list.txt" ] || { echo "error: $TILES_DIR/list.txt not found -- is $FA_DIR an FAangband tree?" >&2; exit 1; }
 
 TOTAL_STEPS=6
@@ -65,6 +68,10 @@ else
     step 1 "Building tileset (tools/build.py) ..."
     python3 "$HERE/tools/build.py"
 fi
+# Sanity-check the build produced the expected output dir. set -e already
+# catches a non-zero build.py; this catches the exit-0-but-no-output case
+# (e.g. manifest tileset.directory not matching what build.py wrote).
+[ -d "$DIST" ] || { echo "error: build did not produce $DIST (directory-name mismatch?)" >&2; exit 1; }
 
 # 2. Copy the tileset directory (replace wholesale; it is generated output).
 step 2 "Copying tileset '$DIRNAME' -> $TILES_DIR ..."
