@@ -2,6 +2,13 @@ dist/
 __pycache__/
 .claude-backups/
 
+# Local nanobanana/Gemini MCP wiring — kept out of the repo entirely.
+# .env holds the real key; .env.example is the local template; .mcp.json is the
+# machine-specific project MCP registration. None are tracked.
+.env
+.env.example
+.mcp.json
+
 # Local Claude Code tooling, instructions, and player data -- not part of the tileset
 # product. The fa-playtest skill + its case index live under .claude/ and are local-only.
 .claude/
