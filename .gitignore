@@ -1,2 +1,9 @@
 dist/
 __pycache__/
+.claude-backups/
+
+# Local Claude Code tooling, instructions, and player data -- not part of the tileset
+# product. The fa-playtest skill + its case index live under .claude/ and are local-only.
+.claude/
+CLAUDE.md
+player-saves/
