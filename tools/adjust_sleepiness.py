@@ -58,7 +58,7 @@ def new_sleepiness(category, old_val):
     if category == "fauna_territorial":
         return 0
     if category == "fauna":
-        return min(old_val, 2)
+        return 0
     if category == "townsfolk":
         return min(old_val, 5)
     if category == "player_race":

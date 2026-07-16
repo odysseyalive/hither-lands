@@ -516,6 +516,15 @@
       "note": "Three-tier disposition labels: aggressive/aligned/neutral (+territorial sub-label). Replaces ally-look-text's hostile/allied/neutral."
     },
     {
+      "id": "eco-disposition-guard",
+      "file": "src/target.c",
+      "anchor": "\tif (rf_has(mon->race->flags, RF_PLAYER)) {\n\t\t/* HITHER-LANDS:eco-disposition-label BEGIN */\n\t\tif (mon->target.midx < 0) {\n\t\t\tmy_strcat(buf, \", aggressive\", max);\n\t\t} else if (mon->target.midx > 0 ||\n\t\t\t\t   mflag_has(mon->mflag, MFLAG_FOLLOWER)) {\n\t\t\tmy_strcat(buf, \", aligned\", max);\n\t\t} else {\n\t\t\tmy_strcat(buf, \", neutral\", max);\n\t\t\tif (rf_has(mon->race->flags, RF_ANIMAL) &&\n\t\t\t\trf_has(mon->race->flags, RF_TERRITORIAL)) {\n\t\t\t\tmy_strcat(buf, \", territorial\", max);\n\t\t\t}\n\t\t}\n\t\t/* HITHER-LANDS:eco-disposition-label END */\n\t\t/* HITHER-LANDS:recruit-look BEGIN */\n\t\tif (rf_has(mon->race->flags, RF_PLAYER) &&\n\t\t\t\tmflag_has(mon->mflag, MFLAG_FOLLOWER)) {\n\t\t\tmy_strcat(buf, \", following\", max);\n\t\t}\n\t\t/* HITHER-LANDS:recruit-look END */\n\t}\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:eco-disposition-guard",
+      "payload": "\t/* HITHER-LANDS:eco-disposition-guard BEGIN */\n\t/* HITHER-LANDS:ally-look-text superseded by eco-disposition-label */\n\t/* HITHER-LANDS:eco-disposition-label BEGIN */\n\tif (mon->target.midx < 0) {\n\t\tmy_strcat(buf, \", aggressive\", max);\n\t} else if (mon->target.midx > 0 ||\n\t\t\t   mflag_has(mon->mflag, MFLAG_FOLLOWER)) {\n\t\tmy_strcat(buf, \", aligned\", max);\n\t} else {\n\t\tmy_strcat(buf, \", neutral\", max);\n\t\tif (rf_has(mon->race->flags, RF_ANIMAL) &&\n\t\t\trf_has(mon->race->flags, RF_TERRITORIAL)) {\n\t\t\tmy_strcat(buf, \", territorial\", max);\n\t\t}\n\t}\n\t/* HITHER-LANDS:eco-disposition-label END */\n\tif (rf_has(mon->race->flags, RF_PLAYER)) {\n\t\t/* HITHER-LANDS:recruit-look BEGIN */\n\t\tif (mflag_has(mon->mflag, MFLAG_FOLLOWER)) {\n\t\t\tmy_strcat(buf, \", following\", max);\n\t\t}\n\t\t/* HITHER-LANDS:recruit-look END */\n\t}\n\t/* HITHER-LANDS:eco-disposition-guard END */\n",
+      "note": "Pull disposition labels outside the RF_PLAYER guard so ALL monsters (including fauna) show aggressive/neutral/aligned labels. recruit-look stays RF_PLAYER-only."
+    },
+    {
       "id": "eco-fauna-tint",
       "file": "src/ui-map.c",
       "anchor": "\t\t\t/* HITHER-LANDS:ally-map-tint BEGIN */\n",
