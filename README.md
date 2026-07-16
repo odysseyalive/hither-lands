@@ -131,10 +131,27 @@ faangband -msdl2
 ```
 
 Step 4 put the installed binary on your `PATH` (`~/.local/bin`), so this runs
-the game with the deployed data. Select **Hither Lands** in the graphics
-options menu (`=` > Graphics). (`../FAangband/src/faangband -msdl2` also works
-with this configure — it reads the same installed data — but only after
+the game with the deployed data. (`../FAangband/src/faangband -msdl2` also
+works with this configure — it reads the same installed data — but only after
 `make install` has deployed it.)
+
+The game starts in ASCII — tiles are off until you select a tileset, and the
+selector is in the SDL2 window's own menu bar, **not** the in-game `=` options
+menu. **First start (or load) a character and get into the game world** — the
+tile-set entries are greyed out at the title screen, during character
+creation, and inside menus; the engine only allows switching at the main
+command prompt. Then click **Menu** in the bar at the top of the game window,
+then **FAangband** (the first entry — the main window), then **Tiles** >
+**Set**, and pick **Hither Lands**. The selection is remembered across sessions.
+
+Then set the tile size under **Tiles** > **Size** (also only available once
+tiles are on and you're at the command prompt). Tiles are stretched to fill
+`font cell × multiplier` on screen, and terminal fonts are about twice as tall
+as they are wide, so **keep the width multiplier at roughly 2× the height
+multiplier** or the square tiles render squashed. With a default-size font,
+**width 6 / height 3** hits both marks: square tiles at close to their native
+64px detail. A larger font reaches the same look at lower multipliers (e.g.
+4×2) — the target is a destination cell of roughly 64px.
 
 Tiles render only in the SDL2 (or X11) frontend, never in curses (`-mgcu`).
 
