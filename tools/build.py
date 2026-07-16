@@ -280,6 +280,28 @@ def main():
         print("palette: WARNING — no palette.json; tiles are NOT palette-locked "
               "(see /tileset art-direction rule 1)")
 
+    # Guard: every shapechange sprite must resolve to visible art. A `shapes`
+    # entry only binds a transform name to a grid cell (emitting a `shape:` prf
+    # line); it carries no art of its own, so the cell must be painted by a
+    # co-located tiles[] entry (a monster tile, or a maps:[] art-only tile). If
+    # that cell is fully transparent, the engine swaps the player sprite to a
+    # blank tile mid-shapechange and the character icon vanishes in-game
+    # (fa-playtest case 002: a low-level Beorning's "bear cub" form). Catch it at
+    # build time so this class of bug can never ship silently again.
+    blank_shapes = []
+    for sh in m.get("shapes", []):
+        x0, y0 = sh["col"] * ts, sh["row"] * ts
+        alpha = atlas.crop((x0, y0, x0 + ts, y0 + ts)).split()[3]
+        if alpha.getextrema()[1] == 0:   # max alpha 0 -> zero opaque pixels
+            blank_shapes.append((sh["name"], sh["row"], sh["col"]))
+    if blank_shapes:
+        detail = "; ".join(f"'{n}' at cell ({r},{c})" for n, r, c in blank_shapes)
+        sys.exit(
+            "manifest error: shapechange sprite(s) map to a fully transparent "
+            "atlas cell, so the player icon would vanish in-game -- add a tiles[] "
+            f"entry with art at that cell (or point the shape at a painted cell): "
+            f"{detail}")
+
     outdir = ROOT / "dist" / m["tileset"]["directory"]
     outdir.mkdir(parents=True, exist_ok=True)
     # Drop atlases left by a previous build at a different --size, so dist/ (and

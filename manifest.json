@@ -10366,6 +10366,34 @@
       "row": 110,
       "col": 3,
       "chroma": true
+    },
+    {
+      "source": "monsters/quadruped-fox.png",
+      "maps": [],
+      "row": 109,
+      "col": 0,
+      "chroma": true
+    },
+    {
+      "source": "monsters/quadruped-bear-cub.png",
+      "maps": [],
+      "row": 109,
+      "col": 1,
+      "chroma": true
+    },
+    {
+      "source": "monsters/bird-eagle.png",
+      "maps": [],
+      "row": 109,
+      "col": 2,
+      "chroma": true
+    },
+    {
+      "source": "monsters/golem-pukelman-shape.png",
+      "maps": [],
+      "row": 15,
+      "col": 5,
+      "chroma": true
     }
   ],
   "player_variants": [
@@ -12512,13 +12540,13 @@
     },
     {
       "name": "shining dragon",
-      "row": 109,
-      "col": 3
+      "row": 71,
+      "col": 9
     },
     {
       "name": "law dragon",
-      "row": 109,
-      "col": 4
+      "row": 58,
+      "col": 7
     },
     {
       "name": "bear",
