@@ -65,6 +65,10 @@ cd FAangband
 cd ../hither-lands
 ```
 
+```sh
+./install.sh ../FAangband
+```
+
 This builds the atlas from source tiles, copies it into `lib/tiles/`,
 registers the tileset in the build system, and applies any C source patches
 (e.g. shapechange tile display).
@@ -93,27 +97,44 @@ FAangband reads each graphics mode's tile dimensions from its registration.
 
 This process takes a while — there are over 1,400 tiles to integrate.
 
-### 6. Build FAangband
+### 6. Build and deploy FAangband
 
 ```sh
 make -C ../FAangband install
 ```
 
-A plain `make` is all you need — the in-place build reads tiles straight from this
-tree's `lib/`, so there's no `make install`. **Rebuild after every `install.sh`,**
-because it makes two small graphics-only additions to the game's code that have to
-be compiled in: **animated tiles** (so things like torches flicker and water
-ripples) and **shapeshift sprites** (so your character shows a matching picture
-when it transforms into another form). Neither changes how the game plays.
+The `install` target matters. With the `--prefix=$HOME/.local` configure from
+step 4, the compiled binary looks for its data **only** in
+`~/.local/share/faangband/` — the path is baked in at configure time, and it
+never reads the source tree's `lib/`. `make install` both compiles the game and
+deploys the game data, including this tileset, to that directory. A plain
+`make` compiles but deploys nothing, so the game won't find the tiles (or, on a
+first build, any data at all).
+
+**Re-run `make -C ../FAangband install` after every `install.sh`**, for two
+reasons: it redeploys the rebuilt tiles, and it recompiles the two small
+graphics-only additions `install.sh` patches into the game's code — **animated
+tiles** (so things like torches flicker and water ripples) and **shapeshift
+sprites** (so your character shows a matching picture when it transforms into
+another form). Neither changes how the game plays.
+
+> If you instead configured with `--with-no-install`, the rule flips: run a
+> plain `make -C ../FAangband` and skip `install` — that build mode reads tiles
+> straight from this source tree's `lib/`. Either way, `install.sh` detects
+> your tree's build mode from `config.log` and prints the correct follow-up
+> command at the end of its run.
 
 ### 7. Run
 
 ```sh
-../FAangband/src/faangband -msdl2
+faangband -msdl2
 ```
 
-Run the in-place binary from this tree. Select **Hither Lands** in the graphics
-options menu (`=` > Graphics).
+Step 4 put the installed binary on your `PATH` (`~/.local/bin`), so this runs
+the game with the deployed data. Select **Hither Lands** in the graphics
+options menu (`=` > Graphics). (`../FAangband/src/faangband -msdl2` also works
+with this configure — it reads the same installed data — but only after
+`make install` has deployed it.)
 
 Tiles render only in the SDL2 (or X11) frontend, never in curses (`-mgcu`).
 
@@ -127,10 +148,13 @@ separately *installed* binary — e.g. one built with `--prefix=$HOME/.local` an
 `make install`, sitting in `~/.local/bin/faangband` — reads its **own** copy
 under `~/.local/share/faangband/tiles/` and never sees your rebuild. Fixes:
 
-- Run the in-place binary, `../FAangband/src/faangband`, not an installed one; or
-- If you do use a prefixed install, re-run `install.sh ../FAangband` **and**
-  `make -C ../FAangband install` after every tileset change, and launch the
-  binary from that prefix. Build location and run location must match.
+- If you followed the Quick Start (`--prefix=$HOME/.local`), re-run
+  `install.sh ../FAangband` **and** `make -C ../FAangband install` after every
+  tileset change — both the installed `faangband` and the in-place
+  `src/faangband` read the deployed copy under `~/.local/share/faangband/`; or
+- If your tree is configured `--with-no-install`, run the in-place binary,
+  `../FAangband/src/faangband`, after a plain `make` — that build mode reads
+  this tree's `lib/tiles/` directly. Build location and run location must match.
 
 To confirm what's actually deployed, compare the registration and atlas the game
 reads:
