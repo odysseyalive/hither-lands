@@ -451,6 +451,78 @@
       "sentinel": "HITHER-LANDS:recruit-look",
       "payload": "\t\t/* HITHER-LANDS:recruit-look BEGIN */\n\t\tif (rf_has(mon->race->flags, RF_PLAYER) &&\n\t\t\t\tmflag_has(mon->mflag, MFLAG_FOLLOWER)) {\n\t\t\tmy_strcat(buf, \", following\", max);\n\t\t}\n\t\t/* HITHER-LANDS:recruit-look END */\n",
       "note": "append ', following' to the look/examine text for a recruited follower"
+    },
+    {
+      "id": "eco-neutral-spawn",
+      "file": "src/mon-make.c",
+      "anchor": "\t} else {\n\t\t/* Set to target the player */\n\t\tmon->target.midx = -1;\n\t}\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:eco-neutral-spawn",
+      "payload": "\t} else {\n\t\t/* HITHER-LANDS:eco-neutral-spawn BEGIN */\n\t\t/* Living ecosystem: classify non-player-race monsters by\n\t\t * faction.  Fauna (ANIMAL, not EVIL) and sessile creatures\n\t\t * (NEVER_MOVE, not evil/undead/demon) spawn neutral.\n\t\t * CHARM bonus: animals never hostile for a charming player.\n\t\t * Vaults force fauna hostile (same as player-race). */\n\t\tif (player_has(player, PF_CHARM) &&\n\t\t\trf_has(race->flags, RF_ANIMAL) &&\n\t\t\t!rf_has(race->flags, RF_EVIL) &&\n\t\t\t!square_isvault(c, grid)) {\n\t\t\tmon->target.midx = 0;\n\t\t} else if (rf_has(race->flags, RF_UNDEAD) ||\n\t\t\t\t   rf_has(race->flags, RF_DEMON) ||\n\t\t\t\t   (rf_has(race->flags, RF_EVIL) &&\n\t\t\t\t    !rf_has(race->flags, RF_ANIMAL))) {\n\t\t\tmon->target.midx = -1;\n\t\t} else if (rf_has(race->flags, RF_ANIMAL) &&\n\t\t\t\t   !rf_has(race->flags, RF_EVIL) &&\n\t\t\t\t   !square_isvault(c, grid)) {\n\t\t\tmon->target.midx = 0;\n\t\t} else if (rf_has(race->flags, RF_NEVER_MOVE) &&\n\t\t\t\t   !rf_has(race->flags, RF_EVIL) &&\n\t\t\t\t   !rf_has(race->flags, RF_UNDEAD) &&\n\t\t\t\t   !rf_has(race->flags, RF_DEMON) &&\n\t\t\t\t   !square_isvault(c, grid)) {\n\t\t\tmon->target.midx = 0;\n\t\t} else {\n\t\t\tmon->target.midx = -1;\n\t\t}\n\t\t/* HITHER-LANDS:eco-neutral-spawn END */\n\t}\n",
+      "note": "Core ecosystem: fauna (ANIMAL, not EVIL) and sessile (NEVER_MOVE, not evil/undead/demon) spawn neutral. CHARM forces animal neutrality. Vaults force hostility. Replaces the blanket target.midx=-1 fallback."
+    },
+    {
+      "id": "eco-fauna-behavior",
+      "file": "src/mon-move.c",
+      "anchor": "/* HITHER-LANDS:ally-seek-fn BEGIN */\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:eco-fauna-behavior",
+      "payload": "/* HITHER-LANDS:eco-fauna-behavior BEGIN */\n/*\n * Fauna behavior for neutral animals (Hither Lands ecosystem).\n *\n * TERRITORIAL: turn hostile if player enters half hearing range.\n * FRIGHTENED or low-level: flee when player gets close.\n * Default: startled (brief fear) if player bumps adjacent.\n * CHARM suppresses all proximity aggro for animals.\n */\nstatic void hl_fauna_behavior(struct monster *mon)\n{\n\tint dis;\n\n\tif (mon->target.midx != 0) return;\n\tif (!rf_has(mon->race->flags, RF_ANIMAL)) return;\n\tif (mon->player_race) return;\n\n\tdis = distance(mon->grid, player->grid);\n\n\tif (player_has(player, PF_CHARM)) return;\n\n\tif (rf_has(mon->race->flags, RF_TERRITORIAL)) {\n\t\tif (dis <= mon->race->hearing / 2) {\n\t\t\tmon->target.midx = -1;\n\t\t\tmonster_wake(mon, false, 100);\n\t\t}\n\t\treturn;\n\t}\n\n\tif (rf_has(mon->race->flags, RF_FRIGHTENED) ||\n\t\tmon->race->level < player->lev / 2) {\n\t\tif (dis <= mon->race->hearing / 3) {\n\t\t\tmon_inc_timed(mon, MON_TMD_FEAR, 5 + randint0(5),\n\t\t\t\t\t\t  MON_TMD_FLG_NOMESSAGE);\n\t\t}\n\t\treturn;\n\t}\n\n\tif (dis <= 1) {\n\t\tmon_inc_timed(mon, MON_TMD_FEAR, 3 + randint0(3),\n\t\t\t\t\t  MON_TMD_FLG_NOMESSAGE);\n\t}\n}\n/* HITHER-LANDS:eco-fauna-behavior END */\n\n",
+      "note": "Fauna AI: territorial animals aggro at half hearing range, skittish prey flee, indifferent animals startle on contact. CHARM suppresses all proximity aggro."
+    },
+    {
+      "id": "eco-sessile-aggro",
+      "file": "src/mon-move.c",
+      "anchor": "\t/* HITHER-LANDS:ally-seek-call BEGIN */\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:eco-sessile-aggro",
+      "payload": "\t/* HITHER-LANDS:eco-sessile-aggro BEGIN */\n\tif (mon->target.midx == 0 &&\n\t\trf_has(mon->race->flags, RF_NEVER_MOVE) &&\n\t\tdistance(mon->grid, player->grid) <= 1) {\n\t\tmon->target.midx = -1;\n\t}\n\t/* HITHER-LANDS:eco-sessile-aggro END */\n\n",
+      "note": "Sessile neutrals (molds, mushrooms) turn hostile only when the player is adjacent (melee range)."
+    },
+    {
+      "id": "eco-fauna-call",
+      "file": "src/mon-move.c",
+      "anchor": "\t/* HITHER-LANDS:eco-sessile-aggro BEGIN */\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:eco-fauna-call",
+      "payload": "\t/* HITHER-LANDS:eco-fauna-call BEGIN */\n\thl_fauna_behavior(mon);\n\t/* HITHER-LANDS:eco-fauna-call END */\n\n",
+      "note": "Hook fauna behavior into monster_turn before sessile-aggro and ally-seek."
+    },
+    {
+      "id": "eco-charm-recruit",
+      "file": "src/cmd-cave.c",
+      "anchor": "\t/* Only well-disposed player-race folk will consider joining */\n\tif (!mon->player_race || (mon->target.midx != 0)) {\n\t\tmsg(\"%s refuses to join you.\", m_name);\n\t\treturn;\n\t}\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:eco-charm-recruit",
+      "payload": "\t/* HITHER-LANDS:eco-charm-recruit BEGIN */\n\t/* Player-race folk or animals (if player has BEGUILE) may join */\n\tif (mon->target.midx != 0) {\n\t\tmsg(\"%s refuses to join you.\", m_name);\n\t\treturn;\n\t}\n\tif (!mon->player_race &&\n\t\t!(player_has(player, PF_BEGUILE) &&\n\t\t  rf_has(mon->race->flags, RF_ANIMAL) &&\n\t\t  !rf_has(mon->race->flags, RF_EVIL))) {\n\t\tmsg(\"%s refuses to join you.\", m_name);\n\t\treturn;\n\t}\n\t/* HITHER-LANDS:eco-charm-recruit END */\n",
+      "note": "Extend recruitment to neutral animals for players with PF_BEGUILE (Druid specialty). Replaces the player-race-only eligibility check inside recruit-fn."
+    },
+    {
+      "id": "eco-charm-ally-seek",
+      "file": "src/mon-move.c",
+      "anchor": "\t/* Only player-race monsters can be allies, and only while neutral. */\n\tif (!mon->player_race || mon->target.midx != 0) return;\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:eco-charm-ally-seek",
+      "payload": "\t/* HITHER-LANDS:eco-charm-ally-seek BEGIN */\n\t/* Allies: player-race neutrals, or any follower (incl. animals) */\n\tif (mon->target.midx != 0) return;\n\tif (!mon->player_race && !mflag_has(mon->mflag, MFLAG_FOLLOWER)) return;\n\t/* HITHER-LANDS:eco-charm-ally-seek END */\n",
+      "note": "Extend ally enemy-seeking to animal followers (MFLAG_FOLLOWER), not just player-race neutrals. Replaces the guard clause inside ally-seek-fn."
+    },
+    {
+      "id": "eco-disposition-label",
+      "file": "src/target.c",
+      "anchor": "\t\t/* HITHER-LANDS:ally-look-text BEGIN */\n\t\tif (mon->target.midx < 0) {\n\t\t\t/* Hostile monsters */\n\t\t\tmy_strcat(buf, \", hostile\", max);\n\t\t} else if (mon->target.midx > 0) {\n\t\t\t/* Actively fighting the player's enemies */\n\t\t\tmy_strcat(buf, \", allied\", max);\n\t\t} else {\n\t\t\t/* Not hostile, but idle */\n\t\t\tmy_strcat(buf, \", neutral\", max);\n\t\t}\n\t\t/* HITHER-LANDS:ally-look-text END */\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:eco-disposition-label",
+      "payload": "\t\t/* HITHER-LANDS:eco-disposition-label BEGIN */\n\t\tif (mon->target.midx < 0) {\n\t\t\tmy_strcat(buf, \", aggressive\", max);\n\t\t} else if (mon->target.midx > 0 ||\n\t\t\t\t   mflag_has(mon->mflag, MFLAG_FOLLOWER)) {\n\t\t\tmy_strcat(buf, \", aligned\", max);\n\t\t} else {\n\t\t\tmy_strcat(buf, \", neutral\", max);\n\t\t\tif (rf_has(mon->race->flags, RF_ANIMAL) &&\n\t\t\t\trf_has(mon->race->flags, RF_TERRITORIAL)) {\n\t\t\t\tmy_strcat(buf, \", territorial\", max);\n\t\t\t}\n\t\t}\n\t\t/* HITHER-LANDS:eco-disposition-label END */\n",
+      "note": "Three-tier disposition labels: aggressive/aligned/neutral (+territorial sub-label). Replaces ally-look-text's hostile/allied/neutral."
+    },
+    {
+      "id": "eco-fauna-tint",
+      "file": "src/ui-map.c",
+      "anchor": "\t\t\t/* HITHER-LANDS:ally-map-tint BEGIN */\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:eco-fauna-tint",
+      "payload": "\t\t\t/* HITHER-LANDS:eco-fauna-tint BEGIN */\n\t\t\tif (use_graphics == GRAPHICS_NONE &&\n\t\t\t\tmon->target.midx == 0 &&\n\t\t\t\trf_has(mon->race->flags, RF_ANIMAL) &&\n\t\t\t\t!mon->player_race) {\n\t\t\t\tif (rf_has(mon->race->flags, RF_TERRITORIAL)) {\n\t\t\t\t\ta = COLOUR_YELLOW;\n\t\t\t\t} else {\n\t\t\t\t\ta = COLOUR_L_UMBER;\n\t\t\t\t}\n\t\t\t}\n\t\t\t/* HITHER-LANDS:eco-fauna-tint END */\n",
+      "note": "ASCII-mode colour tint for neutral fauna: yellow=territorial, light umber=other. Runs before ally-map-tint."
     }
   ]
 }
