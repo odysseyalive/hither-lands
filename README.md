@@ -148,10 +148,20 @@ Then set the tile size under **Tiles** > **Size** (also only available once
 tiles are on and you're at the command prompt). Tiles are stretched to fill
 `font cell × multiplier` on screen, and terminal fonts are about twice as tall
 as they are wide, so **keep the width multiplier at roughly 2× the height
-multiplier** or the square tiles render squashed. With a default-size font,
-**width 6 / height 3** hits both marks: square tiles at close to their native
-64px detail. A larger font reaches the same look at lower multipliers (e.g.
-4×2) — the target is a destination cell of roughly 64px.
+multiplier** or the square tiles render squashed. With the default `10x20`
+font, **width 6 / height 3** hits both marks: square tiles at close to their
+native 64px detail. The target is a destination cell of roughly 64px:
+`font width × width multiplier` should equal `font height × height multiplier`,
+landing near 64.
+
+The **font** is set under **Menu** > **FAangband** > **Font** > **Name** and
+couples directly to tile size, so pick the pair together. The bundled bitmap
+fonts (`5x8x.fon` … `16x24x.fon`) are fixed-size; only the `16x16xw.woff`
+vector font responds to **Font** > **Size**. A comfortable readable combo:
+**`12x24x.fon` with tiles at 6×3** (72×72 px tiles, square). Other square
+pairings: `8x16` at 8×4 (64px), `16x24` at 3×2 (48px). All of these choices
+persist in the frontend's `sdl2init.txt` in its user directory, so they're
+one-time setup.
 
 Tiles render only in the SDL2 (or X11) frontend, never in curses (`-mgcu`).
 
