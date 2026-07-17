@@ -2,6 +2,11 @@ dist/
 __pycache__/
 .claude-backups/
 
+# Derived tile catalog — regenerated from manifest.json + the built atlas by the
+# /tile-index skill. Ignored (like dist/) so it can never rot into a competing
+# source of truth; regenerate it, never hand-edit it.
+docs/tile-index.md
+
 # Local nanobanana/Gemini MCP wiring — kept out of the repo entirely.
 # .env holds the real key; .env.example is the local template; .mcp.json is the
 # machine-specific project MCP registration. None are tracked.
