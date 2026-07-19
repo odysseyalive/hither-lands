@@ -36,8 +36,19 @@ MAX_TEXTURE = 8192
 FAMILY_TOL = 50  # for "family" mode: how far magenta must dominate green
 BG_COLOR = (23, 19, 16)  # #171310 — the shared dark background
 
+# AI renders often leave an impure-magenta fringe (e.g. (255,70,250)) a pixel or
+# two in from the frame — too far from pure #FF00FF for the tight chroma key, so
+# it survives as opaque magenta and LANCZOS-downscales into a faint colored edge
+# line. The tight key sweeps this outer ring for magenta-DOMINANT pixels too, so
+# the fringe dies at full resolution (before it can bleed) while genuine purple
+# detail in the interior is untouched. ALPHA_FLOOR then clears any sub-threshold
+# feathering the resize leaves — invisible as art, but the SDL2 front-end scales
+# it into a visible line.
+EDGE_BAND_FRAC = 0.03  # outer ring (fraction of the shorter side) swept for fringe
+ALPHA_FLOOR = 16       # alpha below this reads as invisible art but renders as a line
 
-def key_out_chroma(img, family=False):
+
+def key_out_chroma(img, family=False, edge_fringe=False):
     """Make the magenta background transparent.
 
     Tight mode (default): only near-pure #FF00FF. Safe for sprites that may
@@ -47,11 +58,21 @@ def key_out_chroma(img, family=False):
     large) — also removes the darkened-magenta drop shadows the generator
     bakes under buildings. Do NOT use on art with genuine purple (the magic
     shop therefore uses a deep-blue roof, which survives this key).
+
+    edge_fringe (tight mode only): additionally apply the magenta-dominant
+    family test, but confined to the outer EDGE_BAND_FRAC ring. This catches the
+    impure-magenta edge fringe the near-pure test misses, before it bleeds into
+    a faint edge line — without touching interior detail (see EDGE_BAND_FRAC).
     """
     img = img.convert("RGBA")
     px = img.load()
     w, h = img.size
+    band = int(min(w, h) * EDGE_BAND_FRAC) if edge_fringe else 0
     for y in range(h):
+        # In edge-fringe mode, whole top/bottom band rows are "near an edge"; on
+        # interior rows only the left/right band columns are. Precomputing this
+        # per row keeps the interior fast (a couple of int compares, no min()).
+        row_edge = band and (y < band or y >= h - band)
         for x in range(w):
             r, g, b, a = px[x, y]
             if family:
@@ -60,6 +81,10 @@ def key_out_chroma(img, family=False):
                 hit = (abs(r - CHROMA[0]) < CHROMA_TOL
                        and abs(g - CHROMA[1]) < CHROMA_TOL
                        and abs(b - CHROMA[2]) < CHROMA_TOL)
+                if (not hit and band
+                        and (row_edge or x < band or x >= w - band)
+                        and (r - g > FAMILY_TOL) and (b - g > FAMILY_TOL)):
+                    hit = True
             if hit:
                 px[x, y] = (r, g, b, 0)
     return img
@@ -133,6 +158,21 @@ def snap_to_palette(img, palette):
     return q
 
 
+def floor_alpha(img, threshold=ALPHA_FLOOR):
+    """Zero pixels whose alpha is below `threshold`.
+
+    A near-invisible feather (a few % opacity) is imperceptible as art, but the
+    SDL2 front-end composites and scales it into a faint line. Real anti-aliased
+    silhouettes keep their meaningful (higher-alpha) body; only the faintest
+    feather is trimmed. Applied once to the assembled atlas so tiles, player
+    variants and shapes are treated uniformly.
+    """
+    rgba = img.convert("RGBA")
+    a = rgba.split()[3].point(lambda v: 0 if v < threshold else v)
+    rgba.putalpha(a)
+    return rgba
+
+
 def _progress(label, done, total):
     """Live progress bar on stderr (visible even when stdout is piped to tail)."""
     width = 28
@@ -158,7 +198,7 @@ def render_tile_image(spec, source_rel, ts):
     if spec.get("chroma") == "family":
         img = key_out_chroma(img, family=True)
     elif spec.get("chroma"):
-        img = key_out_chroma(img)
+        img = key_out_chroma(img, edge_fringe=True)
     img = img.convert("RGBA").resize((ts, ts), Image.LANCZOS)
     if spec.get("margin"):
         img = apply_margin_fade(img)
@@ -247,15 +287,9 @@ def main():
         seen.add(pos)
         if pv["row"] > 0x7F or pv["col"] > 0x7F:
             sys.exit(f"manifest error: cell {pos} beyond the 128x128 prf limit")
-        src = ROOT / "source-tiles" / pv["source"]
-        if not src.is_file():
-            sys.exit(f"missing source tile: {src}")
-        img = Image.open(src)
-        if pv.get("chroma") == "family":
-            img = key_out_chroma(img, family=True)
-        elif pv.get("chroma"):
-            img = key_out_chroma(img)
-        img = img.convert("RGBA").resize((ts, ts), Image.LANCZOS)
+        # Player variants get the identical chroma/resize/fringe treatment as
+        # tiles (they carry no margin/ground/frames keys, so those steps no-op).
+        img = render_tile_image(pv, pv["source"], ts)
         need_w = (pv["col"] + 1) * ts
         need_h = (pv["row"] + 1) * ts
         if need_w > atlas.width or need_h > atlas.height:
@@ -279,6 +313,12 @@ def main():
     else:
         print("palette: WARNING — no palette.json; tiles are NOT palette-locked "
               "(see /tileset art-direction rule 1)")
+
+    # Clear near-invisible feathering/fringe from the whole atlas at once. NOTE:
+    # this runs before the shape blank-cell guard below, so that guard's "zero
+    # opaque pixels" test now means "zero pixels >= ALPHA_FLOOR alpha" — a
+    # correct strengthening (a near-invisible shape sprite should also fail).
+    atlas = floor_alpha(atlas)
 
     # Guard: every shapechange sprite must resolve to visible art. A `shapes`
     # entry only binds a transform name to a grid cell (emitting a `shape:` prf
