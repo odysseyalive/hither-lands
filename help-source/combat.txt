@@ -1,0 +1,52 @@
+{tile:capital:O| }           Of Arms and the Manner of Fighting
+            ==================================
+            "That knife was made by Telchar of Nogrod... iron it would
+            cleave as if it were green wood."
+            -- The Silmarillion, ch. 19
+            Melee
+            -----
+            Walk into a foe and you strike it.  Bare hands are a poor
+argument
+in Beleriand, so bear a weapon and take it up with
+'{key:Wear/wield an item}'.  Each blow rolls your skill against the
+target's armour, and a miss is no damage at all.  Weapon damage is
+its dice plus enchantment, and your blows per round grow with STR
+and DEX and shrink with the weapon's weight -- warriors reach six
+blows, pure casters four, the rest five.  Rings and other worn
+gear add their to-hit and to-dam to your melee strikes.
+
+Shooting and throwing
+---------------------
+
+Fire ammunition with '{key:Fire your missile weapon}', or loose at
+the nearest foe without aiming -- Appendix I gives that key for your
+keyset.  Throw things with '{key:Throw an item}'.  Only a matching
+launcher gives ammunition its full power, for the bow's multiplier
+scales the whole shot.  Choose your mark with
+'{key:Target monster or location}', or take the closest foe with
+'{key:Target closest monster}'.
+
+Armour and resistance
+---------------------
+
+Armour class turns blows aside and softens what lands, though heavy
+body armour costs a little accuracy.  Elemental resistances are
+percentages that stack multiplicatively, and temporary resistance
+adds another layer.  Fire, cold, acid, lightning, poison, and
+confusion are the six to secure first.  The elements also ruin
+your goods -- fire eats scrolls, acid armour, cold potions,
+lightning rings and wands -- so resistance guards your pack too.
+
+Perils of the deep
+------------------
+
+Dragon-breath takes a share of the beast's own vigour, less at a
+distance, for there is no dodging it, only resisting.  The undead
+drain your experience, and hold life is the true shield there.
+Stunning spoils your aim and your spells; free action wards off
+magical paralysis.  Speed is the king of stats, and ten points of it
+doubles you.
+
+The Enemy's creatures may be afflicted in their turn.  Stun,
+confuse, slow, frighten or hold them, and every such state opens
+them to heavier critical strikes.

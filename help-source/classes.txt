@@ -1,0 +1,47 @@
+{tile:capital:O| }           Of Callings and Crafts
+            ======================
+            "Aurë entuluva!  Day shall come again!"
+            -- The Silmarillion, ch. 20
+            Nine callings are open to you.  Casters draw upon INT or WIS as
+            noted; Warriors draw upon nothing but themselves, as Húrin did.
+            The nine classes
+            ----------------
+
+  Warrior     - pure battle; the most blows, the best survival by
+                steel alone, no spells ever.  Begins with a bonus
+                specialty.
+  Mage (INT)  - feeble at first, near-boundless at last; the best
+                user of wands and staves in the late game.
+  Priest (WIS)- servant of the Valar; prayers are GRANTED, not
+                chosen, and hafted or blessed weapons please them.
+  Druid (WIS) - keeper of growing things; fights unarmed, charms
+                and commands beasts (of which see Of Companions on
+                the Road).
+  Necromancer (INT) - walks in self-made darkness that light
+                disrupts; terrible power at a terrible price.
+  Paladin (WIS) - the second-best fighter, praying slowly but
+                striking hard; STR and WIS together.
+  Rogue (INT) - the best stealth and perception; steals from
+                monsters with '{key:Steal from a monster}', sets
+                traps, opens what is shut.
+  Ranger (WIS)- the master of the bow, with woodcraft and a fair
+                sword-arm besides.
+  Blackguard (INT) - a brutal brawler in heavy gear, spending
+                blood for dark spellcraft; very hard to kill.
+
+Specialties
+-----------
+
+FAangband's specialty abilities set your character apart from all
+others of the same calling.  You choose one at first level
+(Warriors choose two), and earn further choices as you prove
+yourself against the great enemies of the Age -- three or four in
+a full life.  Review yours with '{key:View abilities}'; casters
+gain new spells with '{key:Gain new spells}'.
+
+Specialties run from armsmanship, evasion, and shield mastery to
+channeling, meditation, rapid fire, and stranger arts.  Two touch
+the living world itself: Charm soothes the beasts of the wild so
+they never turn on you unprovoked, and Beguile (a Druid specialty)
+lets you charm animals to your side.  Of these also Of Companions
+on the Road tells.

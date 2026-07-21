@@ -1,0 +1,42 @@
+{tile:capital:O| }           Of Havens and Markets
+            =====================
+            The towns of the free peoples shelter four or nine numbered
+            doors,
+            and the townsfolk between them -- urchins, drunks, and worse,
+            hardly
+            worth a blow, and sometimes worth some care for your purse.
+            The shops
+
+---------
+
+  1  General Store - food, torches, oil, cloaks, picks and
+                     shovels; the town's dependable larder.
+  2  Armoury       - mail and shields, richer as you prove
+                     yourself below.
+  3  Weaponsmith   - blades, bows, and ammunition.
+  4  Bookseller    - the simpler books of every realm.
+  5  Alchemist     - potions and scrolls, Word of Recall among
+                     them.
+  6  Magic Shop    - rings, amulets, wands, and staves; sell a
+                     spent wand and buy it back recharged.
+  7  Black Market  - anything at all, for far too much.
+  8  Home          - your own storeroom, and the one honest
+                     price in town.
+
+Within a shop, 'p' or 'g' buys, 's' or 'd' sells (or stashes, at
+home), 'l' or 'x' examines a ware, and ESC takes you out again.
+
+The terms of trade
+------------------
+
+By the default birth options the shops will pay nothing for your
+loot, and your gold must come out of the deeps instead.  Shopkeepers
+refuse what they know to be dross, and they will buy an unknown thing
+with a merchant's confidence, so that selling a mystery is a fair way
+to learn what it was.  Stock shifts only while you are long away;
+what you sold may be gone when you return, and a shop bought empty
+restocks entirely.
+
+Nothing here is quite as it was in the songs -- no market of
+Menegroth, no forges of Nogrod -- but a shovel bought is a shovel, in
+any Age.

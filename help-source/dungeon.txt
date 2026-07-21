@@ -1,0 +1,55 @@
+{tile:capital:O| }           Of Delvings, and How to Walk in Them
+            ====================================
+            Beneath every dungeon-marked hill and fortress of the map lie
+            levels
+            without end.  Stand upon a down-stair and press
+            '{key:Go down staircase}' to descend; '{key:Go up staircase}'
+            climbs
+            back toward the light.  A level once left is gone forever, for
+the
+deeps are vaster than any map, so take what you need the first time.
+Most levels offer one stair up and two down.
+
+Light
+-----
+
+Without light you are blind, and there is no reading, no casting, no
+picking of locks, no seeing of traps.  Carry a torch or a lamp and
+spare fuel with it, and refuel with '{key:Fuel your light source}'
+before the dark surprises you.  Rooms may be lit or unlit, and the
+deeper you go the darker they are.  Necromancers alone walk
+lightless, by choice and by art.
+
+Traps and doors
+---------------
+
+Traps lie hidden until your wits uncover them -- a passive skill,
+for there is no search command -- or until you blunder into one;
+'^' marks those you know of.  Disarm with
+'{key:Disarm a trap or chest}', and carefully.  Trap-detection magic
+marks out a green zone of safety, but it is a snapshot only, and what
+the monsters dig afterward it does not know.  Doors are '+' when shut
+and ''' when open, and a secret door wears the look of plain granite
+until you pass close by it.  Open with '{key:Open a door or a chest}'
+and close with '{key:Close a door}'.
+
+Mining
+------
+
+Quartz veins '*' hold the richest strikes, and magma '%' the lesser.
+Dig as Appendix I directs, and the game will wield your best digger
+unbidden.  Always carry one, for rock can close behind you, and a
+shovel has saved more lives than many a sword.
+
+Reading a level
+---------------
+
+On arrival the level tells you something of itself, a danger feeling
+from "quiet and peaceful" to "omens of death", and, as you explore, a
+promise of treasure from cobwebs to superb.  Rest with
+'{key:Rest for a while}', survey with '{key:Full dungeon map}', and
+scroll the map with '{key:Locate player on map}'.
+
+At the last depth of Angband, past every terror of the descent,
+Morgoth himself bars the way down.  There is no level beneath him.
+There does not need to be.

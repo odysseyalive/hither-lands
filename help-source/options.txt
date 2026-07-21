@@ -1,0 +1,53 @@
+Options
+=======
+
+Press '=' (both keysets) to interact with options.  User Interface
+options may be changed at any time; Birth options are fixed for a
+character's whole life and matter only when a new one is made.
+On the option pages, 's' saves your settings as defaults for later
+characters and 'r' resets to the defaults for new characters.
+
+The two keysets
+---------------
+
+The FIRST entry on the User Interface page is "Rogue-like
+commands".  Off (the default), you use the original keyset shown
+in the commands help file; on, you use the roguelike keyset, where
+the letters hjklyubn walk and their capitals run.  This help
+system follows you: '?' opens the reference for whichever keyset
+is active.
+
+User interface options worth knowing
+------------------------------------
+
+  Always pickup items          - no prompt to gather what you step on
+  Use old target by default    - keep shooting the same foe
+  Show damage player deals     - numbers with your blows
+  Disturb whenever viewable monster moves - safer, noisier
+  Automatically clear -more- prompts      - faster, riskier
+  Player color indicates low hitpoints    - '@' warns you in ASCII
+  Show unique monsters in purple          - the great foes stand out
+  Center map continuously      - the view follows you
+  Notify on object recharge    - know when the rod is ready
+  Use sound                    - as it says
+
+Birth options worth knowing
+---------------------------
+
+  Start with a kit of useful gear   - gear instead of gold (default on)
+  Increase gold but disable selling - shops buy nothing (default on)
+  Show level feelings               - sense a level's promise
+  Generate levels with connected stairs
+  Force player descent + Word of Recall has no effect - the
+  ironman's road: down, only down, and no way home.
+
+Graphics and the Hither Lands tiles
+-----------------------------------
+
+Tiles are chosen in the SDL2 frontend's menu bar, not on the '='
+screen.  Start the game with the SDL2 interface, load or create a
+character, then open the menu at the top: FAangband -> Tiles ->
+Set -> Hither Lands.  Under Tiles -> Size, keep the width about
+twice the height (6x3 suits a 10x20 font).  The choice persists.
+Tile animation and shapechange sprites need no option; they simply
+happen wherever the tileset provides them.

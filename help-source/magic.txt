@@ -1,0 +1,44 @@
+{tile:capital:O| }           Of Song and Spellcraft
+            ======================
+            "For Felagund strove with Sauron in songs of power, and the
+            power of the King was very great; but Sauron had the mastery."
+            -- The Silmarillion, ch. 19
+            Power in the Elder Days is sung, and prayed, and studied.  Four
+            realms of five books each serve the four kinds of caster:
+            Arcane (INT)  - the Mage's study, and a little of the Rogue's.
+
+  Shadow (INT)  - the Necromancer's dark road; the Blackguard
+                  borrows its destructions.
+  Holy (WIS)    - the Priest's prayers, granted by the Valar in
+                  their own order, not chosen; the Paladin prays
+                  more slowly and never reaches the highest.
+  Nature (WIS)  - the Druid's verses; the Ranger sings the
+                  survival-songs of wood and trail.
+
+Warriors have no spell points and want none.  Pure casters use
+all five books of their realm, and the hybrid callings only the
+first few.
+
+Casting
+-------
+
+Cast or pray with '{key:Cast a spell}', browse a book with
+'{key:Browse a book}', and learn new spells with
+'{key:Gain new spells}' when your level allows.  Casting takes a full
+turn.  Failure starts common and grows rare with level, and the great
+casters come to fail not at all.
+Casting beyond your spell points is possible, and it asks a price --
+the attempt may leave you drained, or paralyzed mid-word.
+
+You cannot cast blind or confused, and every caster but the
+Necromancer needs light to read by.  The Necromancer reads the
+dark itself, and light is a wound to that art.
+
+Devices
+-------
+
+Wands are aimed with '{key:Aim a wand}', staves used with
+'{key:Use a staff}', rods zapped with '{key:Zap a rod}', and worn
+things activated with '{key:Activate an object}'.  Devices obey
+skill and not realm, and even a Warrior may lean on a good wand,
+though it is the Mage who outshoots everyone with them in the end.

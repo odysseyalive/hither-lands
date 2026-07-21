@@ -1,0 +1,108 @@
+{tile:capital:A| }           A Traveller's Guide to Beleriand
+            ================================
+            Being certain leaves gathered for those who come late over the
+            Blue Mountains, and would go armed into the West.
+            -- compiled at the Fords of Sarn
+            You have crossed Ered Luin out of Eriador, and Beleriand lies
+            open
+            before you.  It is a fair land and an old one, and much of it is
+held
+by folk who will not thank you for wandering in.  What follows is set
+down for the newcomer, and tells where the roads run, whom you may
+meet upon them, and what a traveller ought to carry.
+
+Choose a chapter by its letter.  SPACE turns the page and ESC closes
+the book; '?' brings you back to these contents from anywhere within.
+
+OF THE ROAD HITHER
+------------------
+
+  (a) Of Coming into Beleriand -- the making of a traveller
+  (b) Of the Peoples of the West -- the kindreds you may claim
+  (c) Of Callings and Crafts -- what a traveller may be trained to
+
+THE LAND ITSELF
+---------------
+
+  (d) Of Beleriand and Its Realms -- the wilderness and its roads
+  (e) A Gazetteer of the Deep Places -- the delvings and their tales
+  (f) Of Delvings, and How to Walk in Them -- doors, stairs, light
+  (g) Of the Years -- where in the First Age you now stand
+
+THE FOLK YOU WILL MEET
+----------------------
+
+  (h) Of Beasts and Fell Things -- the bestiary, by kindred
+  (i) Of Companions on the Road -- those who will walk with you
+  (j) Of Havens and Markets -- lodging, trade, and the storehouse
+
+COUNSEL FOR THE ROAD
+--------------------
+
+  (k) Of Arms and the Manner of Fighting
+  (l) Of Song and Spellcraft
+  (m) Of Goods and Gear, and What They Are Worth
+  (n) Of the Great Treasures -- the artefacts, told lightly
+  (o) Of Skin-Changing -- the wearing of a beast's form
+  (p) Of Skin-Changing: the Full Particulars -- SPOILERS within
+
+APPENDICES
+----------
+
+  (q) Appendix I: The Ordering of Deeds -- every command and its key
+  (r) Appendix II: The Marks upon the Map -- symbols and colours
+  (s) Appendix III: Of the Painted Tiles -- the Hither Lands tileset
+  (t) Appendix IV: On Settings -- the options screens
+  (u) Appendix V: On Keymaps and Pref Files
+
+The keys named throughout this book are your own.  Change your keyset
+in the options and the letters in these pages change with you, so
+what you read here is always what you may press.
+
+Within a chapter, '#' goes to a line, '%' opens another file, '/'
+searches, and '&' highlights what you name.  '-' turns back a page.
+
+Deeper counsel than these leaves can hold is kept by the loremasters
+at https://faangband.readthedocs.io/
+
+.. menu:: [a] birth.txt
+
+.. menu:: [b] races.txt
+
+.. menu:: [c] classes.txt
+
+.. menu:: [d] world.txt
+
+.. menu:: [e] places.txt
+
+.. menu:: [f] dungeon.txt
+
+.. menu:: [g] timeline.txt
+
+.. menu:: [h] monsters.txt
+
+.. menu:: [i] allies.txt
+
+.. menu:: [j] stores.txt
+
+.. menu:: [k] combat.txt
+
+.. menu:: [l] magic.txt
+
+.. menu:: [m] objects.txt
+
+.. menu:: [n] artifacts.txt
+
+.. menu:: [o] shapes.txt
+
+.. menu:: [p] shapes-spoiler.txt
+
+.. menu:: [q] commands.txt
+
+.. menu:: [r] symbols.txt
+
+.. menu:: [s] tiles.txt
+
+.. menu:: [t] options.txt
+
+.. menu:: [u] customize.txt

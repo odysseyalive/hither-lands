@@ -1,0 +1,95 @@
+{tile:capital:O|O}           f Beasts and Fell Things
+            =========================
+            "...thus did Melkor breed the hideous
+            race of the Orcs in envy and mockery
+            of the Elves..."
+                    -- The Silmarillion, ch. 3
+            Beleriand is not empty, and little of
+            what fills it wishes you well.  One
+who can name a thing before it reaches him lives longer than one
+who cannot, so the kindreds are set out below with the mark each
+bears upon the map.
+
+Look before you strike.  Press '{key:Look around}' and the cursor will
+walk from creature to creature, naming each and telling what is known
+of it.  '{key:Identify symbol}' will name a symbol you do not know, and
+'{key:Display visible monster list}' lists everything presently in your
+sight.  Not all of it is your enemy; of neutral beasts and of those who
+will walk with you, see Of Companions on the Road.
+
+The great kindreds
+------------------
+
+  {tile:beast:cave orc| }       Orcs
+          the hosts of Angband, slave-snaga driven to
+          war by greater uruks and captains.
+          upon the map, 'o'
+
+  {tile:beast:hill troll| }       Trolls
+          stone-hided brutes bred in mockery of Ents;
+          some cannot bear the light.
+          upon the map, 'T'
+
+  {tile:beast:Glaurung, Father of the Dragons| }       Dragons
+          Glaurung's wingless fire-drakes first, winged
+          terrors late; colour tells element.
+          upon the map, 'd' and 'D'
+
+  {tile:beast:warg| }       Wolves
+          wargs and the werewolves of Sauron's
+          breeding; they hunt in packs.
+          upon the map, 'C' and 'Z'
+
+  {tile:beast:giant spider| }       Spiders
+          the brood of Ungoliant, spinners of darkness
+          under Nan Dungortheb.
+          upon the map, 'S'
+
+  {tile:beast:skeleton orc| }       Undead
+          skeletons, ghosts, liches, wights and wraiths
+          that drain what makes you strong.
+          upon the map, 's z G L W V'
+
+  {tile:beast:imp| }       Demons
+          fire-imps up to the Balrogs themselves, Maiar
+          of flame with whips of many thongs.
+          upon the map, 'u' and 'U'
+
+  {tile:beast:Maia| }       Spirits
+          ainur and elementals, shape-shifting and hard
+          to wound with common elements.
+          upon the map, 'A' and 'E'
+
+  {tile:beast:crow of Udûn| }       Birds, bats
+          the crows of Udûn and the bats of Ered
+          Gorgoroth, and Morgoth's eyes are many.
+          upon the map, 'B' and 'b'
+
+  {tile:beast:huorn| }       Trees
+          huorns and worse; fire serves where blades
+          fail, though the Ents will not thank you.
+          upon the map, 'l'
+
+  {tile:beast:hill giant| }       Giants
+          hurlers of boulders, to whom doors are of no
+          use at all.
+          upon the map, 'P'
+
+  {tile:beast:ruffian| }       Men
+          not all Men kept faith, and the followers of
+          Ulfang serve the Enemy within reach.
+          upon the map, 'p'
+
+Some creatures wandered in from stranger legends than this one; take
+them as you find them.
+
+The great names
+---------------
+
+Deep in Angband wait the named terrors of the Age, among them
+Gothmog lord of Balrogs, Glaurung father of dragons, Ungoliant,
+Sauron of the werewolves, and Carcharoth at the gate.  At the
+uttermost depth sits Morgoth Bauglir, the Iron Crown, whom all
+this war is for.
+
+Where these stand in the tale of years is told in Of the Years.

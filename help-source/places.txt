@@ -1,0 +1,59 @@
+{tile:capital:A| }           A Gazetteer of the Deep Places
+            ==============================
+            "...encompassed within the Girdle of Melian."
+            -- The Silmarillion, ch. 14
+            The Hither Lands are Middle-earth itself, the mortal shore east
+            of
+            the Great Sea, and Beleriand is their war-torn west, where this
+            game
+
+is set.  What follows is what the wise remember of the places you
+will walk.
+
+The great cities
+----------------
+
+  Menegroth    - the Thousand Caves, Thingol's hall behind the
+                 Girdle of Melian; the fairest dwelling east of
+                 the Sea.
+  Gondolin     - the Hidden Rock, Turgon's white city, found
+                 only by those it summons.
+  Belegost     - the Great Fortress of the Broadbeam Dwarves,
+                 whose lord Azaghâl wounded Glaurung.
+  Khazad-dûm   - the vast eastern mansion of Durin's Folk, in
+                 its morning-glory.
+  Nargothrond  - Finrod's cavern-fortress above the Narog --
+                 in these days already a name of dread.
+
+The strongholds of the Enemy and the deep places
+------------------------------------------------
+
+  Angband          - the Iron Prison beneath Thangorodrim, where
+                     Morgoth sits crowned with stolen light.
+  Nan Dungortheb   - the Valley of Dreadful Death, where
+                     Ungoliant's brood still spins.
+  Tol-in-Gaurhoth  - the Isle of Werewolves, that was fair Tol
+                     Sirion before Sauron took it.
+  Amon Rûdh        - the Bald Hill, red-capped with seregon,
+                     where Mîm keeps the last halls of his kind.
+
+The wild regions
+----------------
+
+  Anfauglith    - the Gasping Dust, that was a green plain until
+                  the Sudden Flame.
+  Dorthonion    - the highland of pines where Barahir's outlaws
+                  held out, and fell.
+  Doriath       - the Fenced Land, girdled by enchantment.
+  Sirion Vale   - the pass and course of the great river, the
+                  highway of the Age.
+  Talath Dirnen - the Guarded Plain, watched from Nargothrond.
+  Ossiriand     - the Land of Seven Rivers, where the Green-Elves
+                  sing unseen.
+  Fen of Serech - the reed-marsh where rearguards buy time with
+                  blood.
+
+East over the Blue Mountains lie quieter lands -- Eriador, the vales
+of Anduin, the Gladden Fields -- out of which the humbler peoples
+come.  And some names upon the map belong to later songs than this
+one; walk them gently, for they are visiting, as you are.

@@ -1,0 +1,43 @@
+{tile:capital:O| }           Of the Years
+            ============
+            "...it was named Dagor Aglareb, the Glorious Battle.  A victory
+            it was, and yet a warning..."
+            -- The Silmarillion, ch. 13
+            The game is set in the First Age of the world, in Beleriand, the
+            land that lay west of the Blue Mountains.  As you go down, you
+            go
+
+back through the Age's own history: green realms and guarded
+kingdoms above, ash and iron below, and at the bottom the
+beginning of all the trouble.
+
+The Age in brief
+----------------
+
+  1. The Elves awake at Cuiviénen and journey west; the
+     Green-Elves turn aside and stay in Ossiriand.
+  2. Fëanor makes the Silmarils.  Morgoth and Ungoliant destroy
+     the Two Trees and steal them.
+  3. The Noldor depart under the Doom of Mandos to make war for
+     the jewels' recovery.
+  4. The Siege of Angband, the long peace in which Doriath,
+     Nargothrond, and hidden Gondolin flower.
+  5. Dagor Bragollach, the Battle of Sudden Flame: rivers of fire
+     break the Siege; Fingolfin rides to the gate and dies.
+  6. The deeds of Beren and of Túrin: the Quest of the Silmaril,
+     the fall of Nargothrond, the black sword's doom.
+  7. Nírnaeth Arnoediad, the Unnumbered Tears, when treason
+     broke the great alliance of the free peoples.
+  8. Gondolin falls, betrayed from within.
+  9. The War of Wrath, in which the Enemy is thrown down at
+     last -- and that is where you come in.
+
+The road down
+-------------
+
+Five appointed foes mark the descent, each a chapter of the tale:
+Mîm at Amon Rûdh, Glaurung at Nargothrond, Ungoliant in Nan
+Dungortheb, Sauron at Tol-in-Gaurhoth, and Morgoth himself at the
+hundredth depth of Angband.  Defeat the last and the Age is
+mended.  What each of their strongholds was in its own day is told
+in the chapter of places.

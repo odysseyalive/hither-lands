@@ -77,6 +77,20 @@ fi
 step 2 "Copying tileset '$DIRNAME' -> $TILES_DIR ..."
 rm -rf "${TILES_DIR:?}/${DIRNAME:?}"
 cp -r "$DIST" "$TILES_DIR/$DIRNAME"
+
+# In-game documentation: the guide topics plus the tile-plate index that the
+# help-tile patches read. Built into dist/help by tools/build.py, which resolves
+# {tile:...} markers -- never install help-source/ directly.
+HELP_SRC="$HERE/dist/help"
+if [ -d "$HELP_SRC" ]; then
+  cp "$HELP_SRC"/*.txt "$HELP_SRC"/help-tiles.idx "$FA_DIR/lib/help/"
+  HELP_MK="$FA_DIR/lib/help/Makefile"
+  for f in "$HELP_SRC"/*.txt "$HELP_SRC"/help-tiles.idx; do
+    b=$(basename "$f")
+    grep -q "$b" "$HELP_MK" || sed -i "s|^DATA = |DATA = $b |" "$HELP_MK"
+  done
+  echo "  installed $(ls "$HELP_SRC" | wc -l) help files"
+fi
 # 1b. Select the gendered player sprites (default build is male).
 GENDERED="$TILES_DIR/$DIRNAME/$XTRA_STEM-$GENDER.prf"
 if [ -f "$GENDERED" ]; then

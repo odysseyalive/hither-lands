@@ -17,8 +17,10 @@ atlas is named <N>x<N>.png to match, and the list.txt registration follows).
 """
 import argparse
 import json
+import os
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 from PIL import Image
@@ -185,7 +187,7 @@ def _progress(label, done, total):
         sys.stderr.write("\n")
 
 
-def render_tile_image(spec, source_rel, ts):
+def render_tile_image(spec, source_rel, ts, size=None):
     """Run one source tile through the chroma/resize/margin/ground pipeline.
 
     Factored out so animation frames get exactly the same treatment as the
@@ -199,7 +201,7 @@ def render_tile_image(spec, source_rel, ts):
         img = key_out_chroma(img, family=True)
     elif spec.get("chroma"):
         img = key_out_chroma(img, edge_fringe=True)
-    img = img.convert("RGBA").resize((ts, ts), Image.LANCZOS)
+    img = img.convert("RGBA").resize(size or (ts, ts), Image.LANCZOS)
     if spec.get("margin"):
         img = apply_margin_fade(img)
     # A terrain feature (e.g. a building) fills its whole cell — the engine
@@ -216,6 +218,14 @@ def render_tile_image(spec, source_rel, ts):
         base.alpha_composite(img)
         img = base
     return img
+
+
+def block_of(t):
+    """A tile's cell span, (width, height). Ordinary tiles are 1x1; an
+    illuminated capital declares e.g. "block": [3, 2] and is sliced across
+    that many atlas cells so one drawing becomes one large letter."""
+    b = t.get("block")
+    return (int(b[0]), int(b[1])) if b else (1, 1)
 
 
 def frame_sources(t):
@@ -238,6 +248,273 @@ def parse_args():
     return ap.parse_args()
 
 
+TILE_MARKER = re.compile(r"\{tile:([^|{}]+)\|(.)\}")
+KEY_MARKER = re.compile(r"\{key:([^{}]+)\}")
+CMD_ROW = re.compile(r'\{\s*"((?:[^"\\]|\\.)*)"\s*,\s*\{([^}]*)\}')
+CHAR_LIT = re.compile(r"'(\\.|[^'])'")
+
+
+def fa_tree():
+    """The FAangband clone this repo installs into, if it is beside us."""
+    for cand in (os.environ.get("HL_FA_DIR"), ROOT.parent / "FAangband"):
+        if cand and Path(cand).joinpath("src/ui-game.c").is_file():
+            return Path(cand)
+    return None
+
+
+def load_keysets(fa):
+    """desc -> (standard key, roguelike key) from the cmd_info tables.
+
+    Keys are the game's own, read from source rather than remembered: the
+    roguelike slot falls back to the standard key when unset, exactly as
+    cmd_init does.  Also returns the set of keys the roguelike movement
+    keymaps shadow, which a fallback cannot escape.
+    """
+    src = (fa / "src/ui-game.c").read_text(encoding="utf-8", errors="replace")
+    cmds = {}
+    for desc, keys in CMD_ROW.findall(src):
+        # Classify each slot separately: a bare 'x' is a printable key, while
+        # KTRL('T') or a named keycode is not one a help file can show as a
+        # single character.  Matching char literals loosely would read
+        # KTRL('T') as plain "T" and document the wrong key.
+        slots = []
+        for part in keys.split(","):
+            part = part.strip()
+            lit = CHAR_LIT.fullmatch(part)
+            slots.append(lit.group(1).replace("\\", "") if lit else None)
+        if not slots:
+            continue
+        std = slots[0]
+        rogue = slots[1] if len(slots) > 1 else std
+        if rogue is None and len(slots) > 1:
+            rogue = False     # bound, but not printable -- never tokenisable
+        cmds.setdefault(desc, (std, rogue))
+
+    shadowed = set()
+    pref = fa / "lib/customize/pref.prf"
+    if pref.is_file():
+        for line in pref.read_text(encoding="utf-8", errors="replace").split("\n"):
+            if line.startswith("keymap-input:1:"):
+                trigger = line[len("keymap-input:1:"):]
+                if len(trigger) == 1:
+                    shadowed.add(trigger)
+    return cmds, shadowed
+HELP_TILE_MAX = 1024   # must match HELP_TILE_MAX in the help-tile-code patch
+HELP_LINE_BYTES = 1000  # ui-help.c reads lines into char[1024]
+
+
+def fnv1a(text):
+    """32-bit FNV-1a over the UTF-8 bytes -- the hash the help-tile patch uses."""
+    h = 2166136261
+    for byte in text.encode("utf-8"):
+        h = ((h ^ byte) * 16777619) & 0xFFFFFFFF
+    return h
+
+
+def build_help(m):
+    """Resolve {tile:<entity>|<glyph>} markers in help-source/ into dist/help/.
+
+    Each marker is replaced by its one-character ASCII fallback glyph, so the
+    shipped file stays plain text of exactly the width the author saw -- line
+    wrapping, `/` search and the browser's highlight all keep working.  The
+    atlas cell to draw over that column instead, when the SDL2 front end is
+    running with graphics, goes into help-tiles.idx keyed on a hash of the
+    emitted line rather than its number: the browser skips RST directives when
+    it counts lines, and hashing needs no such rule.
+
+    Read by the help-tile-* patch group.  Missing index, ASCII mode, or an
+    unpatched tree all degrade to the fallback glyph.
+    """
+    src = ROOT / "help-source"
+    topics = sorted(src.glob("*.txt")) if src.is_dir() else []
+    if not topics:
+        return
+
+    # Exact entity-string lookup: "monster:warg", "feat:open floor:*".
+    cells = {}
+    for t in m["tiles"]:
+        for entity in t.get("maps", []):
+            cells[entity] = (t["row"], t["col"])
+        # Art-only tiles (empty maps[], so no prf line is emitted) may still be
+        # named for the help text via "help": decorative initials and the like,
+        # which are pictures rather than game entities.
+        if t.get("help"):
+            cells[t["help"]] = (t["row"], t["col"]) + block_of(t)
+
+    outdir = ROOT / "dist" / "help"
+    outdir.mkdir(parents=True, exist_ok=True)
+    for stale in outdir.iterdir():
+        stale.unlink()
+
+    fa = fa_tree()
+    cmds, shadowed = load_keysets(fa) if fa else ({}, set())
+    if not fa:
+        print("help: no FAangband tree found -- {key:...} tokens NOT verified")
+
+    errors = []
+    index = []
+    n_plates = 0
+    n_keys = 0
+    for i, topic in enumerate(topics):
+        raw = topic.read_text()
+        # file_getl() strips CR/LF but not trailing spaces, and expands tabs to
+        # 4-column stops; rather than reimplement that, forbid tabs outright.
+        lines = raw.rstrip("\n").split("\n")
+        emitted = []
+        plates = []          # (line index, column, attr, char)
+        gutter = []          # (where, line, col, bw, bh) for block capitals
+        skipping = False
+        for n, line in enumerate(lines):
+            line = line.rstrip("\r")
+            where = f"{topic.name}:{n + 1}"
+            if "\t" in line:
+                errors.append(f"{where}: literal tab -- use spaces")
+            if not unicodedata.is_normalized("NFC", line):
+                errors.append(f"{where}: not NFC-normalised")
+            if len(line.encode("utf-8")) > HELP_LINE_BYTES:
+                errors.append(f"{where}: line exceeds {HELP_LINE_BYTES} bytes")
+
+            # {key:...} stays in the shipped file and is expanded per reader by
+            # the help-key patch, so both keysets must be checked here.
+            keys = KEY_MARKER.findall(line)
+            if keys and TILE_MARKER.search(line):
+                errors.append(
+                    f"{where}: a key token and a tile plate on one line -- the "
+                    "plate is keyed on the on-disk line, which key expansion "
+                    "changes; split them across two lines")
+            for desc in keys:
+                n_keys += 1
+                if not cmds:
+                    continue
+                if desc not in cmds:
+                    errors.append(
+                        f"{where}: '{desc}' is no command description in "
+                        "ui-game.c's cmd_info tables")
+                    continue
+                std, rogue = cmds[desc]
+                if std is None or rogue is False:
+                    errors.append(
+                        f"{where}: '{desc}' is bound to a control or named key "
+                        "in at least one keyset, which cannot be shown as one "
+                        "character -- name it in prose instead")
+                elif rogue in shadowed:
+                    errors.append(
+                        f"{where}: '{desc}' resolves to '{rogue}' in the "
+                        "roguelike keyset, which a movement keymap shadows -- "
+                        "the token would print a dead key, so write prose "
+                        "naming the working path instead")
+
+            # Mirror the browser's RST skipping: a '.. ' directive and every
+            # line after it up to a blank one are never drawn, so a marker
+            # there would silently never appear.
+            drawn = True
+            if skipping:
+                drawn = False
+                if not line.strip():
+                    skipping = False
+            elif line.startswith(".. "):
+                drawn = False
+                skipping = True
+
+            out = []
+            col = 0
+            pos = 0
+            for mark in TILE_MARKER.finditer(line):
+                out.append(line[pos:mark.start()])
+                col += mark.start() - pos
+                entity = mark.group(1).strip()
+                if entity not in cells:
+                    errors.append(
+                        f"{where}: tile '{entity}' is mapped by no manifest "
+                        "entry -- a wrong plate is worse than none")
+                elif not drawn:
+                    errors.append(
+                        f"{where}: tile marker inside an RST directive block, "
+                        "where the browser never draws it")
+                elif col >= 80:
+                    errors.append(
+                        f"{where}: tile at column {col} is off the 80-column "
+                        "screen")
+                else:
+                    cell = cells[entity]
+                    row, tcol = cell[0], cell[1]
+                    bw, bh = (cell[2], cell[3]) if len(cell) > 2 else (1, 1)
+                    for br in range(bh):
+                        for bc in range(bw):
+                            plates.append((n + br, col + bc,
+                                           0x80 + row + br, 0x80 + tcol + bc))
+                    if (bw, bh) != (1, 1):
+                        # The first cell carries the fallback glyph; every other
+                        # cell must be blank gutter the author indented for it,
+                        # or the capital would paint over its own prose.
+                        gutter.append((where, n, col, bw, bh))
+                out.append(mark.group(2))
+                col += 1
+                pos = mark.end()
+            out.append(line[pos:])
+            shipped = "".join(out)
+            emitted.append(shipped)
+
+            # Width is what the READER sees: plates are already collapsed here,
+            # key tokens collapse at display time, and the two keysets can
+            # differ in length, so check both.
+            for slot, keyset in ((0, "standard"), (1, "roguelike")):
+                shown = KEY_MARKER.sub(
+                    lambda mk: cmds.get(mk.group(1), ("?", "?"))[slot], shipped)
+                if len(shown) > 76:
+                    errors.append(
+                        f"{where}: renders {len(shown)} columns in the "
+                        f"{keyset} keyset")
+
+        for where, n, col, bw, bh in gutter:
+            if n + bh > len(emitted):
+                errors.append(f"{where}: block capital needs {bh} lines but the "
+                              "file ends first")
+                continue
+            for br in range(bh):
+                line_ = emitted[n + br]
+                span = line_[col:col + bw] if br else line_[col + 1:col + bw]
+                if span.strip():
+                    errors.append(
+                        f"{where}: block capital overlaps text on line "
+                        f"{n + br + 1} -- indent {bw} columns for {bh} lines")
+                    break
+
+        if len(plates) > HELP_TILE_MAX:
+            errors.append(
+                f"{topic.name}: {len(plates)} plates exceeds the loader's "
+                f"{HELP_TILE_MAX}-cell limit")
+
+        # The loader matches by hash alone and queues EVERY match, so a plate
+        # line sharing a hash with any other line would paint that line too.
+        hashes = [fnv1a(line) for line in emitted]
+        counts = {}
+        for h in hashes:
+            counts[h] = counts.get(h, 0) + 1
+        for n, col, attr, char in plates:
+            if counts[hashes[n]] > 1:
+                errors.append(
+                    f"{topic.name}:{n + 1}: this line is not unique within the "
+                    "file, so its plate would also paint the twin -- reword one")
+                continue
+            index.append(f"{topic.name}|{hashes[n]:08x}|{col}|{attr}|{char}")
+            n_plates += 1
+
+        (outdir / topic.name).write_text("\n".join(emitted) + "\n")
+        _progress("help", i + 1, len(topics))
+
+    if errors:
+        sys.exit("help error:\n  " + "\n  ".join(errors))
+
+    (outdir / "help-tiles.idx").write_text("\n".join([
+        "# File: help-tiles.idx",
+        "# Generated by tools/build.py -- do not hand-edit.",
+        "# <help file>|<FNV-1a of the emitted line>|<column>|<attr>|<char>",
+    ] + index) + "\n")
+    print(f"help: {len(topics)} topic(s), {n_plates} tile plate(s), "
+          f"{n_keys} key token(s) -> dist/help/")
+
+
 def main():
     args = parse_args()
     m = json.loads((ROOT / "manifest.json").read_text())
@@ -251,9 +528,11 @@ def main():
     ts = m["tileset"]["tile_size"]
     tiles = m["tiles"]
 
-    rows = max(t["row"] for t in tiles) + 1
+    rows = max(t["row"] + block_of(t)[1] - 1 for t in tiles) + 1
     # Animated tiles extend rightward into (col + frame) columns; size for that.
-    cols = max(t["col"] + len(frame_sources(t)) - 1 for t in tiles) + 1
+    # Block tiles (illuminated capitals) extend both right and down.
+    cols = max(t["col"] + max(len(frame_sources(t)), block_of(t)[0]) - 1
+               for t in tiles) + 1
     atlas = Image.new("RGBA", (cols * ts, rows * ts), (0, 0, 0, 0))
 
     seen = set()
@@ -262,6 +541,30 @@ def main():
     for i, t in enumerate(tiles):
         frames = frame_sources(t)
         base_row, base_col = t["row"], t["col"]
+        bw, bh = block_of(t)
+        if (bw, bh) != (1, 1):
+            # An illuminated capital is ONE drawing spread over a bw x bh grid
+            # of cells: slice it here so the art can be authored (and judged) as
+            # a single letter rather than as a dozen unreadable fragments.
+            if len(frames) > 1:
+                sys.exit(f"manifest error: {frames[0]} is both animated and a "
+                         "block tile; frames and block cannot combine")
+            whole = render_tile_image(t, frames[0], ts, size=(bw * ts, bh * ts))
+            for br in range(bh):
+                for bc in range(bw):
+                    pos = (base_row + br, base_col + bc)
+                    if pos in seen:
+                        sys.exit(f"manifest error: duplicate grid cell {pos} "
+                                 f"(block {frames[0]})")
+                    seen.add(pos)
+                    if pos[0] > 0x7F or pos[1] > 0x7F:
+                        sys.exit(f"manifest error: cell {pos} beyond the "
+                                 "128x128 prf limit")
+                    atlas.paste(whole.crop((bc * ts, br * ts,
+                                            (bc + 1) * ts, (br + 1) * ts)),
+                                (pos[1] * ts, pos[0] * ts))
+            _progress("tiles", i + 1, n_tiles)
+            continue
         for fi, fsrc in enumerate(frames):
             col = base_col + fi
             pos = (base_row, col)
@@ -542,6 +845,8 @@ def main():
         f"pref:{m['tileset']['pref']}\n"
         f"extra:{alpha}:0:0\n"
     )
+
+    build_help(m)
 
     mapped = sum(len(t["maps"]) for t in tiles)
     pvcount = len(pvars)

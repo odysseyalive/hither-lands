@@ -1,0 +1,81 @@
+{tile:capital:O| }           Of Companions on the Road
+            =========================
+            "...he swore an oath of abiding friendship and aid in every
+            need to Barahir and all his kin."
+            -- The Silmarillion, ch. 18
+            Not all that lives in Beleriand wishes you ill.  Beasts and the
+            Free
+            Peoples may stand neutral, and a few will walk at your side, as
+
+Finrod walked with the house of Barahir.  How such folk are known,
+how they are won, and how they are led is set down here.
+
+
+Dispositions
+------------
+
+Look at a creature with '{key:Look around}' and its temper is named
+after it.
+
+  aggressive   it means you harm.  "(unaware)" means it has not yet
+               noticed you.
+  neutral      it lets you be unless provoked.  Territorial animals
+               are marked "territorial"; give them room.
+  aligned      it is fighting your enemies, or follows you.
+  following    it is one of your own followers.
+
+The monster list, '{key:Display visible monster list}', counts your
+helpers with an "(allied)" tag.  In ASCII mode neutral folk of the
+Free Peoples are tinted green, and bright green when they fight for
+you; territorial beasts are yellow, and other wild animals umber.
+With graphics tiles these tints do not apply, so let the look command
+and the monster list answer for you instead.
+
+
+Parley and recruiting
+---------------------
+
+The deed is called "Recruit a monster".  In the standard keyset it
+answers to 'j' -- press it, then a direction toward an ADJACENT
+neutral creature.  In the roguelike keyset 'j' walks south instead,
+so reach the command through the ENTER command menu, under "Hidden",
+or bind a keymap of your own.
+
+  - Who may join: neutral people of the Free Peoples, that is, the
+    speaking races.  A character with the Beguile ability -- a Druid
+    specialty -- may also charm wild animals that are not evil.
+  - Persuasion is a contest of your level against the creature's.
+    Great folk will not lightly follow the untried.
+  - Fail against a much greater creature, more than five levels
+    above you, and it takes offence and turns hostile.  A milder
+    failure leaves it merely unconvinced, and you may try again.
+  - You can lead 1 follower, plus one more at level 15 and another
+    at level 30.
+  - Parley takes a game turn, whether or not it succeeds.
+
+To dismiss a follower, parley with it a second time; it leaves off
+following you and returns to neutrality.
+
+
+Leading allies
+--------------
+
+Allies need no orders.  A follower seeks out your enemies within its
+hearing and fights them, and when no enemy is near it walks with you.
+An ally never turns on you of its own will -- but strike or rob one
+and it will remember, as the sons of Ulfang taught the Union of
+Maedhros that a false friend is worse than an open foe.
+
+
+The wilds of Beleriand
+----------------------
+
+Animals and growing things begin neutral rather than hostile.
+Territorial beasts attack if you press into their ground, skittish
+ones flee, and molds and mushrooms strike only what stands beside
+them.  Evil things, the undead, and the creatures of Morgoth are
+enemies always.  A character with the Charm ability moves among
+beasts without alarming them.
+
+     "But Huan the hound was true of heart."
+                                        -- The Silmarillion, ch. 19

@@ -1,0 +1,42 @@
+{tile:capital:O| }           Of the Great Treasures
+            ======================
+            "In that time were made those things that afterwards were most
+            renowned of all the works of the Elves."
+            -- The Silmarillion, ch. 7
+            The great works of the Age lie hidden in Beleriand, waiting.
+            What
+            each one does you must learn for yourself, and
+
+'{key:Examine an item}' will tell you what you have learned; but
+their names are already legend.  A few of those you may find:
+
+  Ringil          - Fingolfin's ice-bright sword, that gave
+                    Morgoth seven wounds before the High King fell.
+  Angrist         - "Iron-cleaver," Telchar's knife, which cut a
+                    Silmaril from the Iron Crown and snapped.
+  Gurthang        - "Iron of Death," the black sword of Túrin,
+                    that speaks, and does not forget.
+  Anguirel        - one of Eöl's two blades of meteor-iron, worn
+                    by Maeglin of Gondolin.
+  Aranrúth        - "King's Ire," the sword of Thingol of Doriath.
+  Glamdring and   - the paired blades of Gondolin, Foe-hammer and
+  Orcrist           Goblin-cleaver, that burn cold when orcs come.
+  The Dragon-helm - the Helm of Hador, crowned with Glaurung's
+  of Dor-Lómin      likeness; Morgoth's servants fled it.
+  Belthronding    - the black bow of Beleg Cúthalion, truest
+                    friend that Túrin had.
+  The Elessar     - the green Elfstone of healing, wrought in
+                    Gondolin, whose fame outlives the Age.
+  Nimphelos       - the great pearl Thingol paid to the Dwarves
+                    of Belegost.
+  Camlost         - "Empty-handed," gauntlets that remember the
+                    hand of Beren, and what it held.
+
+Weapons and armour of the Enemy's making lie below also -- black
+things of meteor-iron and worse.  Whether to wield them is your
+own affair.
+
+The smiths of the Age worked in ranks of matter: dwarf-iron grey
+and runed, elven steel blue-white, meteor-iron black with a glint
+of stars, and rarest of all, work that saw the Light of Valinor
+itself.

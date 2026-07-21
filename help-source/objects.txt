@@ -1,0 +1,49 @@
+{tile:capital:O| }           Of Goods and Gear
+            =================
+            "The heart of Fëanor was fast bound to these things that he
+            himself had made."
+            -- The Silmarillion, ch. 7
+            Carrying
+            --------
+            Walk onto an item to take it, or gather it with
+
+'{key:Pick up objects}'.  The pack holds twenty-three kinds of
+thing, each stacking to forty, and twelve more places are worn upon
+your body.  Weight past your strength slows you.  Wear or wield with
+'{key:Wear/wield an item}', take off with
+'{key:Take off/unwield an item}', drop with '{key:Drop an item}', and
+inscribe with '{key:Inscribe an object}' -- your notes ride along
+with the item.
+
+Knowing what you have
+---------------------
+
+Every potion, scroll, ring and amulet kind wears a random
+disguise each game -- "a copper ring" -- until it is learned.  There
+is no scroll of Identify in this Age, and knowledge is earned.
+Weapons and armour reveal their runes as you fight in them; devices
+reveal themselves in use, so aim them at something easy first;
+scrolls teach by reading, which is safest done standing on
+stairs; potions and mushrooms teach the bold.  Shopkeepers know
+their trade also, and selling an unknown thing reveals it.
+
+Unknown properties show as {??}, and the game marks {cursed},
+{tried}, and {empty} as it learns alongside you.
+
+Ignoring the dross
+------------------
+
+The ignore command puts an item, or its whole kind, out of your
+sight, and '{key:Toggle ignoring of items}' shows or hides everything
+so dismissed.  Appendix I gives the ignore key for your keyset.
+Quality levels let you sweep all bad gear from sight at once.
+
+Keeping things whole
+--------------------
+
+The elements are enemies of property.  Fire eats scrolls and
+staves, acid armour and ammunition, frost potions, lightning
+rings, wands, and rods.  Your pack gives a thing some chance to
+survive; the bare floor gives none.  Resist the element and your
+goods resist with you, of which more in Of Arms and the Manner of
+Fighting.

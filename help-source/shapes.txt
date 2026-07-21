@@ -1,0 +1,50 @@
+{tile:capital:O| }           Of Skin-Changing
+            ================
+            "Then Sauron shifted shape, from wolf to serpent, and from
+            monster to his own accustomed form..."
+            -- The Silmarillion, ch. 19
+            Skin-changing is an old art in Middle-earth, and not the Enemy's
+            alone.  Some callings learn to wear a beast's form, and trade
+            hands
+
+and spellcraft for teeth and wings and hide.
+
+Who shifts
+----------
+
+Druids take the shapes of beast and stone through their nature
+verses; Necromancers wear the forms of the creatures of night;
+Blackguards learn one savage shape of their own.  A Beorning needs
+no spell at all, for bear-shape is that people's birthright, taken
+at will with '{key:Change shape}', and it deepens as they grow.  And
+any hero whatever, wearing the right dragon-scale armour, may briefly
+know what it is to be a dragon.
+
+Wearing another skin
+--------------------
+
+Shapes are entered by casting the form's verse with
+'{key:Cast a spell}', by the Beorning's '{key:Change shape}', or by
+the power of certain items.  In a shape you ARE the beast -- its
+blows, its senses, its stealth, its hide.  Your worn equipment stays
+on you, changed with you, and all its virtue still counts.
+
+But paws cannot turn pages.  In beast-form your pack is closed to
+you, and there is no reading, no casting, no wands, no swapping of
+gear.  You may eat from the floor and little more.  Attempt anything
+handier and the game asks whether to return to your own form first.
+
+Returning
+---------
+
+Press '{key:Change shape}' to take your own shape again, and the
+changing back costs nothing.  A shape is a tool.  Put it on for the
+work it is good at -- travel, stealth, or slaughter -- and take it
+off again to think.
+
+With the Hither Lands tileset your figure on the map changes with
+you, every form with its own sprite.
+
+The full particulars of every shape, and there are twenty-two, are
+set out with numbers and all in Of Skin-Changing: the Full
+Particulars, for those who would rather know than wonder.

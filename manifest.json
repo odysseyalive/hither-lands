@@ -1549,7 +1549,7 @@
       "col": 6,
       "chroma": true,
       "maps": [
-        "monster:Kh\u00eem, Son of M\u00eem"
+        "monster:Khîm, Son of Mîm"
       ]
     },
     {
@@ -1744,7 +1744,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:Maia of Orom\u00eb"
+        "monster:Maia of Oromë"
       ]
     },
     {
@@ -1753,7 +1753,7 @@
       "col": 14,
       "chroma": true,
       "maps": [
-        "monster:Maia of Aul\u00eb"
+        "monster:Maia of Aulë"
       ]
     },
     {
@@ -1762,7 +1762,7 @@
       "col": 15,
       "chroma": true,
       "maps": [
-        "monster:Me\u00e1ss\u00eb, the Bloody"
+        "monster:Meássë, the Bloody"
       ]
     },
     {
@@ -2221,7 +2221,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:Mugh\u00e2sh the Kobold Lord"
+        "monster:Mughâsh the Kobold Lord"
       ]
     },
     {
@@ -3577,7 +3577,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:E\u00f6l, the Dark Elven Smith"
+        "monster:Eöl, the Dark Elven Smith"
       ],
       "frames": [
         "monsters/elf-eol.png",
@@ -3610,7 +3610,7 @@
       "col": 13,
       "chroma": true,
       "maps": [
-        "monster:F\u00ebanorian raider"
+        "monster:Fëanorian raider"
       ]
     },
     {
@@ -3646,7 +3646,7 @@
       "col": 1,
       "chroma": true,
       "maps": [
-        "monster:M\u00eem, Betrayer of Turin"
+        "monster:Mîm, Betrayer of Turin"
       ]
     },
     {
@@ -3682,7 +3682,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:Oss\u00eb, Herald of Ulmo"
+        "monster:Ossë, Herald of Ulmo"
       ]
     },
     {
@@ -3727,7 +3727,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:Maia of Manw\u00eb"
+        "monster:Maia of Manwë"
       ]
     },
     {
@@ -4717,7 +4717,7 @@
       "col": 8,
       "chroma": true,
       "maps": [
-        "monster:m\u00fbmak"
+        "monster:mûmak"
       ]
     },
     {
@@ -4822,7 +4822,7 @@
       "col": 3,
       "chroma": true,
       "maps": [
-        "monster:dr\u00faadan mage"
+        "monster:drúadan mage"
       ]
     },
     {
@@ -5173,7 +5173,7 @@
       "col": 10,
       "chroma": true,
       "maps": [
-        "monster:crow of Ud\u00fbn"
+        "monster:crow of Udûn"
       ]
     },
     {
@@ -5371,7 +5371,7 @@
       "col": 0,
       "chroma": true,
       "maps": [
-        "monster:Ibun, Son of M\u00eem"
+        "monster:Ibun, Son of Mîm"
       ]
     },
     {
@@ -5704,7 +5704,7 @@
       "col": 5,
       "chroma": true,
       "maps": [
-        "monster:dr\u00faadan druid"
+        "monster:drúadan druid"
       ]
     },
     {
@@ -10394,6 +10394,174 @@
       "row": 15,
       "col": 5,
       "chroma": true
+    },
+    {
+      "source": "help/capital-o.png",
+      "row": 0,
+      "col": 16,
+      "block": [
+        12,
+        8
+      ],
+      "maps": [],
+      "help": "capital:O",
+      "chroma": true
+    },
+    {
+      "source": "monsters/orc-cave.png",
+      "row": 8,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:cave orc",
+      "chroma": true
+    },
+    {
+      "source": "monsters/troll-stone.png",
+      "row": 12,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:hill troll",
+      "chroma": true
+    },
+    {
+      "source": "monsters/dragon-glaurung.png",
+      "row": 16,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:Glaurung, Father of the Dragons",
+      "chroma": true
+    },
+    {
+      "source": "monsters/warg-single.png",
+      "row": 20,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:warg",
+      "chroma": true
+    },
+    {
+      "source": "monsters/spider-giant.png",
+      "row": 24,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:giant spider",
+      "chroma": true
+    },
+    {
+      "source": "monsters/skeleton-orc.png",
+      "row": 28,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:skeleton orc",
+      "chroma": true
+    },
+    {
+      "source": "monsters/demon-imp-single.png",
+      "row": 32,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:imp",
+      "chroma": true
+    },
+    {
+      "source": "monsters/ainu.png",
+      "row": 36,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:Maia",
+      "chroma": true
+    },
+    {
+      "source": "monsters/bird-crow-udun.png",
+      "row": 40,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:crow of Udûn",
+      "chroma": true
+    },
+    {
+      "source": "monsters/tree-huorn.png",
+      "row": 44,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:huorn",
+      "chroma": true
+    },
+    {
+      "source": "monsters/giant-hill.png",
+      "row": 48,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:hill giant",
+      "chroma": true
+    },
+    {
+      "source": "monsters/ruffian.png",
+      "row": 52,
+      "col": 16,
+      "block": [
+        8,
+        4
+      ],
+      "maps": [],
+      "help": "beast:ruffian",
+      "chroma": true
+    },
+    {
+      "source": "help/capital-a.png",
+      "row": 56,
+      "col": 16,
+      "block": [
+        12,
+        8
+      ],
+      "maps": [],
+      "help": "capital:A",
+      "chroma": true
     }
   ],
   "player_variants": [
@@ -11456,7 +11624,7 @@
       "col": 0,
       "chroma": true,
       "class": "Warrior",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-warrior-f.png",
@@ -11464,7 +11632,7 @@
       "col": 0,
       "chroma": true,
       "class": "Warrior",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11473,7 +11641,7 @@
       "col": 1,
       "chroma": true,
       "class": "Mage",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-mage-f.png",
@@ -11481,7 +11649,7 @@
       "col": 1,
       "chroma": true,
       "class": "Mage",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11490,7 +11658,7 @@
       "col": 2,
       "chroma": true,
       "class": "Druid",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-druid-f.png",
@@ -11498,7 +11666,7 @@
       "col": 2,
       "chroma": true,
       "class": "Druid",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11507,7 +11675,7 @@
       "col": 3,
       "chroma": true,
       "class": "Priest",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-priest-f.png",
@@ -11515,7 +11683,7 @@
       "col": 3,
       "chroma": true,
       "class": "Priest",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11524,7 +11692,7 @@
       "col": 4,
       "chroma": true,
       "class": "Necromancer",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-mage-f.png",
@@ -11532,7 +11700,7 @@
       "col": 4,
       "chroma": true,
       "class": "Necromancer",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11541,7 +11709,7 @@
       "col": 5,
       "chroma": true,
       "class": "Paladin",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-paladin-f.png",
@@ -11549,7 +11717,7 @@
       "col": 5,
       "chroma": true,
       "class": "Paladin",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11558,7 +11726,7 @@
       "col": 6,
       "chroma": true,
       "class": "Rogue",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-rogue-f.png",
@@ -11566,7 +11734,7 @@
       "col": 6,
       "chroma": true,
       "class": "Rogue",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11575,7 +11743,7 @@
       "col": 7,
       "chroma": true,
       "class": "Ranger",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-ranger-f.png",
@@ -11583,7 +11751,7 @@
       "col": 7,
       "chroma": true,
       "class": "Ranger",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {
@@ -11592,7 +11760,7 @@
       "col": 8,
       "chroma": true,
       "class": "Blackguard",
-      "race": "Dr\u00faadan"
+      "race": "Drúadan"
     },
     {
       "source": "player/druadan-rogue-f.png",
@@ -11600,7 +11768,7 @@
       "col": 8,
       "chroma": true,
       "class": "Blackguard",
-      "race": "Dr\u00faadan",
+      "race": "Drúadan",
       "gender": "Female"
     },
     {

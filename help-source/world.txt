@@ -1,0 +1,53 @@
+{tile:capital:O| }           Of Beleriand and Its Realms
+            ===========================
+            "...there were mighty convulsions in the earth, and Beleriand
+            was broken and laid waste..."
+            -- The Silmarillion, ch. 24
+            That breaking is not yet come upon the land, and until it comes
+            there
+            is a whole world to walk.  The wilderness spreads Beleriand and
+the
+lands east of it -- plains, forests, mountains, rivers, swamps, and
+deserts -- and the great dungeons are sunk into it where the tales
+say they stood.
+
+Of the roads between
+--------------------
+
+Region is joined to region by paths, and a path is worked with the
+same keys as a stair.  Stand upon one and press
+'{key:Go up staircase}' toward the safer country, or
+'{key:Go down staircase}' toward the danger, for depth is danger here
+as it is below.  Run as Appendix I directs, step warily with
+'{key:Walk}', and press '{key:Start exploring}' to be drawn on toward
+what you have not yet seen.  There is no magic carriage; you walk, as
+Beren walked.
+
+By day the wild is lit, and by night you must carry your own light --
+though by night the beasts of the wilderness are sleeping.  Towns
+keep their own hours.
+
+Of the four worlds
+------------------
+
+Four world-maps are offered you at birth.  The standard and the
+extended wildernesses hang the dungeons from an overworld of paths;
+the hybrid game walks the dungeons in sequence through portals; and
+the plain Angband game keeps one town and one long stair down, with
+Sauron near the bottom of it, and Morgoth at the last.
+
+Five dungeons anchor the map -- Amon Rûdh of the Petty-Dwarves,
+Nargothrond upon the guarded plain, Nan Dungortheb beneath the
+Mountains of Terror, Tol-in-Gaurhoth in the Vale of Sirion, and
+Angband itself behind the Gasping Dust.  Each keeps its guardian, and
+their tales are told in the Gazetteer.
+
+Of coming home
+--------------
+
+A scroll of Word of Recall will snatch you out of the wild or out of
+the deeps and set you down in your home town, though not at once; and
+read at home it will carry you back down to the furthest point of
+your daring.  Read a second scroll to change your mind.  Should you
+come to another town and like it better, press '{key:Move house}' and
+your house moves there.

@@ -1,0 +1,36 @@
+Keymaps and Preferences
+=======================
+
+The game can be reshaped to your hand.  Two tools matter most:
+keymaps, which bind a sequence of commands to a single trigger
+key, and user pref files, which carry your choices between games.
+
+Keymaps
+-------
+
+Press '=' and choose "Edit keymaps".  There you may query what a
+key does ('c'), create a new keymap ('d'), or remove one ('e').
+Creating one prompts first for the trigger key, then for the
+action -- the exact keystrokes to replay; end the action with '='
+and confirm.  Control-u erases the action typed so far.
+
+Keymaps belong to the keyset they were made in: a keymap created
+under the original keyset is invisible under the roguelike keyset,
+and each keyset can bind its own action to the same trigger.  The
+'\' key bypasses keymaps for one keystroke, and '"' enters a
+single pref command directly.
+
+A worthwhile example: roguelike players can give the Hither Lands
+recruit command a key of its own (see the Allies help file), since
+its default 'j' walks south in that keyset.
+
+Pref files
+----------
+
+Keymaps last only for the session unless saved to a pref file
+from the same '=' menus.  Pref files live in your user directory
+(on Linux, ~/.angband/FAangband) and load automatically in order:
+the game's defaults, then your race, class, and character-name
+files, so a keymap can follow one hero alone or all of them.
+Wrap an action in '(' and ')' to keep -more- prompts from
+interrupting its replay.

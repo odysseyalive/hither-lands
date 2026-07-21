@@ -1,0 +1,46 @@
+Appendix III: Of the Painted Tiles
+==================================
+
+Hither Lands draws the whole game -- terrain, monsters, objects,
+and you -- as painted tiles in a single warm palette, made for
+this First-Age setting.  This file covers what the tileset adds
+and how to turn it on.
+
+Turning tiles on
+----------------
+
+Tiles work in the SDL2 interface only (never in the terminal).
+Start the game with the SDL2 frontend, load or create a
+character, and once you stand at the main command prompt open the
+menu bar at the top of the window and follow it through
+
+    FAangband -> Tiles -> Set -> Hither Lands
+
+Then under Tiles -> Size, keep the width about twice the height
+(width 6, height 3 suits the 10x20 font).  Your choice is saved
+and holds for later sessions.
+
+What the tileset adds
+---------------------
+
+  Animated tiles     - torchlight flickers and water shimmers on
+                       their own, even while the game waits for
+                       your move.  No option needed.
+  Shapechange        - take another form (a Beorning's bear, a
+  sprites              druid's shapes, the '{key:Change shape}'
+                       command) and your figure on the map
+                       changes with you.
+  Per-race sprites   - you appear as your own race, and so do the
+                       people of the Free Races you meet below;
+                       a female-flagged foe shows a female figure.
+  Your own figure    - the player sprite's gender is chosen when
+                       the tileset is installed, not in the game.
+
+What stays ASCII
+----------------
+
+The disposition colour-tints described in Of Companions on the Road
+belong to ASCII mode; with tiles on, read dispositions with the
+look command and the monster list instead.  The
+'{key:Identify symbol}' command always answers in symbols, whatever
+is drawn on the map.

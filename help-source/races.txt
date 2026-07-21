@@ -1,0 +1,65 @@
+{tile:capital:O| }           Of the Peoples of the West
+            ==========================
+            "Now the Children of Ilúvatar are Elves and Men, the Firstborn
+            and the Followers."
+            -- The Silmarillion, ch. 1
+            Thirteen peoples may take up the war against Morgoth, and no two
+            of them go at it alike.  Those marked (b) suit a traveller new
+            to
+
+the road; those marked (e) ask some seasoning.  Each keeps its own
+home town in the wilderness game.
+
+The Elves
+---------
+
+  High-Elf (e)   - Noldor of Gondolin and Nargothrond, mightiest
+                   and most burdened; masters of every skill, they
+                   see the unseen from birth and start above first
+                   level, at the steepest experience cost.
+  Grey-Elf (e)   - Sindar of Thingol's Doriath; strong of arm and
+                   will, at home under trees, unharmed by light.
+  Green-Elf (e)  - Laiquendi of Ossiriand; hunters and singers,
+                   keen-eyed, silent, deadly with bows, slight in
+                   close battle.
+  Dark-Elf       - the Moriquendi who never saw the Light; the
+                   stealthiest of all folk, but frail, and the sun
+                   pains them.
+
+The Dwarves and the Halflings
+-----------------------------
+
+  Dwarf          - the Broadbeams of Belegost; strong, tough,
+                   never blinded, resistant to spellcraft -- and
+                   loud as a forge underfoot.
+  Longbeard      - Durin's Folk of Khazad-dûm, greatest of the
+                   Seven Houses; all a Dwarf's strengths written
+                   larger.
+  Petty-Dwarf    - the Noegyth Nibin, Mîm's hunted kindred; the
+                   finest handlers of magical devices alive, free
+                   of movement, and easily broken.
+  Hobbit (b)     - halflings out of a later age; peerless with
+                   slings, locks, and shadows, hardy against
+                   sickness, feeble in a stand-up fight.
+
+The Men and the Others
+----------------------
+
+  Easterling (b) - Men out of the East, the plain measure of
+                   mortal kind; sturdy, adaptable, any calling.
+  Adan (e)       - the Edain of the Three Houses, friends of the
+                   Eldar; surpassing other Men in every field, and
+                   their endurance cannot be worn down.
+  Drúadan (e)    - the Drúedain, allies of the Haladin; wise,
+                   quiet, tough, seeing minds from afar, though
+                   towns mistrust them.
+  Beorning (b)   - skin-changers of the Anduin vales; hardy
+                   woodsfolk who may take bear-shape with the
+                   '{key:Change shape}' command.
+  Ent            - the Onodrim, shepherds of trees; terribly
+                   strong, slow-handed, and wary of fire above all
+                   things.
+
+Choose as you will.  The stat tables, the experience costs, and
+the full particulars are set out on the race screen at birth as
+you scroll.
