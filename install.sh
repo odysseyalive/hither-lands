@@ -134,6 +134,14 @@ else
     echo "      no patches/ -- skipped"
 fi
 
+# 5b. Retune monster sleepiness for the ecosystem patches (idempotent -- the
+#     script appends its own sentinel to monster.txt and no-ops if present).
+if [ -f "$HERE/tools/adjust_sleepiness.py" ] && [ -f "$FA_DIR/lib/gamedata/monster.txt" ]; then
+    python3 "$HERE/tools/adjust_sleepiness.py" "$FA_DIR"
+else
+    echo "      no adjust_sleepiness.py or gamedata -- skipped"
+fi
+
 echo "Installed '$DIRNAME' into $TILES_DIR (registered in list.txt + Makefile)."
 echo
 

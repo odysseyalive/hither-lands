@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 """Adjust monster sleepiness values for the Hither Lands ecosystem.
 
-Neutral-faction creatures (ANIMAL, NEVER_MOVE sessile, townsfolk, player-race)
-get reduced sleepiness so they wake quickly in the new faction system.
-Hostile-faction creatures (EVIL, UNDEAD, DEMON) keep their original values
-since sleep is now the primary balancing mechanic for hostiles.
+Animals, townsfolk and player-race creatures get reduced sleepiness; EVIL,
+UNDEAD and DEMON creatures keep their original values, since sleep is the
+primary balancing mechanic for them.
+
+Note that this is deliberate even though nearly all animals are now hostile
+(the eco-neutral-spawn patch only spares depth-0 critters and the skittish
+crow / giant white mouse): a wide-awake fauna layer is the intended feel.
+Sleepiness 0 is also what activates FAangband's day/night rule -- the
+is_night() +20-turn branch at mon-make.c:1881 is the *else* of
+`if (race->sleep)`, so a non-zero value opts a race out of it entirely.
+That branch only fires outdoors (is_night() is `!is_daytime() && outside()`),
+so fauna are always awake in caves.
 
 Usage:
     python3 tools/adjust_sleepiness.py <FA_DIR>
@@ -55,18 +63,14 @@ def classify(name, base_name, mon_flags, base_flags):
 
 
 def new_sleepiness(category, old_val):
-    if category == "fauna_territorial":
+    if category in ("fauna", "fauna_territorial"):
         return 0
-    if category == "fauna":
-        return 0
-    if category == "townsfolk":
+    if category in ("townsfolk", "player_race"):
         return min(old_val, 5)
-    if category == "player_race":
-        return min(old_val, 5)
-    if category == "sessile":
-        return old_val
     if category == "evil_animal":
         return min(old_val, max(5, old_val // 2))
+    # sessile, hostile and other keep their upstream values -- sleep is the
+    # balancing mechanic for everything that isn't fauna.
     return old_val
 
 
