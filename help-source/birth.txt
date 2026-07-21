@@ -1,34 +1,33 @@
 {tile:capital:O| }           Of Coming into Beleriand
             ========================
-            "By the starlit mere of Cuiviénen, Water of Awakening, they
-            rose from the sleep of Ilúvatar..."
+            "By the starlit mere of Cuiviénen, Water of Awakening, they rose
+            from the sleep of Ilúvatar..."
             -- The Silmarillion, ch. 3
             Every hero of the Elder Days began somewhere, and you begin
-            here.
-            Six screens make a traveller of you, and the arrow keys and
-ENTER
+
+here. Six screens make a traveller of you, and the arrow keys and ENTER
 drive them all, in either keyset.
 
 The birth screens
 -----------------
 
   1. RACE    - choose among the thirteen peoples, of whom Of the
-               Peoples of the West tells.  Stat changes and the
-               experience penalty are shown as you scroll.
+   Peoples of the West tells.  Stat changes and the
+   experience penalty are shown as you scroll.
   2. CLASS   - choose a calling; of these see Of Callings and
-               Crafts.
+   Crafts.
   3. OPTIONS - birth options are locked for your character's whole
-               life.  Two notable defaults: a starting kit of gear
-               (in place of extra gold), and no-selling (shops pay
-               nothing, but you find more gold).
+   life.  Two notable defaults: a starting kit of gear
+   (in place of extra gold), and no-selling (shops pay
+   nothing, but you find more gold).
   4. STATS   - the point-based buyer is the default and comes
-               pre-filled with sound choices; unspent points become
-               starting gold.  The standard roller rolls instead,
-               and will roll again at your word until you accept.
+   pre-filled with sound choices; unspent points become
+   starting gold.  The standard roller rolls instead,
+   and will roll again at your word until you accept.
   5. HISTORY - edit your background story, if you wish.
   6. NAME    - last of all, the name.  End it with a Roman numeral
-               ("Fred I") and your next of that line will succeed
-               it automatically.
+   ("Fred I") and your next of that line will succeed
+   it automatically.
 
 The five stats
 --------------

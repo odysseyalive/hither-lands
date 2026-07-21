@@ -1,61 +1,61 @@
 {tile:capital:O| }           Of Skin-Changing: the Full Particulars
             ======================================
-            "...he took thence the ghastly wolf-hame of Draugluin, and
-            the bat-fell of Thuringwethil."
+            "...he took thence the ghastly wolf-hame of Draugluin, and the
+            bat-fell of Thuringwethil."
             -- The Silmarillion, ch. 19
             *** SPOILERS ***  This file lists every shape with its numbers.
-            If you would rather discover them in play, close this file now.
-            Of Skin-Changing tells all a traveller needs and no more.
 
-Notation: hit/dam/AC are combat modifiers; named flags are gained
-while shaped; equipment worn keeps all its own powers.
+If you would rather discover them in play, close this file now. Of
+Skin-Changing tells all a traveller needs and no more. Notation: hit/dam/AC
+are combat modifiers; named flags are gained while shaped; equipment worn
+keeps all its own powers.
 
 How each shape is gained
 ------------------------
 
   Druid      - Fox Form L1 [Lesser Charms]; Become Pukel-man L30,
-               Eagle's Flight L35, Bear Form L40 [Creature
-               Dominion].
+   Eagle's Flight L35, Bear Form L40 [Creature
+   Dominion].
   Necromancer- Bat Form L3 [Into the Shadows]; Warg Form L28
-               [Fear and Torment]; Vampire Form L37 [Corruption
-               of Spirit].
+   [Fear and Torment]; Vampire Form L37 [Corruption
+   of Spirit].
   Blackguard - Werewolf Form L32 [Fear and Torment].
   Beorning   - bear at will with '{key:Change shape}', cub below
-               L20, bear to L39, great bear from L40.
+   L20, bear to L39, great bear from L40.
   Anyone     - dragon-scale mail's activation turns you into its
-               dragon; certain rarer items grant the beast-forms.
+   dragon; certain rarer items grant the beast-forms.
 
 The beast-forms
 ---------------
 
   Fox          -3/-3/+3.  STR-3, Stealth+5, +1 blow, +1 move;
-               feather fall, free action.  Bite and claw.
+   feather fall, free action.  Bite and claw.
   Bear cub     +5/+5/+0.  STR+1, INT-3, infra+3; clumsy paws
-               (disarming suffers).  Four light blows.
+   (disarming suffers).  Four light blows.
   Bear         +10/+10/+2.  STR+2, INT-2, CON+1; fearless.
-               Five blows.
+   Five blows.
   Great bear   +15/+15/+5.  STR+3, INT-2, CON+2, +1 blow;
-               fearless.  Seven blows -- a mill of claws.
+   fearless.  Seven blows -- a mill of claws.
   Eagle        +5/+0/+10.  +3 moves; flying, trap-immune, sees
-               the unseen, cannot be blinded, confused, or
-               frightened; free action.  Five rending blows.
+   the unseen, cannot be blinded, confused, or
+   frightened; free action.  Five rending blows.
   Bat          +0/-10/+10.  Speed+3, Stealth+3, infra+5; flying,
-               trap-immune, sees invisible, cannot be blinded.
-               Entering costs a little blood.  Two weak blows.
+   trap-immune, sees invisible, cannot be blinded.
+   Entering costs a little blood.  Two weak blows.
   Warg         +5/+5/+0.  +2 blows; entering hurts briefly,
-               cures fear, and rouses a berserk fury.  Four
-               savage blows.
+   cures fear, and rouses a berserk fury.  Four
+   savage blows.
   Vampire      +3/+3/-5.  Speed+5, Stealth+5, infra+5; sees
-               invisible, holds life; your own light dims.
-               Entering costs a quarter of your health; your
-               bite drinks blood back.
+   invisible, holds life; your own light dims.
+   Entering costs a quarter of your health; your
+   bite drinks blood back.
   Werewolf     +5/+5/+0.  +1 blow, +1 move; regenerating.
-               Entering terrifies the nearby, cures fear, and
-               rouses fury.  Four rending blows.
+   Entering terrifies the nearby, cures fear, and
+   rouses fury.  Four rending blows.
   Pukel-man    +0/+5/+20.  STR+4, CON+4, save+20, damage cut by
-               10, poison-proof, shard-hard, Speed-5; sustained,
-               regenerating, stun-proof, holds life; cures
-               poison and stunning on entry.  Four stone fists.
+   10, poison-proof, shard-hard, Speed-5; sustained,
+   regenerating, stun-proof, holds life; cures
+   poison and stunning on entry.  Four stone fists.
 
 The dragons
 -----------

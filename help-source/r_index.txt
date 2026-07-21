@@ -4,15 +4,13 @@
             Blue Mountains, and would go armed into the West.
             -- compiled at the Fords of Sarn
             You have crossed Ered Luin out of Eriador, and Beleriand lies
-            open
-            before you.  It is a fair land and an old one, and much of it is
-held
-by folk who will not thank you for wandering in.  What follows is set
-down for the newcomer, and tells where the roads run, whom you may
-meet upon them, and what a traveller ought to carry.
 
-Choose a chapter by its letter.  SPACE turns the page and ESC closes
-the book; '?' brings you back to these contents from anywhere within.
+open before you.  It is a fair land and an old one, and much of it is held
+by folk who will not thank you for wandering in. What follows is set down
+for the newcomer, and tells where the roads run, whom you may meet upon
+them, and what a traveller ought to carry. Choose a chapter by its letter.
+SPACE turns the page and ESC closes the book; '?' brings you back to these
+contents from anywhere within.
 
 OF THE ROAD HITHER
 ------------------

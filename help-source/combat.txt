@@ -1,19 +1,19 @@
 {tile:capital:O| }           Of Arms and the Manner of Fighting
             ==================================
-            "That knife was made by Telchar of Nogrod... iron it would
-            cleave as if it were green wood."
+            "That knife was made by Telchar of Nogrod...
+            iron it would cleave as if it were green
+            wood."
             -- The Silmarillion, ch. 19
-            Melee
-            -----
-            Walk into a foe and you strike it.  Bare hands are a poor
-argument
-in Beleriand, so bear a weapon and take it up with
-'{key:Wear/wield an item}'.  Each blow rolls your skill against the
-target's armour, and a miss is no damage at all.  Weapon damage is
-its dice plus enchantment, and your blows per round grow with STR
-and DEX and shrink with the weapon's weight -- warriors reach six
-blows, pure casters four, the rest five.  Rings and other worn
-gear add their to-hit and to-dam to your melee strikes.
+
+Melee
+-----
+Walk into a foe and you strike it.  Bare hands are a poor argument in
+Beleriand, so bear a weapon and take it up with '{key:Wear/wield an item}'.
+Each blow rolls your skill against the target's armour, and a miss is no
+damage at all.  Weapon damage is its dice plus enchantment, and your blows
+per round grow with STR and DEX and shrink with the weapon's weight --
+warriors reach six blows, pure casters four, the rest five.  Rings and other
+worn gear add their to-hit and to-dam to your melee strikes.
 
 Shooting and throwing
 ---------------------

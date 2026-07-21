@@ -1,19 +1,20 @@
 {tile:capital:O| }           Of Song and Spellcraft
             ======================
-            "For Felagund strove with Sauron in songs of power, and the
-            power of the King was very great; but Sauron had the mastery."
+            "For Felagund strove with Sauron in songs of power,
+            and the power of the King was very great; but Sauron
+            had the mastery."
             -- The Silmarillion, ch. 19
-            Power in the Elder Days is sung, and prayed, and studied.  Four
-            realms of five books each serve the four kinds of caster:
-            Arcane (INT)  - the Mage's study, and a little of the Rogue's.
 
+Power in the Elder Days is sung, and prayed, and studied.  Four
+realms of five books each serve the four kinds of caster:
+  Arcane (INT)  - the Mage's study, and a little of the Rogue's.
   Shadow (INT)  - the Necromancer's dark road; the Blackguard
-                  borrows its destructions.
+      borrows its destructions.
   Holy (WIS)    - the Priest's prayers, granted by the Valar in
-                  their own order, not chosen; the Paladin prays
-                  more slowly and never reaches the highest.
+      their own order, not chosen; the Paladin prays
+      more slowly and never reaches the highest.
   Nature (WIS)  - the Druid's verses; the Ranger sings the
-                  survival-songs of wood and trail.
+      survival-songs of wood and trail.
 
 Warriors have no spell points and want none.  Pure casters use
 all five books of their realm, and the hybrid callings only the

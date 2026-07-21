@@ -4,12 +4,10 @@
             it was, and yet a warning..."
             -- The Silmarillion, ch. 13
             The game is set in the First Age of the world, in Beleriand, the
-            land that lay west of the Blue Mountains.  As you go down, you
-            go
 
-back through the Age's own history: green realms and guarded
-kingdoms above, ash and iron below, and at the bottom the
-beginning of all the trouble.
+land that lay west of the Blue Mountains.  As you go down, you go back
+through the Age's own history: green realms and guarded kingdoms above, ash
+and iron below, and at the bottom the beginning of all the trouble.
 
 The Age in brief
 ----------------

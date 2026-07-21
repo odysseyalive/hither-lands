@@ -1,14 +1,12 @@
 {tile:capital:O| }           Of Delvings, and How to Walk in Them
             ====================================
             Beneath every dungeon-marked hill and fortress of the map lie
-            levels
-            without end.  Stand upon a down-stair and press
+            levels without end.  Stand upon a down-stair and press
             '{key:Go down staircase}' to descend; '{key:Go up staircase}'
-            climbs
-            back toward the light.  A level once left is gone forever, for
-the
-deeps are vaster than any map, so take what you need the first time.
-Most levels offer one stair up and two down.
+            climbs back toward the light.  A level once left is gone
+
+forever, for the deeps are vaster than any map, so take what you need the
+first time. Most levels offer one stair up and two down.
 
 Light
 -----
