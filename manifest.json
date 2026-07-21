@@ -368,7 +368,7 @@
       "source": "monsters/yeek-blue.png",
       "row": 5,
       "col": 7,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "monster:blue yeek"
       ]
@@ -7583,7 +7583,7 @@
       "source": "objects/ring-steel.png",
       "row": 90,
       "col": 4,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Steel"
       ]
@@ -7592,7 +7592,7 @@
       "source": "objects/ring-pewter.png",
       "row": 90,
       "col": 5,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Pewter"
       ]
@@ -7601,7 +7601,7 @@
       "source": "objects/ring-galvorn.png",
       "row": 90,
       "col": 6,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Galvorn"
       ]
@@ -7610,7 +7610,7 @@
       "source": "objects/ring-brass.png",
       "row": 90,
       "col": 7,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Brass"
       ]
@@ -7619,7 +7619,7 @@
       "source": "objects/ring-bronze.png",
       "row": 90,
       "col": 8,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Bronze"
       ]
@@ -7628,7 +7628,7 @@
       "source": "objects/ring-copper.png",
       "row": 90,
       "col": 9,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Copper"
       ]
@@ -7637,7 +7637,7 @@
       "source": "objects/ring-silver.png",
       "row": 90,
       "col": 10,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Silver"
       ]
@@ -7646,7 +7646,7 @@
       "source": "objects/ring-gold.png",
       "row": 90,
       "col": 11,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Gold"
       ]
@@ -7655,7 +7655,7 @@
       "source": "objects/ring-adamantite.png",
       "row": 90,
       "col": 12,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Adamantite"
       ]
@@ -7664,7 +7664,7 @@
       "source": "objects/ring-mithril.png",
       "row": 90,
       "col": 13,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:ring:Mithril"
       ]
@@ -7997,7 +7997,7 @@
       "source": "objects/shot-pebble.png",
       "row": 93,
       "col": 2,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:shot:Rounded Pebble"
       ]
@@ -8006,7 +8006,7 @@
       "source": "objects/shot-iron.png",
       "row": 93,
       "col": 3,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:shot:Iron Shot"
       ]
@@ -8015,7 +8015,7 @@
       "source": "objects/shot-mithril.png",
       "row": 93,
       "col": 4,
-      "chroma": true,
+      "chroma": "family",
       "maps": [
         "object:shot:Mithril Shot"
       ]
@@ -10730,6 +10730,42 @@
       "maps": [],
       "help": "relic:gauntlets",
       "chroma": true
+    },
+    {
+      "source": "objects/pile-of-objects.png",
+      "row": 107,
+      "col": 3,
+      "chroma": "family",
+      "maps": [
+        "object:none:<pile>"
+      ]
+    },
+    {
+      "source": "objects/unknown-item.png",
+      "row": 107,
+      "col": 4,
+      "chroma": "family",
+      "maps": [
+        "object:none:<unknown item>"
+      ]
+    },
+    {
+      "source": "objects/unknown-treasure.png",
+      "row": 107,
+      "col": 5,
+      "chroma": "family",
+      "maps": [
+        "object:none:<unknown treasure>"
+      ]
+    },
+    {
+      "source": "objects/curse-object.png",
+      "row": 107,
+      "col": 6,
+      "chroma": "family",
+      "maps": [
+        "object:none:<curse object>"
+      ]
     }
   ],
   "player_variants": [
