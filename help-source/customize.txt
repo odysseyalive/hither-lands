@@ -11,7 +11,7 @@ Keymaps
 Press '=' and choose "Edit keymaps".  There you may query what a
 key does ('c'), create a new keymap ('d'), or remove one ('e').
 Creating one prompts first for the trigger key, then for the
-action -- the exact keystrokes to replay; end the action with '='
+action, which is the exact keystrokes to replay; end it with '='
 and confirm.  Control-u erases the action typed so far.
 
 Keymaps belong to the keyset they were made in: a keymap created

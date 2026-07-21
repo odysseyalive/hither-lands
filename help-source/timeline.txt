@@ -12,7 +12,7 @@ from the beginning.  They assume you know, and they are tired.
 
 The game is set in the First Age of the world, in Beleriand, the land
 that lay west of the Blue Mountains.  As you go down, you go back
-through the Age's own history -- green realms and guarded kingdoms
+through the Age's own history.  Green realms and guarded kingdoms
 above, ash and iron below, and at the bottom the beginning of all the
 trouble.  The descent is a reading of the Age backwards.  The deeper
 you stand, the earlier the wound.
@@ -40,8 +40,9 @@ the subject.
      Nargothrond, and hidden Gondolin flower.  Four hundred
      years of quiet, and everyone alive believed it would hold.
 
-  5. Dagor Bragollach, the Battle of Sudden Flame -- rivers of
-     fire break the Siege; Fingolfin rides to the gate and dies.
+  5. Dagor Bragollach, the Battle of Sudden Flame, in which
+     rivers of fire break the Siege.  Fingolfin rides to the
+     gate and dies.
      He rides alone, in wrath, and no one goes after him.
 
   6. The deeds of Beren and of Túrin, the Quest of the Silmaril,
@@ -71,8 +72,8 @@ grief.  You will not merely read about the fall of these places; you
 will walk in on the fall itself, still going on, with the same enemy
 still standing in the same hall.
 
-Five appointed foes mark the descent, each a chapter of the tale --
-Mîm at Amon Rûdh, Glaurung at Nargothrond, Ungoliant in Nan
+Five appointed foes mark the descent, and each is a chapter of the
+tale.  Mîm at Amon Rûdh, Glaurung at Nargothrond, Ungoliant in Nan
 Dungortheb, Sauron at Tol-in-Gaurhoth, and Morgoth himself at the
 hundredth depth of Angband.  Defeat the last and the Age is mended.
 

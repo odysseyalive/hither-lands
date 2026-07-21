@@ -10562,6 +10562,174 @@
       "maps": [],
       "help": "capital:A",
       "chroma": true
+    },
+    {
+      "source": "town/shop-general.png",
+      "row": 62,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "shop:general",
+      "chroma": "family"
+    },
+    {
+      "source": "town/shop-armoury.png",
+      "row": 65,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "shop:armoury",
+      "chroma": "family"
+    },
+    {
+      "source": "town/shop-weapon.png",
+      "row": 68,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "shop:weaponsmith",
+      "chroma": "family"
+    },
+    {
+      "source": "town/shop-bookseller.png",
+      "row": 71,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "shop:bookseller",
+      "chroma": "family"
+    },
+    {
+      "source": "town/shop-alchemy.png",
+      "row": 74,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "shop:alchemist",
+      "chroma": "family"
+    },
+    {
+      "source": "town/shop-magic.png",
+      "row": 77,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "shop:magic",
+      "chroma": "family"
+    },
+    {
+      "source": "town/shop-black-market.png",
+      "row": 80,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "shop:black market",
+      "chroma": "family"
+    },
+    {
+      "source": "town/home.png",
+      "row": 83,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "shop:home",
+      "chroma": "family"
+    },
+    {
+      "source": "objects/sword-long.png",
+      "row": 86,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "relic:blade",
+      "chroma": true
+    },
+    {
+      "source": "objects/dagger.png",
+      "row": 89,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "relic:knife",
+      "chroma": true
+    },
+    {
+      "source": "objects/bow-long.png",
+      "row": 92,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "relic:bow",
+      "chroma": true
+    },
+    {
+      "source": "objects/helm-iron.png",
+      "row": 95,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "relic:helm",
+      "chroma": true
+    },
+    {
+      "source": "objects/amulet-emerald.png",
+      "row": 98,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "relic:gem",
+      "chroma": true
+    },
+    {
+      "source": "objects/gloves-gauntlets.png",
+      "row": 101,
+      "col": 16,
+      "block": [
+        6,
+        3
+      ],
+      "maps": [],
+      "help": "relic:gauntlets",
+      "chroma": true
     }
   ],
   "player_variants": [

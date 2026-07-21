@@ -46,9 +46,9 @@ Traps and doors
 Light shows you the room.  It does not show you the floor, and the floor is
 where the trouble is kept.
 
-Traps lie hidden until your wits uncover them -- a passive skill,
-for there is no search command -- or until you blunder into one;
-'^' marks those you know of.  Disarm with
+Traps lie hidden until your wits uncover them, or until you blunder
+into one; '^' marks those you know of.  The uncovering is passive,
+for there is no search command.  Disarm with
 '{key:Disarm a trap or chest}', and carefully.  Trap-detection magic
 marks out a green zone of safety, but it is a snapshot only, and what
 the monsters dig afterward it does not know.  Doors are '+' when shut

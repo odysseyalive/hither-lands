@@ -93,10 +93,10 @@ Where you begin
 The last screen fades and you are somewhere real, with a road going
 out of it.
 
-In the wilderness game each race begins in its own home town --
-Grey-Elves in Menegroth, Dwarves in Belegost, and so on -- and the
-folk of the more perilous lands begin above first level, having been
-seasoned by simply having grown up where they did.  In the
+In the wilderness game each race begins in its own home town:
+Grey-Elves in Menegroth, Dwarves in Belegost, and so on.  The folk of
+the more perilous lands begin above first level, having been seasoned
+by simply having grown up where they did.  In the
 dungeon-only game all begin equal, at the gate of one deep hold, and
 the world above is a rumour.
 

@@ -53,8 +53,8 @@ Cast or pray with '{key:Cast a spell}', browse a book with
 turn.  Failure starts common and grows rare with level, and the great
 casters come to fail not at all.
 
-Casting beyond your spell points is possible, and it asks a price --
-the attempt may leave you drained, or paralyzed mid-word.
+Casting beyond your spell points is possible, and it asks a price.
+The attempt may leave you drained, or paralyzed mid-word.
 
 Every art has its conditions, and no singer has ever talked one of
 them round.  You cannot cast blind or confused, and every caster but

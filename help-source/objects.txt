@@ -27,7 +27,7 @@ thing, each stacking to forty, and twelve more places are worn upon
 your body.  Weight past your strength slows you.  Wear or wield with
 '{key:Wear/wield an item}', take off with
 '{key:Take off/unwield an item}', drop with '{key:Drop an item}', and
-inscribe with '{key:Inscribe an object}' -- your notes ride along
+inscribe with '{key:Inscribe an object}', and your notes ride along
 with the item.
 
 Inscription is worth more than it looks.  The dungeon is long and
@@ -45,7 +45,7 @@ you carry, you carry on trust, until it has proved itself one way or
 the other.
 
 Every potion, scroll, ring and amulet kind wears a random
-disguise each game -- "a copper ring" -- until it is learned.  There
+disguise each game ("a copper ring") until it is learned.  There
 is no scroll of Identify in this Age, and knowledge is earned.
 Weapons and armour reveal their runes as you fight in them; devices
 reveal themselves in use, so aim them at something easy first;

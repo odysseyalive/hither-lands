@@ -21,26 +21,37 @@ The shops
 The doors are numbered rather than named, which offends the poets and suits
 everyone else.  Walk onto a numbered door to go in.
 
-  1  General Store - food, torches, oil, cloaks, picks and
-         shovels; the town's dependable larder.
+  {tile:shop:general|1}     General Store
+        food, torches, oil, cloaks, picks and shovels; the
+        town's dependable larder.
 
-  2  Armoury       - mail and shields, richer as you prove
-         yourself below.
+  {tile:shop:armoury|2}     Armoury
+        mail and shields, richer as you prove
+        yourself below.
 
-  3  Weaponsmith   - blades, bows, and ammunition.
+  {tile:shop:weaponsmith|3}     Weaponsmith
+        blades, bows, and ammunition, and the loudest
+        forge on the street to find it by.
 
-  4  Bookseller    - the simpler books of every realm.
+  {tile:shop:bookseller|4}     Bookseller
+        the simpler books of every realm, shelved by a
+        man who has read none of them.
 
-  5  Alchemist     - potions and scrolls, Word of Recall among
-         them.
+  {tile:shop:alchemist|5}     Alchemist
+        potions and scrolls, Word of Recall among them,
+        which is the errand you will keep coming back for.
 
-  6  Magic Shop    - rings, amulets, wands, and staves; sell a
-         spent wand and buy it back recharged.
+  {tile:shop:magic|6}     Magic Shop
+        rings, amulets, wands, and staves; sell a spent
+        wand and buy it back recharged.
 
-  7  Black Market  - anything at all, for far too much.
+  {tile:shop:black market|7}     Black Market
+        anything at all, for far too much, and no
+        questions asked in either direction.
 
-  8  Home          - your own storeroom, and the one honest
-         price in town.
+  {tile:shop:home|8}     Home
+        your own storeroom, and the one honest
+        price in town.
 
 The first door and the fifth are the two you will wear out.  The seventh you
 will visit once, out of curiosity, and come away insulted, and go back.

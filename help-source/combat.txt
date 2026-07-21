@@ -6,12 +6,12 @@
             -- The Silmarillion, ch. 19
 
 There is a great deal of fighting in Beleriand and very little of it
-is glorious.  The songs keep the duels -- Fingolfin at the gate,
+is glorious.  The songs keep the duels.  Fingolfin at the gate,
 Fingon on the height, Húrin standing over the last of his guard in
-the Fen of Serech -- and they leave out the long ugly middle of every
-battle, which is where you will be spending your time.  The Enemy
-does not fight to be remembered.  He fights with numbers, and with
-poison, and with things that were men once, and he can afford to
+the Fen of Serech.  What they leave out is the long ugly middle of
+every battle, and that is where you will be spending your time.  The
+Enemy does not fight to be remembered.  He fights with numbers, and
+with poison, and with things that were men once, and he can afford to
 lose.
 
 So fight the way the survivors of this Age fought.  Know what is in
@@ -31,7 +31,7 @@ up with '{key:Wear/wield an item}'.
 Each blow rolls your skill against the target's armour, and a miss is
 no damage at all.  Weapon damage is its dice plus enchantment, and
 your blows per round grow with STR and DEX and shrink with the
-weapon's weight -- warriors reach six blows, pure casters four, the
+weapon's weight.  Warriors reach six blows, pure casters four, the
 rest five.  Rings and other worn gear add their to-hit and to-dam to
 your melee strikes.
 
@@ -50,7 +50,7 @@ was scarcely ever seen doing it, and a bow remains the only argument
 that lets you win without being hit.
 
 Fire ammunition with '{key:Fire your missile weapon}', or loose at
-the nearest foe without aiming -- Appendix I gives that key for your
+the nearest foe without aiming.  Appendix I gives that key for your
 keyset.  Throw things with '{key:Throw an item}'.  Only a matching
 launcher gives ammunition its full power, for the bow's multiplier
 scales the whole shot.  Choose your mark with
@@ -75,9 +75,9 @@ Armour class turns blows aside and softens what lands, though heavy
 body armour costs a little accuracy.  Elemental resistances are
 percentages that stack multiplicatively, and temporary resistance
 adds another layer.  Fire, cold, acid, lightning, poison, and
-confusion are the six to secure first.  The elements also ruin
-your goods -- fire eats scrolls, acid armour, cold potions,
-lightning rings and wands -- so resistance guards your pack too.
+confusion are the six to secure first.  The elements ruin your goods
+as well.  Fire eats scrolls, acid eats armour, cold eats potions, and
+lightning eats rings and wands, so resistance guards your pack too.
 
 A traveller who has been burned once tends to buy resistance the way
 other people buy bread, and that is the right instinct.  Sooner or

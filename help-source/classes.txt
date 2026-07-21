@@ -80,8 +80,8 @@ Specialties
 FAangband's specialty abilities set your character apart from all
 others of the same calling.  You choose one at first level (Warriors
 choose two), and earn further choices as you prove yourself against
-the great enemies of the Age -- three or four in a full life.  Review
-yours with '{key:View abilities}'; casters gain new spells with
+the great enemies of the Age, three or four of them in a full life.
+Review yours with '{key:View abilities}'; casters gain new spells with
 '{key:Gain new spells}'.
 
 Consider them the mark the road leaves on you.  They are not bought

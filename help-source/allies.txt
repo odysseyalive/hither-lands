@@ -63,20 +63,20 @@ in a quiet corridor rather than a loud one.
 
 What follows the asking is a contest, and these are its terms.
 
-  Who may join -- neutral people of the Free Peoples, that is, the
+  Who may join: neutral people of the Free Peoples, that is, the
    speaking races.  A character with the Beguile ability, which is a
    Druid specialty, may also charm wild animals that are not evil.
 
-  The reckoning -- persuasion weighs your level against the
-   creature's.  Great folk will not lightly follow the untried, and
-   they are not wrong to weigh you.
+  The reckoning is a weighing of your level against the creature's.
+   Great folk will not lightly follow the untried, and they are not
+   wrong to weigh you.
 
-  Giving offence -- fail against a much greater creature, more than
-   five levels above you, and it takes the asking as an insult and
-   turns hostile.  A milder failure leaves it merely unconvinced, and
-   you may try again.
+  Giving offence is easily done.  Fail against a much greater
+   creature, more than five levels above you, and it takes the asking
+   as an insult and turns hostile.  A milder failure leaves it merely
+   unconvinced, and you may try again.
 
-  How many -- you can lead 1 follower, plus one more at level 15 and
+  How many you may lead: 1 follower, plus one more at level 15 and
    another at level 30.  Three is as much company as Beleriand will
    allow any one traveller.
 

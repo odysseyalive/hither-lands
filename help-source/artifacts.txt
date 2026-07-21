@@ -21,85 +21,85 @@ rest is in the songs, and the songs are not always kind.
 Here are a few of the names you may meet below, and what is
 remembered of them.
 
-  Ringil
-      The sword of Fingolfin, High King of the Noldor, that glittered
-      like ice.  When his people had been broken on the Anfauglith he
-      rode alone to the gates of Angband and knocked upon them, and
-      called Morgoth out to single combat.  With Ringil he dealt the
-      Enemy seven great wounds, and Morgoth has gone lame ever since.
-      The High King did not come back.
+  {tile:relic:blade||}     Ringil
+        The sword of Fingolfin, High King of the Noldor, that glittered
+        like ice.  When his people had been broken on the Anfauglith he
+        rode alone to the gates of Angband and knocked upon them, and
+        called Morgoth out to single combat.  With Ringil he dealt the
+        Enemy seven great wounds, and Morgoth has gone lame ever since.
+        The High King did not come back.
 
-  Angrist
-      "Iron-cleaver," forged by Telchar of Nogrod, carried out of
-      Nargothrond by Curufin and taken from him by Beren.  It cut a
-      Silmaril free of the Iron Crown without complaint.  Then Beren,
-      who never knew when a thing was finished, tried for a second
-      stone, and the blade snapped, and a shard of it flew and struck
-      the cheek of Morgoth, and Morgoth stirred in his sleep.
+  {tile:relic:knife||}     Angrist
+        "Iron-cleaver," forged by Telchar of Nogrod, carried out of
+        Nargothrond by Curufin and taken from him by Beren.  It cut a
+        Silmaril free of the Iron Crown without complaint.  Then Beren,
+        who never knew when a thing was finished, tried for a second
+        stone, and the blade snapped, and a shard of it flew and struck
+        the cheek of Morgoth, and Morgoth stirred in his sleep.
 
-  Gurthang
-      "Iron of Death," the black sword of Túrin Turambar, reforged
-      out of Anglachel, which was made of iron that fell from heaven.
-      It was cold, and it was malicious, and it spoke, and it did not
-      forget what it had been asked to do.  At the end Túrin asked it
-      whether it would drink his blood, and it answered that it
-      would, and gladly.
+  {tile:relic:blade||}     Gurthang
+        "Iron of Death," the black sword of Túrin Turambar, reforged
+        out of Anglachel, which was made of iron that fell from heaven.
+        It was cold, and it was malicious, and it spoke, and it did not
+        forget what it had been asked to do.  At the end Túrin asked it
+        whether it would drink his blood, and it answered that it
+        would, and gladly.
 
-  Anguirel
-      Eöl the Dark Elf made two blades out of a fallen star.  One he
-      gave away and one he kept, and this is the one he kept.  His
-      son Maeglin stole it from him and bore it into Gondolin, and it
-      was not the last thing Maeglin took that was not his.
+  {tile:relic:blade||}     Anguirel
+        Eöl the Dark Elf made two blades out of a fallen star.  One he
+        gave away and one he kept, and this is the one he kept.  His
+        son Maeglin stole it from him and bore it into Gondolin, and it
+        was not the last thing Maeglin took that was not his.
 
-  Aranrúth
-      "King's Ire," the sword of Elu Thingol of Doriath, who was a
-      king in these lands before there were any Noldor here to argue
-      with him.  It came out of the ruin of Menegroth when very
-      little else did, and went down the long years afterward to the
-      hands of the Kings of Númenor.
+  {tile:relic:blade||}     Aranrúth
+        "King's Ire," the sword of Elu Thingol of Doriath, who was a
+        king in these lands before there were any Noldor here to argue
+        with him.  It came out of the ruin of Menegroth when very
+        little else did, and went down the long years afterward to the
+        hands of the Kings of Númenor.
 
-  Glamdring and Orcrist
-      Foe-hammer and Goblin-cleaver, made in Gondolin for the war and
-      paired as brothers are paired.  They burn cold when orcs come
-      near, which is a courtesy the smiths built into them on
-      purpose.  Both of them outlast the city that made them.  Long
-      after this Age has become a song, strangers who cannot read
-      their runes will pull them out of a troll's cave.
+  {tile:relic:blade||}     Glamdring and Orcrist
+        Foe-hammer and Goblin-cleaver, made in Gondolin for the war and
+        paired as brothers are paired.  They burn cold when orcs come
+        near, which is a courtesy the smiths built into them on
+        purpose.  Both of them outlast the city that made them.  Long
+        after this Age has become a song, strangers who cannot read
+        their runes will pull them out of a troll's cave.
 
-  The Dragon-helm of Dor-Lómin
-      The Helm of Hador, grey steel crowned with the likeness of
-      Glaurung in gold, made by Telchar and handed down a line of
-      lords who each in turn found it too heavy to wear.  Túrin wore
-      it.  The servants of Morgoth fled the sight of it, which was
-      the whole purpose of the thing.
+  {tile:relic:helm|]}     The Dragon-helm of Dor-Lómin
+        The Helm of Hador, grey steel crowned with the likeness of
+        Glaurung in gold, made by Telchar and handed down a line of
+        lords who each in turn found it too heavy to wear.  Túrin wore
+        it.  The servants of Morgoth fled the sight of it, which was
+        the whole purpose of the thing.
 
-  Belthronding
-      The great black bow of Beleg Cúthalion, cut of yew, that no
-      other archer ever bent.  Beleg was the truest friend Túrin had,
-      and Túrin killed him in the dark by mistake, in the moment when
-      Beleg was cutting him loose from his bonds.  The bow was buried
-      with the archer.
+  {tile:relic:bow|}}     Belthronding
+        The great black bow of Beleg Cúthalion, cut of yew, that no
+        other archer ever bent.  Beleg was the truest friend Túrin had,
+        and Túrin killed him in the dark by mistake, in the moment when
+        Beleg was cutting him loose from his bonds.  The bow was buried
+        with the archer.
 
-  The Elessar
-      The green Elfstone, in which a little of the light of the elder
-      Sun was caught, so that withered things seen through it looked
-      young again, and hurt things touched by the hand that held it
-      were made whole.  It was wrought in Gondolin and given for
-      love, and its fame runs clean out the far end of this Age.
+  {tile:relic:gem|"}     The Elessar
+        The green Elfstone, in which a little of the light of the elder
+        Sun was caught, so that withered things seen through it looked
+        young again, and hurt things touched by the hand that held it
+        were made whole.  It was wrought in Gondolin and given for
+        love, and its fame runs clean out the far end of this Age.
 
-  Nimphelos
-      A pearl the size of a dove's egg, white as starlight, that
-      Thingol paid to the Dwarves of Belegost for their labour in the
-      delving of Menegroth.  Their lord held it worth more than a
-      mountain of gold and said so aloud, which from a Dwarf is an
-      extravagance.
+  {tile:relic:gem|"}     Nimphelos
+        A pearl the size of a dove's egg, white as starlight, that
+        Thingol paid to the Dwarves of Belegost for their labour in the
+        delving of Menegroth.  Their lord held it worth more than a
+        mountain of gold and said so aloud, which from a Dwarf is an
+        extravagance.
 
-  Camlost
-      "Empty-handed."  Beren took that name for himself when he came
-      back to Thingol's hall and lifted his arm and there was no hand
-      on the end of it, and no Silmaril in the hand, Carcharoth
-      having taken the two of them together.  The gauntlets remember
-      what the hand held.
+  {tile:relic:gauntlets|]}     Camlost
+        "Empty-handed."  Beren took that name for himself when he came
+        back to Thingol's hall and lifted his arm and there was no hand
+        on the end of it, and no Silmaril in the hand, Carcharoth
+        having taken the two of them together.  The gauntlets remember
+        what the hand held.
 
 Not all of the great work of the Age was done in the light.  Weapons
 and armour of the Enemy's making lie below also -- black things of
