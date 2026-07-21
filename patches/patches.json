@@ -525,6 +525,87 @@
       "note": "ASCII-mode colour tint for neutral fauna: yellow=territorial, light umber=other. Runs before ally-map-tint."
     },
     {
+      "id": "eco-home-mark",
+      "file": "src/mon-make.c",
+      "anchor": "\t/* Mark territorial monster's home */\n\tif (rf_has(race->flags, RF_TERRITORIAL)) {\n\t\tmon->home = grid;\n\t}",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:eco-home-mark",
+      "payload": "\t/* HITHER-LANDS:eco-home-mark BEGIN */\n\t/* Every monster remembers where it spawned so territorial races and pack\n\t * members can be leashed to a home area (see hl_home_leash).  Upstream set\n\t * this for RF_TERRITORIAL only. */\n\tmon->home = grid;\n\t/* HITHER-LANDS:eco-home-mark END */",
+      "note": "Record home for every spawn, not just RF_TERRITORIAL. Group members are placed one-at-a-time via place_new_monster_one, so each gets its own spawn grid. home is read only by hl_home_leash, so this is otherwise side-effect-free. Replaces the upstream territorial-only assignment."
+    },
+    {
+      "id": "eco-home-leash",
+      "file": "src/mon-move.c",
+      "anchor": "/* HITHER-LANDS:eco-fauna-behavior END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:eco-home-leash",
+      "payload": "\n\n/* HITHER-LANDS:eco-home-leash BEGIN */\n/*\n * Home-area leash for territorial races and pack (group) monsters.\n *\n * The eco-* layer removed the sleep that used to hold packs in their spawn\n * blob, so awake wolves/ants/orc-bands scatter via random-walk (RAND_25) and\n * heatmap pursuit with nothing pulling them back.  This tethers a monster to\n * its spawn grid (mon->home): when it has no way to reach the player it heads\n * home, while get_move_advance() transparently overrides the home target on\n * any turn the monster can actually track the player - so a real hunt is never\n * interrupted, and the leash only bites once the monster disengages.\n *\n * Returns true when the monster is being steered home this turn; the caller\n * then cancels innate stagger so the trip isn't wasted on a random step.\n *\n * Replaces the upstream RF_TERRITORIAL block, which was cave-excluded, used a\n * level-sized 5*hearing radius, and clamped target.grid (a per-turn step\n * target) rather than the monster's own position.\n */\nstatic bool hl_home_leash(struct monster *mon)\n{\n\tint radius, dist, i;\n\n\t/* Allies and monsters hunting another monster are never leashed. */\n\tif (mflag_has(mon->mflag, MFLAG_FOLLOWER)) return false;\n\tif (mon->target.midx > 0) return false;\n\n\t/* Only territorial races and live packs (2+ in the group) are leashed. */\n\tif (!rf_has(mon->race->flags, RF_TERRITORIAL) &&\n\t\tmonster_primary_group_size(cave, mon) < 2) {\n\t\treturn false;\n\t}\n\n\t/* Pre-patch savefiles have no home; adopt the current grid. */\n\tif (loc_is_zero(mon->home)) {\n\t\tmon->home = mon->grid;\n\t\treturn false;\n\t}\n\n\t/* Radius scales with perception so keen animals roam wider.  These two\n\t * expressions are the main tuning knob. */\n\tif (rf_has(mon->race->flags, RF_TERRITORIAL)) {\n\t\tradius = MAX(8, mon->race->hearing / 2);\n\t} else {\n\t\tradius = MAX(12, mon->race->hearing);\n\t}\n\n\tdist = distance(mon->home, mon->grid);\n\n\t/* Territorial races get a small energy nudge while near home, as upstream\n\t * but measured against the leash radius instead of 5 * hearing. */\n\tif (rf_has(mon->race->flags, RF_TERRITORIAL)) {\n\t\tfor (i = 5; i > 0; i--) {\n\t\t\tif ((dist * i) > (radius * 5)) break;\n\t\t}\n\t\tmon->energy += (5 - i);\n\t}\n\n\t/* Outside the home area: aim for home.  If the monster can reach the\n\t * player, get_move_advance() overrides this and it hunts; only when it\n\t * cannot does it actually walk home. */\n\tif (dist > radius) {\n\t\tmon->target.grid = mon->home;\n\t\tmflag_on(mon->mflag, MFLAG_TRACKING);\n\t\treturn true;\n\t}\n\n\treturn false;\n}\n/* HITHER-LANDS:eco-home-leash END */\n",
+      "note": "Defines hl_home_leash. Chained anchor on the eco-fauna-behavior END sentinel (must run after eco-fauna-behavior in patches.json order), placing the helper just before ally-seek-fn/monster_turn. No MFLAG_AWARE gate: get_move_advance() already overrides target.grid toward the player whenever a hunt path exists and fails only on disengage, so the leash bites exactly when the monster cannot reach the player. Radius expressions are the tuning knob."
+    },
+    {
+      "id": "eco-home-call",
+      "file": "src/mon-move.c",
+      "anchor": "\t/* Handle territorial monsters */\n\tif (rf_has(mon->race->flags, RF_TERRITORIAL) &&\n\t\t(level_topography(player->place) != TOP_CAVE)) {\n\t\t/* Territorial monsters get a direct energy boost when close to home */\n\t\tint from_home =\tdistance(mon->home, mon->grid);\n\n\t\t/* Step up in units of a fifth of monster detection range */\n\t\tfor (i = 5; i > 0; i--) {\n\t\t\tif ((from_home * i) > (mon->race->hearing * 5))\n\t\t\t\tbreak;\n\t\t}\n\n\t\t/* Add some energy */\n\t\tmon->energy += (5 - i);\n\n\t\t/* If target is too far away from home, go back */\n\t\tif (distance(mon->home, mon->target.grid) >\t5 * mon->race->hearing) {\n\t\t\tmon->target.grid = mon->home;\n\t\t}\n\t}",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:eco-home-call",
+      "payload": "\t/* HITHER-LANDS:eco-home-call BEGIN */\n\t/* Retire the upstream territorial block (cave-excluded, level-sized radius,\n\t * clamped the wrong variable); hl_home_leash supersedes it on all levels. */\n\tbool going_home = hl_home_leash(mon);\n\t/* HITHER-LANDS:eco-home-call END */",
+      "note": "Replaces the whole upstream territorial block with a single hl_home_leash call. going_home is read later by eco-home-stagger. The function-level int i is still used by the movement loop, so no unused-variable warning."
+    },
+    {
+      "id": "eco-home-stagger",
+      "file": "src/mon-move.c",
+      "anchor": "\t/* Work out what kind of movement to use - random movement or AI */\n\tstagger = monster_turn_should_stagger(mon);",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:eco-home-stagger",
+      "payload": "\t/* Work out what kind of movement to use - random movement or AI */\n\tstagger = monster_turn_should_stagger(mon);\n\t/* HITHER-LANDS:eco-home-stagger BEGIN */\n\t/* A monster being steered home shouldn't burn the trip on a random\n\t * (RAND_25/RAND_50) step; confusion (CONFUSED_STAGGER) still forces one. */\n\tif (going_home && stagger == INNATE_STAGGER) {\n\t\tstagger = NO_STAGGER;\n\t}\n\t/* HITHER-LANDS:eco-home-stagger END */",
+      "note": "Cancels innate (RAND_25/RAND_50) stagger while the monster is being steered home, so the leash pull isn't undone by a random step. Confusion still staggers. Reads going_home set by eco-home-call earlier in monster_turn."
+    },
+    {
+      "id": "eco-aid-mflag",
+      "file": "src/list-mon-temp-flags.h",
+      "anchor": "/* HITHER-LANDS:recruit-mflag END */\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:eco-aid-mflag",
+      "payload": "/* HITHER-LANDS:eco-aid-mflag BEGIN */\nMFLAG(RALLIED,\t\"Monster has been rallied to a group-mate's aid\")\n/* HITHER-LANDS:eco-aid-mflag END */\n",
+      "note": "Transient 'committed to a group fight' flag, set by mutual aid and cleared by the leash. Needed because MFLAG_AWARE is never cleared anywhere in the engine, so it can't signal disengagement. Same X-macro idiom as recruit-mflag (MFLAG_FOLLOWER)."
+    },
+    {
+      "id": "eco-aid-incl",
+      "file": "src/mon-util.c",
+      "anchor": "#include \"mon-make.h\"\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:eco-aid-incl",
+      "payload": "/* HITHER-LANDS:eco-aid-incl BEGIN */\n#include \"mon-group.h\"\n/* HITHER-LANDS:eco-aid-incl END */\n",
+      "note": "mon-util.c does not otherwise include mon-group.h; hl_group_call_to_arms needs the monster_group / mon_group_list_entry definitions to walk member_list."
+    },
+    {
+      "id": "eco-aid-fn",
+      "file": "src/mon-util.c",
+      "anchor": "bool mon_take_hit(struct monster *mon, struct player *p, int dam, bool *fear,\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:eco-aid-fn",
+      "payload": "/* HITHER-LANDS:eco-aid-fn BEGIN */\n/*\n * Mutual aid: when a group monster is struck by the player, its packmates\n * within earshot rally to its defence - waking, turning hostile, and heading\n * for the commotion.  This re-arms the group cohesion the eco-* awake-fauna\n * layer removed: monster_group_rouse() only wakes *sleeping* friends, and\n * fauna no longer sleep.  Bounded to the monster's own group and to its\n * hearing range, so it never cascades across the level.\n */\nstatic void hl_group_call_to_arms(struct monster *mon)\n{\n\tint index = mon->group_info[PRIMARY_GROUP].index;\n\tstruct monster_group *group;\n\tstruct mon_group_list_entry *entry;\n\n\t/* Solo monsters have nobody to call. */\n\tif (index <= 0) return;\n\tgroup = cave->monster_groups[index];\n\tif (!group) return;\n\n\tfor (entry = group->member_list; entry; entry = entry->next) {\n\t\tstruct monster *friend = cave_monster(cave, entry->midx);\n\n\t\tif (!friend || friend == mon || !friend->race) continue;\n\n\t\t/* Never turn the player's own allies/followers against them. */\n\t\tif (friend->target.midx > 0) continue;\n\t\tif (mflag_has(friend->mflag, MFLAG_FOLLOWER)) continue;\n\n\t\t/* Already answering the call. */\n\t\tif (friend->target.midx == -1 &&\n\t\t\tmflag_has(friend->mflag, MFLAG_AWARE)) continue;\n\n\t\t/* Only packmates within earshot of the commotion respond. */\n\t\tif (distance(mon->grid, friend->grid) > mon->race->hearing) continue;\n\n\t\t/* Answer: wake, turn hostile, and head for the cry. */\n\t\tfriend->target.midx = -1;\n\t\tmonster_wake(friend, false, 100);\n\t\tfriend->target.grid = mon->grid;\n\t\tmflag_on(friend->mflag, MFLAG_TRACKING);\n\t\tmflag_on(friend->mflag, MFLAG_RALLIED);\n\t}\n}\n/* HITHER-LANDS:eco-aid-fn END */\n\n",
+      "note": "Defines hl_group_call_to_arms just above mon_take_hit. Walks the victim's PRIMARY_GROUP member_list; rallies packmates within the victim's hearing that aren't already engaged or player-aligned. Sets each hostile+aware, targets the cry grid, and marks MFLAG_TRACKING + MFLAG_RALLIED."
+    },
+    {
+      "id": "eco-aid-call",
+      "file": "src/mon-util.c",
+      "anchor": "\t/* Covering tracks is no longer possible */\n\tp->timed[TMD_COVERTRACKS] = 0;",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:eco-aid-call",
+      "payload": "\n\n\t/* HITHER-LANDS:eco-aid-call BEGIN */\n\t/* A wounded group monster cries for help; packmates in earshot rally. */\n\thl_group_call_to_arms(mon);\n\t/* HITHER-LANDS:eco-aid-call END */",
+      "note": "Fires inside mon_take_hit after the damage>0 guard and before hp is subtracted, so the victim is alive with a current grid. Runs only on real player damage (melee sets target.midx=-1 first, so the victim is hostile when packmates match it)."
+    },
+    {
+      "id": "eco-aid-leash",
+      "file": "src/mon-move.c",
+      "anchor": "\tdist = distance(mon->home, mon->grid);",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:eco-aid-leash",
+      "payload": "\n\n\t/* HITHER-LANDS:eco-aid-leash BEGIN */\n\t/* Rallied to a packmate's aid: push toward the fight, not home, until we\n\t * can see the player (normal hostile AI then takes over) or we are back\n\t * home with the commotion over. */\n\tif (mflag_has(mon->mflag, MFLAG_RALLIED)) {\n\t\tif (los(cave, mon->grid, player->grid) || dist <= radius) {\n\t\t\tmflag_off(mon->mflag, MFLAG_RALLIED);\n\t\t} else {\n\t\t\treturn false;\n\t\t}\n\t}\n\t/* HITHER-LANDS:eco-aid-leash END */",
+      "note": "Chained anchor inside the installed hl_home_leash body (the dist assignment), so it must follow eco-home-leash in patches.json (it does). radius and dist are both computed by this point. Keeps a rallied straggler heading for the fight instead of peeling home, and self-clears MFLAG_RALLIED on LOS-to-player or on returning within the home radius."
+    },
+    {
       "id": "help-tile-incl",
       "file": "src/ui-help.c",
       "anchor": "#include \"ui-term.h\"\n",
