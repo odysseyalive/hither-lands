@@ -1,5 +1,5 @@
-{tile:capital:A| }           A Traveller's Guide to Beleriand
-            ================================
+{tile:capital:A|A}            Traveller's Guide to Beleriand
+            ==============================
             Being certain leaves gathered for those who come late over the
             Blue Mountains, and would go armed into the West.
             -- compiled at the Fords of Sarn

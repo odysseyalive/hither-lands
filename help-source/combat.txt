@@ -1,22 +1,53 @@
-{tile:capital:O| }           Of Arms and the Manner of Fighting
-            ==================================
+{tile:capital:O|O}           f Arms and the Manner of Fighting
+            =================================
             "That knife was made by Telchar of Nogrod...
             iron it would cleave as if it were green
             wood."
             -- The Silmarillion, ch. 19
 
+There is a great deal of fighting in Beleriand and very little of it
+is glorious.  The songs keep the duels -- Fingolfin at the gate,
+Fingon on the height, Húrin standing over the last of his guard in
+the Fen of Serech -- and they leave out the long ugly middle of every
+battle, which is where you will be spending your time.  The Enemy
+does not fight to be remembered.  He fights with numbers, and with
+poison, and with things that were men once, and he can afford to
+lose.
+
+So fight the way the survivors of this Age fought.  Know what is in
+front of you before it is on top of you.  Keep a road at your back.
+Be faster than the thing you are killing, and where you cannot be
+faster, be somewhere else.  Everything below is only the detail of
+that.
+
 Melee
 -----
-Walk into a foe and you strike it.  Bare hands are a poor argument in
-Beleriand, so bear a weapon and take it up with '{key:Wear/wield an item}'.
-Each blow rolls your skill against the target's armour, and a miss is no
-damage at all.  Weapon damage is its dice plus enchantment, and your blows
-per round grow with STR and DEX and shrink with the weapon's weight --
-warriors reach six blows, pure casters four, the rest five.  Rings and other
-worn gear add their to-hit and to-dam to your melee strikes.
+
+Most of it comes down to standing next to something and hitting it
+until one of you stops.  Walk into a foe and you strike it.  Bare
+hands are a poor argument in Beleriand, so bear a weapon and take it
+up with '{key:Wear/wield an item}'.
+
+Each blow rolls your skill against the target's armour, and a miss is
+no damage at all.  Weapon damage is its dice plus enchantment, and
+your blows per round grow with STR and DEX and shrink with the
+weapon's weight -- warriors reach six blows, pure casters four, the
+rest five.  Rings and other worn gear add their to-hit and to-dam to
+your melee strikes.
+
+The old quarrel between the heavy blade and the quick one is settled
+differently for every arm that lifts them.  A weapon you swing twice
+is generally worth more than a weapon you swing once and harder,
+unless the once is enough, and against certain things it is.  Carry
+both a while and let the corpses decide.
 
 Shooting and throwing
 ---------------------
+
+The better part of any fight in these lands is over before the enemy
+arrives.  Beleg Cúthalion killed at a distance for thirty years and
+was scarcely ever seen doing it, and a bow remains the only argument
+that lets you win without being hit.
 
 Fire ammunition with '{key:Fire your missile weapon}', or loose at
 the nearest foe without aiming -- Appendix I gives that key for your
@@ -26,8 +57,19 @@ scales the whole shot.  Choose your mark with
 '{key:Target monster or location}', or take the closest foe with
 '{key:Target closest monster}'.
 
+Arrows run out, and there is no fletcher under the mountains.  Gather
+what you have shot once the floor is quiet, keep something plain for
+the crowds, and save the good ammunition for whatever the crowd is
+standing in front of.
+
 Armour and resistance
 ---------------------
+
+Mail is a slow answer to a fast problem, and it is still the best
+answer anybody in the Elder Days has found.  The Noldor did not go to
+war in cloth.  Neither should you, and neither should you imagine
+that iron alone will see you through, because most of what wants you
+dead down there does not intend to use iron on you at all.
 
 Armour class turns blows aside and softens what lands, though heavy
 body armour costs a little accuracy.  Elemental resistances are
@@ -37,8 +79,20 @@ confusion are the six to secure first.  The elements also ruin
 your goods -- fire eats scrolls, acid armour, cold potions,
 lightning rings and wands -- so resistance guards your pack too.
 
+A traveller who has been burned once tends to buy resistance the way
+other people buy bread, and that is the right instinct.  Sooner or
+later the cold gets past the mail, and then the only thing between
+you and the floor is what you took the trouble to resist.
+
 Perils of the deep
 ------------------
+
+Deeper down, the fight stops being about weapons.  The old horrors of
+this Age did not need to touch you to finish you.  Glaurung unmade an
+army with his breath and a princess with his eyes, and the wights in
+the barrows take something from a man that no leech can put back.
+Learn these before you meet them, because meeting them is the
+expensive way.
 
 Dragon-breath takes a share of the beast's own vigour, less at a
 distance, for there is no dodging it, only resisting.  The undead
@@ -47,6 +101,13 @@ Stunning spoils your aim and your spells; free action wards off
 magical paralysis.  Speed is the king of stats, and ten points of it
 doubles you.
 
-The Enemy's creatures may be afflicted in their turn.  Stun,
-confuse, slow, frighten or hold them, and every such state opens
-them to heavier critical strikes.
+Take that last one seriously.  Two of you against one of them is not
+a metaphor, and every deep-dweller who ever came back up did so
+because they were quicker than the thing behind them.
+
+The advantage runs both ways, and the Enemy's creatures may be
+afflicted in their turn.  Stun, confuse, slow, frighten or hold them,
+and every such state opens them to heavier critical strikes.  A
+blinded troll is barely a troll.  Cripple first and kill after, and
+you will find that Beleriand is survivable, which is the most that
+anyone in this Age was ever promised.

@@ -1,87 +1,169 @@
-{tile:capital:O| }           Of Skin-Changing: the Full Particulars
-            ======================================
+{tile:capital:O|O}           f Skin-Changing: the Full Particulars
+            =====================================
             "...he took thence the ghastly wolf-hame of Draugluin, and the
             bat-fell of Thuringwethil."
             -- The Silmarillion, ch. 19
             *** SPOILERS ***  This file lists every shape with its numbers.
 
-If you would rather discover them in play, close this file now. Of
-Skin-Changing tells all a traveller needs and no more. Notation: hit/dam/AC
-are combat modifiers; named flags are gained while shaped; equipment worn
-keeps all its own powers.
+If you would rather discover them in play, close this file now.  Of
+Skin-Changing tells a traveller all that is needed and no more, and there
+is a real pleasure in the first time a fox turns out faster than you had
+reckoned on.  What follows trades that pleasure for the ability to plan.
+Choose knowingly.
+
+*** SPOILERS BEGIN HERE ***
+
+The notation is plain.  Hit/dam/AC are combat modifiers.  Named flags are
+gained while shaped and go again when you revert.  Equipment worn keeps
+all its own powers throughout, in every shape, without exception.
 
 How each shape is gained
 ------------------------
 
+No shape comes free.  Most are spells, and arrive with the book that
+holds them, and the levels below are the levels at which the verse may
+first be learned.
+
   Druid      - Fox Form L1 [Lesser Charms]; Become Pukel-man L30,
    Eagle's Flight L35, Bear Form L40 [Creature
    Dominion].
+
   Necromancer- Bat Form L3 [Into the Shadows]; Warg Form L28
    [Fear and Torment]; Vampire Form L37 [Corruption
    of Spirit].
+
   Blackguard - Werewolf Form L32 [Fear and Torment].
+
   Beorning   - bear at will with '{key:Change shape}', cub below
    L20, bear to L39, great bear from L40.
+
   Anyone     - dragon-scale mail's activation turns you into its
    dragon; certain rarer items grant the beast-forms.
+
+The Druid's is the long road and it ends best.  The Necromancer buys
+early and pays for it in blood.  The Blackguard is given one shape and
+wants no other.  The Beorning simply grows into it, which is the only
+recorded instance in Beleriand of a power arriving on schedule.
 
 The beast-forms
 ---------------
 
+Ten of them, and no two are meant for the same work.
+
   Fox          -3/-3/+3.  STR-3, Stealth+5, +1 blow, +1 move;
    feather fall, free action.  Bite and claw.
+
+The fox is no fighting shape and never becomes one.  It is for going
+somewhere quietly and arriving with your choices still in hand.
+
   Bear cub     +5/+5/+0.  STR+1, INT-3, infra+3; clumsy paws
    (disarming suffers).  Four light blows.
+
+A cub strikes four times and thinks about half as well, and the paws
+are honest about what they cannot manage.  It is a beginning.
+
   Bear         +10/+10/+2.  STR+2, INT-2, CON+1; fearless.
    Five blows.
+
+Here the shape stops being a novelty.  Fearless means that you will not
+run, which is either the making of you or the end of you.
+
   Great bear   +15/+15/+5.  STR+3, INT-2, CON+2, +1 blow;
    fearless.  Seven blows -- a mill of claws.
+
+Seven blows is less a fight than a weather event.  You walk into a room
+and the room is over.
+
   Eagle        +5/+0/+10.  +3 moves; flying, trap-immune, sees
    the unseen, cannot be blinded, confused, or
    frightened; free action.  Five rending blows.
+
+The finest travelling shape in the game, and it is not a close contest.
+Nothing on the floor can reach you and nothing in your head can either.
+
   Bat          +0/-10/+10.  Speed+3, Stealth+3, infra+5; flying,
    trap-immune, sees invisible, cannot be blinded.
    Entering costs a little blood.  Two weak blows.
+
+The bat can hurt nothing and does not intend to.  It is a shape for
+crossing a level that wants you dead while declining the argument.
+
   Warg         +5/+5/+0.  +2 blows; entering hurts briefly,
    cures fear, and rouses a berserk fury.  Four
    savage blows.
+
+Putting on the warg is decided in the first second and considered
+afterwards, or else not at all.  The fury is not a thing you choose.
+
   Vampire      +3/+3/-5.  Speed+5, Stealth+5, infra+5; sees
    invisible, holds life; your own light dims.
    Entering costs a quarter of your health; your
    bite drinks blood back.
+
+The fastest shape here, bought at a price paid in advance out of your
+own body, and repaid only if you win.  Your light dims because the
+shape is what it is, and the dark it likes is not the dark you see in.
+
   Werewolf     +5/+5/+0.  +1 blow, +1 move; regenerating.
    Entering terrifies the nearby, cures fear, and
    rouses fury.  Four rending blows.
+
+The room empties before ever you strike.  Sauron built a reputation on
+this shape, and the reputation was fairly earned.
+
   Pukel-man    +0/+5/+20.  STR+4, CON+4, save+20, damage cut by
    10, poison-proof, shard-hard, Speed-5; sustained,
    regenerating, stun-proof, holds life; cures
    poison and stunning on entry.  Four stone fists.
 
+Stone does not hurry and has no need to.  Nobody wears the Pukel-man to
+chase anything.  It is worn to stand immovable in a doorway while the
+rest of the level breaks itself upon you.
+
 The dragons
 -----------
 
+Twelve more, and they are one beast wearing twelve different weathers.
+
 All twelve dragon-shapes share one body: +0/+5/+10, Stealth-3,
-devices+10, throwing-30, four heavy blows -- bite, bite, claw,
-tear.  Re-activate the armour WHILE in dragon-shape to breathe.
-Each colour keeps its own element, total in its kind:
+devices+10, throwing-30, four heavy blows -- bite, bite, claw, tear.
+Re-activate the armour WHILE in dragon-shape to breathe.  Each colour
+keeps its own element, total in its kind:
 
   black acid  -  blue lightning  -  white frost  -  red fire  -
   green poison
 
-and the high dragons besides: shining (light; sees invisible),
-law and chaos (hold life), gold (sound; free action, unconfused),
-multi-hued, balance, and power -- whose breaths are as their
-names.
+and the high dragons besides: shining (light; sees invisible), law and
+chaos (hold life), gold (sound; free action, unconfused), multi-hued,
+balance, and power -- whose breaths are as their names.
+
+The dragon is the loudest thing a traveller can do.  Stealth-3 and a
+body the width of the corridor mean the level knows where you are, and
+the throwing penalty is the game observing that a dragon has no earthly
+use for a sling.  Breathing while shaped is the point of the whole
+exercise, and forgetting that you may is the commonest waste in this
+list.
 
 Practical notes
 ---------------
 
-A shape replaces your skills and blows wholesale.  A warrior's
-sword-arm is wasted in a fox, and a druid's fox wastes nothing.
-The entry costs of bat, warg, and vampire are paid out of your own
-body, so do not put on the vampire at a sliver of health.  The
-Pukel-man trades speed for near-invulnerability, a shape for
-standing in doorways and not for chasing.  Reverting is free;
-shifting in is a turn (Beorning) or a cast.  Every shape has its
-own sprite under the Hither Lands tileset, five of them painted
-for this set alone.
+A few things that the numbers alone will not tell you.
+
+  A shape replaces your skills and blows wholesale.  A warrior's
+   sword-arm is wasted in a fox, and a druid's fox wastes nothing.
+
+  The entry costs of bat, warg, and vampire are paid out of your own
+   body, so do not put on the vampire at a sliver of health.
+
+  The Pukel-man trades speed for near-invulnerability, a shape for
+   standing in doorways and not for chasing.
+
+  Reverting is free; shifting in is a turn (Beorning) or a cast.
+
+None of which is the same thing as knowing what to do.  That arrives
+the first time you shift for the right reason at the right moment, and
+the level that was going to kill you turns out to have been survivable
+all along.
+
+Every shape has its own sprite under the Hither Lands tileset, five of
+them painted for this set alone.

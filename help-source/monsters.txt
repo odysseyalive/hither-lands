@@ -1,95 +1,131 @@
 {tile:capital:O|O}           f Beasts and Fell Things
-            =========================
+            ========================
             "...thus did Melkor breed the hideous
             race of the Orcs in envy and mockery
             of the Elves..."
                     -- The Silmarillion, ch. 3
             Beleriand is not empty, and little of
             what fills it wishes you well.  One
-who can name a thing before it reaches him lives longer than one
-who cannot, so the kindreds are set out below with the mark each
-bears upon the map.
+who can name a thing before it arrives lives longer than one who cannot,
+and and there the argument ends for reading this chapter before you have
+need of it rather than after.
 
-Look before you strike.  Press '{key:Look around}' and the cursor will
-walk from creature to creature, naming each and telling what is known
-of it.  '{key:Identify symbol}' will name a symbol you do not know, and
-'{key:Display visible monster list}' lists everything presently in your
-sight.  Not all of it is your enemy; of neutral beasts and of those who
-will walk with you, see Of Companions on the Road.
+Naming is not idle.  The kindreds of the north are not one enemy but a
+dozen, and what kills one of them will barely inconvenience another.
+Fire clears a wood and does nothing to a wight.  A blade that has served
+you for twenty levels will glance off a spirit.  The traveller who dies
+in Beleriand generally dies because he treated some new thing as though
+it were the last thing.
+
+So look before you strike.  Press '{key:Look around}' and the cursor
+will walk from creature to creature, naming each and telling what is
+known of it.  '{key:Identify symbol}' will name a symbol you do not
+know, and '{key:Display visible monster list}' lists everything
+presently within your sight.  Not all of it is your enemy either; of
+neutral beasts, and of those who will walk with you, see Of Companions
+on the Road.
 
 The great kindreds
 ------------------
 
+What follows is the traveller's rough reckoning of the north, each
+kindred with the mark it bears upon the map.  Begin with the soldiery,
+the bred things that Morgoth makes in quantity and spends without
+counting.
+
   {tile:beast:cave orc| }       Orcs
-          the hosts of Angband, slave-snaga driven to
-          war by greater uruks and captains.
+          the hosts of Angband, snaga-slaves driven to war
+          by greater uruks and by captains worse than these.
           upon the map, 'o'
 
   {tile:beast:hill troll| }       Trolls
-          stone-hided brutes bred in mockery of Ents;
-          some cannot bear the light.
+          stone-hided brutes bred in mockery of Ents; some
+          cannot bear the light, and know it, and wait.
           upon the map, 'T'
+
+Those you will meet in numbers, and numbers are how they are meant to be
+met.  The next three are a different order of thing.  They are not spent
+by the Enemy but husbanded, being few and slow to make and very hard to
+replace, and a traveller who meets one has generally been unlucky rather
+than careless.
 
   {tile:beast:Glaurung, Father of the Dragons| }       Dragons
           Glaurung's wingless fire-drakes first, winged
-          terrors late; colour tells element.
+          terrors later; the colour tells you the element.
           upon the map, 'd' and 'D'
 
   {tile:beast:warg| }       Wolves
-          wargs and the werewolves of Sauron's
-          breeding; they hunt in packs.
+          wargs, and the werewolves of Sauron's breeding;
+          they hunt in packs and they do not tire.
           upon the map, 'C' and 'Z'
 
   {tile:beast:giant spider| }       Spiders
-          the brood of Ungoliant, spinners of darkness
-          under Nan Dungortheb.
+          the brood of Ungoliant, spinners of the darkness
+          that lies thick under Nan Dungortheb.
           upon the map, 'S'
 
+Against all of those a sword is at least an argument.  Against what
+comes next it often is not.  These are the things that are no longer
+flesh, or never were, and the harm they do is chiefly to what you have
+spent your career accumulating.
+
   {tile:beast:skeleton orc| }       Undead
-          skeletons, ghosts, liches, wights and wraiths
-          that drain what makes you strong.
+          skeletons, ghosts, liches, wights and wraiths,
+          that drain away what makes you strong.
           upon the map, 's z G L W V'
 
   {tile:beast:imp| }       Demons
-          fire-imps up to the Balrogs themselves, Maiar
-          of flame with whips of many thongs.
+          fire-imps at the least, and at the worst the
+          Balrogs, Maiar of flame with whips of many thongs.
           upon the map, 'u' and 'U'
 
   {tile:beast:Maia| }       Spirits
-          ainur and elementals, shape-shifting and hard
-          to wound with common elements.
+          ainur and elementals, shifting of shape and hard
+          to wound with any common element.
           upon the map, 'A' and 'E'
 
+The remainder are not lesser so much as harder to place.  Two of them
+are Morgoth's eyes rather than his soldiers, one was a tree before it
+was an enemy, and the last of them chose.
+
   {tile:beast:crow of Udûn| }       Birds, bats
-          the crows of Udûn and the bats of Ered
-          Gorgoroth, and Morgoth's eyes are many.
+          the crows of Udûn and the bats of Ered Gorgoroth;
+          Morgoth's eyes are many and they carry word north.
           upon the map, 'B' and 'b'
 
   {tile:beast:huorn| }       Trees
-          huorns and worse; fire serves where blades
-          fail, though the Ents will not thank you.
+          huorns and worse; fire serves where blades fail,
+          though the Ents will not thank you for it.
           upon the map, 'l'
 
   {tile:beast:hill giant| }       Giants
-          hurlers of boulders, to whom doors are of no
-          use at all.
+          hurlers of boulders, to whom a closed door is of
+          no use to you whatever.
           upon the map, 'P'
 
   {tile:beast:ruffian| }       Men
           not all Men kept faith, and the followers of
-          Ulfang serve the Enemy within reach.
+          Ulfang serve the Enemy within reach of here.
           upon the map, 'p'
 
-Some creatures wandered in from stranger legends than this one; take
-them as you find them.
+That is the honest shape of it, though Beleriand is untidy and you will
+turn up creatures that belong to stranger legends than this one.  Take
+them as you find them, look at them first, and do not assume that the
+rules of one kindred hold for another.
 
 The great names
 ---------------
 
-Deep in Angband wait the named terrors of the Age, among them
-Gothmog lord of Balrogs, Glaurung father of dragons, Ungoliant,
-Sauron of the werewolves, and Carcharoth at the gate.  At the
-uttermost depth sits Morgoth Bauglir, the Iron Crown, whom all
-this war is for.
+Beneath the kindreds there are individuals, and they are a different
+order of trouble.  Deep in Angband wait the named terrors of the Age,
+among them Gothmog lord of Balrogs, Glaurung father of dragons,
+Ungoliant, Sauron of the werewolves, and Carcharoth at the gate.
+
+None of these is a monster in the sense the rest of this chapter has
+meant.  Each is a character in a story that was going on long before you
+walked into it.  Meeting one is not a fight so much as an appointment, and
+the wise arrange to be ready for it well beforehand.  At the uttermost
+depth sits Morgoth Bauglir, the Iron Crown, whom all this war is for,
+and to whom every stair you take down is one stair nearer.
 
 Where these stand in the tale of years is told in Of the Years.

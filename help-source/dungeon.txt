@@ -1,15 +1,32 @@
-{tile:capital:O| }           Of Delvings, and How to Walk in Them
-            ====================================
+{tile:capital:O|O}           f Delvings, and How to Walk in Them
+            ===================================
             Beneath every dungeon-marked hill and fortress of the map lie
-            levels without end.  Stand upon a down-stair and press
-            '{key:Go down staircase}' to descend; '{key:Go up staircase}'
-            climbs back toward the light.  A level once left is gone
+            levels without end.  The first stair is usually a decent one,
+            cut square, with the marks of the chisel still on it, and you
+            go down it thinking well of whoever made it.  Four turns later
 
-forever, for the deeps are vaster than any map, so take what you need the
-first time. Most levels offer one stair up and two down.
+the cutting stops being square.  Somewhere below that it stops being cutting
+at all and becomes something that was dug by hand, or by claw, and the air
+changes, and your torch begins to lean toward the draught instead of
+standing straight.
+
+Such is a delving, repeated as often as your nerve
+holds.  Stand upon a down-stair and press
+'{key:Go down staircase}' to descend; '{key:Go up staircase}'
+climbs back toward the light.  A level once left is gone forever, for the
+deeps are vaster than any map, so take what you need the first time.  Most
+levels offer one stair up and two down.
+
+Understand what that means before you are standing in it.  There is no
+going back for the thing you left in the corner.  There is no second look
+at the room you did not open.  The deeps do not keep still behind you, and
+what you walk away from you have given away.
 
 Light
 -----
+
+Everything else in this chapter assumes you can see, and that assumption is
+the first one the dungeon takes off you.
 
 Without light you are blind, and there is no reading, no casting, no
 picking of locks, no seeing of traps.  Carry a torch or a lamp and
@@ -18,8 +35,16 @@ before the dark surprises you.  Rooms may be lit or unlit, and the
 deeper you go the darker they are.  Necromancers alone walk
 lightless, by choice and by art.
 
+A guttering torch four hundred feet down is a worse enemy than most of what
+lives there, because most of what lives there can wait.  Buy the extra
+flask.  It weighs almost nothing and it has never once been the thing that
+killed anybody.
+
 Traps and doors
 ---------------
+
+Light shows you the room.  It does not show you the floor, and the floor is
+where the trouble is kept.
 
 Traps lie hidden until your wits uncover them -- a passive skill,
 for there is no search command -- or until you blunder into one;
@@ -31,22 +56,41 @@ and ''' when open, and a secret door wears the look of plain granite
 until you pass close by it.  Open with '{key:Open a door or a chest}'
 and close with '{key:Close a door}'.
 
+A shut door behind you is worth more than most spells.  Things that hunt by
+smell lose the trail at a closed door, and things that hunt by sight lose
+you entirely, and the few that can open doors will announce themselves
+doing it, which is a courtesy of a kind.
+
 Mining
 ------
 
+Sooner or later the way you want goes through the rock, or the rock has
+something in it that you want, and then you dig.
+
 Quartz veins '*' hold the richest strikes, and magma '%' the lesser.
 Dig as Appendix I directs, and the game will wield your best digger
-unbidden.  Always carry one, for rock can close behind you, and a
-shovel has saved more lives than many a sword.
+unbidden.
+
+Always carry one.  Rock can close behind you, and a wall is only a wall
+until you own the tool that disagrees with it; a shovel has saved more
+lives than many a sword, and it has never yet been cursed.
 
 Reading a level
 ---------------
+
+The dungeon tells you things, if you will stand still long enough to be
+told.
 
 On arrival the level tells you something of itself, a danger feeling
 from "quiet and peaceful" to "omens of death", and, as you explore, a
 promise of treasure from cobwebs to superb.  Rest with
 '{key:Rest for a while}', survey with '{key:Full dungeon map}', and
 scroll the map with '{key:Locate player on map}'.
+
+Learn to trust those feelings and learn when to walk away from one.  A
+level that promises nothing and threatens much is a level you owe nothing
+to.  The stair down is always somewhere, and it is always cheaper than
+pride.
 
 At the last depth of Angband, past every terror of the descent,
 Morgoth himself bars the way down.  There is no level beneath him.

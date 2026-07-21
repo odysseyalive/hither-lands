@@ -1,55 +1,157 @@
-{tile:capital:A| }           A Gazetteer of the Deep Places
-            ==============================
+{tile:capital:A|A}            Gazetteer of the Deep Places
+            ============================
             "...encompassed within the Girdle of Melian."
             -- The Silmarillion, ch. 14
             The Hither Lands are Middle-earth itself, the mortal shore east
             of the Great Sea, and Beleriand is their war-torn west, where
 
 this game is set.  What follows is what the wise remember of the places you
-will walk.
+will walk, and the wise are not always right, and some of them are lying.
+
+Take it as a guide is meant to be taken.  A name on a map is a promise that
+somebody was there once and came back to say so.  It is not a promise that
+you will.
 
 The great cities
 ----------------
 
-  Menegroth    - the Thousand Caves, Thingol's hall behind the
-     Girdle of Melian; the fairest dwelling east of
-     the Sea.
-  Gondolin     - the Hidden Rock, Turgon's white city, found
-     only by those it summons.
-  Belegost     - the Great Fortress of the Broadbeam Dwarves,
-     whose lord Azaghâl wounded Glaurung.
-  Khazad-dûm   - the vast eastern mansion of Durin's Folk, in
-     its morning-glory.
-  Nargothrond  - Finrod's cavern-fortress above the Narog --
-     in these days already a name of dread.
+Four of the free peoples still keep halls worth the name in these years,
+and a fifth is falling as you read.  You will not be welcome in all of
+them, and you will not find the gate of one of them at all.
+
+  Menegroth, the Thousand Caves
+
+      Thingol's hall behind the Girdle of Melian, and the fairest
+      dwelling east of the Sea.  The Dwarves of Belegost delved it and
+      were paid in pearls out of the water, and they carved the pillars
+      like beeches, with birds of stone in the branches and lamps hung
+      among them.  Bright, and old, and closed.
+
+  Gondolin, the Hidden Rock
+
+      Turgon's white city in its ring of mountains, seven gates deep and
+      not marked on any map that Morgoth has read.  The songs say it is
+      found only by those it summons, and the songs are not wrong; the
+      road that brought you there was laid for you before you took it.
+
+  Belegost, the Great Fortress
+
+      The mansion of the Broadbeam Dwarves under the Blue Mountains,
+      where the mail is made that turns dragon-fire.  Their lord Azaghâl
+      wounded Glaurung and was trodden down for it, and his people bore
+      him out on their shoulders singing, and no enemy dared touch them
+      on the road.
+
+  Khazad-dûm
+
+      The vast eastern mansion of Durin's Folk, in its morning-glory.
+      Far off, untouched by this war, and rich beyond the telling of it.
+      Nothing has yet been dug too deep there.  That comes later.
+
+  Nargothrond
+
+      Finrod's cavern-fortress above the Narog, hewn with dwarf-help
+      until the halls ran a mile under the hill.  In these days it is
+      already a name of dread, and the folk who live within a week's
+      march of it have stopped saying it aloud.
+
+In a city you may eat, and buy, and sleep with both eyes shut, and that is
+the whole of what a city is for.  The places that follow are not for any of
+those things.
 
 The strongholds of the Enemy and the deep places
 ------------------------------------------------
 
-  Angband          - the Iron Prison beneath Thangorodrim, where
-         Morgoth sits crowned with stolen light.
-  Nan Dungortheb   - the Valley of Dreadful Death, where
-         Ungoliant's brood still spins.
-  Tol-in-Gaurhoth  - the Isle of Werewolves, that was fair Tol
-         Sirion before Sauron took it.
-  Amon Rûdh        - the Bald Hill, red-capped with seregon,
-         where Mîm keeps the last halls of his kind.
+These are the delvings the game will actually take you down into.  Every
+one of them was something else before it was this.  That is worth holding
+on to on the stairs, when the torch is guttering and the level below is
+making a noise you cannot place.
+
+  Angband, the Iron Prison
+
+      Beneath Thangorodrim, the three peaks of slag that Morgoth heaped
+      out of his own digging.  He sits crowned with stolen light at the
+      bottom of it and has not left his chair since Fingolfin came alone
+      to the gate and knocked.  The air on the last stair smells of hot
+      iron.  There is nothing under him.
+
+  Nan Dungortheb, the Valley of Dreadful Death
+
+      A cleft under the Mountains of Terror where Ungoliant's brood
+      still spins.  The water there is bad and the dark is worse, and
+      the webs are strung across the way at the height of a man's face.
+      Beren crossed it in his youth and would never afterward say what
+      he had seen, and men who knew him said he came out grey.
+
+  Tol-in-Gaurhoth, the Isle of Werewolves
+
+      It was fair Tol Sirion once, and Finrod built a watchtower on it
+      to hold the pass, and it was the pride of the north.  Sauron took
+      it.  Now the howling carries downriver on still nights for miles,
+      and the boatmen of the Vale will not tie up within sight of the
+      island, and they are right not to.
+
+  Amon Rûdh, the Bald Hill
+
+      A red crown of seregon over the moorland, flowering like spilt
+      blood in the late year.  Under it Mîm keeps the last halls of the
+      Petty-Dwarves, who were driven out of the west long ago and have
+      forgotten why they should love anyone.  It is the shallowest of
+      the deep places, and it is where most travellers learn what a
+      dungeon is.
+
+Begin at Amon Rûdh.  Nearly everyone begins at Amon Rûdh.  The ones who
+begin elsewhere are seldom written about, there being nobody left to do it.
 
 The wild regions
 ----------------
 
-  Anfauglith    - the Gasping Dust, that was a green plain until
-      the Sudden Flame.
-  Dorthonion    - the highland of pines where Barahir's outlaws
-      held out, and fell.
-  Doriath       - the Fenced Land, girdled by enchantment.
-  Sirion Vale   - the pass and course of the great river, the
-      highway of the Age.
-  Talath Dirnen - the Guarded Plain, watched from Nargothrond.
-  Ossiriand     - the Land of Seven Rivers, where the Green-Elves
-      sing unseen.
-  Fen of Serech - the reed-marsh where rearguards buy time with
-      blood.
+Between the delvings lies the country itself, and the country has a temper.
+Some of these names are places you will cross a dozen times without
+trouble.  Others are the reason the roads bend where they do.
+
+  Anfauglith, the Gasping Dust
+
+      A green plain until the Sudden Flame came over it in a night and
+      burned the grass to the bone.  Now it is ash and grit, and the
+      wind off it tastes of the forge.  Nothing lives there that was not
+      sent.
+
+  Dorthonion
+
+      The highland of pines where Barahir's outlaws held out after the
+      country fell, twelve men and a dog's loyalty, and fell in their
+      turn.  The trees are still standing.  Little else is.
+
+  Doriath, the Fenced Land
+
+      Girdled by enchantment, so that the paths bend back on themselves
+      and the traveller walks a day and arrives where he started.  It is
+      not malice.  It is simply not for you.
+
+  Sirion Vale
+
+      The pass and course of the great river, the highway of the Age.
+      Every army that has ever mattered has gone up or down this valley,
+      and most of them only once.
+
+  Talath Dirnen, the Guarded Plain
+
+      Watched from Nargothrond by scouts you will never see, who have
+      counted you since you came over the last rise.  Behave yourself.
+
+  Ossiriand, the Land of Seven Rivers
+
+      Where the Green-Elves sing unseen among the alders, and the water
+      is loud enough that you will hear the singing only when you stop
+      walking.  The gentlest country in Beleriand, which is faint praise
+      and still true.
+
+  Fen of Serech
+
+      A reed-marsh at the throat of the north, where rearguards buy time
+      with blood.  They have done it more than once.  They will do it
+      again before this is finished.
 
 East over the Blue Mountains lie quieter lands -- Eriador, the vales
 of Anduin, the Gladden Fields -- out of which the humbler peoples

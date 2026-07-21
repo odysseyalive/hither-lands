@@ -1,45 +1,80 @@
-{tile:capital:O| }           Of Song and Spellcraft
-            ======================
+{tile:capital:O|O}           f Song and Spellcraft
+            =====================
             "For Felagund strove with Sauron in songs of power,
             and the power of the King was very great; but Sauron
             had the mastery."
             -- The Silmarillion, ch. 19
 
-Power in the Elder Days is sung, and prayed, and studied.  Four
-realms of five books each serve the four kinds of caster:
+That is the shape of magic in the Elder Days.  Two beings stand in a
+dark place and sing at one another, and the stronger song bends the
+weaker, and the loser goes down.  There are no gestures here and no
+smoke.  Power in this Age is sung, and prayed, and studied, and it
+comes out of who you are and what you have been given rather than
+out of any trick of the fingers.
+
+Finrod Felagund lost that contest and it cost him his crown, his
+company and his life, and he is still counted among the mighty for
+having come as close as he did.  Bear that in mind on the days when
+a spell fails you.  The greatest singer in Beleriand was beaten by a
+lieutenant, and it was a near thing.
+
+Four realms of five books each serve the four kinds of caster, and
+which realm is open to you was settled at your birth, when you chose
+what you would be.
+
   Arcane (INT)  - the Mage's study, and a little of the Rogue's.
+
   Shadow (INT)  - the Necromancer's dark road; the Blackguard
       borrows its destructions.
+
   Holy (WIS)    - the Priest's prayers, granted by the Valar in
       their own order, not chosen; the Paladin prays
       more slowly and never reaches the highest.
+
   Nature (WIS)  - the Druid's verses; the Ranger sings the
       survival-songs of wood and trail.
 
 Warriors have no spell points and want none.  Pure casters use
 all five books of their realm, and the hybrid callings only the
-first few.
+first few.  The hybrids are not lesser people for it; a Ranger who
+can heal his own arm in the field has settled an argument the Mage
+is still having with a book.
 
 Casting
 -------
+
+A song must be learned before it can be sung, and no one has ever
+learned one usefully while being eaten.  Everything in this section
+is work you do in the quiet, so that the loud part goes better.
 
 Cast or pray with '{key:Cast a spell}', browse a book with
 '{key:Browse a book}', and learn new spells with
 '{key:Gain new spells}' when your level allows.  Casting takes a full
 turn.  Failure starts common and grows rare with level, and the great
 casters come to fail not at all.
+
 Casting beyond your spell points is possible, and it asks a price --
 the attempt may leave you drained, or paralyzed mid-word.
 
-You cannot cast blind or confused, and every caster but the
-Necromancer needs light to read by.  The Necromancer reads the
+Every art has its conditions, and no singer has ever talked one of
+them round.  You cannot cast blind or confused, and every caster but
+the Necromancer needs light to read by.  The Necromancer reads the
 dark itself, and light is a wound to that art.
 
 Devices
 -------
+
+There is a second kind of power, older in a sense, because it was put
+into the thing by somebody else and only waits there for a hand.  A
+wand does not care whether you were taught.  This is how the unlearned
+of Beleriand fight fire, and there is no shame in it whatever.
 
 Wands are aimed with '{key:Aim a wand}', staves used with
 '{key:Use a staff}', rods zapped with '{key:Zap a rod}', and worn
 things activated with '{key:Activate an object}'.  Devices obey
 skill and not realm, and even a Warrior may lean on a good wand,
 though it is the Mage who outshoots everyone with them in the end.
+
+Which is the way of things.  The one who understands how the making
+was done gets the most out of what was made, and that has been true
+in these lands since the first forge was lit.

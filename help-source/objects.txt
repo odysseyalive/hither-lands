@@ -1,13 +1,27 @@
-{tile:capital:O| }           Of Goods and Gear
-            =================
+{tile:capital:O|O}           f Goods and Gear
+            ================
             "The heart of Fëanor was fast
             bound to these things that he
             himself had made."
             -- The Silmarillion, ch. 7
 
+Fëanor is the warning at the head of this chapter and not the model.
+The greatest craftsman who ever lived bound his heart to three
+jewels, and burned the ships, and dragged his whole people into a
+ruin that is still going on around you.  Things are dangerous.  Not
+because they are cursed, though some are, but because a traveller
+who will not put a thing down when the time comes to run will be
+found later, still holding it.
+
+Still, no one ever walked into Angband empty-handed on purpose.  Let
+us be practical about the carrying.
+
 Carrying
 --------
-Walk onto an item to take it, or gather it with
+
+A traveller's pack in the Elder Days is a small and jealous country,
+and everything you put into it you have chosen not to put something
+else.  Walk onto an item to take it, or gather it with
 '{key:Pick up objects}'.  The pack holds twenty-three kinds of
 thing, each stacking to forty, and twelve more places are worn upon
 your body.  Weight past your strength slows you.  Wear or wield with
@@ -16,8 +30,19 @@ your body.  Weight past your strength slows you.  Wear or wield with
 inscribe with '{key:Inscribe an object}' -- your notes ride along
 with the item.
 
+Inscription is worth more than it looks.  The dungeon is long and
+memory is short, and a word cut into the haft of a wand will still be
+there in an hour, when you have forgotten what the wand was for and
+something with too many legs is coming up the corridor.
+
 Knowing what you have
 ---------------------
+
+The hard part of this Age is that nothing tells you what it is.  The
+loremasters who could name a thing on sight are behind you in
+Menegroth and Nargothrond, and they are not coming down here.  What
+you carry, you carry on trust, until it has proved itself one way or
+the other.
 
 Every potion, scroll, ring and amulet kind wears a random
 disguise each game -- "a copper ring" -- until it is learned.  There
@@ -31,19 +56,43 @@ their trade also, and selling an unknown thing reveals it.
 Unknown properties show as {??}, and the game marks {cursed},
 {tried}, and {empty} as it learns alongside you.
 
+So the pack fills with half-known things, and each of them is a small
+wager.  This is the ordinary condition of everyone who has ever gone
+under a mountain looking for treasure, and there is no cure for it
+except going under the mountain again.
+
 Ignoring the dross
 ------------------
+
+Rubbish accumulates faster than gold.  Every orc you kill leaves a
+bent dagger behind it, and after the fortieth bent dagger the floor
+stops meaning anything and you begin to walk past the things that
+matter.
 
 The ignore command puts an item, or its whole kind, out of your
 sight, and '{key:Toggle ignoring of items}' shows or hides everything
 so dismissed.  Appendix I gives the ignore key for your keyset.
 Quality levels let you sweep all bad gear from sight at once.
 
+Use it early and use it hard.  A clean floor is a floor you can read
+at a glance, and reading the floor at a glance is occasionally the
+difference between leaving a level and staying on it.
+
 Keeping things whole
 --------------------
+
+The last thing to understand about property in Beleriand is that it
+does not last.  Nothing here does.  The Enemy's servants throw fire
+and frost about with no thought for what is in your pack, and the
+scroll you were saving is a handful of ash the moment a fire-hound
+gets a look at it.
 
 The elements are enemies of property.  Fire eats scrolls and staves, acid
 armour and ammunition, frost potions, lightning rings, wands, and rods.
 Your pack gives a thing some chance to survive; the bare floor gives none.
 Resist the element and your goods resist with you, of which more in Of Arms
 and the Manner of Fighting.
+
+Which brings the matter back round to Fëanor.  Hold your gear loosely
+enough to lose it, and keep the spare in the pack rather than on the
+ground, and you will part with less than he did.

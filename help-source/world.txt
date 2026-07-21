@@ -1,51 +1,82 @@
-{tile:capital:O| }           Of Beleriand and Its Realms
-            ===========================
+{tile:capital:O|O}           f Beleriand and Its Realms
+            ==========================
             "...there were mighty convulsions in the earth, and Beleriand
             was broken and laid waste..."
             -- The Silmarillion, ch. 24
-            That breaking is not yet come upon the land, and until it comes
+            That breaking is not yet come upon the land.  Ered Luin stands
 
-there is a whole world to walk.  The wilderness spreads Beleriand and the
-lands east of it -- plains, forests, mountains, rivers, swamps, and deserts
--- and the great dungeons are sunk into it where the tales say they stood.
+behind you with the snow still lying in its passes, and westward the country
+falls away league upon league toward a Sea you cannot yet see.  There is a
+whole world there to be walked, and no part of it is safe.
+
+Look west from the last ridge and you will take in most of it at once.  The
+green plains, and the forests dark as standing water, and the grey backs of
+the mountains, and the rivers that come down out of them loud and cold.
+Southward the land softens into reed and fen and the slow country of the
+Seven Rivers.  Northward it hardens.  Beyond the last of the highlands the
+grass gives out altogether and there is a dust there that nothing crosses
+willingly, and past that, if the air is clear, three peaks of slag stand up
+against the sky with smoke lying flat above them.  That is the end of the
+road, though it is a long way off yet.
+
+Under all of it the deep places are sunk where the old tales say they stood
+-- delvings of dwarves, of elven-kings, and of the Enemy -- and no tale
+agrees on how far down any of them goes.
 
 Of the roads between
 --------------------
 
-Region is joined to region by paths, and a path is worked with the
-same keys as a stair.  Stand upon one and press
+You will spend more of your life on the road than in any hall, so learn the
+road first.  Region is joined to region by paths, and a path is worked with
+the same keys as a stair.  Stand upon one and press
 '{key:Go up staircase}' toward the safer country, or
 '{key:Go down staircase}' toward the danger, for depth is danger here
 as it is below.  Run as Appendix I directs, step warily with
 '{key:Walk}', and press '{key:Start exploring}' to be drawn on toward
-what you have not yet seen.  There is no magic carriage; you walk, as
-Beren walked.
+what you have not yet seen.
+
+There is no magic carriage and no horse that will stay with you.  You walk,
+as Beren walked, and you carry what you eat.
 
 By day the wild is lit, and by night you must carry your own light --
-though by night the beasts of the wilderness are sleeping.  Towns
-keep their own hours.
+though by night the beasts of the wilderness are sleeping, so that the dark
+hours are quieter than the bright ones and a good deal more frightening.
+Towns keep their own hours, and their gates do not close, whatever the
+songs say of prudent folk.
 
 Of the four worlds
 ------------------
 
-Four world-maps are offered you at birth.  The standard and the
-extended wildernesses hang the dungeons from an overworld of paths;
-the hybrid game walks the dungeons in sequence through portals; and
-the plain Angband game keeps one town and one long stair down, with
-Sauron near the bottom of it, and Morgoth at the last.
+Beleriand is not offered to you in one shape only.  Four world-maps are
+laid out at birth, and the choice you make there decides what kind of
+journey you are agreeing to.
 
-Five dungeons anchor the map -- Amon Rûdh of the Petty-Dwarves,
-Nargothrond upon the guarded plain, Nan Dungortheb beneath the
-Mountains of Terror, Tol-in-Gaurhoth in the Vale of Sirion, and
-Angband itself behind the Gasping Dust.  Each keeps its guardian, and
-their tales are told in the Gazetteer.
+The standard and the extended wildernesses hang the dungeons from an
+overworld of paths, so that the walking between is itself the tale.  The
+hybrid game spares you the walking and strings the dungeons in sequence
+through portals.  And the plain Angband game forgets Beleriand altogether
+and keeps one town and one long stair down, with Sauron near the bottom of
+it, and Morgoth at the last.
+
+Whichever you take, five dungeons anchor the map.  Amon Rûdh of the
+Petty-Dwarves stands first and least, a bald red hill above the moors.
+Nargothrond is under the Guarded Plain, and Nan Dungortheb under the
+Mountains of Terror, and Tol-in-Gaurhoth keeps the crossing of the Vale of
+Sirion.  Angband is behind the Gasping Dust, and Angband is last.
+
+Each of them keeps a guardian, and none of the guardians is reasonable.
+Their tales are told in the Gazetteer, and it is worth reading the tale of
+a place before you stand in its doorway rather than after.
 
 Of coming home
 --------------
 
-A scroll of Word of Recall will snatch you out of the wild or out of
-the deeps and set you down in your home town, though not at once; and
-read at home it will carry you back down to the furthest point of
-your daring.  Read a second scroll to change your mind.  Should you
-come to another town and like it better, press '{key:Move house}' and
-your house moves there.
+Nobody walks all the way back.  A scroll of Word of Recall will snatch you
+out of the wild or out of the deeps and set you down in your home town,
+though not at once; and read at home it will carry you back down to the
+furthest point of your daring.  Read a second scroll to change your mind.
+Should you come to another town and like it better, press
+'{key:Move house}' and your house moves there.
+
+So the country lies.  You go out light, you come back heavy, and
+each time the road you take out begins further down than the last.

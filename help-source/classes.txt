@@ -1,48 +1,100 @@
-{tile:capital:O| }           Of Callings and Crafts
-            ======================
+{tile:capital:O|O}           f Callings and Crafts
+            =====================
             "Aurë entuluva!  Day shall come again!"
             -- The Silmarillion, ch. 20
-            Nine callings are open to you.  Casters draw upon INT or WIS as
-            noted; Warriors draw upon nothing but themselves, as Húrin did.
+            A people is what you are born; a calling is what you have
+            done with it since.  Every hall in Beleriand is full of
 
-The nine classes
-----------------
+folk who chose, some of them badly.  The armoury at Barad Eithel is
+kept by a man who meant to be a loremaster.  There is a Green-Elf in
+Nargothrond who set down her bow forty years ago to learn the making
+of staves and has not touched a bowstring since, and she is a poor
+shot now and cares nothing about it.
+
+Nine callings are open to you.  Casters draw upon INT or WIS as
+noted; Warriors draw upon nothing but themselves, as Húrin did, who
+stood at the Nirnaeth with an axe and no spell at all and killed until
+the axe would not lift.  Whichever road you take, take it early.  The
+war will not wait while you decide what you are.
+
+The nine callings
+-----------------
+
+Three of them fight, three of them pray or study, and three walk
+somewhere in between.  What follows is what the muster-rolls would
+say if muster-rolls were honest.
 
   Warrior     - pure battle; the most blows, the best survival by
     steel alone, no spells ever.  Begins with a bonus
-    specialty.
+    specialty.  A Warrior's answer to an enchantment is
+    to reach the enchanter.
+
   Mage (INT)  - feeble at first, near-boundless at last; the best
-    user of wands and staves in the late game.
+    user of wands and staves in the late game.  The
+    early years are an apprenticeship paid in bruises,
+    and many do not survive their own beginning.
+
   Priest (WIS)- servant of the Valar; prayers are GRANTED, not
     chosen, and hafted or blessed weapons please them.
+    You will be given what is needful, which is seldom
+    what you asked for.
+
   Druid (WIS) - keeper of growing things; fights unarmed, charms
     and commands beasts (of which see Of Companions on
-    the Road).
+    the Road).  In a country being burned from the
+    north this is not the gentle calling it sounds.
+
   Necromancer (INT) - walks in self-made darkness that light
-    disrupts; terrible power at a terrible price.
+    disrupts; terrible power at a terrible price.  The
+    dark must be carried with you and kept unbroken,
+    so a well-lit room is an enemy's best defence.
+
   Paladin (WIS) - the second-best fighter, praying slowly but
-    striking hard; STR and WIS together.
+    striking hard; STR and WIS together.  A blunt
+    instrument in the hand of something that has an
+    opinion about how it is used.
+
   Rogue (INT) - the best stealth and perception; steals from
     monsters with '{key:Steal from a monster}', sets
-    traps, opens what is shut.
+    traps, opens what is shut.  A Rogue leaves a hoard
+    lighter and a sleeping dragon none the wiser, most
+    times.
+
   Ranger (WIS)- the master of the bow, with woodcraft and a fair
-    sword-arm besides.
+    sword-arm besides.  The marches of Doriath and the
+    pine-woods of Dorthonion were held for an Age by
+    folk who shot first and were never seen at all.
+
   Blackguard (INT) - a brutal brawler in heavy gear, spending
-    blood for dark spellcraft; very hard to kill.
+    blood for dark spellcraft; very hard to kill.  The
+    strength comes out of the wound, so a Blackguard
+    who is not bleeding is not yet at work.
+
+None of these is a finished thing.  Two Warriors of the same house,
+armed alike, will not fight alike a year from now, and the reason is
+below.
 
 Specialties
 -----------
 
 FAangband's specialty abilities set your character apart from all
-others of the same calling.  You choose one at first level
-(Warriors choose two), and earn further choices as you prove
-yourself against the great enemies of the Age -- three or four in
-a full life.  Review yours with '{key:View abilities}'; casters
-gain new spells with '{key:Gain new spells}'.
+others of the same calling.  You choose one at first level (Warriors
+choose two), and earn further choices as you prove yourself against
+the great enemies of the Age -- three or four in a full life.  Review
+yours with '{key:View abilities}'; casters gain new spells with
+'{key:Gain new spells}'.
+
+Consider them the mark the road leaves on you.  They are not bought
+with gold or study but with the deaths of great foes, and there are
+only so many great foes.
 
 Specialties run from armsmanship, evasion, and shield mastery to
-channeling, meditation, rapid fire, and stranger arts.  Two touch
-the living world itself: Charm soothes the beasts of the wild so
-they never turn on you unprovoked, and Beguile (a Druid specialty)
-lets you charm animals to your side.  Of these also Of Companions
-on the Road tells.
+channeling, meditation, rapid fire, and stranger arts.  Two touch the
+living world itself.  Charm soothes the beasts of the wild so they
+never turn on you unprovoked, and Beguile (a Druid specialty) lets you
+charm animals to your side.  Of these also Of Companions on the Road
+tells.
+
+Choose the first one at birth and you will be living with it for the
+whole descent, so choose the one that covers the way you already mean
+to fight, rather than the way you admire from a distance.

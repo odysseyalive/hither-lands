@@ -1,58 +1,107 @@
-{tile:capital:O| }           Of Coming into Beleriand
-            ========================
-            "By the starlit mere of Cuiviénen, Water of Awakening, they rose
-            from the sleep of Ilúvatar..."
+{tile:capital:O|O}           f Coming into Beleriand
+            =======================
+            "By the starlit mere of Cuiviénen, Water of Awakening, they
+            rose from the sleep of Ilúvatar..."
             -- The Silmarillion, ch. 3
-            Every hero of the Elder Days began somewhere, and you begin
+            Every hero of the Elder Days began somewhere, and most of
 
-here. Six screens make a traveller of you, and the arrow keys and ENTER
-drive them all, in either keyset.
+them began badly, in a cold country, owning very little, with the
+strong opinion that somebody ought to do something.  Beren came over
+the mountains of Dorthonion alone and half-starved and made himself
+into the most famous outlaw of the Age.  Tuor was a slave.  The tale
+does not begin when you are ready; it begins when you cross the
+border, and the border is where you are standing now.
+
+Six screens make a traveller of you, and the arrow keys and ENTER
+drive them all, in either keyset.  Take your time over them.  Most of
+what they settle can never be settled again, and the game is old
+enough and hard enough that it will not be settling any of it for you
+out of pity.
 
 The birth screens
 -----------------
 
+They come in order and each narrows the road a little.  The first two
+are the great choices, the third is the one people regret, and the
+last three are yours to enjoy.
+
   1. RACE    - choose among the thirteen peoples, of whom Of the
    Peoples of the West tells.  Stat changes and the
-   experience penalty are shown as you scroll.
+   experience penalty are shown as you scroll.  This
+   decides your kin, your home gate, and who will
+   shut a door in your face.
+
   2. CLASS   - choose a calling; of these see Of Callings and
-   Crafts.
+   Crafts.  What the world made you is settled; this
+   is the part you answer for.
+
   3. OPTIONS - birth options are locked for your character's whole
    life.  Two notable defaults: a starting kit of gear
    (in place of extra gold), and no-selling (shops pay
-   nothing, but you find more gold).
+   nothing, but you find more gold).  Read them once
+   with attention now, and you will not have to
+   wonder about them for the next ten thousand turns.
+
   4. STATS   - the point-based buyer is the default and comes
-   pre-filled with sound choices; unspent points become
-   starting gold.  The standard roller rolls instead,
-   and will roll again at your word until you accept.
-  5. HISTORY - edit your background story, if you wish.
+   pre-filled with sound choices; unspent points
+   become starting gold.  The standard roller rolls
+   instead, and will roll again at your word until you
+   accept.  The buyer is the wiser road, though there
+   is an old pleasure in the rolling.
+
+  5. HISTORY - edit your background story, if you wish.  It changes
+   nothing and it is worth doing anyway; a character
+   with a grandfather in it dies harder.
+
   6. NAME    - last of all, the name.  End it with a Roman numeral
    ("Fred I") and your next of that line will succeed
-   it automatically.
+   it automatically, which is a quiet mercy in a game
+   that kills as freely as this one.
 
 The five stats
 --------------
 
+Two screens back you were asked to weigh these against one another
+without being told what they do.  This is what they do.  Nothing here
+is decoration; every one of the five is somebody's whole reason for
+still being alive.
+
   STR - to-hit and damage, carried weight, and extra blows with
         heavier weapons.  The fighter's early friend.
+
   INT - spellcasting for mages, rogues, necromancers, and
         blackguards; also magical devices and disarming.
+
   WIS - spellcasting for priests, paladins, druids, and rangers;
         also your saving throws against magic.
+
   DEX - extra blows with light weapons, to-hit, dodging, locks,
         and holding onto your purse.
-  CON - hit points and recovery.  Matters most in the deep places.
+
+  CON - hit points and recovery.  Matters most in the deep places,
+        where nothing comes at you once.
 
 Hit points come of your race and class together; spell points, for
-those who cast, grow with level and with the casting stat.
-Warriors never have spell points, and want none.
+those who cast, grow with level and with the casting stat.  Warriors
+never have spell points, and want none.  Whatever you are, the first
+few levels are the thin ones, and more heroes of this Age have been
+lost in the third week than in the third year.
 
 Where you begin
 ---------------
 
+The last screen fades and you are somewhere real, with a road going
+out of it.
+
 In the wilderness game each race begins in its own home town --
 Grey-Elves in Menegroth, Dwarves in Belegost, and so on -- and the
-folk of the more perilous lands begin above first level.  In the
-dungeon-only game all begin equal, at the gate of one deep hold.
+folk of the more perilous lands begin above first level, having been
+seasoned by simply having grown up where they did.  In the
+dungeon-only game all begin equal, at the gate of one deep hold, and
+the world above is a rumour.
 
 With the Hither Lands tileset your sprite is of your own race; its
-gender is settled when the tileset is installed, not at birth.
+gender is settled when the tileset is installed, not at birth.  Look
+down at yourself once before you set out.  You will be looking at
+that small figure for a long while, and if the Age goes as it has
+gone for everyone else, not long enough.

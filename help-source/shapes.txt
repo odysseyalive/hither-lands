@@ -1,49 +1,86 @@
-{tile:capital:O| }           Of Skin-Changing
-            ================
+{tile:capital:O|O}           f Skin-Changing
+            ===============
             "Then Sauron shifted shape, from wolf to serpent, and from
             monster to his own accustomed form..."
             -- The Silmarillion, ch. 19
-            Skin-changing is an old art in Middle-earth, and not the Enemy's
+            Skin-changing is an old art, and not the Enemy's alone.
 
-alone.  Some callings learn to wear a beast's form, and trade hands and
-spellcraft for teeth and wings and hide.
+Sauron wore the wolf and the serpent because they served him, and they
+served him well.  But the craft is older than his use of it, and there
+are those who put on another skin for reasons he would not recognise.
+Some callings learn it out of books.  One people is simply born to it.
+
+What the changing is like is hard to set down, and those who can do it
+are not much help, since they mostly shrug.  The nearest a traveller
+gets is this.  You are yourself, and then the ground is closer, and the
+dark has stopped being dark and has become a set of shapes you can
+smell.  Your hands are gone and you do not miss them.  You want to run,
+not out of fear, but because running has become the obvious thing to do
+with a body.  And underneath all of it you are still there, keeping
+accounts, deciding where to go.  That last part is the whole difference
+between skin-changing and madness, and it holds.
 
 Who shifts
 ----------
 
-Druids take the shapes of beast and stone through their nature
-verses; Necromancers wear the forms of the creatures of night;
-Blackguards learn one savage shape of their own.  A Beorning needs
-no spell at all, for bear-shape is that people's birthright, taken
-at will with '{key:Change shape}', and it deepens as they grow.  And
-any hero whatever, wearing the right dragon-scale armour, may briefly
-know what it is to be a dragon.
+The art is not open to everyone, and those it is open to come at it by
+four different roads.
+
+  Druids take the shapes of beast and stone through their nature
+   verses.  Theirs is the widest road and the gentlest, and it ends
+   in a bear.
+
+  Necromancers wear the forms of the creatures of night, which are
+   quicker and stronger than a Druid's and are not given freely.
+
+  Blackguards learn one savage shape of their own, and one is enough
+   for what a Blackguard intends to do with it.
+
+  A Beorning needs no spell at all, for bear-shape is that people's
+   birthright, taken at will with '{key:Change shape}', and it
+   deepens as they grow.
+
+And any hero whatever, wearing the right dragon-scale armour, may
+briefly know what it is to be a dragon.  That is the shortest road of
+the lot and the dearest, and nobody who takes it once forgets it.
 
 Wearing another skin
 --------------------
 
-Shapes are entered by casting the form's verse with
-'{key:Cast a spell}', by the Beorning's '{key:Change shape}', or by
-the power of certain items.  In a shape you ARE the beast -- its
-blows, its senses, its stealth, its hide.  Your worn equipment stays
-on you, changed with you, and all its virtue still counts.
+Shapes are entered by casting the form's verse with '{key:Cast a spell}',
+by the Beorning's '{key:Change shape}', or by the power of certain items.
+Whichever door you come in by, what waits beyond it is the same.  In a
+shape you ARE the beast.  Its blows are yours, and its senses, and its
+stealth, and its hide.  Your worn equipment stays on you, changed with
+you, and all its virtue still counts, which is the one great mercy of
+the art and the reason anyone bothers.
 
-But paws cannot turn pages.  In beast-form your pack is closed to
-you, and there is no reading, no casting, no wands, no swapping of
-gear.  You may eat from the floor and little more.  Attempt anything
-handier and the game asks whether to return to your own form first.
+But paws cannot turn pages.  That is the whole of the difficulty, and it
+is not a small one.  In beast-form your pack is closed to you, and there
+is no reading, no casting, no wands, and no swapping of gear.  You may
+eat from the floor and little else.  Attempt anything handier and the
+game will ask whether you would care to be a person again first, which
+is a courteous way of saying that you have forgotten what you are.
+
+The moment this matters is always the same moment.  Something has gone
+wrong, and the answer to it is in your pack, and you are a fox.
 
 Returning
 ---------
 
-Press '{key:Change shape}' to take your own shape again, and the
-changing back costs nothing.  A shape is a tool.  Put it on for the
-work it is good at -- travel, stealth, or slaughter -- and take it
-off again to think.
+Press '{key:Change shape}' to take your own shape again.  The changing
+back costs nothing, and say it plainly that there is no trap
+in this art.  Nobody in Beleriand gets stuck as a wolf.
 
-With the Hither Lands tileset your figure on the map changes with
-you, every form with its own sprite.
+A shape is a tool.  Put it on for the work it is good at, which is
+travel, or stealth, or slaughter, and take it off again to think.  The
+skin-changers who come to grief are not the ones who shift too often.
+They are the ones who forget that they have shifted.
 
-The full particulars of every shape, and there are twenty-two, are
-set out with numbers and all in Of Skin-Changing: the Full
+With the Hither Lands tileset your figure upon the map changes with you,
+every form having its own sprite, so you need not remember by willpower
+alone.
+
+The full particulars of every shape, and there are twenty-two of them,
+are set out with numbers and all in Of Skin-Changing: the Full
 Particulars, for those who would rather know than wonder.

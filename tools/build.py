@@ -49,6 +49,15 @@ BG_COLOR = (23, 19, 16)  # #171310 — the shared dark background
 EDGE_BAND_FRAC = 0.03  # outer ring (fraction of the shorter side) swept for fringe
 ALPHA_FLOOR = 16       # alpha below this reads as invisible art but renders as a line
 
+# A character cell on screen is TALLER THAN IT IS WIDE (about 10x22 px at a 16px
+# font), but an atlas cell is square. Block art -- an illuminated capital spread
+# over several cells -- must therefore be pre-distorted horizontally, or the
+# engine's square-cell-to-tall-cell mapping squashes the letter flat. This is a
+# pure ratio, so it holds at any --size: the atlas cell and the screen cell scale
+# together. It describes the reader's font, not the tileset, so it is a constant
+# here rather than manifest data.
+CELL_ASPECT = (10, 22)
+
 
 def key_out_chroma(img, family=False, edge_fringe=False):
     """Make the magenta background transparent.
@@ -187,7 +196,7 @@ def _progress(label, done, total):
         sys.stderr.write("\n")
 
 
-def render_tile_image(spec, source_rel, ts, size=None):
+def render_tile_image(spec, source_rel, ts, block=None):
     """Run one source tile through the chroma/resize/margin/ground pipeline.
 
     Factored out so animation frames get exactly the same treatment as the
@@ -201,7 +210,10 @@ def render_tile_image(spec, source_rel, ts, size=None):
         img = key_out_chroma(img, family=True)
     elif spec.get("chroma"):
         img = key_out_chroma(img, edge_fringe=True)
-    img = img.convert("RGBA").resize(size or (ts, ts), Image.LANCZOS)
+    if block:
+        img = fit_block_art(img, block[0], block[1], ts)
+    else:
+        img = img.convert("RGBA").resize((ts, ts), Image.LANCZOS)
     if spec.get("margin"):
         img = apply_margin_fade(img)
     # A terrain feature (e.g. a building) fills its whole cell — the engine
@@ -218,6 +230,35 @@ def render_tile_image(spec, source_rel, ts, size=None):
         base.alpha_composite(img)
         img = base
     return img
+
+
+def fit_block_art(img, bw, bh, ts):
+    """Fit one drawing into a bw x bh block of atlas cells, undistorted on screen.
+
+    Trims the source's empty margin, then scales so the letter keeps its true
+    proportions AFTER the engine maps each square atlas cell onto a tall narrow
+    character cell (see CELL_ASPECT). Centred on a transparent canvas, so the
+    outer cells of a block may legitimately be blank.
+    """
+    img = img.convert("RGBA")
+    # Alpha-only bbox: the chroma key zeroes alpha but keeps the magenta RGB, so a
+    # plain getbbox() would see the whole frame on older Pillow. The ALPHA_FLOOR
+    # threshold also drops the sub-threshold feather that would inflate the box.
+    box = img.getchannel("A").point(lambda v: 255 if v >= ALPHA_FLOOR else 0).getbbox()
+    if box:
+        img = img.crop(box)
+
+    cw, ch = bw * ts, bh * ts
+    # Pre-distort: widen by the cell's height:width ratio so the on-screen result
+    # is true to the source.
+    stretch = CELL_ASPECT[1] / CELL_ASPECT[0]
+    want_w, want_h = img.width * stretch, img.height
+    scale = min(cw / want_w, ch / want_h)
+    w, h = max(1, round(want_w * scale)), max(1, round(want_h * scale))
+
+    out = Image.new("RGBA", (cw, ch), (0, 0, 0, 0))
+    out.paste(img.resize((w, h), Image.LANCZOS), ((cw - w) // 2, (ch - h) // 2))
+    return out
 
 
 def block_of(t):
@@ -549,7 +590,10 @@ def main():
             if len(frames) > 1:
                 sys.exit(f"manifest error: {frames[0]} is both animated and a "
                          "block tile; frames and block cannot combine")
-            whole = render_tile_image(t, frames[0], ts, size=(bw * ts, bh * ts))
+            if t.get("ground") or t.get("margin"):
+                sys.exit(f"manifest error: {frames[0]} combines block with "
+                         "ground/margin; both assume a single square cell")
+            whole = render_tile_image(t, frames[0], ts, block=(bw, bh))
             for br in range(bh):
                 for bc in range(bw):
                     pos = (base_row + br, base_col + bc)

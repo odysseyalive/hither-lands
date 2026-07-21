@@ -1,64 +1,156 @@
-{tile:capital:O| }           Of the Peoples of the West
-            ==========================
+{tile:capital:O|O}           f the Peoples of the West
+            =========================
             "Now the Children of Ilúvatar are Elves and Men, the Firstborn
             and the Followers."
             -- The Silmarillion, ch. 1
-            Thirteen peoples may take up the war against Morgoth, and no two
+            Come down out of the passes of Ered Luin in the morning and
 
-of them go at it alike.  Those marked (b) suit a traveller new to the road;
-those marked (e) ask some seasoning.  Each keeps its own home town in the
-wilderness game.
+look west, and the first thing you will notice is the smoke.  It stands
+in three or four thin columns along the northern sky and it never quite
+goes out.  The second thing you will notice is the traffic.  The road
+under the mountains is not empty, even now; it carries Dwarves with ore
+and Dwarves with mail, Green-Elf hunters who will not speak to you,
+Men driving thin cattle east away from the war, and now and then a
+company of horse going the other way, north, in no hurry to arrive.
+
+Beleriand is a small country with a great many nations in it.  In the
+space of one season on the road you may drink with all of them, and be
+turned from four doors, and be told four different accounts of who
+began the trouble.  It is worth learning them apart before you need to
+know whose gate you are hammering upon in the dark.
+
+Thirteen peoples may take up the war against Morgoth, and no two of
+them go at it alike.  Those marked (b) suit a traveller new to the
+road; those marked (e) ask some seasoning.  Each keeps its own home
+town in the wilderness game, and each will call you kin or stranger
+accordingly.
 
 The Elves
 ---------
 
+The Firstborn hold most of what is still free, and they hold it
+because they have been holding it a long while and mean to go on.  An
+Elf remembers the war from its first day, which is a kind of strength
+and also a kind of weight; they learn slowly what they do not already
+know, having already learned so much.  Expect long silences, and be
+careful how you speak of oaths.
+
   High-Elf (e)   - Noldor of Gondolin and Nargothrond, mightiest
        and most burdened; masters of every skill, they
        see the unseen from birth and start above first
-       level, at the steepest experience cost.
+       level, at the steepest experience cost.  They
+       came back over the Sea for the jewels' sake and
+       the Doom of Mandos came with them.
+
   Grey-Elf (e)   - Sindar of Thingol's Doriath; strong of arm and
        will, at home under trees, unharmed by light.
+       They never went into the West and never wanted
+       to, and they were fighting orcs under starlight
+       while the Noldor were still learning smithcraft.
+
   Green-Elf (e)  - Laiquendi of Ossiriand; hunters and singers,
        keen-eyed, silent, deadly with bows, slight in
-       close battle.
+       close battle.  They wear green and go barefoot
+       and you will not see one until it wishes it, and
+       they have long memories for slaughter.
+
   Dark-Elf       - the Moriquendi who never saw the Light; the
        stealthiest of all folk, but frail, and the sun
-       pains them.
+       pains them.  To travel with one is to travel by
+       night and rest at noon, and never once to be the
+       first thing an enemy notices.
+
+Take an Elf and you take the long view of this war, for good and for
+ill.  The Naugrim in the mountains east take a shorter one, and get
+rather more done before dinner.
 
 The Dwarves and the Halflings
 -----------------------------
 
+The Dwarf-road runs from Belegost and Nogrod under Mount Dolmed and
+down into Beleriand, and it is the busiest road in the country.  The
+Naugrim came to this war as smiths and stayed as soldiers, and they
+have never much cared which Elf-king is presently offended.  They are
+plain dealers, hard bargainers, and the only folk here who can walk
+into the deep dark without their nerve going.  With them are counted
+the halflings, who arrived out of nowhere and no age of this one, and
+whom nobody has yet had the heart to send back.
+
   Dwarf          - the Broadbeams of Belegost; strong, tough,
        never blinded, resistant to spellcraft -- and
-       loud as a forge underfoot.
+       loud as a forge underfoot.  Their lord Azaghâl
+       put a knife in Glaurung and died of it, and they
+       will tell you so within the hour.
+
   Longbeard      - Durin's Folk of Khazad-dûm, greatest of the
        Seven Houses; all a Dwarf's strengths written
-       larger.
+       larger.  Their mansion east of the mountains is
+       in its morning-glory, and they walk as folk who
+       have somewhere better to go home to.
+
   Petty-Dwarf    - the Noegyth Nibin, Mîm's hunted kindred; the
        finest handlers of magical devices alive, free
-       of movement, and easily broken.
+       of movement, and easily broken.  They were
+       hunted for sport before the Elves knew what they
+       were, so they are small, quick, and slow to
+       forgive; a life of hiding teaches the hands
+       everything and the body nothing.
+
   Hobbit (b)     - halflings out of a later age; peerless with
        slings, locks, and shadows, hardy against
-       sickness, feeble in a stand-up fight.
+       sickness, feeble in a stand-up fight.  Nobody
+       can say how they came here.  They do not seem
+       greatly troubled by the question.
+
+The Naugrim will fight beside you and go home again.  The Followers
+have nowhere else to go, which is a different sort of courage.
 
 The Men and the Others
 ----------------------
 
+Men came late over the mountains, in the Sun's first years, and found
+the war already old.  They are given seventy years or so and they
+spend them fast.  Some entered the service of the Eldar and were
+loved; some entered the service of the Enemy and were paid; most only
+wanted a valley with no orcs in it, and did not get one.  With them
+here are counted the stranger kindreds -- the skin-changers, and the
+tree-shepherds who are older than any of us and in no hurry to say so.
+
   Easterling (b) - Men out of the East, the plain measure of
        mortal kind; sturdy, adaptable, any calling.
+       Their name is under a shadow in these lands and
+       will be under a darker one before the Age ends,
+       which is a poor inheritance for a good soldier.
+
   Adan (e)       - the Edain of the Three Houses, friends of the
        Eldar; surpassing other Men in every field, and
-       their endurance cannot be worn down.
+       their endurance cannot be worn down.  Hador,
+       Bëor and Haleth brought their people west into
+       the fire, and their grandchildren are still in
+       it.
+
   Drúadan (e)    - the Drúedain, allies of the Haladin; wise,
        quiet, tough, seeing minds from afar, though
-       towns mistrust them.
+       towns mistrust them.  They sit still for hours
+       and are thought slow; they know where the orcs
+       are, and are thought uncanny for it.  Both
+       judgements are made by folk who do not listen.
+
   Beorning (b)   - skin-changers of the Anduin vales; hardy
        woodsfolk who may take bear-shape with the
-       '{key:Change shape}' command.
+       '{key:Change shape}' command.  East of the
+       mountains they keep bees and mistrust strangers,
+       and it is thought unwise to be a guest of theirs
+       past sundown.
+
   Ent            - the Onodrim, shepherds of trees; terribly
        strong, slow-handed, and wary of fire above all
-       things.
+       things.  Nothing in Beleriand hits harder or
+       thinks longer, and nothing else on this list has
+       watched a forest grow from seed and then watched
+       it burned.
 
-Choose as you will.  The stat tables, the experience costs, and
-the full particulars are set out on the race screen at birth as
-you scroll.
+Choose as you will.  The stat tables, the experience costs, and the
+full particulars are set out on the race screen at birth as you
+scroll.  What that screen cannot tell you is which door will open at
+midnight when you knock, and that is the choice you are really making.

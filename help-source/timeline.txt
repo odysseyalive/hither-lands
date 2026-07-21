@@ -1,41 +1,82 @@
-{tile:capital:O| }           Of the Years
-            ============
+{tile:capital:O|O}           f the Years
+            ===========
             "...it was named Dagor Aglareb, the Glorious Battle.  A victory
             it was, and yet a warning..."
             -- The Silmarillion, ch. 13
-            The game is set in the First Age of the world, in Beleriand, the
+            You have come in at the end of a very long argument.  It began
 
-land that lay west of the Blue Mountains.  As you go down, you go back
-through the Age's own history: green realms and guarded kingdoms above, ash
-and iron below, and at the bottom the beginning of all the trouble.
+before the Sun and the Moon were made, over three jewels, and it has
+since eaten two Trees, four kingdoms, and most of the Elves and Men who
+ever lived in this country.  Nobody in Beleriand will explain it to you
+from the beginning.  They assume you know, and they are tired.
+
+The game is set in the First Age of the world, in Beleriand, the land
+that lay west of the Blue Mountains.  As you go down, you go back
+through the Age's own history -- green realms and guarded kingdoms
+above, ash and iron below, and at the bottom the beginning of all the
+trouble.  The descent is a reading of the Age backwards.  The deeper
+you stand, the earlier the wound.
 
 The Age in brief
 ----------------
 
+Here is the argument in nine steps, so that when a Grey-Elf spits at
+the name of Fëanor over the wine, you will know why, and can change
+the subject.
+
   1. The Elves awake at Cuiviénen and journey west; the
-     Green-Elves turn aside and stay in Ossiriand.
-  2. Fëanor makes the Silmarils.  Morgoth and Ungoliant destroy
-     the Two Trees and steal them.
+     Green-Elves turn aside and stay in Ossiriand, and are
+     thought lesser for it by folk who later lost everything.
+
+  2. Fëanor makes the Silmarils, and puts into three stones a
+     light that cannot be made twice.  Morgoth and Ungoliant
+     destroy the Two Trees and steal them.
+
   3. The Noldor depart under the Doom of Mandos to make war for
-     the jewels' recovery.
+     the jewels' recovery.  The Doom is not a curse laid on
+     strangers; it is a promise made to them, and it is kept.
+
   4. The Siege of Angband, the long peace in which Doriath,
-     Nargothrond, and hidden Gondolin flower.
-  5. Dagor Bragollach, the Battle of Sudden Flame: rivers of fire
-     break the Siege; Fingolfin rides to the gate and dies.
-  6. The deeds of Beren and of Túrin: the Quest of the Silmaril,
-     the fall of Nargothrond, the black sword's doom.
+     Nargothrond, and hidden Gondolin flower.  Four hundred
+     years of quiet, and everyone alive believed it would hold.
+
+  5. Dagor Bragollach, the Battle of Sudden Flame -- rivers of
+     fire break the Siege; Fingolfin rides to the gate and dies.
+     He rides alone, in wrath, and no one goes after him.
+
+  6. The deeds of Beren and of Túrin, the Quest of the Silmaril,
+     the fall of Nargothrond, the black sword's doom.  One tale
+     ends in a marriage, the other in a river, and both are told
+     wherever there is a fire and drink enough.
+
   7. Nírnaeth Arnoediad, the Unnumbered Tears, when treason
-     broke the great alliance of the free peoples.
-  8. Gondolin falls, betrayed from within.
+     broke the great alliance of the free peoples.  After this
+     there are no more alliances, only holdouts.
+
+  8. Gondolin falls, betrayed from within, and the last hidden
+     kingdom goes up in smoke that the northern sky still
+     carries.
+
   9. The War of Wrath, in which the Enemy is thrown down at
      last -- and that is where you come in.
+
+So runs the Age, in brief.  Now stand at the top of the stair and take
+it the other way.
 
 The road down
 -------------
 
-Five appointed foes mark the descent, each a chapter of the tale:
+Every dungeon is somebody's ruin, and the deeper ones are the older
+grief.  You will not merely read about the fall of these places; you
+will walk in on the fall itself, still going on, with the same enemy
+still standing in the same hall.
+
+Five appointed foes mark the descent, each a chapter of the tale --
 Mîm at Amon Rûdh, Glaurung at Nargothrond, Ungoliant in Nan
 Dungortheb, Sauron at Tol-in-Gaurhoth, and Morgoth himself at the
-hundredth depth of Angband.  Defeat the last and the Age is
-mended.  What each of their strongholds was in its own day is told
-in the chapter of places.
+hundredth depth of Angband.  Defeat the last and the Age is mended.
+
+What each of their strongholds was in its own day is told in the
+chapter of places, and it is worth reading before you go down, if
+only so that you know what you are standing in when the floor of it
+runs with water and you cannot say why.
