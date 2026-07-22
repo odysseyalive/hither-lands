@@ -33,8 +33,9 @@ What the tileset adds
   Per-race sprites   - you appear as your own race, and so do the
                        people of the Free Races you meet below;
                        a female-flagged foe shows a female figure.
-  Your own figure    - the player sprite's gender is chosen when
-                       the tileset is installed, not in the game.
+  Your own figure    - the player sprite's gender is chosen at
+                       character generation, on the step between the
+                       map and race menus, and kept in your savefile.
 
 What stays ASCII
 ----------------

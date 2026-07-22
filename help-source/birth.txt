@@ -99,8 +99,9 @@ by simply having grown up where they did.  In the
 dungeon-only game all begin equal, at the gate of one deep hold, and
 the world above is a rumour.
 
-With the Hither Lands tileset your sprite is of your own race; its
-gender is settled when the tileset is installed, not at birth.  Look
+With the Hither Lands tileset your sprite is of your own race, and of
+whichever gender you chose on the way in -- the step between the map
+and the roll of the races, a matter of the eye and not the sword.  Look
 down at yourself once before you set out.  You will be looking at
 that small figure for a long while, and if the Age goes as it has
 gone for everyone else, not long enough.

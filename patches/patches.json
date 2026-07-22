@@ -694,6 +694,60 @@
       "sentinel": "HITHER-LANDS:display-default-tile-scale",
       "payload": "\t\t/* HITHER-LANDS:display-default-tile-scale\n\t\t * 64px art in a 10x22 cell: 7x3 cells is 70x66px, near square.\n\t\t * Only the GRAPHICS arm -- ASCII mode must keep 1x1 or the map\n\t\t * collapses to a handful of dungeon columns. */\n\t\ttile_width = 7;\n\t\ttile_height = 3;\n",
       "note": "GRAPHICS arm only -- inside the GRAPHICS_NONE arm this would break the ASCII map"
+    },
+    {
+      "id": "pgender-option",
+      "file": "src/list-options.h",
+      "anchor": "OP(birth_thrall,          \"Start on steps of Angband (wilderness only)\",\nBIRTH, false)",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:pgender-option",
+      "payload": "\n/* HITHER-LANDS:pgender-option BEGIN */\nOP(birth_female_sprite,          \"Female character (player sprite)\",\nBIRTH, false)\n/* HITHER-LANDS:pgender-option END */",
+      "note": "Player gender as a birth option. Options are name-keyed in the savefile (wr_options/rd_options), so adding one is savefile-compatible both directions, and player_generate preserves p->opts across a birth reset. Cosmetic only -- read solely by pgender-expr."
+    },
+    {
+      "id": "pgender-expr",
+      "file": "src/ui-prefs.c",
+      "anchor": "else if (streq(b+1, \"CLASS\"))\n\t\t\t\tv = player->class->name;",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:pgender-expr",
+      "payload": "\n\t\t\t/* HITHER-LANDS:pgender-expr BEGIN */\n\t\t\t/* Player sprite gender, chosen at birth. Lets the tileset's\n\t\t\t * xtra-*.prf gate a female override line on\n\t\t\t * ?:[EQU $GENDER Female], the same way it already gates on\n\t\t\t * $RACE / $CLASS. Prefs are re-processed after birth\n\t\t\t * (ui-game.c play_game -> EVENT_LEAVE_INIT -> reset_visuals),\n\t\t\t * so the choice takes effect for the new character. */\n\t\t\telse if (streq(b+1, \"GENDER\"))\n\t\t\t\tv = OPT(player, birth_female_sprite) ? \"Female\" : \"Male\";\n\t\t\t/* HITHER-LANDS:pgender-expr END */",
+      "note": "Adds the $GENDER pref-file variable, backed by the birth_female_sprite option. Replaces the old install-time gender bake."
+    },
+    {
+      "id": "pgender-stage-enum",
+      "file": "src/ui-birth.c",
+      "anchor": "\tBIRTH_MAP_CHOICE,\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:pgender-stage-enum",
+      "payload": "\t/* HITHER-LANDS:pgender-stage-enum BEGIN */\n\tBIRTH_GENDER_CHOICE,\n\t/* HITHER-LANDS:pgender-stage-enum END */\n",
+      "note": "New birth stage between map and race choice. Order matters: BIRTH_RACE_CHOICE's BACK handler is 'current_stage - 1', which must land on the gender stage."
+    },
+    {
+      "id": "pgender-map-next",
+      "file": "src/ui-birth.c",
+      "anchor": "next = BIRTH_RACE_CHOICE;",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:pgender-map-next",
+      "payload": "next = BIRTH_GENDER_CHOICE; /* HITHER-LANDS:pgender-map-next */",
+      "note": "Route the map menu forward into the new gender stage instead of straight to race choice."
+    },
+    {
+      "id": "pgender-menu",
+      "file": "src/ui-birth.c",
+      "anchor": "\tmap_menu_destroy(m);\n\n\treturn next;\n}\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:pgender-menu",
+      "payload": "\n/* HITHER-LANDS:pgender-menu BEGIN */\n/**\n * ------------------------------------------------------------------------\n * Gender choice.\n *\n * Purely cosmetic: it sets the birth_female_sprite option, which the tileset's\n * $GENDER pref expression (HITHER-LANDS:pgender-expr in ui-prefs.c) reads to\n * pick the male or female player sprite from xtra-<tileset>.prf. No game\n * mechanic looks at it. Modelled on the map menu above.\n * ------------------------------------------------------------------------ */\n\n#define GENDER_TEXT \"Choose whether your character is male or female.\\n\\nThis is a cosmetic choice with no effect on game mechanics: it selects which player sprite a graphical tileset shows for you.\\n\\nUse the movement keys to scroll the menu, Enter to select the current menu item, or ESC to step back through the birth process.\"\n\nstatic const char *gender_names[] = { \"Male\", \"Female\" };\nstatic int current_gender_index;\n\n/**\n * Display a row of the gender menu\n */\nstatic void gender_menu_display(struct menu *m, int oid, bool cursor,\n\t\t\t\t\t\t\t\tint row, int col, int wid)\n{\n\tint attr_name = cursor ? COLOUR_L_BLUE : COLOUR_WHITE;\n\n\tc_put_str(attr_name, gender_names[oid], row, col);\n}\n\n/**\n * Handle an event on a gender menu row.\n */\nstatic bool gender_menu_handler(struct menu *m, const ui_event *e, int oid)\n{\n\tif (e->type == EVT_SELECT) {\n\t\tcurrent_gender_index = oid;\n\t\treturn false;\n\t} else if (e->type == EVT_ESCAPE) {\n\t\tcurrent_gender_index = -1;\n\t\treturn false;\n\t}\n\treturn true;\n}\n\nstatic const menu_iter gender_menu_iter = {\n\tNULL,\t\t\t\t\t\t/* get_tag = NULL, use lowercase selections */\n\tNULL,\t\t\t\t\t\t/* no validity hook */\n\tgender_menu_display,\n\tgender_menu_handler,\n\tNULL\t\t\t\t\t\t/* no resize hook */\n};\n\n/**\n * Show the gender instructions\n */\nstatic void print_gender_instructions(void)\n{\n\t/* Clear screen */\n\tTerm_clear();\n\n\t/* Output to the screen */\n\ttext_out_hook = text_out_to_screen;\n\n\t/* Indent output */\n\ttext_out_indent = 5;\n\tTerm_gotoxy(5, 1);\n\n\t/* Display some helpful information */\n\ttext_out_e(GENDER_TEXT);\n\n\t/* Reset text_out() indentation */\n\ttext_out_indent = 0;\n}\n\n/**\n * Choose the character's gender (which player sprite the tileset shows).\n */\nstatic enum birth_stage get_gender_command(void)\n{\n\tenum birth_stage next = BIRTH_BACK;\n\tstruct menu *m = menu_new(MN_SKIN_SCROLL, &gender_menu_iter);\n\tregion loc = { 5, 14, 70, 3 };\n\n\tif (!m) return next;\n\n\t/* Start on the current setting (persisted across characters) */\n\tcurrent_gender_index = OPT(player, birth_female_sprite) ? 1 : 0;\n\n\tmenu_setpriv(m, (int)N_ELEMENTS(gender_names), NULL);\n\n\t/* Set flags */\n\tm->flags = MN_CASELESS_TAGS;\n\tm->selections = lower_case;\n\n\t/* Set size */\n\tloc.page_rows = (int)N_ELEMENTS(gender_names) + 1;\n\tmenu_layout(m, &loc);\n\tm->cursor = current_gender_index;\n\n\tscreen_save();\n\tregion_erase_bordered(&m->active);\n\n\tmenu_select(m, 0, true);\n\n\tscreen_load();\n\n\tif (current_gender_index != -1) {\n\t\toption_set(option_name(OPT_birth_female_sprite),\n\t\t\t\t   current_gender_index == 1);\n\t\tnext = BIRTH_RACE_CHOICE;\n\t}\n\n\tmem_free(m);\n\n\treturn next;\n}\n/* HITHER-LANDS:pgender-menu END */\n",
+      "note": "The gender menu itself, modelled on the map menu directly above it. Sets the birth_female_sprite option via option_set (same call the birth-options screen uses)."
+    },
+    {
+      "id": "pgender-stage-case",
+      "file": "src/ui-birth.c",
+      "anchor": "\t\t\tcase BIRTH_MAP_CHOICE:\n\t\t\t{\n\t\t\t\tprint_map_instructions();",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:pgender-stage-case",
+      "payload": "\t\t\t/* HITHER-LANDS:pgender-stage-case BEGIN */\n\t\t\tcase BIRTH_GENDER_CHOICE:\n\t\t\t{\n\t\t\t\tprint_gender_instructions();\n\t\t\t\tnext = get_gender_command();\n\t\t\t\tif (next == BIRTH_BACK)\n\t\t\t\t\tnext = BIRTH_MAP_CHOICE;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t\t/* HITHER-LANDS:pgender-stage-case END */\n\n",
+      "note": "Drive the gender stage from textui_do_birth; ESC steps back to the map menu."
     }
   ]
 }

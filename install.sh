@@ -15,9 +15,11 @@
 # tilesets, and the registration survives future `make install` runs,
 # which rewrite lib-derived files in the prefix.
 #
-# --gender selects which player sprites are used. FAangband has no runtime
-# player gender, so the choice is baked in here: the build produced both a male
-# and a female player-tile prf; we copy the chosen one over the default.
+# --gender is now only a FALLBACK. Gender is chosen in-game at character
+# generation (the HITHER-LANDS:pgender-* patches applied in step 5 add a birth
+# menu and a $GENDER pref variable), and every player-tile prf carries both
+# genders. --gender picks which one an engine WITHOUT those patches falls back
+# to, by copying that prf over the default.
 set -euo pipefail
 
 FA_DIR="$HOME/lab/FAangband"
@@ -91,11 +93,13 @@ if [ -d "$HELP_SRC" ]; then
   done
   echo "  installed $(ls "$HELP_SRC" | wc -l) help files"
 fi
-# 1b. Select the gendered player sprites (default build is male).
+# 1b. Select the fallback gender for the player sprites (default build is male).
+#     Both prfs map both genders; this only sets which one applies when the
+#     engine cannot resolve $GENDER (i.e. the pgender-* patches are absent).
 GENDERED="$TILES_DIR/$DIRNAME/$XTRA_STEM-$GENDER.prf"
 if [ -f "$GENDERED" ]; then
     cp "$GENDERED" "$TILES_DIR/$DIRNAME/$XTRA"
-    echo "      player sprites: $GENDER"
+    echo "      player sprites: chosen at character generation ($GENDER fallback)"
 fi
 
 # 3. Register with the build system so `make install` deploys it.

@@ -44,5 +44,5 @@ Key files to modify (Phase 4):
 - `src/effect-handler-general.c` — swap tile in SHAPECHANGE handler
 - `src/player-util.c` — restore tile in `player_resume_normal_shape()`
 - `src/ui-map.c` — shape-aware rendering (optional if swap approach used)
-- `src/ui-prefs.c` — add `$GENDER` variable (separate bug fix)
+- `src/ui-prefs.c` — `$GENDER` variable (done: `HITHER-LANDS:pgender-expr`)
 - `lib/gamedata/shape.txt` — add d_attr/d_char lines for each shape

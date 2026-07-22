@@ -73,7 +73,15 @@ This builds the atlas from source tiles, copies it into `lib/tiles/`,
 registers the tileset in the build system, and applies any C source patches
 (e.g. shapechange tile display).
 
-Use `--gender` to select player sprite gender (default: male):
+Player sprite gender is chosen **in the game**, at character generation: the
+patches add a Male/Female step to the birth sequence, between the map and race
+menus (it is also togglable as the "Female character (player sprite)" birth
+option). The choice is cosmetic — it only picks the sprite — and it is stored
+in the savefile, so each character keeps its own. Quickstart and the `*`
+random-character shortcut skip the step and inherit the last value used.
+
+`--gender` now only sets the *fallback* for a tree where the C patches were not
+applied (default: male):
 
 ```sh
 ./install.sh ../FAangband --gender female
