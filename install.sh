@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Install the built tileset into an FAangband source tree.
 #
-# Usage: ./install.sh [path-to-FAangband-tree] [--gender male|female] [--size 32|64|128]
-#        (defaults: ~/lab/FAangband, male, manifest tile_size)
+# Usage: ./install.sh [path-to-FAangband-tree] [--size 32|64|128]
+#        (defaults: ~/lab/FAangband, manifest tile_size)
 #
 # --size picks the tile resolution (default 64, from manifest.json). Source tiles
 # are 1024px native, so 64 and 128 carry real detail; 32 is a lightweight
@@ -15,28 +15,24 @@
 # tilesets, and the registration survives future `make install` runs,
 # which rewrite lib-derived files in the prefix.
 #
-# --gender is now only a FALLBACK. Gender is chosen in-game at character
-# generation (the HITHER-LANDS:pgender-* patches applied in step 5 add a birth
-# menu and a $GENDER pref variable), and every player-tile prf carries both
-# genders. --gender picks which one an engine WITHOUT those patches falls back
-# to, by copying that prf over the default.
+# There is no gender option. Both genders ship in the one player-sprite prf,
+# and the character's own choice at character generation picks between them:
+# the HITHER-LANDS:pgender-* patches applied in step 5 add a birth menu stage
+# and a $GENDER pref variable that the prf's conditional lines read.
 set -euo pipefail
 
 FA_DIR="$HOME/lab/FAangband"
-GENDER="male"
 SIZE=""
 while [ $# -gt 0 ]; do
     case "$1" in
-        --gender) GENDER="${2:-male}"; shift 2 ;;
-        --gender=*) GENDER="${1#*=}"; shift ;;
+        # Rejected explicitly: without this arm the old flag would fall through
+        # to the catch-all below and be silently taken as the FAangband path.
+        --gender*) echo "error: --gender was removed -- gender is chosen in-game at character generation" >&2; exit 1 ;;
         --size) SIZE="${2:-}"; shift 2 ;;
         --size=*) SIZE="${1#*=}"; shift ;;
         *) FA_DIR="$1"; shift ;;
     esac
 done
-GENDER="$(printf '%s' "$GENDER" | tr '[:upper:]' '[:lower:]')"
-[ "$GENDER" = "male" ] || [ "$GENDER" = "female" ] || {
-    echo "error: --gender must be 'male' or 'female' (got '$GENDER')" >&2; exit 1; }
 if [ -n "$SIZE" ]; then
     case "$SIZE" in
         32|64|128) ;;
@@ -47,9 +43,6 @@ fi
 HERE="$(cd "$(dirname "$0")" && pwd)"
 
 DIRNAME=$(python3 -c "import json; print(json.load(open('$HERE/manifest.json'))['tileset']['directory'])")
-PREF=$(python3 -c "import json; print(json.load(open('$HERE/manifest.json'))['tileset']['pref'])")
-XTRA="${PREF/graf-/xtra-}"          # e.g. graf-fai.prf -> xtra-fai.prf
-XTRA_STEM="${XTRA%.prf}"            # xtra-fai
 TILES_DIR="$FA_DIR/lib/tiles"
 DIST="$HERE/dist/$DIRNAME"
 
@@ -92,14 +85,6 @@ if [ -d "$HELP_SRC" ]; then
     grep -q "$b" "$HELP_MK" || sed -i "s|^DATA = |DATA = $b |" "$HELP_MK"
   done
   echo "  installed $(ls "$HELP_SRC" | wc -l) help files"
-fi
-# 1b. Select the fallback gender for the player sprites (default build is male).
-#     Both prfs map both genders; this only sets which one applies when the
-#     engine cannot resolve $GENDER (i.e. the pgender-* patches are absent).
-GENDERED="$TILES_DIR/$DIRNAME/$XTRA_STEM-$GENDER.prf"
-if [ -f "$GENDERED" ]; then
-    cp "$GENDERED" "$TILES_DIR/$DIRNAME/$XTRA"
-    echo "      player sprites: chosen at character generation ($GENDER fallback)"
 fi
 
 # 3. Register with the build system so `make install` deploys it.

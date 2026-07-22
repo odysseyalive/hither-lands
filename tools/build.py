@@ -696,6 +696,13 @@ def main():
     for old in outdir.glob("*.png"):
         if re.fullmatch(r"\d+x\d+\.png", old.name) and old.name != m["tileset"]["atlas"]:
             old.unlink()
+    # Same for prf files this build no longer emits (e.g. the per-gender
+    # xtra-*-male/-female.prf a pre-2026-07 build wrote). Every prf here is
+    # generated, and install.sh copies the directory wholesale, so a leftover
+    # would be deployed forever -- inert, since nothing %:-includes it, but it
+    # would outlive every explanation of what it was.
+    for old in outdir.glob("*.prf"):
+        old.unlink()
     if atlas.width > MAX_TEXTURE or atlas.height > MAX_TEXTURE:
         print(f"WARNING: atlas is {atlas.width}x{atlas.height}px, over the "
               f"{MAX_TEXTURE}px texture limit on some GPUs -- it may fail to "
@@ -774,84 +781,75 @@ def main():
     # play_game -> EVENT_LEAVE_INIT -> reset_visuals), so the choice takes
     # effect for the character that just chose it.
     #
-    # Each file carries every race/class group TWICE: once for the default
-    # gender, UNGATED, then once for the other gender behind a $GENDER gate.
-    # prf is last-match-wins, so the gated block wins wherever $GENDER resolves.
-    # The default block must never be gated: on an engine without the pgender
+    # ONE file carries both genders: every race/class group emitted for Male,
+    # UNGATED, then every group again for Female behind a $GENDER gate. prf is
+    # last-match-wins, so the gated block wins wherever $GENDER resolves.
+    # The first block must never be gated: on an engine without the pgender
     # patches an unknown $VAR expands to the placeholder "?o?o?", so every gated
-    # line is skipped -- an ungated default block is what keeps such a tree
-    # showing a complete set of player sprites. That default is what
-    # `install.sh --gender` still selects, by copying xtra-<suffix>-male.prf or
-    # -female.prf over xtra-<suffix>.prf.
+    # line is skipped -- the ungated block is what keeps such a tree showing a
+    # complete set of player sprites. Which gender that unreachable-on-a-patched-
+    # tree fallback happens to show is arbitrary; it is not a setting, and there
+    # is deliberately no build- or install-time gender option.
     if pvars:
         xtra_pref = m["tileset"]["pref"].replace("graf-", "xtra-", 1)
-        stem = xtra_pref[:-len(".prf")] if xtra_pref.endswith(".prf") else xtra_pref
 
-        def emit_player_xtra(default_gender):
-            """One xtra file: every race/class group emitted for the default
-            gender, then every group again for the other gender, gated on
-            $GENDER. Class-only groups come before race+class so the more
-            specific line wins (prf = last match wins); the gated block repeats
-            ALL groups in that same order so it shadows the default block whole
-            -- a partial second block would let a gated class-only line outrank
-            an ungated race+class one. A group with no art for the wanted gender
-            falls back to the other's tile."""
-            other_gender = "Female" if default_gender == "Male" else "Male"
-            groups = {}
-            for pv in pvars:
-                key = (pv.get("race", ""), pv.get("class", ""))
-                g = "Female" if pv.get("gender") == "Female" else "Male"
-                groups.setdefault(key, {})[g] = pv
-            order = sorted(groups, key=lambda k: (1 if k[0] else 0, k[0],
-                                                  1 if k[1] else 0, k[1]))
+        # Two ordering invariants, both load-bearing (prf = last match wins):
+        #   1. Class-only groups sort before race+class, so the more specific
+        #      line is the later match and wins.
+        #   2. The gated block repeats ALL groups in that same order, so it
+        #      shadows the ungated block whole. A partial second block would let
+        #      a gated class-only line outrank an ungated race+class one.
+        groups = {}
+        for pv in pvars:
+            key = (pv.get("race", ""), pv.get("class", ""))
+            g = "Female" if pv.get("gender") == "Female" else "Male"
+            groups.setdefault(key, {})[g] = pv
+        order = sorted(groups, key=lambda k: (1 if k[0] else 0, k[0],
+                                              1 if k[1] else 0, k[1]))
 
-            def block(gender, gated):
-                out = []
-                for race, cls in order:
-                    choices = groups[(race, cls)]
-                    pv = (choices.get(gender) or choices.get(default_gender)
-                          or next(iter(choices.values())))
-                    attr = 0x80 + pv["row"]
-                    char = 0x80 + pv["col"]
-                    conds = []
-                    if gated:
-                        conds.append(f"[EQU $GENDER {gender}]")
-                    if cls:
-                        conds.append(f"[EQU $CLASS {cls}]")
-                    if race:
-                        conds.append(f"[EQU $RACE {race}]")
-                    if len(conds) == 1:
-                        out.append(f"?:{conds[0]}")
-                    elif len(conds) > 1:
-                        out.append(f"?:[AND {' '.join(conds)}]")
-                    out.append(f"monster:<player>:0x{attr:02X}:0x{char:02X}")
-                return out
+        def block(gender, gated):
+            """One pass over every group. A group with no art for the wanted
+            gender falls back to whatever tile that group does have."""
+            out = []
+            for race, cls in order:
+                choices = groups[(race, cls)]
+                pv = choices.get(gender) or next(iter(choices.values()))
+                attr = 0x80 + pv["row"]
+                char = 0x80 + pv["col"]
+                conds = []
+                if gated:
+                    conds.append(f"[EQU $GENDER {gender}]")
+                if cls:
+                    conds.append(f"[EQU $CLASS {cls}]")
+                if race:
+                    conds.append(f"[EQU $RACE {race}]")
+                if len(conds) == 1:
+                    out.append(f"?:{conds[0]}")
+                elif len(conds) > 1:
+                    out.append(f"?:[AND {' '.join(conds)}]")
+                out.append(f"monster:<player>:0x{attr:02X}:0x{char:02X}")
+            return out
 
-            lines = [
-                f"# File: {stem}-{default_gender.lower()}.prf",
-                "#",
-                "# Generated by tools/build.py from manifest.json -- do not hand-edit.",
-                "#",
-                "# Player sprites keyed on $RACE / $CLASS / $GENDER. Gender is chosen at",
-                "# character generation (HITHER-LANDS:pgender-* patches); the ungated block",
-                f"# below is the {default_gender} fallback for a tree without those patches.",
-                "",
-                f"# {default_gender} -- default, and the fallback when $GENDER cannot resolve:",
-            ] + block(default_gender, False) + [
-                "",
-                f"# {other_gender} -- wins wherever the engine resolves $GENDER:",
-            ] + block(other_gender, True)
-            return "\n".join(lines) + "\n"
-
-        male_prf = emit_player_xtra("Male")
-        female_prf = emit_player_xtra("Female")
-        (outdir / f"{stem}-male.prf").write_text(male_prf)
-        (outdir / f"{stem}-female.prf").write_text(female_prf)
-        (outdir / xtra_pref).write_text(male_prf)  # default = male
+        lines = [
+            f"# File: {xtra_pref}",
+            "#",
+            "# Generated by tools/build.py from manifest.json -- do not hand-edit.",
+            "#",
+            "# Player sprites keyed on $RACE / $CLASS / $GENDER. Both genders ship",
+            "# here; the character's own choice at birth picks between them",
+            "# (HITHER-LANDS:pgender-* patches). The ungated block is only the",
+            "# fallback for a tree without those patches, where $GENDER cannot resolve.",
+            "",
+            "# Male -- ungated, and the fallback when $GENDER cannot resolve:",
+        ] + block("Male", False) + [
+            "",
+            "# Female -- wins wherever the engine resolves $GENDER:",
+        ] + block("Female", True)
+        (outdir / xtra_pref).write_text("\n".join(lines) + "\n")
 
         prf += ["", "# Player variant sprites (race/class/gender; gender chosen at birth):",
                 f"%:{xtra_pref}"]
-        data_files += f" {xtra_pref} {stem}-male.prf {stem}-female.prf"
+        data_files += f" {xtra_pref}"
 
         # Per-race tiles for PLAYER-flag monsters (e.g. "Ent cutpurse"): reuse
         # each race's Warrior player sprite. Unlike the player's own tile, these
