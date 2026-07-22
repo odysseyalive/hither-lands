@@ -224,7 +224,25 @@ tiles are drawn large (big font, hi-DPI) and otherwise just costs ~4× the memor
 - `install.sh` — builds the tileset, copies it into an FAangband source tree,
   registers it in `list.txt` and `Makefile`, and applies C source patches.
 - `patches/` — anchor-based, idempotent C source patches delivered via
-  `install.sh` (e.g. shapechange tile display system).
+  `install.sh` (e.g. shapechange tile display system). `patches.json` also pins
+  the upstream FAangband commit every anchor was proven against; every run
+  reports drift against it before touching anchors.
+- `docs/never-regress.md` — **the prime directive**: what every change owes the
+  next one, and how the baseline pin enforces it. Read before changing patches,
+  the manifest, or the build pipeline.
+
+## Contributing / Maintaining
+
+This project patches a repository that does not know it exists. Read
+[`docs/never-regress.md`](docs/never-regress.md) first — it explains the baseline
+pin, why a still-matching anchor is not proof of correctness, and the checklist
+every change is held to.
+
+```sh
+python3 patches/apply_patches.py <fa-tree> --baseline   # upstream drift report
+python3 patches/apply_patches.py <fa-tree> --status     # + anchor states, no writes
+python3 patches/apply_patches.py <fa-tree> --repin      # advance the pin after a re-author
+```
 
 ## Adding Tiles
 

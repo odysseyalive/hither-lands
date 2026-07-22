@@ -20,3 +20,6 @@ docs/tile-index.md
 CLAUDE.md
 player-saves/
 library/
+
+# transient re-pin write (apply_patches.py --repin)
+patches/patches.json.repin.tmp

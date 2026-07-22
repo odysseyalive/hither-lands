@@ -1,6 +1,24 @@
 {
-  "version": 1,
+  "version": 2,
   "note": "Anchor-based, idempotent C patches for FAangband, applied by apply_patches.py. Authored by /fa-codepatch. Anchors are literal substrings that must match exactly once.",
+  "upstream": {
+    "repo": "https://github.com/NickMcConnell/FAangband.git",
+    "commit": "4bfb96aabb62fd2bf708aa5739bb82c17ff5545b",
+    "describe": "2.0.1-1065-g0b5530a31-1-g4bfb96aab",
+    "subject": "On a shapechange, only learn shape's resistances that differ from baseline",
+    "date": "2026-07-18",
+    "verified": "2026-07-21",
+    "note": "NEVER-REGRESS BASELINE. Every anchor below was proven to locate uniquely against THIS upstream commit. apply_patches.py compares the target tree's HEAD against it on every run and, on drift, reports which anchored files upstream touched -- so an at-risk patch group is announced BEFORE anchors are attempted. Advance this pin ONLY via `apply_patches.py <FA_DIR> --repin`, which refuses unless every patch classifies READY/ALREADY against the new HEAD. Each advance appends to `history`, so the baseline can always be walked backwards.",
+    "history": [
+      {
+        "commit": "4bfb96aabb62fd2bf708aa5739bb82c17ff5545b",
+        "date": "2026-07-18",
+        "verified": "2026-07-21",
+        "patches": 83,
+        "note": "Initial pin. Established retroactively -- this is the tree the 83 anchors were authored against, all classifying READY/ALREADY at pin time."
+      }
+    ]
+  },
   "patches": [
     {
       "id": "shape-incl",
