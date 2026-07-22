@@ -766,6 +766,33 @@
       "sentinel": "HITHER-LANDS:pgender-stage-case",
       "payload": "\t\t\t/* HITHER-LANDS:pgender-stage-case BEGIN */\n\t\t\tcase BIRTH_GENDER_CHOICE:\n\t\t\t{\n\t\t\t\tprint_gender_instructions();\n\t\t\t\tnext = get_gender_command();\n\t\t\t\tif (next == BIRTH_BACK)\n\t\t\t\t\tnext = BIRTH_MAP_CHOICE;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t\t/* HITHER-LANDS:pgender-stage-case END */\n\n",
       "note": "Drive the gender stage from textui_do_birth; ESC steps back to the map menu."
+    },
+    {
+      "id": "pgender-sheet-rows",
+      "file": "src/ui-player.c",
+      "anchor": "static struct panel *get_panel_topleft(void) {\n\tstruct panel *p = panel_allocate(7);",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:pgender-sheet-rows",
+      "payload": "static struct panel *get_panel_topleft(void) {\n\t/* HITHER-LANDS:pgender-sheet-rows -- 8th line is Gender (pgender-sheet-line).\n\t * panel_line asserts p->len != p->max, so this MUST grow with that patch. */\n\tstruct panel *p = panel_allocate(8);",
+      "note": "Grow the top-left character-sheet panel by one row. panel_allocate(7) alone is not unique in this file (4 occurrences), so the anchor carries the function header."
+    },
+    {
+      "id": "pgender-sheet-line",
+      "file": "src/ui-player.c",
+      "anchor": "\tpanel_line(p, COLOUR_L_BLUE, \"Title\", \"%s\", show_title());",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:pgender-sheet-line",
+      "payload": "\n\t/* HITHER-LANDS:pgender-sheet-line BEGIN */\n\tpanel_line(p, COLOUR_L_BLUE, \"Gender\", \"%s\",\n\t\t\tOPT(player, birth_female_sprite) ? \"Female\" : \"Male\");\n\t/* HITHER-LANDS:pgender-sheet-line END */",
+      "note": "Show gender on the character sheet, after Title so Race/Class/Title stay contiguous. Reads the birth_female_sprite option (pgender-option) -- FAangband has no player-gender field of its own. Requires pgender-sheet-rows for the extra slot."
+    },
+    {
+      "id": "pgender-sheet-region",
+      "file": "src/ui-player.c",
+      "anchor": "\t{ {  1, 1, 40, 7 }, true,  get_panel_topleft },\t/* Name, Class, ... */",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:pgender-sheet-region",
+      "payload": "\t{ {  1, 1, 40, 8 }, true,  get_panel_topleft },\t/* HITHER-LANDS:pgender-sheet-region -- Name, Class, ... */",
+      "note": "The bounds height drives region_erase, not the line loop, so a stale row 8 would otherwise survive a redraw. Rows 1-8 stay clear of the midleft panel, which starts at row 9."
     }
   ]
 }
