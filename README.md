@@ -70,8 +70,8 @@ cd ../hither-lands
 ```
 
 This builds the atlas from source tiles, copies it into `lib/tiles/`,
-registers the tileset in the build system, and applies any C source patches
-(e.g. shapechange tile display).
+registers the tileset in the build system, and applies the C source patches
+the tileset needs (see step 6 for what they add).
 
 Player sprite gender is chosen **in the game**, at character generation: the
 patches add a Male/Female step to the birth sequence, between the map and race
@@ -120,11 +120,25 @@ deploys the game data, including this tileset, to that directory. A plain
 first build, any data at all).
 
 **Re-run `make -C ../FAangband install` after every `install.sh`**, for two
-reasons: it redeploys the rebuilt tiles, and it recompiles the two small
-graphics-only additions `install.sh` patches into the game's code — **animated
-tiles** (so things like torches flicker and water ripples) and **shapeshift
-sprites** (so your character shows a matching picture when it transforms into
-another form). Neither changes how the game plays.
+reasons: it redeploys the rebuilt tiles, and it recompiles the additions
+`install.sh` patches into the game's code. Most are graphics-only:
+
+- **animated tiles** — torches flicker, water ripples.
+- **shapeshift sprites** — your character shows a matching picture when it
+  transforms into another form.
+- **per-race monster sprites** — player-race monsters get their own art
+  instead of one shared sprite.
+- **a Male/Female sprite step in character generation** (see step 5), plus the
+  birth option that backs it.
+- **tiles and keypresses drawn inside the in-game help browser**, and larger
+  default font/tile sizes to suit them.
+
+Two of them do change how the game plays, by design:
+
+- **allies** — a command and UI for recruiting and directing friendly monsters.
+- **the faction ecosystem** — some creatures spawn neutral rather than hostile,
+  fauna behave less like uniform monsters, packs and territorial races stay near
+  where they spawned, and a struck creature can rally its group to its aid.
 
 > If you instead configured with `--with-no-install`, the rule flips: run a
 > plain `make -C ../FAangband` and skip `install` — that build mode reads tiles
@@ -153,8 +167,10 @@ then **FAangband** (the first entry — the main window), then **Tiles** >
 **Set**, and pick **Hither Lands**. The selection is remembered across sessions.
 
 Then set the tile size under **Tiles** > **Size** (also only available once
-tiles are on and you're at the command prompt). Tiles are stretched to fill
-`font cell × multiplier` on screen, and terminal fonts are about twice as tall
+tiles are on and you're at the command prompt). On a patched tree the size
+already defaults to **width 7 / height 3** when tiles are switched on, so the
+rest of this section is tuning rather than required setup. Tiles are stretched
+to fill `font cell × multiplier` on screen, and terminal fonts are about twice as tall
 as they are wide, so **keep the width multiplier at roughly 2× the height
 multiplier** or the square tiles render squashed. With the default `10x20`
 font, **width 6 / height 3** hits both marks: square tiles at close to their
@@ -211,7 +227,7 @@ tiles are drawn large (big font, hi-DPI) and otherwise just costs ~4× the memor
 
 - `manifest.json` — single source of truth: tileset metadata plus one entry
   per tile (source image, atlas grid position, game entities it maps).
-- `source-tiles/` — one PNG per tile at render size (~512px), named by entity.
+- `source-tiles/` — one PNG per tile at render size (~1024px), named by entity.
   Committed, because AI generation is not reproducible.
 - `palette.json` — the locked 21-color theme palette. `build.py` snaps every
   tile to these colors at build time. Edit this to re-theme the whole set
@@ -224,9 +240,13 @@ tiles are drawn large (big font, hi-DPI) and otherwise just costs ~4× the memor
 - `install.sh` — builds the tileset, copies it into an FAangband source tree,
   registers it in `list.txt` and `Makefile`, and applies C source patches.
 - `patches/` — anchor-based, idempotent C source patches delivered via
-  `install.sh` (e.g. shapechange tile display system). `patches.json` also pins
-  the upstream FAangband commit every anchor was proven against; every run
-  reports drift against it before touching anchors.
+  `install.sh`, grouped by id prefix: `shape-*` (shapechange sprites),
+  `tile-anim-*` (animation), `prace-*` (per-race monster sprites), `pgender-*`
+  (birth-time sprite gender), `help-*`/`display-*` (help-browser tiles and
+  display defaults), `ally-*`/`recruit-*` (ally system), `eco-*` (faction
+  ecosystem). `patches.json` also pins the upstream FAangband commit every
+  anchor was proven against; every run reports drift against it before touching
+  anchors.
 - `docs/never-regress.md` — **the prime directive**: what every change owes the
   next one, and how the baseline pin enforces it. Read before changing patches,
   the manifest, or the build pipeline.
