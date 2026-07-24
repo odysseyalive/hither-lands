@@ -68,10 +68,10 @@ still being alive.
   STR - to-hit and damage, carried weight, and extra blows with
         heavier weapons.  The fighter's early friend.
 
-  INT - spellcasting for mages, rogues, necromancers, and
+  INT - the art of song for mages, rogues, necromancers, and
         blackguards; also magical devices and disarming.
 
-  WIS - spellcasting for priests, paladins, druids, and rangers;
+  WIS - the art of song for priests, paladins, druids, and rangers;
         also your saving throws against magic.
 
   DEX - extra blows with light weapons, to-hit, dodging, locks,
@@ -80,9 +80,9 @@ still being alive.
   CON - hit points and recovery.  Matters most in the deep places,
         where nothing comes at you once.
 
-Hit points come of your race and class together; spell points, for
-those who cast, grow with level and with the casting stat.  Warriors
-never have spell points, and want none.  Whatever you are, the first
+Hit points come of your race and class together; the strength to
+sing, for those who do, grows with level and with the governing
+stat.  Warriors carry no song, and want none.  Whatever you are, the first
 few levels are the thin ones, and more heroes of this Age have been
 lost in the third week than in the third year.
 

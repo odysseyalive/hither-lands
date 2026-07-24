@@ -845,8 +845,8 @@
       "anchor": "\tkeyboard_event_to_angband_key(key, a->kp_as_mod, &ch, &mods);\n",
       "where": "before",
       "sentinel": "HITHER-LANDS:display-lightmode-key",
-      "payload": "\t/* HITHER-LANDS:display-lightmode-key: F9 toggles the light/dark colour\n\t * theme (issue #13 D9), checked on the raw SDL scancode before the Angband\n\t * key mapping so it collides with no keyset. */\n\tif (key->keysym.scancode == SDL_SCANCODE_F9) {\n\t\thl_toggle_light_mode();\n\t\treturn true;\n\t}\n",
-      "note": "D9: F9 runtime toggle intercept in handle_key"
+      "payload": "\t/* HITHER-LANDS:display-lightmode-key: F12 toggles the light/dark colour\n\t * theme (issue #13 D9), checked on the raw SDL scancode before the Angband\n\t * key mapping so it collides with no keyset. */\n\tif (key->keysym.scancode == SDL_SCANCODE_F12) {\n\t\thl_toggle_light_mode();\n\t\treturn true;\n\t}\n",
+      "note": "D9: F12 runtime toggle intercept in handle_key"
     },
     {
       "id": "display-lightmode-dump",
@@ -917,8 +917,8 @@
       "anchor": "\tassert((int) g->f_idx < z_info->f_max);\n",
       "where": "before",
       "sentinel": "HITHER-LANDS:town-roof-mark",
-      "payload": "\t/* HITHER-LANDS:town-roof-mark -- flag an INTERIOR town permanent wall (a\n\t * building wall, NOT the level-edge boundary which is also FEAT_PERM) so the\n\t * tileset can draw a roof over it (issue #13 D6). Display-only: the real grid\n\t * stays FEAT_PERM and still blocks. Town is a TOPOGRAPHY, not depth 0. The\n\t * our-tileset gate and the roof tile itself live in grid_data_as_text\n\t * (ui-map.c), which has feat_x_attr. */\n\tif ((int) g->f_idx == FEAT_PERM\n\t\t\t&& level_topography(player->place) == TOP_TOWN\n\t\t\t&& grid.x > 0 && grid.y > 0\n\t\t\t&& grid.x < cave->width - 1 && grid.y < cave->height - 1) {\n\t\tg->hl_town_building = true;\n\t}\n\n",
-      "note": "D6 roofs: mark interior town building walls (not the boundary) for the roof render"
+      "payload": "\t/* HITHER-LANDS:town-roof-mark -- flag a town BUILDING wall for the roof\n\t * tile (issue #13 D6).  Rule: a FEAT_PERM cell is a building wall iff all\n\t * four cardinal walks reach a non-permanent cell within 6 steps WITHOUT\n\t * running off the level.  Why that separates buildings from the town's\n\t * outer wall (town_gen_layout, gen-cave.c):\n\t *   - a store/home is a solid FEAT_PERM rectangle of at most 5x3, embedded\n\t *     in floor, so every one of its cells passes (5 wide needs radius 5);\n\t *     ruins are FEAT_GRANITE, not FEAT_PERM, so they are never eligible;\n\t *   - the outer wall is everything outside the floor ELLIPSE plus the\n\t *     level-edge rectangle.  The ellipse is CONVEX, so from any cell\n\t *     outside it at least one cardinal ray moves away from the centre and\n\t *     never re-enters floor -- it leaves the level and the walk breaks with\n\t *     found = false.  CONVEXITY is the invariant here, not band thickness:\n\t *     the band is only 1-3 cells thick in a 22x66 town.\n\t * Known gap: the \"Angband Dungeon\" world carves its town from a starburst\n\t * room instead, which is NOT convex; a concave neck <= 6 cells wide there\n\t * could still be roofed.  Town is a TOPOGRAPHY, not depth 0.  Display-only:\n\t * the real grid stays FEAT_PERM and still blocks. */\n\tif ((int) g->f_idx == FEAT_PERM\n\t\t\t&& level_topography(player->place) == TOP_TOWN) {\n\t\tstatic const int dx[] = {0, 0, -1, 1};\n\t\tstatic const int dy[] = {-1, 1, 0, 0};\n\t\tbool enclosed = true;\n\t\tint d;\n\t\tfor (d = 0; d < 4 && enclosed; d++) {\n\t\t\tint s;\n\t\t\tbool found = false;\n\t\t\tfor (s = 1; s <= 6; s++) {\n\t\t\t\tstruct loc p = loc(grid.x + dx[d] * s,\n\t\t\t\t\t\t\t\t   grid.y + dy[d] * s);\n\t\t\t\tif (p.x < 0 || p.y < 0 ||\n\t\t\t\t\t\tp.x >= cave->width || p.y >= cave->height)\n\t\t\t\t\tbreak;\n\t\t\t\tif (!square_isperm(cave, p)) { found = true; break; }\n\t\t\t}\n\t\t\tif (!found) enclosed = false;\n\t\t}\n\t\tif (enclosed) g->hl_town_building = true;\n\t}\n\n",
+      "note": "D6 roofs: mark town building walls via a bounded 4-way cardinal walk; the convexity of the town floor ellipse is what keeps the outer wall out (see payload comment). Superseded the naive interior-FEAT_PERM test that roofed the whole perimeter."
     },
     {
       "id": "town-roof-render",
@@ -928,6 +928,24 @@
       "sentinel": "HITHER-LANDS:town-roof-render",
       "payload": "\n\t/* HITHER-LANDS:town-roof-render -- draw the roof tile over a town building\n\t * wall that map_info flagged (g->hl_town_building), but ONLY when our\n\t * tileset maps the roof feat (feat_x_attr high bit). ASCII and every other\n\t * tileset leave the bit clear -> normal wall, untouched. No baked atlas\n\t * coords: the cell comes from the roof feat's own tile mapping. Placed\n\t * before the (*tap)/(*tcp) save so the roof flows into the transparency\n\t * layer too (correct minimap priority + SDL2 background). (issue #13 D6) */\n\tif (g->hl_town_building) {\n\t\tstatic int hl_roof_fidx = -2;   /* -2 unresolved, -1 no such feat */\n\t\tif (hl_roof_fidx == -2)\n\t\t\thl_roof_fidx = lookup_feat(\"town roof\");\n\t\tif (hl_roof_fidx >= 0\n\t\t\t\t&& (feat_x_attr[g->lighting][hl_roof_fidx] & 0x80)) {\n\t\t\ta = feat_x_attr[g->lighting][hl_roof_fidx];\n\t\t\tc = feat_x_char[g->lighting][hl_roof_fidx];\n\t\t}\n\t}\n",
       "note": "D6 roofs: our-tileset-only roof substitution for grids map_info flagged as town building walls"
+    },
+    {
+      "id": "song-cmd-cast",
+      "file": "src/ui-game.c",
+      "anchor": "\t{ \"Cast a spell\", { 'm' }, CMD_CAST, NULL, player_can_cast_prereq, 0, NULL, NULL, NULL, 0 },\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:song-cmd-cast",
+      "payload": "\t{ \"Sing a song\", { 'm' }, CMD_CAST, NULL, player_can_cast_prereq, 0, NULL, NULL, NULL, 0 }, /* HITHER-LANDS:song-cmd-cast */\n",
+      "note": "Tolkien lore: power in the First Age is sung, not cast. Finrod strove with Sauron in songs of power (Silm. ch.19). The command menu and {key:} tokens see this description."
+    },
+    {
+      "id": "song-cmd-study",
+      "file": "src/ui-game.c",
+      "anchor": "\t{ \"Gain new spells\", { 'G' }, CMD_STUDY, NULL, player_can_study_prereq, 0, NULL, NULL, NULL, 0 },\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:song-cmd-study",
+      "payload": "\t{ \"Learn new songs\", { 'G' }, CMD_STUDY, NULL, player_can_study_prereq, 0, NULL, NULL, NULL, 0 }, /* HITHER-LANDS:song-cmd-study */\n",
+      "note": "Companion to song-cmd-cast. Songs are learned from books, as verses are studied."
     }
   ]
 }

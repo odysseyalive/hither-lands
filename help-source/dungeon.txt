@@ -55,7 +55,7 @@ and ''' when open, and a secret door wears the look of plain granite
 until you pass close by it.  Open with '{key:Open a door or a chest}'
 and close with '{key:Close a door}'.
 
-A shut door behind you is worth more than most spells.  Things that hunt by
+A shut door behind you is worth more than most songs of warding.  Things that hunt by
 smell lose the trail at a closed door, and things that hunt by sight lose
 you entirely, and the few that can open doors will announce themselves
 doing it, which is a courtesy of a kind.

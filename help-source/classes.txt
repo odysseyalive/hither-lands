@@ -12,7 +12,7 @@ shot now and cares nothing about it.
 
 Nine callings are open to you.  Casters draw upon INT or WIS as
 noted; Warriors draw upon nothing but themselves, as Húrin did, who
-stood at the Nirnaeth with an axe and no spell at all and killed until
+stood at the Nirnaeth with an axe and no song at all and killed until
 the axe would not lift.  Whichever road you take, take it early.  The
 war will not wait while you decide what you are.
 
@@ -24,7 +24,7 @@ somewhere in between.  What follows is what the muster-rolls would
 say if muster-rolls were honest.
 
   Warrior     - pure battle; the most blows, the best survival by
-    steel alone, no spells ever.  Begins with a bonus
+    steel alone, no songs, no prayers.  Begins with a bonus
     specialty.  A Warrior's answer to an enchantment is
     to reach the enchanter.
 
@@ -80,8 +80,8 @@ FAangband's specialty abilities set your character apart from all
 others of the same calling.  You choose one at first level (Warriors
 choose two), and earn further choices as you prove yourself against
 the great enemies of the Age, three or four of them in a full life.
-Review yours with '{key:View abilities}'; casters gain new spells with
-'{key:Gain new spells}'.
+Review yours with '{key:View abilities}'; casters learn new verses with
+'{key:Learn new songs}'.
 
 Consider them the mark the road leaves on you.  They are not bought
 with gold or study but with the deaths of great foes, and there are

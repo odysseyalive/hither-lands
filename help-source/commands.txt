@@ -21,13 +21,13 @@ when the autoexplore_commands option is on.
   d    Drop an item                    D    Disarm a trap or lock a door
   e    List equipped items             E    Eat some food
   f    Fire an item                    F    Fuel your lantern/torch
-  g    Get objects on floor            G    Gain new spells/prayers
+  g    Get objects on floor            G    Learn new songs/prayers
   h    Fire default ammo at target     H    -
   i    List contents of pack           I    Inspect an item
   j    Recruit a monster               J    -
   k    Ignore an item                  K    Toggle ignore
   l    Look around                     L    Locate player on map
-  m    Cast a spell                    M    Display map of entire level
+  m    Sing a song                     M    Display map of entire level
   n    Repeat previous command         N    -
   o    Open a door or chest            O    -
   p    - (see above)                   P    -

@@ -36,7 +36,7 @@ four different roads.
   Blackguards learn one savage shape of their own, and one is enough
    for what a Blackguard intends to do with it.
 
-  A Beorning needs no spell at all, for bear-shape is that people's
+  A Beorning needs no verse at all, for bear-shape is that people's
    birthright, taken at will with '{key:Change shape}', and it
    deepens as they grow.
 
@@ -47,7 +47,7 @@ the lot and the dearest, and nobody who takes it once forgets it.
 Wearing another skin
 --------------------
 
-Shapes are entered by casting the form's verse with '{key:Cast a spell}',
+Shapes are entered by singing the form's verse with '{key:Sing a song}',
 by the Beorning's '{key:Change shape}', or by the power of certain items.
 Whichever door you come in by, what waits beyond it is the same.  In a
 shape you ARE the beast.  Its blows are yours, and its senses, and its
