@@ -827,7 +827,7 @@
       "anchor": "/* HITHER-LANDS:display-tileset-fwd -- reload_all_graphics is defined\n * far below term_xtra_react, which calls it (display-default-tileset). */\nstatic void reload_all_graphics(struct my_app *a, graphics_mode *mode);\n",
       "where": "after",
       "sentinel": "HITHER-LANDS:display-lightmode-fwd",
-      "payload": "/* HITHER-LANDS:display-lightmode-fwd -- hl_toggle_light_mode is defined far\n * below (right after init_colors, which it calls); handle_key needs it. */\nstatic void hl_toggle_light_mode(void);\n",
+      "payload": "/* HITHER-LANDS:display-lightmode-fwd -- hl_toggle_light_mode is defined far\n * below (right after init_colors, which it calls); handle_key needs it. */\nstatic void hl_toggle_light_mode(void);\n/* A stored light-mode:1 choice, read from config; applied once the frontend\n * is up (term_xtra_react). Declared here so term_xtra_react, which is above the\n * toggle's definition, can see it (issue #13 D9). */\nstatic bool hl_light_pending = false;\n",
       "note": "D9: forward-declare the light/dark toggle for handle_key"
     },
     {
@@ -847,6 +847,42 @@
       "sentinel": "HITHER-LANDS:display-lightmode-key",
       "payload": "\t/* HITHER-LANDS:display-lightmode-key: F9 toggles the light/dark colour\n\t * theme (issue #13 D9), checked on the raw SDL scancode before the Angband\n\t * key mapping so it collides with no keyset. */\n\tif (key->keysym.scancode == SDL_SCANCODE_F9) {\n\t\thl_toggle_light_mode();\n\t\treturn true;\n\t}\n",
       "note": "D9: F9 runtime toggle intercept in handle_key"
+    },
+    {
+      "id": "display-lightmode-dump",
+      "file": "src/main-sdl2.c",
+      "anchor": "\tfile_putf(config, \"kp-as-modifier:%d\\n\", (a->kp_as_mod) ? 1 : 0);\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:display-lightmode-dump",
+      "payload": "\t/* HITHER-LANDS:display-lightmode-dump */\n\tfile_putf(config, \"light-mode:%d\\n\", hl_light_mode ? 1 : 0);\n",
+      "note": "D9: persist the light/dark choice as a dedicated key (D3-safe: nothing else writes it)"
+    },
+    {
+      "id": "display-lightmode-readfn",
+      "file": "src/main-sdl2.c",
+      "anchor": "static struct parser *init_parse_config(struct my_app *a)\n{\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:display-lightmode-readfn",
+      "payload": "/* HITHER-LANDS:display-lightmode-readfn */\nstatic enum parser_error config_light_mode(struct parser *parser)\n{\n\thl_light_pending = (parser_getint(parser, \"on\") != 0);\n\treturn PARSE_ERROR_NONE;\n}\n\n",
+      "note": "D9: config handler for the light-mode line"
+    },
+    {
+      "id": "display-lightmode-readreg",
+      "file": "src/main-sdl2.c",
+      "anchor": "\tparser_reg(parser, \"kp-as-modifier int enabled\", config_kp_as_mod);\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:display-lightmode-readreg",
+      "payload": "\t/* HITHER-LANDS:display-lightmode-readreg */\n\tparser_reg(parser, \"light-mode int on\", config_light_mode);\n",
+      "note": "D9: register the light-mode config line"
+    },
+    {
+      "id": "display-lightmode-apply",
+      "file": "src/main-sdl2.c",
+      "anchor": "static errr term_xtra_react(void)\n{\n\tinit_colors(&g_app);\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:display-lightmode-apply",
+      "payload": "\n\t/* HITHER-LANDS:display-lightmode-apply -- apply a stored light-mode choice\n\t * once the frontend window exists (issue #13 D9). Toggling from the OFF\n\t * default turns it on; latched so it fires exactly once, never re-forced. */\n\t{\n\t\tstatic bool hl_light_applied = false;\n\t\tif (!hl_light_applied && hl_light_pending\n\t\t\t\t&& g_app.windows[MAIN_WINDOW].inited) {\n\t\t\thl_light_applied = true;\n\t\t\thl_toggle_light_mode();\n\t\t}\n\t}\n",
+      "note": "D9: apply a persisted light-mode choice on startup, latched"
     }
   ]
 }
