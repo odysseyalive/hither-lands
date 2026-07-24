@@ -1,5 +1,5 @@
-{tile:capital:O|O}           f Song and Spellcraft
-            =====================
+{tile:capital:O|O}           f Song and Spell
+            ================
             "For Felagund strove with Sauron in songs of power,
             and the power of the King was very great; but Sauron
             had the mastery."
@@ -46,6 +46,12 @@ A song must be learned before it can be sung, and no one has ever
 learned one usefully while being eaten.  Everything in this section
 is work you do in the quiet, so that the loud part goes better.
 
+These pages speak of song, which is how the loremasters of the First
+Age spoke of such power.  Your own screens name the same thing
+plainly: the command is to cast, and the strength you spend is
+counted in spell points.  Song and spell are one thing here, told two
+ways.
+
 Cast or pray with '{key:Cast a spell}', browse a book with
 '{key:Browse a book}', and learn new spells with
 '{key:Gain new spells}' when your level allows.  Casting takes a full
@@ -59,6 +65,20 @@ Every art has its conditions, and no singer has ever talked one of
 them round.  You cannot cast blind or confused, and every caster but
 the Necromancer needs light to read by.  The Necromancer reads the
 dark itself, and light is a wound to that art.
+
+What you wear is one of those conditions.  Mail is a weight on the
+singer.  Carry more armour than your calling was meant to bear and
+your maximum spell points fall away, one for every ten units of
+excess, and they come back the moment the weight is set down.  The
+allowance is widest for the Blackguard, who was never expected to
+travel light, and narrowest for the Mage and the Necromancer, whose
+strength was never meant to be worn.  Priest, Druid, Rogue, Paladin
+and Ranger stand between.  Those who take the Armor Proficiency
+specialty are granted a little more room before the penalty begins.
+
+Gloves are the one mercy.  In other worlds a caster's hands must go
+bare; here they need not.  A glove is only the weight it is, and
+nothing about it dulls a voice or a hand.
 
 Devices
 -------

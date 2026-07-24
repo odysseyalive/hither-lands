@@ -53,8 +53,9 @@ everyone else.  Walk onto a numbered door to go in.
         your own storeroom, and the one honest
         price in town.
 
-The first door and the fifth are the two you will wear out.  The seventh you
-will visit once, out of curiosity, and come away insulted, and go back.
+The General Store and the Alchemist are the two you will wear out.  The
+Black Market you will visit once, out of curiosity, and come away
+insulted, and go back.
 
 Within a shop, 'p' or 'g' buys, 's' or 'd' sells (or stashes, at
 home), 'l' or 'x' examines a ware, and ESC takes you out again.

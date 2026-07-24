@@ -919,6 +919,25 @@ def main():
 
     build_help(m)
 
+    # Tier-1 illustrated PDF (issue #13 D8): text + embedded tile art, fully
+    # deterministic off help-source/ + the atlas we just built, so it stays in
+    # lockstep with every build.  Optional dependency (reportlab): a clean
+    # notice and skip if it is absent, never a build failure.
+    try:
+        import build_pdf
+        build_pdf.build_pdf(m)
+    except Exception as e:  # pragma: no cover - export is best-effort
+        print(f"pdf: skipped ({type(e).__name__}: {e})")
+
+    # Pinned LIGHT atlas (issue #13 D9): a locked luminance transform of the
+    # dark atlas we just built, kept in lockstep so the runtime light/dark
+    # toggle never drifts.  No source art is redrawn.  Best-effort.
+    try:
+        import build_light_atlas
+        build_light_atlas.build_light_atlas(m)
+    except Exception as e:  # pragma: no cover
+        print(f"light: skipped ({type(e).__name__}: {e})")
+
     mapped = sum(len(t["maps"]) for t in tiles)
     pvcount = len(pvars)
     print(f"built {len(tiles) + pvcount} tiles ({rows}x{cols}+ atlas), "

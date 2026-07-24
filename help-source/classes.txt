@@ -65,7 +65,7 @@ say if muster-rolls were honest.
     folk who shot first and were never seen at all.
 
   Blackguard (INT) - a brutal brawler in heavy gear, spending
-    blood for dark spellcraft; very hard to kill.  The
+    blood for dark sorcery; very hard to kill.  The
     strength comes out of the wound, so a Blackguard
     who is not bleeding is not yet at work.
 

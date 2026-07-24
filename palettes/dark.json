@@ -1,0 +1,27 @@
+{
+  "name": "Hither Lands",
+  "_comment": "The locked theme palette. build.py snaps every tile to these colors. Edit here (and keep the /tileset skill's art-direction.md table in sync) to re-theme the whole set; re-run build.py to apply. Warm earthy First-Age mood: warm dark ground, ochre/tan earth and stone, muted forest green, with sparse amber/terracotta/gold jewel accents.",
+  "colors": [
+    "#171310",
+    "#211a12",
+    "#33271a",
+    "#5e4428",
+    "#8a6536",
+    "#5a4d3a",
+    "#7d6f57",
+    "#a89274",
+    "#4f5a2e",
+    "#7d8a45",
+    "#3d2c18",
+    "#7a5526",
+    "#3a5a52",
+    "#6a8a80",
+    "#b8c4a8",
+    "#d98a2e",
+    "#c06a28",
+    "#f0d68a",
+    "#a83b22",
+    "#cdb98a",
+    "#f0e6cf"
+  ]
+}

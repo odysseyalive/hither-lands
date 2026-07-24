@@ -37,11 +37,10 @@ COUNSEL FOR THE ROAD
 --------------------
 
   (k) Of Arms and the Manner of Fighting
-  (l) Of Song and Spellcraft
+  (l) Of Song and Spell
   (m) Of Goods and Gear, and What They Are Worth
   (n) Of the Great Treasures - the artefacts, told lightly
   (o) Of Skin-Changing - the wearing of a beast's form
-  (p) Of Skin-Changing: the Full Particulars - SPOILERS within
 
 APPENDICES
 ----------
@@ -51,6 +50,7 @@ APPENDICES
   (s) Appendix III: Of the Painted Tiles - the Hither Lands tileset
   (t) Appendix IV: On Settings - the options screens
   (u) Appendix V: On Keymaps and Pref Files
+  (v) Appendix VI: Of Matters Best Discovered - skin-changing, SPOILERS
 
 The keys named throughout this book are your own.  Change your keyset
 in the options and the letters in these pages change with you, so
@@ -92,8 +92,6 @@ at https://faangband.readthedocs.io/
 
 .. menu:: [o] shapes.txt
 
-.. menu:: [p] shapes-spoiler.txt
-
 .. menu:: [q] commands.txt
 
 .. menu:: [r] symbols.txt
@@ -103,3 +101,5 @@ at https://faangband.readthedocs.io/
 .. menu:: [t] options.txt
 
 .. menu:: [u] customize.txt
+
+.. menu:: [v] shapes-spoiler.txt
