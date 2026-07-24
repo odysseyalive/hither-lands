@@ -10766,6 +10766,15 @@
       "maps": [
         "object:none:<curse object>"
       ]
+    },
+    {
+      "source": "town/roof-thatch.png",
+      "row": 120,
+      "col": 0,
+      "chroma": true,
+      "maps": [
+        "feat:town roof:*"
+      ]
     }
   ],
   "player_variants": [

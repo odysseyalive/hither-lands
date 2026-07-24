@@ -156,7 +156,22 @@ land.
       doors survive the 21-colour snap AND the 64px cell size with numerals still legible and shops
       still mutually distinct. The same build regenerated the PDF (now shows the doors) and the light
       atlas, exercising all new `build.py` wiring in one clean pass.
-- [ ] Roof tile(s) + town wall tile (the `town-roof-*` half of D6 — still to art + patch).
+- [x] **AUTHORED + COMPILES 2026-07-23** D6 roofs (`town-roof-*`): owner-ratified design — *"replace
+      the building walls with an ASCII roof representation, interpret that as the roof tile"* — which
+      makes it **graphics-only** (walls stay `FEAT_PERM`, still block; only the display changes) with
+      **no baked coords**. Two records + a tile: `town-roof-feat` (a display-only carrier feat "town
+      roof" in terrain.txt, never placed) + `town-roof-render` (overrides `FEAT_PERM`'s town display
+      to the roof tile in `grid_data_as_text`, gated on `TOP_TOWN` + `FEAT_PERM` + `feat_x_attr&0x80`)
+      + `roof-thatch.png` mapped to `feat:town roof:*` at cell (120,0). A `code-design-advisor` panel
+      caught two real bugs pre-write (town is TOPOGRAPHY not depth-0 — would have roofed ARENA/etc.;
+      and the self-gate soundness). **Owner then refined to BUILDINGS-ONLY** (not the town's outer
+      wall). Both are `FEAT_PERM` and `grid_data` has no coords, so this became a clean 5-record
+      split: `map_info` flags interior (not-edge) town building walls via a display-only
+      `grid_data.hl_town_building` bit; `grid_data_as_text` does the our-tileset-gated substitution.
+      Applied clean, **`make` exit 0, my files warning-free**; atlas rebuilt with the roof tile at
+      (120,0) + `feat:town roof` prf line. Coverage row + ledger implementation record updated.
+      *Remaining: the in-game check (buildings roofed, town edge NOT roofed, dungeon unchanged,
+      shops enterable) — `/fa-playtest`, keyboard-gated.*
 - [ ] Define the actual 32-colour light UI values (text legibility pass) — pairs with the C patch below.
 
 ### E · `hither-lands-dev` — C patches, manifest remap, build.py

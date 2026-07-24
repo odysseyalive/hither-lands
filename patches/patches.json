@@ -883,6 +883,51 @@
       "sentinel": "HITHER-LANDS:display-lightmode-apply",
       "payload": "\n\t/* HITHER-LANDS:display-lightmode-apply -- apply a stored light-mode choice\n\t * once the frontend window exists (issue #13 D9). Toggling from the OFF\n\t * default turns it on; latched so it fires exactly once, never re-forced. */\n\t{\n\t\tstatic bool hl_light_applied = false;\n\t\tif (!hl_light_applied && hl_light_pending\n\t\t\t\t&& g_app.windows[MAIN_WINDOW].inited) {\n\t\t\thl_light_applied = true;\n\t\t\thl_toggle_light_mode();\n\t\t}\n\t}\n",
       "note": "D9: apply a persisted light-mode choice on startup, latched"
+    },
+    {
+      "id": "town-roof-feat",
+      "file": "lib/gamedata/terrain.txt",
+      "anchor": "name:sand dune\ngraphics:.:y\npriority:13\n",
+      "where": "before",
+      "sentinel": "town roof",
+      "payload": "name:town roof\ngraphics:^:u\npriority:10\nflags:WALL | ROCK | PERMANENT | NO_SCENT | NO_FLOW\ndesc:The roof of a town building.  Never placed in a level; it exists only\ndesc: to carry the Hither Lands roof tile, which the town display draws over\ndesc: a building's permanent wall under a graphical tileset (issue #13 D6).\n\n",
+      "note": "D6 roofs: display-only carrier feat, never placed; the town render override maps FEAT_PERM's town display to this feat's tile"
+    },
+    {
+      "id": "town-roof-flag",
+      "file": "src/cave.h",
+      "anchor": "\tbool hallucinate;\n",
+      "where": "after",
+      "sentinel": "hl_town_building",
+      "payload": "\tbool hl_town_building;\t/* HITHER-LANDS town-roof (D6): set by map_info for an\n\t\t\t\t * interior town building wall, read by grid_data_as_text; display-only */\n",
+      "note": "D6 roofs: display-only grid_data flag marking a town building wall"
+    },
+    {
+      "id": "town-roof-init",
+      "file": "src/cave-map.c",
+      "anchor": "\tg->unseen_money = false;\n",
+      "where": "after",
+      "sentinel": "g->hl_town_building = false;",
+      "payload": "\tg->hl_town_building = false;\t/* HITHER-LANDS town-roof (D6) */\n",
+      "note": "D6 roofs: clear the town-building flag with the other default grid_data values"
+    },
+    {
+      "id": "town-roof-mark",
+      "file": "src/cave-map.c",
+      "anchor": "\tassert((int) g->f_idx < z_info->f_max);\n",
+      "where": "before",
+      "sentinel": "HITHER-LANDS:town-roof-mark",
+      "payload": "\t/* HITHER-LANDS:town-roof-mark -- flag an INTERIOR town permanent wall (a\n\t * building wall, NOT the level-edge boundary which is also FEAT_PERM) so the\n\t * tileset can draw a roof over it (issue #13 D6). Display-only: the real grid\n\t * stays FEAT_PERM and still blocks. Town is a TOPOGRAPHY, not depth 0. The\n\t * our-tileset gate and the roof tile itself live in grid_data_as_text\n\t * (ui-map.c), which has feat_x_attr. */\n\tif ((int) g->f_idx == FEAT_PERM\n\t\t\t&& level_topography(player->place) == TOP_TOWN\n\t\t\t&& grid.x > 0 && grid.y > 0\n\t\t\t&& grid.x < cave->width - 1 && grid.y < cave->height - 1) {\n\t\tg->hl_town_building = true;\n\t}\n\n",
+      "note": "D6 roofs: mark interior town building walls (not the boundary) for the roof render"
+    },
+    {
+      "id": "town-roof-render",
+      "file": "src/ui-map.c",
+      "anchor": "\twchar_t c = feat_x_char[g->lighting][feat->fidx];\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:town-roof-render",
+      "payload": "\n\t/* HITHER-LANDS:town-roof-render -- draw the roof tile over a town building\n\t * wall that map_info flagged (g->hl_town_building), but ONLY when our\n\t * tileset maps the roof feat (feat_x_attr high bit). ASCII and every other\n\t * tileset leave the bit clear -> normal wall, untouched. No baked atlas\n\t * coords: the cell comes from the roof feat's own tile mapping. Placed\n\t * before the (*tap)/(*tcp) save so the roof flows into the transparency\n\t * layer too (correct minimap priority + SDL2 background). (issue #13 D6) */\n\tif (g->hl_town_building) {\n\t\tstatic int hl_roof_fidx = -2;   /* -2 unresolved, -1 no such feat */\n\t\tif (hl_roof_fidx == -2)\n\t\t\thl_roof_fidx = lookup_feat(\"town roof\");\n\t\tif (hl_roof_fidx >= 0\n\t\t\t\t&& (feat_x_attr[g->lighting][hl_roof_fidx] & 0x80)) {\n\t\t\ta = feat_x_attr[g->lighting][hl_roof_fidx];\n\t\t\tc = feat_x_char[g->lighting][hl_roof_fidx];\n\t\t}\n\t}\n",
+      "note": "D6 roofs: our-tileset-only roof substitution for grids map_info flagged as town building walls"
     }
   ]
 }
