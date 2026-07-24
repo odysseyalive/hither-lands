@@ -181,10 +181,13 @@ land.
       so it collides with no keyset. **Defaults OFF, applied only by the explicit toggle, never
       auto-forced** (never-regress; the hook is isolated in `handle_key`, not the shared grid path).
       Applied clean (3 applied, 89 present), **`main-sdl2.c` compiles, full link exit 0, no warnings**,
-      92/92 anchors prove clean. *Still needs Package-A in-game confirm (esp. text legibility) + the
-      cross-session persistence (dedicated `light-mode:` config line) which is the flagged next step;
-      Phase-2 atlas-swap-on-toggle is optional polish. `palettes/{dark,light}.json` already emitted by
-      build_light_atlas.py.*
+      96/96 anchors prove clean. **Transform VERIFIED** against FA's default 32-colour table: the
+      first (multiplicative) version left the pure-black void black and text black (contrast 0,
+      invisible) — caught statically and replaced with an additive luminance shift (void→white,
+      text→black, contrast 255). **Cross-session PERSISTENCE added + compiles:** a dedicated
+      `light-mode:` line in `sdl2init.txt` (dump/read/apply, latched on startup), D3-safe by
+      construction. Only Package-A in-game confirm and the optional Phase-2 atlas-swap-on-toggle
+      remain. `palettes/{dark,light}.json` emitted by build_light_atlas.py.
 - [ ] D6 Part A: remap 9 store feats → door art in place on (3,0)–(3,8); Merchant its own tile.
 - [ ] D6 Part B: `town-roof-*` C patch (town-context `FEAT_PERM`→roof) + roof/wall tiles at new appended cells.
 - [x] **SKILL DONE 2026-07-23** Discipline encoded in workflow (f): shared-display-path guard, and a
