@@ -964,6 +964,51 @@
       "sentinel": "HITHER-LANDS:song-cmd-study",
       "payload": "\t{ \"Learn new songs\", { 'G' }, CMD_STUDY, NULL, player_can_study_prereq, 0, NULL, NULL, NULL, 0 }, /* HITHER-LANDS:song-cmd-study */\n",
       "note": "Companion to song-cmd-cast. Songs are learned from books, as verses are studied."
+    },
+    {
+      "id": "song-msg-cast",
+      "file": "src/cmd-obj.c",
+      "anchor": "\tif (cmd_get_spell(cmd, \"spell\", player, &spell_index,\n\t\t\t/* Verb */ \"cast\",\n\t\t\t/* Book */ obj_can_cast_from,\n\t\t\t/* Book error */ \"There are no spells you can cast.\",\n\t\t\t/* Filter */ spell_okay_to_cast,\n\t\t\t/* Spell error */ \"That book has no spells that you can cast.\") != CMD_OK) {\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:song-msg-cast",
+      "payload": "\tif (cmd_get_spell(cmd, \"spell\", player, &spell_index,\n\t\t\t/* Verb */ \"sing\",\n\t\t\t/* Book */ obj_can_cast_from,\n\t\t\t/* Book error */ \"There are no songs you can sing.\",\n\t\t\t/* Filter */ spell_okay_to_cast,\n\t\t\t/* Spell error */ \"That book has no songs that you can sing.\") != CMD_OK) { /* HITHER-LANDS:song-msg-cast */\n",
+      "note": "Songs are sung, not cast. The verb feeds ui-spell.c's \"%s which %s?\" prompt for every realm; the noun beside it stays per-realm from realm.txt."
+    },
+    {
+      "id": "song-msg-study",
+      "file": "src/cmd-obj.c",
+      "anchor": "\tif (cmd_get_spell(cmd, \"spell\", player, &spell_index,\n\t\t\t/* Verb */ \"study\",\n\t\t\t/* Book */ obj_can_study,\n\t\t\t/* Book error */ \"You cannot learn any new spells from the books you have.\",\n\t\t\t/* Filter */ spell_okay_to_study,\n\t\t\t/* Spell error */ \"That book has no spells that you can learn.\") != CMD_OK)\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:song-msg-study",
+      "payload": "\tif (cmd_get_spell(cmd, \"spell\", player, &spell_index,\n\t\t\t/* Verb */ \"study\",\n\t\t\t/* Book */ obj_can_study,\n\t\t\t/* Book error */ \"You cannot learn any new songs from the books you have.\",\n\t\t\t/* Filter */ spell_okay_to_study,\n\t\t\t/* Spell error */ \"That book has no songs that you can learn.\") != CMD_OK) /* HITHER-LANDS:song-msg-study */\n",
+      "note": "Companion to song-msg-cast. Verb stays \"study\": a song is still learned from a book."
+    },
+    {
+      "id": "song-msg-study-book",
+      "file": "src/cmd-obj.c",
+      "anchor": "\tif (cmd_get_item(cmd, \"item\", &book_obj,\n\t\t\t/* Prompt */ \"Study which book? \",\n\t\t\t/* Error  */ \"You cannot learn any new spells from the books you have.\",\n\t\t\t/* Filter */ obj_can_study,\n\t\t\t/* Choice */ USE_INVEN | USE_FLOOR) != CMD_OK)\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:song-msg-study-book",
+      "payload": "\tif (cmd_get_item(cmd, \"item\", &book_obj,\n\t\t\t/* Prompt */ \"Study which book? \",\n\t\t\t/* Error  */ \"You cannot learn any new songs from the books you have.\",\n\t\t\t/* Filter */ obj_can_study,\n\t\t\t/* Choice */ USE_INVEN | USE_FLOOR) != CMD_OK) /* HITHER-LANDS:song-msg-study-book */\n",
+      "note": "The priest random-gain path repeats the book-error string of song-msg-study verbatim; anchored on the cmd_get_item call because that string occurs twice in the file."
+    },
+    {
+      "id": "song-msg-no-realm",
+      "file": "src/player-util.c",
+      "anchor": "\t\t\tmsg(\"You cannot pray or produce magics.\");\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:song-msg-no-realm",
+      "payload": "\t\t\tmsg(\"You cannot raise a song of power.\"); /* HITHER-LANDS:song-msg-no-realm */\n",
+      "note": "Warriors and other realmless callings. Must stay a statement about the character, not the conditions -- the blind/confused arms below it are separate messages."
+    },
+    {
+      "id": "song-realm-arcane",
+      "file": "lib/gamedata/realm.txt",
+      "anchor": "verb:cast\nspell-noun:spell\n",
+      "where": "replace",
+      "sentinel": "spell-noun:song",
+      "payload": "verb:sing\nspell-noun:song\n",
+      "note": "spell_noun feeds ~12 runtime messages (player-spell.c, player-calcs.c, player-util.c, cmd-obj.c:1241); realm verb feeds the not-enough-mana warning. Bare-data sentinel mirrors town-roof-feat, since gamedata has no comment syntax."
     }
   ]
 }
