@@ -148,6 +148,19 @@ def load_palette():
     return out
 
 
+def light_atlas_name(m):
+    """Filename of the light-mode plate: "64x64.png" -> "64x64-light.png".
+
+    This rule is duplicated ON PURPOSE in the HITHER-LANDS:display-lightmode-atlas
+    C patch, which has only the graphics mode's own directory + atlas filename to
+    work from -- the engine never learns about a second plate, so the name IS the
+    contract between the two halves. Change it here and you must change it there;
+    there is no third place that could mediate.
+    """
+    stem, _, ext = m["tileset"]["atlas"].rpartition(".")
+    return f"{stem}-light.{ext}" if stem else m["tileset"]["atlas"] + "-light"
+
+
 def snap_to_palette(img, palette):
     """Quantize every pixel to the nearest locked-palette color, preserving alpha.
 
@@ -767,7 +780,24 @@ def main():
         prf += ["", "# Flavored-item appearances (mapped by flavor index):",
                 f"%:{flavor_pref}"]
 
-    data_files = f"{m['tileset']['atlas']} {m['tileset']['pref']}"
+    # The light-mode plate ships INSIDE the tileset directory, beside the dark
+    # atlas, because that is the only place the runtime can find it: the
+    # display-lightmode-atlas patch derives its path from the loaded graphics
+    # mode's own directory and atlas filename. It is deliberately NOT added to
+    # list-stanza.txt -- it is this tileset wearing a different theme, not a
+    # second tileset, so it must never appear in the tileset menu (two entries
+    # sharing one set of prf coordinates is a trap, not a feature).
+    # Written at the end of the build by build_light_atlas.py; named here so the
+    # `make install` deploy path, which copies via DATA, carries it too.
+    #
+    # light.txt rides along for the same reason and is just as load-bearing: it
+    # carries the light-mode void tone, which the runtime CANNOT re-derive (the
+    # C-side transform serves text and no longer agrees with the atlas one).
+    # Omitted from DATA it would install-and-vanish, and light mode would come
+    # back with unlit grids brighter than lit ground -- the silent-fallback
+    # failure the light plate itself already had once.
+    data_files = (f"{m['tileset']['atlas']} {light_atlas_name(m)} light.txt "
+                  f"{m['tileset']['pref']}")
     if has_flavors:
         data_files += f" {flavor_pref}"
 

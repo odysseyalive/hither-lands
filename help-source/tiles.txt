@@ -37,6 +37,15 @@ What the tileset adds
                        character generation, on the step between the
                        map and race menus, and kept in your savefile.
 
+Light and dark themes
+---------------------
+
+Press F12 at any time to toggle between the dark palette
+(the default) and a light palette.  The colours invert
+while the tile art stays the same; it is a display
+preference, not a gameplay change.  Your choice is saved
+and restored when you next load the game.
+
 What stays ASCII
 ----------------
 

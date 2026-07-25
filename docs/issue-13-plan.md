@@ -138,7 +138,8 @@ land.
 - [x] **CODE DONE + VERIFIED 2026-07-23** D9 pinned light atlas: `tools/build_light_atlas.py`
       computes the light palette as a **locked luminance transform** of `palette.json`
       (`L' = 1 - L`, hue/sat kept), writes `palettes/{dark,light}.json`, and remaps the built dark
-      atlas 1:1 (`dark[i] → light[i]`) into `dist/fa-ai-light/64x64.png`. Verified: 0 off-palette
+      atlas 1:1 (`dark[i] → light[i]`) into `dist/fa-ai/64x64-light.png` (**moved 2026-07-24** from
+      `dist/fa-ai-light/64x64.png`, which install.sh never shipped — see the D9 fix below). Verified: 0 off-palette
       pixels (exact remap), mean luminance **76.8 → 188.1**, warm ground → warm parchment with amber
       accents preserved and dark outlines intact (eyeballed a shop-tile crop — coherent, not muddy).
       Wired into `build.py` (best-effort). Zero source art redrawn, per the pinned design.
@@ -203,6 +204,30 @@ land.
       `light-mode:` line in `sdl2init.txt` (dump/read/apply, latched on startup), D3-safe by
       construction. Only Package-A in-game confirm and the optional Phase-2 atlas-swap-on-toggle
       remain. `palettes/{dark,light}.json` emitted by build_light_atlas.py.
+- [x] **REWORKED 2026-07-24 — Phase 2 was not optional; Phase 1 alone was broken.** Player report:
+      the theme does not reach the map, and toggling back is worse than before. Three defects, all
+      from the same root — light mode was implemented as a *mutation of `angband_color_table`*:
+      1. **The map never changed at all.** `render_tile_rect_scaled` blits the atlas with a plain
+         `SDL_RenderCopy` and **no colour modulation**, so the colour table stops at the panel edge.
+         Nothing the table does can re-theme a single map cell. The light atlas that would have
+         fixed it was built into `dist/fa-ai-light/` and **never installed** — `install.sh` copies
+         `dist/fa-ai/` only.
+      2. **Half-light chrome.** `graf-fai.prf` carries `color:0`, and `reset_visuals(true)` (called
+         from `load_graphics`) re-applies it *over* the light-mutated table — index 0 came back dark
+         while 1..31 stayed light. That is the black void against pale panels in the report.
+      3. **Toggling back was worse.** `hl_dark_table` was snapshotted in `term_xtra_react` **before
+         the tileset prf had ever been processed**, so restoring it installed the *stock Angband*
+         32-colour table, losing the theme entirely.
+      **Fix:** light mode is now a single flag read by its consumers, never a write to engine state
+      (invariant 10). `hl_light_mode` + `hl_light_of` move up to `display-lightmode-fwd`; new
+      `display-lightmode-colors` (`replace` on the `init_colors` loop) derives the SDL colours
+      *through* the transform, so the pref loader stays authoritative and no snapshot exists to go
+      stale; new `display-lightmode-atlas` (`replace` in `load_graphics`) loads `<atlas>-light.png`
+      when the file exists, which also makes the theme survive tileset switches and
+      `recreate_textures()` for free. `hl_dark_table`/`hl_dark_saved` deleted. Build ships the plate
+      **inside** `dist/fa-ai/` so the existing wholesale copy installs it; `DATA =` updated for the
+      `make install` path. Absent-file fallthrough keeps every stock tileset untouched
+      (PAT-2026-07-22). Key is **F12**, not F9 as written above.
 - [ ] D6 Part A: remap 9 store feats → door art in place on (3,0)–(3,8); Merchant its own tile.
 - [ ] D6 Part B: `town-roof-*` C patch (town-context `FEAT_PERM`→roof) + roof/wall tiles at new appended cells.
 - [x] **SKILL DONE 2026-07-23** Discipline encoded in workflow (f): shared-display-path guard, and a

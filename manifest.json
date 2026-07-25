@@ -10768,10 +10768,9 @@
       ]
     },
     {
-      "source": "town/roof-thatch.png",
+      "source": "town/roof-clay.png",
       "row": 120,
       "col": 0,
-      "chroma": true,
       "maps": [
         "feat:town roof:*"
       ]
