@@ -316,17 +316,10 @@ def fa_tree():
     return None
 
 
-def load_keysets(fa):
-    """desc -> (standard key, roguelike key) from the cmd_info tables.
-
-    Keys are the game's own, read from source rather than remembered: the
-    roguelike slot falls back to the standard key when unset, exactly as
-    cmd_init does.  Also returns the set of keys the roguelike movement
-    keymaps shadow, which a fallback cannot escape.
-    """
-    src = (fa / "src/ui-game.c").read_text(encoding="utf-8", errors="replace")
-    cmds = {}
-    for desc, keys in CMD_ROW.findall(src):
+def cmd_rows(text):
+    """(desc, (standard key, roguelike key)) for each cmd_info row in C source."""
+    rows = []
+    for desc, keys in CMD_ROW.findall(text):
         # Classify each slot separately: a bare 'x' is a printable key, while
         # KTRL('T') or a named keycode is not one a help file can show as a
         # single character.  Matching char literals loosely would read
@@ -342,7 +335,53 @@ def load_keysets(fa):
         rogue = slots[1] if len(slots) > 1 else std
         if rogue is None and len(slots) > 1:
             rogue = False     # bound, but not printable -- never tokenisable
-        cmds.setdefault(desc, (std, rogue))
+        rows.append((desc, (std, rogue)))
+    return rows
+
+
+def patched_cmd_rows():
+    """(rows our patches add, descriptions they take away) for ui-game.c.
+
+    The help files are written against the PATCHED game -- song-cmd-* renames
+    "Cast a spell" to "Sing a song" -- but install.sh builds (step 1) before it
+    applies the patches (step 5), so on a fresh or freshly-reset tree ui-game.c
+    still carries upstream's wording and every {key:} token naming a renamed
+    command would be reported as unknown.  Reading patches.json here closes
+    that gap from the same single source of truth that does the renaming, and
+    is correct whichever state the tree is in: on an already-patched tree the
+    added rows are present anyway and the replaced anchors are already gone.
+    """
+    path = ROOT / "patches" / "patches.json"
+    if not path.is_file():
+        return [], set()
+    added, removed = [], set()
+    for rec in json.loads(path.read_text(encoding="utf-8")).get("patches", []):
+        if not rec.get("file", "").endswith("ui-game.c"):
+            continue
+        added.extend(cmd_rows(rec.get("payload", "")))
+        # Only a "replace" consumes its anchor; before/after leave it in place.
+        if rec.get("where") == "replace":
+            removed.update(desc for desc, _ in cmd_rows(rec.get("anchor", "")))
+    return added, removed
+
+
+def load_keysets(fa):
+    """desc -> (standard key, roguelike key) from the cmd_info tables.
+
+    Keys are the game's own, read from source rather than remembered: the
+    roguelike slot falls back to the standard key when unset, exactly as
+    cmd_init does.  Also returns the set of keys the roguelike movement
+    keymaps shadow, which a fallback cannot escape.
+    """
+    src = (fa / "src/ui-game.c").read_text(encoding="utf-8", errors="replace")
+    cmds = {}
+    for desc, slots in cmd_rows(src):
+        cmds.setdefault(desc, slots)
+    added, removed = patched_cmd_rows()
+    for desc in removed:
+        cmds.pop(desc, None)
+    for desc, slots in added:
+        cmds[desc] = slots
 
     shadowed = set()
     pref = fa / "lib/customize/pref.prf"
