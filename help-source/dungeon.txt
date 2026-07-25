@@ -27,7 +27,7 @@ Light
 Everything else in this chapter assumes you can see, and that assumption is
 the first one the dungeon takes off you.
 
-Without light you are blind, and there is no reading, no casting, no
+Without light you are blind, and there is no reading, no singing, no
 picking of locks, no seeing of traps.  Carry a torch or a lamp and
 spare fuel with it, and refuel with '{key:Fuel your light source}'
 before the dark surprises you.  Rooms may be lit or unlit, and the

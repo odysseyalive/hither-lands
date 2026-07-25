@@ -17,7 +17,7 @@ having come as close as he did.  Bear that in mind on the days when
 a song fails you.  The greatest singer in Beleriand was beaten by a
 lieutenant, and it was a near thing.
 
-Four realms of five books each serve the four kinds of caster, and
+Four realms of five books each serve the four kinds of singer, and
 which realm is open to you was settled at your birth, when you chose
 what you would be.
 
@@ -33,13 +33,13 @@ what you would be.
   Nature (WIS)  - the Druid's verses; the Ranger sings the
       survival-songs of wood and trail.
 
-Warriors carry no song and want none.  Pure casters use
+Warriors carry no song and want none.  Pure singers use
 all five books of their realm, and the hybrid callings only the
 first few.  The hybrids are not lesser people for it; a Ranger who
 can heal his own arm in the field has settled an argument the Mage
 is still having with a book.
 
-Casting
+Singing
 -------
 
 A song must be learned before it can be sung, and no one has ever
@@ -60,7 +60,7 @@ Singing beyond your strength is possible, and it asks a price.
 The attempt may leave you drained, or paralyzed mid-word.
 
 Every art has its conditions, and no singer has ever talked one of
-them round.  You cannot cast blind or confused, and every caster but
+them round.  You cannot sing blind or confused, and every singer but
 the Necromancer needs light to read by.  The Necromancer reads the
 dark itself, and light is a wound to that art.
 
@@ -74,7 +74,7 @@ strength was never meant to be worn.  Priest, Druid, Rogue, Paladin
 and Ranger stand between.  Those who take the Armor Proficiency
 specialty are granted a little more room before the penalty begins.
 
-Gloves are the one mercy.  In other worlds a caster's hands must go
+Gloves are the one mercy.  In other worlds a singer's hands must go
 bare; here they need not.  A glove is only the weight it is, and
 nothing about it dulls a voice or a hand.
 

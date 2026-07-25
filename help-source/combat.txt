@@ -30,7 +30,7 @@ up with '{key:Wear/wield an item}'.
 Each blow rolls your skill against the target's armour, and a miss is
 no damage at all.  Weapon damage is its dice plus enchantment, and
 your blows per round grow with STR and DEX and shrink with the
-weapon's weight.  Warriors reach six blows, pure casters four, the
+weapon's weight.  Warriors reach six blows, pure singers four, the
 rest five.  Rings and other worn gear add their to-hit and to-dam to
 your melee strikes.
 
