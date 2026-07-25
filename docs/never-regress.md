@@ -16,9 +16,10 @@ So, above convenience and above speed:
 
 ## Why this project needs it stated
 
-Hither Lands is not an application. It is ~1,400 tiles plus 83 anchor-based C patches spliced
-into 22 files of somebody else's actively-developed roguelike. Three properties make silent
-regression the default failure mode rather than an unusual one:
+Hither Lands is not an application. It is ~1,400 tiles plus 110 anchor-based patches spliced
+into 28 files of somebody else's actively-developed roguelike (all C source but two, which
+patch `lib/gamedata/`). Three properties make silent regression the default failure mode
+rather than an unusual one:
 
 1. **Upstream moves without warning.** An anchor that located uniquely last month may be gone,
    duplicated, or — worst — still matching while the code around it changed meaning.
@@ -59,8 +60,8 @@ than no pin at all. So `--repin` refuses unless the new baseline is genuinely pr
 
 That last check is the load-bearing one, and it is why `--repin` does not simply reuse the
 normal anchor classification. Classification short-circuits on the sentinel: on a tree
-`install.sh` has already patched, all 83 records report `ALREADY`, which proves the tree was
-patched and proves *nothing* about whether the anchors still locate. Seventeen `replace`
+`install.sh` has already patched, all 110 records report `ALREADY`, which proves the tree was
+patched and proves *nothing* about whether the anchors still locate. Twenty-nine `replace`
 records are worse still — applying one destroys its own anchor, so it can never be re-found
 in a patched file at all. Reading the pristine upstream blob sidesteps both.
 
@@ -81,6 +82,45 @@ is suspect — not only the ones that broke.
 `where: "replace"` is the exception, and it is safe: its anchor *is* the replaced region
 (`text[:idx] + payload + text[idx+len(anchor):]`), so an upstream edit inside it breaks the
 match and forces a `MISSING` abort. Replace patches cannot silently swallow an upstream fix.
+
+### The build may not read a tree the patches have not reached yet
+
+`install.sh` builds at step 1 and applies patches at step 5. So any build-time check that
+reads the live FAangband tree is reading a tree **our own patches have not touched yet**. If a
+patch renames a string that check validates against, the build validates against a world that
+does not exist until four steps later, and it fails on every clean tree.
+
+This bit on 2026-07-25. One commit rewrote `help-source/` to reference commands by their new
+descriptions (`{key:Sing a song}`) *and* added the `song-cmd-*` patches that create those
+descriptions. `build.py` validated the tokens against the live `ui-game.c`, which still said
+"Cast a spell", and `install.sh` aborted in step 1. It had passed review only because the
+author's tree was still patched from a previous install; the first `git reset --hard` exposed
+it, and a bare `python3 tools/build.py` failed the same way.
+
+**Rule: when a patch changes a string that anything under `tools/` reads, greps, or validates,
+that tool must derive the string from `patches.json` — the same single source of truth that
+performs the rename — never from the live tree alone.** The overlay ships in the same change
+as the patch. `load_keysets()` in `tools/build.py` is the worked example: it reads the live
+source first (so genuine upstream drift is still caught, which is the whole point of the
+check), then removes what a `where: "replace"` record consumes and adds what its payload
+introduces. That is correct in both tree states, because on an already-patched tree the added
+rows are present anyway and the anchors are already gone.
+
+Note what this failure is *not*. Every anchor matched, `--status` said `READY`, `--baseline`
+said clean. The patch machinery was working perfectly, and every drift instrument reported
+healthy while the build could not run. Verify against an **unpatched** tree — a patched tree
+passes whether or not the bug exists, which is precisely why it shipped.
+
+### A patch group's blast radius is not its name
+
+Before landing a patch that edits a shared string, find every consumer; the group's name will
+understate its reach. `song-realm-arcane` reads as "the arcane realm only", and its
+`spell-noun` change is indeed per-realm — but the selection prompt beside it is built in
+`ui-spell.c` as `"%s which %s?"` from a **hardcoded** verb plus that per-realm noun. Changing
+the verb at the call site changed it for *every* realm at once: a Priest now reads "Sing which
+prayer?", a Druid "Sing which verse?". That was intended here, and it is written into the
+`/game-docs` coverage map so a later topic cannot quietly contradict it. It would have been a
+regression had nobody looked.
 
 ### Cells and maps are append-only
 
@@ -103,4 +143,6 @@ has already regressed.
 3. Full `make -C <FA_DIR>` — anchors locating says nothing about whether the tree builds.
 4. No previously-mapped entity lost its tile; no existing cell moved.
 5. The pin advanced (`--repin`) if anchors were re-authored, in the same commit.
-6. The *why* recorded wherever the diff cannot show it.
+6. If a patch renamed a string any `tools/` check reads, that check derives it from
+   `patches.json`, and the build was proven against an **unpatched** tree.
+7. The *why* recorded wherever the diff cannot show it.
