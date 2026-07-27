@@ -85,7 +85,7 @@ match and forces a `MISSING` abort. Replace patches cannot silently swallow an u
 
 ### The build may not read a tree the patches have not reached yet
 
-`install.sh` builds at step 1 and applies patches at step 5. So any build-time check that
+`install.sh` builds at step 2 and applies patches at step 6. So any build-time check that
 reads the live FAangband tree is reading a tree **our own patches have not touched yet**. If a
 patch renames a string that check validates against, the build validates against a world that
 does not exist until four steps later, and it fails on every clean tree.
@@ -93,7 +93,7 @@ does not exist until four steps later, and it fails on every clean tree.
 This bit on 2026-07-25. One commit rewrote `help-source/` to reference commands by their new
 descriptions (`{key:Sing a song}`) *and* added the `song-cmd-*` patches that create those
 descriptions. `build.py` validated the tokens against the live `ui-game.c`, which still said
-"Cast a spell", and `install.sh` aborted in step 1. It had passed review only because the
+"Cast a spell", and `install.sh` aborted in its build step. It had passed review only because the
 author's tree was still patched from a previous install; the first `git reset --hard` exposed
 it, and a bare `python3 tools/build.py` failed the same way.
 
@@ -122,6 +122,32 @@ prayer?", a Druid "Sing which verse?". That was intended here, and it is written
 `/game-docs` coverage map so a later topic cannot quietly contradict it. It would have been a
 regression had nobody looked.
 
+### Two installers, one behaviour
+
+There are two entry points into the same seven steps — `install.sh` (Linux/macOS) and
+`install.ps1` (Windows) — and only one of them can be run here. Nothing tests the other; a
+change to one silently makes the platforms disagree, and the person who finds out is a user
+on the platform the author does not have.
+
+**Rule: a change to `install.sh` lands with the matching change to `install.ps1`, in the same
+commit.** Keep the step numbers, the step names and the printed text aligned so the two can be
+read side by side — that diffability is the only test the pair has.
+
+Two portability traps are worth naming because both fail silently rather than loudly:
+
+- **GNU-only shell constructs.** `sed -i` (BSD requires a suffix argument), template-less
+  `mktemp` (BSD requires a template), and `\b` in a `grep` pattern (a GNU extension) are all
+  fine on Linux and broken on macOS. The last is the dangerous one: on macOS the `\b` guard
+  simply never matches, so the "already registered?" check answers *no* every time and appends
+  a duplicate `SUBDIRS` entry on every run. Prefer POSIX spellings or shell-level `case`
+  matching.
+- **Text written on Windows.** Python's text mode translates `\n` to `\r\n` there, so anything
+  `tools/` generates for `make` or for the C readers must be written with an explicit LF
+  (`write_lf()` in `build.py`) — a stray CR lands *inside* a filename in the generated
+  `lib/tiles/Makefile` and inside a frame count in `anim.txt`, and both are read as data
+  rather than rejected as errors. Files edited *in place* in the FA tree are the opposite case
+  and keep the platform's own convention.
+
 ### Cells and maps are append-only
 
 Atlas cell (row, col) → `attr = 0x80+row`, `char = 0x80+col`, baked into every prf line and
@@ -146,3 +172,4 @@ has already regressed.
 6. If a patch renamed a string any `tools/` check reads, that check derives it from
    `patches.json`, and the build was proven against an **unpatched** tree.
 7. The *why* recorded wherever the diff cannot show it.
+8. If `install.sh` changed, `install.ps1` changed with it — same steps, same order, same text.

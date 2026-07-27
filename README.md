@@ -19,6 +19,11 @@ at build time for visual cohesion. Art is generated via Gemini
   (e.g. `libsdl2-dev`, `sdl2-ttf`, `sdl2-image` — or your distro's equivalents)
 - **make**
 
+On Windows, the equivalents come from [MSYS2](https://www.msys2.org/) plus a
+python.org install — see [Windows notes](#windows-notes). The Quick Start below
+is written in Linux/macOS shell; step 5 gives the PowerShell form of each
+command.
+
 ## Quick Start
 
 ### 1. Clone FAangband
@@ -59,25 +64,53 @@ cd FAangband
 - `--enable-sdl2` builds the SDL2 graphical frontend that renders the tiles.
   Without it you only get the curses/text frontend, which shows ASCII, not tiles.
 
-### 5. Install the tileset into the FAangband source tree
+### 5. Install the tileset, and build the game
+
+There are two installers — the same seven steps, one per platform. Use the one
+for your system:
+
+| Platform | Script |
+|---|---|
+| Linux, macOS | `install.sh` |
+| Windows | `install.ps1` |
 
 ```sh
 cd ../hither-lands
 ```
 
+**Linux / macOS:**
+
 ```sh
 ./install.sh ../FAangband
 ```
 
-This builds the atlas from source tiles, copies it into `lib/tiles/`,
-registers the tileset in the build system, and applies the C source patches
-the tileset needs (see step 6 for what they add).
+**Windows** (PowerShell 5.1 or 7, from an MSYS2/MinGW-capable environment —
+see [Windows notes](#windows-notes) below):
+
+```powershell
+.\install.ps1 ..\FAangband
+```
+
+Either script builds the atlas from source tiles, copies it into `lib/tiles/`,
+registers the tileset in the build system, applies the C source patches the
+tileset needs (see step 6 for what they add), **and then compiles FAangband
+for you** — running `make install` or plain `make`, whichever your tree's own
+configuration calls for. It finishes by printing the exact command that starts
+the game.
+
+Before touching anything, the script checks the FAangband tree for local
+changes it did not make itself. If it finds any, it prints them, recommends
+stashing them and pulling the latest official source, and asks
+`Proceed with installation, Y/n?` — nothing happens until you answer. Pass
+`--yes` (`-Yes` in PowerShell) to acknowledge that up front in a script.
 
 Use `--size` to select the tile resolution — `32`, `64` (default), or `128`:
 
 ```sh
 ./install.sh ../FAangband --size 64
 ```
+
+(In PowerShell the same option is `-Size 64`.)
 
 The source tiles are ~1024px native, so `64` and `128` render with real added
 detail rather than upscaling. The whole set rebuilds at the chosen size and the
@@ -91,23 +124,28 @@ FAangband reads each graphics mode's tile dimensions from its registration.
 
 This process takes a while — there are over 1,400 tiles to integrate.
 
-### 6. Build and deploy FAangband
+### 6. What the installer just compiled in
 
-```sh
-make -C ../FAangband install
-```
+Step 5 ran the build itself, so there is no separate `make` to remember. Which
+command it ran depends on how you configured the tree in step 4, and the
+difference is not cosmetic:
 
-The `install` target matters. With the `--prefix=$HOME/.local` configure from
-step 4, the compiled binary looks for its data **only** in
-`~/.local/share/faangband/` — the path is baked in at configure time, and it
-never reads the source tree's `lib/`. `make install` both compiles the game and
-deploys the game data, including this tileset, to that directory. A plain
-`make` compiles but deploys nothing, so the game won't find the tiles (or, on a
-first build, any data at all).
+- **`--prefix=$HOME/.local`** (the Quick Start) → `make -C ../FAangband install`.
+  The compiled binary looks for its data **only** in
+  `~/.local/share/faangband/`; that path is baked in at configure time and it
+  never reads the source tree's `lib/`. The `install` target both compiles the
+  game and deploys the data, this tileset included. A plain `make` would
+  compile but deploy nothing, so the game would find no tiles — or, on a first
+  build, no data at all.
+- **`--with-no-install`** → plain `make -C ../FAangband`. That build mode reads
+  tiles straight out of the source tree the installer just wrote into, and
+  `make install` is wrong for it.
+- **a prefix needing root** (`/usr/local`) → the installer compiles but stops
+  short of deploying, and prints the `sudo make … install` line for you to run.
 
-**Re-run `make -C ../FAangband install` after every `install.sh`**, for two
-reasons: it redeploys the rebuilt tiles, and it recompiles the additions
-`install.sh` patches into the game's code. Most are graphics-only:
+Re-running the installer after any tileset change is therefore the whole
+procedure: it redeploys the rebuilt tiles *and* recompiles the additions it
+patches into the game's code. Most are graphics-only:
 
 - **animated tiles** — torches flicker, water ripples.
 - **shapeshift sprites** — your character shows a matching picture when it
@@ -126,13 +164,15 @@ Two of them do change how the game plays, by design:
   fauna behave less like uniform monsters, packs and territorial races stay near
   where they spawned, and a struck creature can rally its group to its aid.
 
-> If you instead configured with `--with-no-install`, the rule flips: run a
-> plain `make -C ../FAangband` and skip `install` — that build mode reads tiles
-> straight from this source tree's `lib/`. Either way, `install.sh` detects
-> your tree's build mode from `config.log` and prints the correct follow-up
-> command at the end of its run.
+> The installer reads your tree's build mode from `mk/extra.mk` (falling back
+> to `config.log`), so it never has to guess. If the tree isn't configured yet
+> it says so, prints the two configure recipes, and skips the build — configure
+> once, run the installer again, and it takes over from there.
 
 ### 7. Run
+
+The installer prints the exact command for your build at the end of its run.
+With the Quick Start's configure that is:
 
 ```sh
 faangband -msdl2
@@ -175,6 +215,32 @@ one-time setup.
 
 Tiles render only in the SDL2 (or X11) frontend, never in curses (`-mgcu`).
 
+## Windows notes
+
+`install.ps1` is the Windows twin of `install.sh` — the same seven steps in the
+same order — but the surrounding toolchain differs:
+
+- **Get a build environment.** [MSYS2](https://www.msys2.org/) is the path of
+  least resistance: from its MinGW64 shell, install the toolchain plus SDL2
+  (`pacman -S mingw-w64-x86_64-toolchain mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf mingw-w64-x86_64-SDL2_image make autoconf automake`),
+  then run FAangband's steps 3–4 there (`./autogen.sh`, `./configure --enable-sdl2`).
+  `install.ps1` finds `make` on `PATH` and runs the build itself; without one it
+  installs everything and prints the build command for you to run in that shell.
+- **Python is `py -3` on Windows**, not `python3`. The script probes `py -3`,
+  `python3` and `python` in that order and checks Pillow up front, so a missing
+  `pip install Pillow` fails in a second rather than after a long build.
+- **Run it from the repo root**, and if PowerShell refuses to run a local
+  script, either `Unblock-File .\install.ps1` or launch it as
+  `powershell -ExecutionPolicy Bypass -File .\install.ps1 ..\FAangband`.
+- **Frontend choice matters for two features.** A `--enable-win` build uses
+  FAangband's native Windows frontend, which draws this tileset fine, but
+  *animated tiles* and the *display defaults* are patches into `main-sdl2.c` —
+  they exist only in the SDL2 frontend. Build with `--enable-sdl2` and run
+  `faangband.exe -msdl2` for the complete feature set.
+- **A Visual Studio build** (`src\win\vs2019`) is not driven from this script.
+  Run `install.ps1` to write the tiles and patch the sources, then rebuild in
+  the IDE.
+
 ## Troubleshooting
 
 **A rebuilt tileset looks unchanged in-game (e.g. `--size 128` looks identical
@@ -186,8 +252,8 @@ separately *installed* binary — e.g. one built with `--prefix=$HOME/.local` an
 under `~/.local/share/faangband/tiles/` and never sees your rebuild. Fixes:
 
 - If you followed the Quick Start (`--prefix=$HOME/.local`), re-run
-  `install.sh ../FAangband` **and** `make -C ../FAangband install` after every
-  tileset change — both the installed `faangband` and the in-place
+  `install.sh ../FAangband` after every tileset change — it ends with
+  `make install`, and both the installed `faangband` and the in-place
   `src/faangband` read the deployed copy under `~/.local/share/faangband/`; or
 - If your tree is configured `--with-no-install`, run the in-place binary,
   `../FAangband/src/faangband`, after a plain `make` — that build mode reads
@@ -224,7 +290,10 @@ tiles are drawn large (big font, hi-DPI) and otherwise just costs ~4× the memor
 - `tools/make_placeholders.py` — draws placeholder tiles for manifest entries
   with no source image yet (never overwrites real art).
 - `install.sh` — builds the tileset, copies it into an FAangband source tree,
-  registers it in `list.txt` and `Makefile`, and applies C source patches.
+  registers it in `list.txt` and `Makefile`, applies the C source patches, then
+  compiles the game with the command that tree's configuration calls for.
+- `install.ps1` — the Windows PowerShell twin of `install.sh`: same seven steps,
+  same order, same guarantees. Keep the two in step when either changes.
 - `patches/` — anchor-based, idempotent C source patches delivered via
   `install.sh`, grouped by id prefix: `shape-*` (shapechange sprites),
   `tile-anim-*` (animation), `prace-*` (per-race monster sprites), `pgender-*`
@@ -259,8 +328,9 @@ python3 patches/apply_patches.py <fa-tree> --repin      # advance the pin after 
    tiles — grid positions are baked into prf coordinates) and the entity
    mapping lines, e.g. `feat:<name>:*`, `monster:<name>`,
    `object:<tval>:<name>`.
-3. Run `./install.sh <fa-tree>` and `make -C <fa-tree>` to rebuild.
-   Unmapped entities fall back to ASCII, so coverage grows incrementally.
+3. Run `./install.sh <fa-tree>` (`.\install.ps1 <fa-tree>` on Windows) — it
+   rebuilds, reinstalls and recompiles in one pass. Unmapped entities fall back
+   to ASCII, so coverage grows incrementally.
 
 Entity names come from FAangband's gamedata files
 (`lib/gamedata/terrain.txt`, `monster.txt`, `object.txt`). The atlas grid
