@@ -20,7 +20,9 @@ absent, so a Pillow-only environment still builds the atlas.
 """
 
 import io
+import os
 import re
+import subprocess
 import sys
 import pathlib
 
@@ -82,6 +84,29 @@ def _resolve_line(line, cells, cmds, slot):
     return text, plates
 
 
+def _help_commit_epoch():
+    """When the help this PDF renders last changed, as a unix timestamp.
+
+    Guarded because build.py calls build_pdf() inside a catch-all that turns any
+    exception into "pdf: skipped": unguarded, a machine without git would lose
+    the whole PDF rather than lose a date.  OSError is the only path that can
+    raise here (git absent) -- no check=True, so a nonzero exit comes back as a
+    returncode and is handled below.  Returning None is harmless either way:
+    reportlab's own invariant sentinel takes over.
+
+    Reads the last COMMIT date, so an uncommitted help edit still stamps the
+    previous one; that is cosmetic, and it settles as soon as the edit lands.
+    """
+    try:
+        r = subprocess.run(["git", "-C", str(B.ROOT), "log", "-1", "--format=%ct",
+                            "--", "help-source", "tools/build_pdf.py"],
+                           capture_output=True, text=True)
+    except OSError:
+        return None
+    out = r.stdout.strip()
+    return out if r.returncode == 0 and out.isdigit() else None
+
+
 def build_pdf(m, keyset="standard"):
     try:
         from reportlab.pdfgen import canvas
@@ -131,7 +156,32 @@ def build_pdf(m, keyset="standard"):
     top = PH - MARGIN
     bottom = MARGIN + line_h * 2  # room for the footer
 
-    c = canvas.Canvas(str(PDF_OUT), pagesize=letter)
+    # Deterministic output.  Left alone, reportlab stamps the live clock into
+    # /CreationDate and seeds the document /ID from that same timestamp, so an
+    # unchanged help corpus produced a DIFFERENT file on every build -- this
+    # artifact is committed, so every build dirtied the tree and a modified
+    # PDF told the reader nothing.  invariant=1 makes the ID a pure digest of
+    # the content (reportlab/pdfbase/pdfdoc.py) and hands the date over to
+    # SOURCE_DATE_EPOCH, so the file now changes only when the help does.
+    #
+    # An externally-set SOURCE_DATE_EPOCH wins (the reproducible-builds
+    # convention); otherwise the date is the help's own last commit, which is
+    # stable across clones and means something to a reader opening the
+    # document properties -- unlike reportlab's year-2000 sentinel, which is
+    # what a bare invariant=1 would leave there.  Restored afterwards: this is
+    # process-global and the atlas build continues in the same process.
+    _prev_epoch = os.environ.get("SOURCE_DATE_EPOCH")
+    if not (_prev_epoch or "").strip():
+        _epoch = _help_commit_epoch()
+        if _epoch:
+            os.environ["SOURCE_DATE_EPOCH"] = _epoch
+    try:
+        c = canvas.Canvas(str(PDF_OUT), pagesize=letter, invariant=1)
+    finally:
+        if _prev_epoch is None:
+            os.environ.pop("SOURCE_DATE_EPOCH", None)
+        else:
+            os.environ["SOURCE_DATE_EPOCH"] = _prev_epoch
     c.setTitle("Hither Lands -- In-Game Help")
     c.setAuthor("Hither Lands tileset for FAangband")
 
