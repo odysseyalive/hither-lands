@@ -289,6 +289,9 @@ tiles are drawn large (big font, hi-DPI) and otherwise just costs ~4× the memor
   into `dist/`.
 - `tools/make_placeholders.py` — draws placeholder tiles for manifest entries
   with no source image yet (never overwrites real art).
+- `tools/selftest.py` — the pre-landing checks: help validators against both an
+  unpatched and a patched tree, anchor status, installer-twin drift, shell
+  portability, LF-safe writers. Seconds; renders nothing.
 - `install.sh` — builds the tileset, copies it into an FAangband source tree,
   registers it in `list.txt` and `Makefile`, applies the C source patches, then
   compiles the game with the command that tree's configuration calls for.
@@ -314,10 +317,22 @@ pin, why a still-matching anchor is not proof of correctness, and the checklist
 every change is held to.
 
 ```sh
+python3 tools/selftest.py <fa-tree>                     # fast pre-landing checks (seconds)
 python3 patches/apply_patches.py <fa-tree> --baseline   # upstream drift report
 python3 patches/apply_patches.py <fa-tree> --status     # + anchor states, no writes
 python3 patches/apply_patches.py <fa-tree> --repin      # advance the pin after a re-author
 ```
+
+`selftest.py` is the closest thing this repo has to a test suite. It renders nothing and
+writes nothing outside a temp directory, and it checks the things that have actually broken:
+the help validators against an **unpatched** tree (the fresh-clone state, materialised from
+the FAangband tree's git objects — a developer's own tree is always already patched, which is
+how that class of bug ships), the same validators against the patched tree, every patch
+anchor, that `install.sh` and `install.ps1` still declare the same steps, that `install.sh`
+uses no GNU-only construct that would break on macOS, and that `build.py` writes its
+generated files with explicit LF endings so a Windows build cannot put a stray CR inside a
+makefile. It deliberately does **not** compile FAangband or render the atlas — a full
+`make -C <fa-tree>` remains a separate, required step.
 
 ## Adding Tiles
 

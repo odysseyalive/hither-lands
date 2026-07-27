@@ -419,8 +419,12 @@ def fnv1a(text):
     return h
 
 
-def build_help(m):
+def build_help(m, outdir=None):
     """Resolve {tile:<entity>|<glyph>} markers in help-source/ into dist/help/.
+
+    outdir overrides the destination, which is what lets tools/selftest.py run
+    these validators against a throwaway directory -- and therefore against an
+    UNPATCHED tree -- without touching the real dist/help or racing a build.
 
     Each marker is replaced by its one-character ASCII fallback glyph, so the
     shipped file stays plain text of exactly the width the author saw -- line
@@ -449,7 +453,7 @@ def build_help(m):
         if t.get("help"):
             cells[t["help"]] = (t["row"], t["col"]) + block_of(t)
 
-    outdir = ROOT / "dist" / "help"
+    outdir = Path(outdir) if outdir else ROOT / "dist" / "help"
     outdir.mkdir(parents=True, exist_ok=True)
     for stale in outdir.iterdir():
         stale.unlink()
@@ -635,6 +639,13 @@ def main():
         m["tileset"]["atlas"] = f"{args.size}x{args.size}.png"
     ts = m["tileset"]["tile_size"]
     tiles = m["tiles"]
+
+    # Help FIRST, before a single tile is rendered.  Its validators are the
+    # cheapest thing in this file and the likeliest to fail (they check the help
+    # text against the live FAangband source, which moves under us), so running
+    # them last meant a bad {key:} token cost a full ~15-minute atlas render
+    # before it was reported.  Nothing here depends on the atlas.
+    build_help(m)
 
     rows = max(t["row"] + block_of(t)[1] - 1 for t in tiles) + 1
     # Animated tiles extend rightward into (col + frame) columns; size for that.
@@ -1000,8 +1011,6 @@ def main():
         f"pref:{m['tileset']['pref']}\n"
         f"extra:{alpha}:0:0\n"
     )
-
-    build_help(m)
 
     # Tier-1 illustrated PDF (issue #13 D8): text + embedded tile art, fully
     # deterministic off help-source/ + the atlas we just built, so it stays in

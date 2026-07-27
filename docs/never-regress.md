@@ -111,6 +111,19 @@ said clean. The patch machinery was working perfectly, and every drift instrumen
 healthy while the build could not run. Verify against an **unpatched** tree — a patched tree
 passes whether or not the bug exists, which is precisely why it shipped.
 
+**That verification is now mechanical.** `tools/selftest.py` materialises the files these
+validators read straight out of the FAangband tree's git object store, at the pinned baseline
+commit, into a temp directory — a fresh clone's exact state, without touching anyone's working
+tree — and runs the help pass against it. It runs the same pass against the live *patched*
+tree too, because a check that is only correct in one state is the bug it is meant to catch.
+Run against `bda9d9a^` it reports the four `'Sing a song'` lines and passes the patched tree,
+which is this incident reproduced on demand.
+
+The same day's second lesson: these validators used to run **last** in `build.py`, after the
+~15-minute atlas render, so the cheapest check in the file reported its verdict at the most
+expensive possible moment. They now run first. A check that is cheap to run is worth nothing
+if it is scheduled behind an expensive one that does not depend on it.
+
 ### A patch group's blast radius is not its name
 
 Before landing a patch that edits a shared string, find every consumer; the group's name will
@@ -164,6 +177,12 @@ has already regressed.
 
 ## Before landing any change
 
+0. `python3 tools/selftest.py <FA_DIR>` — seconds, renders nothing. It runs the help
+   validators against an **unpatched** fixture materialised from the FAangband tree's git
+   objects at the pinned commit (items 6 and 3 of this list, mechanised), plus the anchor
+   status, the installer-twin comparison, and the two lint rules below. It does **not**
+   compile anything, so it replaces no item here — it only means you stop *finding out* by
+   hand.
 1. `--baseline` clean, or its drift report read and acted on.
 2. `--status` all `READY`/`ALREADY`.
 3. Full `make -C <FA_DIR>` — anchors locating says nothing about whether the tree builds.
