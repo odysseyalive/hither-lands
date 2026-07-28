@@ -297,6 +297,37 @@ def check_lf_writers():
             + ", ".join(str(n) for n in bad)) if bad else None
 
 
+# --------------------------------------------------------------------------
+# 7. The generated Makefile must reference only files that actually exist.
+#
+# This is the check that exists because of 2026-07-27 (issue #17). build.py
+# emits a Makefile whose DATA line lists every file `make install` should
+# deploy. If a best-effort step (light atlas, animation) skips but its output
+# is listed unconditionally, the build reports success and `make install` fails
+# on the user's machine with "install: No such file or directory". build.py
+# now has its own post-emit guard, but selftest catches a regression even when
+# the developer does not rebuild before committing.
+# --------------------------------------------------------------------------
+@check("generated Makefile DATA files all exist in dist")
+def check_makefile_data():
+    m = json.loads((ROOT / "manifest.json").read_text())
+    outdir = ROOT / "dist" / m["tileset"]["directory"]
+    mf = outdir / "Makefile"
+    if not mf.is_file():
+        NOTES.append("dist/ not built -- skipping Makefile DATA check "
+                     "(run build.py to enable)")
+        return None
+    match = re.search(r"^DATA\s*=\s*(.+)$", mf.read_text(), re.M)
+    if not match:
+        return "no DATA line found in generated Makefile"
+    missing = [f for f in match.group(1).split()
+               if not (outdir / f).is_file()]
+    if missing:
+        return (f"Makefile DATA lists files not in {outdir.relative_to(ROOT)}: "
+                + " ".join(missing))
+    return None
+
+
 def main():
     fa = fa_dir(sys.argv)
     if not fa:
@@ -316,6 +347,7 @@ def main():
     check_installer_twins()
     check_portability()
     check_lf_writers()
+    check_makefile_data()
 
     for note in NOTES:
         print(f"  note: {note}")

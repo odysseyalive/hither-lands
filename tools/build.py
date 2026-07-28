@@ -845,24 +845,7 @@ def main():
         prf += ["", "# Flavored-item appearances (mapped by flavor index):",
                 f"%:{flavor_pref}"]
 
-    # The light-mode plate ships INSIDE the tileset directory, beside the dark
-    # atlas, because that is the only place the runtime can find it: the
-    # display-lightmode-atlas patch derives its path from the loaded graphics
-    # mode's own directory and atlas filename. It is deliberately NOT added to
-    # list-stanza.txt -- it is this tileset wearing a different theme, not a
-    # second tileset, so it must never appear in the tileset menu (two entries
-    # sharing one set of prf coordinates is a trap, not a feature).
-    # Written at the end of the build by build_light_atlas.py; named here so the
-    # `make install` deploy path, which copies via DATA, carries it too.
-    #
-    # light.txt rides along for the same reason and is just as load-bearing: it
-    # carries the light-mode void tone, which the runtime CANNOT re-derive (the
-    # C-side transform serves text and no longer agrees with the atlas one).
-    # Omitted from DATA it would install-and-vanish, and light mode would come
-    # back with unlit grids brighter than lit ground -- the silent-fallback
-    # failure the light plate itself already had once.
-    data_files = (f"{m['tileset']['atlas']} {light_atlas_name(m)} light.txt "
-                  f"{m['tileset']['pref']}")
+    data_files = f"{m['tileset']['atlas']} {m['tileset']['pref']}"
     if has_flavors:
         data_files += f" {flavor_pref}"
 
@@ -994,6 +977,27 @@ def main():
         data_files += " anim.txt"
         print(f"animation: {len(anim_entries)} animated tile(s) -> anim.txt")
 
+    # Pinned LIGHT atlas: a locked luminance transform of the dark atlas,
+    # kept in lockstep so the runtime light/dark toggle never drifts.  No
+    # source art is redrawn.  Best-effort (requires numpy).
+    #
+    # The light plate and light.txt ship INSIDE the tileset directory, beside
+    # the dark atlas -- the only place the runtime can find them (the
+    # display-lightmode-atlas patch derives its path from the loaded graphics
+    # mode's directory + atlas filename).  They are NOT added to list-stanza --
+    # the light plate is this tileset wearing a different theme, not a second
+    # tileset.  light.txt carries the light-mode void tone, which the runtime
+    # cannot re-derive (the C-side text transform no longer agrees with the
+    # atlas one).  Both must be in DATA or they install-and-vanish into a
+    # silent light-mode fallback.  But they are added ONLY when the build
+    # succeeds -- otherwise `make install` fails on missing files.
+    try:
+        import build_light_atlas
+        if build_light_atlas.build_light_atlas(m):
+            data_files += f" {light_atlas_name(m)} light.txt"
+    except Exception as e:  # pragma: no cover
+        print(f"light: skipped ({type(e).__name__}: {e})")
+
     write_lf(outdir / "Makefile",
         "MKPATH=../../../mk/\n"
         "include $(MKPATH)buildsys.mk\n"
@@ -1022,14 +1026,18 @@ def main():
     except Exception as e:  # pragma: no cover - export is best-effort
         print(f"pdf: skipped ({type(e).__name__}: {e})")
 
-    # Pinned LIGHT atlas (issue #13 D9): a locked luminance transform of the
-    # dark atlas we just built, kept in lockstep so the runtime light/dark
-    # toggle never drifts.  No source art is redrawn.  Best-effort.
-    try:
-        import build_light_atlas
-        build_light_atlas.build_light_atlas(m)
-    except Exception as e:  # pragma: no cover
-        print(f"light: skipped ({type(e).__name__}: {e})")
+    # Post-emit guard: every file the Makefile promises must actually exist.
+    # Without this, a best-effort step (light atlas, animation) can skip while
+    # the Makefile still lists the output, and `make install` fails on the
+    # user's machine with "No such file or directory".
+    makefile_text = (outdir / "Makefile").read_text()
+    data_match = re.search(r"^DATA\s*=\s*(.+)$", makefile_text, re.M)
+    if data_match:
+        missing = [f for f in data_match.group(1).split()
+                   if not (outdir / f).is_file()]
+        if missing:
+            sys.exit(f"FATAL: Makefile DATA lists files not in {outdir}: "
+                     f"{' '.join(missing)}")
 
     mapped = sum(len(t["maps"]) for t in tiles)
     pvcount = len(pvars)
