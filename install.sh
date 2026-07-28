@@ -90,6 +90,25 @@ DIST="$HERE/dist/$DIRNAME"
 # it and we sanity-check its output afterward.
 [ -f "$TILES_DIR/list.txt" ] || { echo "error: $TILES_DIR/list.txt not found -- is $FA_DIR an FAangband tree?" >&2; exit 1; }
 
+# Pre-check Python dependencies before the minutes-long build. Pillow is
+# required (the atlas can't be built without it); numpy and reportlab are
+# optional features that degrade cleanly.
+python3 -c "from PIL import Image" 2>/dev/null || {
+    echo "error: Python Pillow is not installed. Install it with:" >&2
+    echo "    pip install Pillow" >&2
+    exit 1
+}
+_opt_missing=""
+python3 -c "import numpy" 2>/dev/null ||
+    _opt_missing="${_opt_missing}  - numpy: enables the light-mode atlas (pip install numpy)
+"
+python3 -c "import reportlab" 2>/dev/null ||
+    _opt_missing="${_opt_missing}  - reportlab: enables PDF help export (pip install reportlab)
+"
+if [ -n "$_opt_missing" ]; then
+    printf 'note: optional dependencies not installed (the atlas build is unaffected):\n%s\n' "$_opt_missing"
+fi
+
 TOTAL_STEPS=7
 step() { printf '[%d/%d] %s\n' "$1" "$TOTAL_STEPS" "$2"; }
 

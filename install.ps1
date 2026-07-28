@@ -129,6 +129,22 @@ if (-not (Test-Path (Join-Path $TilesDir 'list.txt'))) {
 
 $Py = Resolve-Python
 Invoke-Python -Arguments @('-c', 'import PIL')  # fails loudly here, not mid-build
+
+# Optional dependencies: warn upfront so the user knows before the long build,
+# not minutes later when the step silently skips.
+$optMissing = @()
+$pyCheck = @($Py.Pre) + @('-c', 'import numpy')
+& $Py.Exe @pyCheck 2>$null
+if ($LASTEXITCODE -ne 0) { $optMissing += '  - numpy: enables the light-mode atlas (pip install numpy)' }
+$pyCheck = @($Py.Pre) + @('-c', 'import reportlab')
+& $Py.Exe @pyCheck 2>$null
+if ($LASTEXITCODE -ne 0) { $optMissing += '  - reportlab: enables PDF help export (pip install reportlab)' }
+if ($optMissing) {
+    Write-Host 'note: optional dependencies not installed (the atlas build is unaffected):'
+    $optMissing | ForEach-Object { Write-Host $_ }
+    Write-Host ''
+}
+
 $dirNameArgs = @($Py.Pre) + @('-c', "import json; print(json.load(open(r'$Here\manifest.json'))['tileset']['directory'])")
 $DirName = (& $Py.Exe @dirNameArgs | Select-Object -First 1)
 if ($LASTEXITCODE -ne 0 -or -not $DirName) { Fail "could not read tileset.directory from manifest.json" }

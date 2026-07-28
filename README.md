@@ -19,6 +19,17 @@ at build time for visual cohesion. Art is generated via Gemini
   (e.g. `libsdl2-dev`, `sdl2-ttf`, `sdl2-image` — or your distro's equivalents)
 - **make**
 
+### Optional Python packages
+
+These add extra features but are not needed for the core tileset build. The
+installer checks for them upfront and tells you what's missing before the build
+starts — the atlas builds fine without either.
+
+| Package | What it adds | Install |
+|---|---|---|
+| [numpy](https://numpy.org/) | Light-mode atlas (a luminance-inverted variant of the tileset for light-theme play) | `pip install numpy` |
+| [ReportLab](https://docs.reportlab.com/) | PDF export of the in-game help (`docs/hither-lands-help.pdf`) | `pip install reportlab` |
+
 On Windows, the equivalents come from [MSYS2](https://www.msys2.org/) plus a
 python.org install — see [Windows notes](#windows-notes). The Quick Start below
 is written in Linux/macOS shell; step 5 gives the PowerShell form of each
