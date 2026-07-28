@@ -1009,6 +1009,69 @@
       "sentinel": "spell-noun:song",
       "payload": "verb:sing\nspell-noun:song\n",
       "note": "spell_noun feeds ~12 runtime messages (player-spell.c, player-calcs.c, player-util.c, cmd-obj.c:1241); realm verb feeds the not-enough-mana warning. Bare-data sentinel mirrors town-roof-feat, since gamedata has no comment syntax."
+    },
+    {
+      "id": "ench-flag",
+      "file": "src/effect-handler.h",
+      "anchor": "#define ENCH_TOAC\t0x04\n",
+      "where": "after",
+      "sentinel": "HITHER-LANDS:ench-flag",
+      "payload": "/* HITHER-LANDS:ench-flag -- greater enchantment reads the fail\n * table ENCH_GREATER_GRADE steps below the item's real bonus.\n * The +15 ceiling is enforced on the real score, never on the\n * shifted index -- see enchant_score() in\n * effect-handler-general.c. */\n#define ENCH_GREATER 0x08\n#define ENCH_GREATER_GRADE 3\n",
+      "note": "0x08 is the first free bit above ENCH_TOAC. It rides the same eflag word the three ENCH_TO* flags already use, so no call in the chain needed a new parameter. It is never OR'd into an effect subtype, only into eflag, so it cannot collide with the 0x01/0x02/0x04 bits effect_handler_ENCHANT tests."
+    },
+    {
+      "id": "ench-score",
+      "file": "src/effect-handler-general.c",
+      "anchor": "static bool enchant_score(int16_t *score, bool is_artifact)\n{\n\tint chance;\n\n\t/* Artifacts resist enchantment half the time */\n\tif (is_artifact && randint0(100) < 50) return false;\n\n\t/* Figure out the chance to enchant */\n\tif (*score < 0) chance = 0;\n\telse if (*score > 15) chance = 1000;\n\telse chance = enchant_table[*score];\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:ench-score",
+      "payload": "static bool enchant_score(int16_t *score, bool is_artifact, int grade)\n{\n\tint chance;\n\tint idx;\n\n\t/* Artifacts resist enchantment half the time */\n\tif (is_artifact && randint0(100) < 50) return false;\n\n\t/*\n\t * Figure out the chance to enchant.  HITHER-LANDS:ench-score --\n\t * greater enchantment reads the table `grade' steps lower, so a\n\t * deeply-wrought weapon is still improvable.  The +15 ceiling is\n\t * tested against the REAL score BEFORE the shift, never against the\n\t * shifted index: at +15 a grade of 3 would otherwise read\n\t * enchant_table[12] (950 -- a 5% success) and carry weapons to +16,\n\t * past the cap upstream guarantees.  Upstream's own test was\n\t * `*score > 15', which stopped +15 only because enchant_table[15]\n\t * happens to be 1000; once the index is shifted that entry is no\n\t * longer the one read, so the test itself has to carry the cap.\n\t * At grade 0 this is upstream's behaviour at every score.\n\t */\n\tif (*score < 0) chance = 0;\n\telse if (*score >= 15) chance = 1000;\n\telse {\n\t\tidx = *score - grade;\n\t\tif (idx < 0) idx = 0;\n\t\tchance = enchant_table[idx];\n\t}\n",
+      "note": "THE correctness-critical record of this group. Upstream's `*score > 15' arm stopped +15 only because enchant_table[15] is itself 1000; a grade shift means that entry is no longer the one read, so the ceiling test has to carry the cap itself and moves to `*score >= 15', evaluated on the UNSHIFTED score. Without that flip a grade-3 attempt at +15 reads enchant_table[12] (950 = 5% success) and produces +16 weapons. At grade 0 the arm is behaviourally identical to upstream at every score."
+    },
+    {
+      "id": "ench-two",
+      "file": "src/effect-handler-general.c",
+      "anchor": "static bool enchant2(struct object *obj, int16_t *score)\n{\n\tbool result = false;\n\tbool is_artifact = obj->artifact ? true : false;\n\tif (enchant_score(score, is_artifact)) result = true;\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:ench-two",
+      "payload": "static bool enchant2(struct object *obj, int16_t *score, int grade)\n{\n\tbool result = false;\n\tbool is_artifact = obj->artifact ? true : false;\n\tif (enchant_score(score, is_artifact, grade)) result = true; /* HITHER-LANDS:ench-two */\n",
+      "note": "Pass-through only. enchant_score/enchant2/enchant/enchant_spell are all static in this one file with no external references, so the signature changes reach no other translation unit."
+    },
+    {
+      "id": "ench-grade",
+      "file": "src/effect-handler-general.c",
+      "anchor": "\tint i, prob;\n\tbool res = false;\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:ench-grade",
+      "payload": "\tint i, prob;\n\tint grade = (eflag & ENCH_GREATER) ? ENCH_GREATER_GRADE : 0; /* HITHER-LANDS:ench-grade */\n\tbool res = false;\n",
+      "note": "Declared with enchant()'s other locals rather than mid-block, so the patch relies on no C dialect the file does not already use. enchant() has a third caller besides enchant_spell -- brand_object() passes ENCH_TOHIT | ENCH_TODAM with no ENCH_GREATER, so branding resolves to grade 0 and is unchanged."
+    },
+    {
+      "id": "ench-call",
+      "file": "src/effect-handler-general.c",
+      "anchor": "\t\tif ((eflag & ENCH_TOHIT) && enchant2(obj, &obj->to_h)) res = true;\n\t\tif ((eflag & ENCH_TODAM) && enchant2(obj, &obj->to_d)) res = true;\n\t\tif ((eflag & ENCH_TOAC)  && enchant2(obj, &obj->to_a)) res = true;\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:ench-call",
+      "payload": "\t\t/* HITHER-LANDS:ench-call -- grade rides eflag, so every caller that\n\t\t * does not set ENCH_GREATER (both plain scrolls, armour, and\n\t\t * brand_object below) keeps upstream's odds exactly. */\n\t\tif ((eflag & ENCH_TOHIT) && enchant2(obj, &obj->to_h, grade)) res = true;\n\t\tif ((eflag & ENCH_TODAM) && enchant2(obj, &obj->to_d, grade)) res = true;\n\t\tif ((eflag & ENCH_TOAC)  && enchant2(obj, &obj->to_a, grade)) res = true;\n",
+      "note": "All three bonuses take the same grade, but only TOBOTH callers ever set ENCH_GREATER, so the armour arm is untouched in practice -- *Enchant Armour* keeps upstream's odds."
+    },
+    {
+      "id": "ench-spell",
+      "file": "src/effect-handler-general.c",
+      "anchor": "\t/* Enchant */\n\tif (num_dam && enchant(obj, num_hit, ENCH_TOBOTH)) okay = true;\n\telse if (enchant(obj, num_hit, ENCH_TOHIT)) okay = true;\n\telse if (enchant(obj, num_dam, ENCH_TODAM)) okay = true;\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:ench-spell",
+      "payload": "\t/*\n\t * Enchant.  HITHER-LANDS:ench-spell -- an attempt on BOTH bonuses at\n\t * once is GREATER enchantment: the *Enchant Weapon* scroll, the\n\t * Battle Blessings prayer of that name, and the ENCHANT_WEAPON\n\t * activation are the only callers that set both counts (this\n\t * function's sole caller is effect_handler_ENCHANT, and only its\n\t * ENCH_TOBOTH arm passes value twice).  The plain single-bonus\n\t * scrolls arrive with one of num_hit/num_dam at zero and are left\n\t * exactly as upstream.  The flag rides the fall-through retries too,\n\t * so a greater read that fails on both bonuses retries at greater\n\t * odds rather than dropping to the plain curve.  The TOBOTH call\n\t * needs no guard of its own: when num_hit is 0 (the plain to-dam\n\t * scroll reaching this line) enchant() loops zero times, so the flag\n\t * cannot reach a roll.\n\t */\n\tif (num_dam && enchant(obj, num_hit, ENCH_TOBOTH | ENCH_GREATER)) okay = true;\n\telse if (enchant(obj, num_hit,\n\t\t\tENCH_TOHIT | (num_dam ? ENCH_GREATER : 0))) okay = true;\n\telse if (enchant(obj, num_dam,\n\t\t\tENCH_TODAM | (num_hit ? ENCH_GREATER : 0))) okay = true;\n",
+      "note": "The scope decision lives here: greater enchantment is exactly 'both counts non-zero', which effect_handler_ENCHANT (this function's only caller) sets only on its ENCH_TOBOTH arm. Enchant Weapon To-Hit, Enchant Weapon To-Dam, Enchant Armour and *Enchant Armour* all reach this code with one count at zero and keep upstream's odds. No wizard/debug command calls it."
+    },
+    {
+      "id": "ench-msg",
+      "file": "src/effect-handler-general.c",
+      "anchor": "\tif (!okay) {\n\t\tevent_signal(EVENT_INPUT_FLUSH);\n\n\t\t/* Message */\n\t\tmsg(\"The enchantment failed.\");\n\t}\n",
+      "where": "replace",
+      "sentinel": "HITHER-LANDS:ench-msg",
+      "payload": "\tif (!okay) {\n\t\t/*\n\t\t * HITHER-LANDS:ench-msg -- upstream said only \"The enchantment\n\t\t * failed.\", which reads as bad luck.  Past +8 the table makes\n\t\t * failure the EXPECTED outcome (a 5% success at +12), so name\n\t\t * what is actually resisting rather than let the reader spend\n\t\t * scrolls against a wall they cannot see.\n\t\t */\n\t\tint wrought;\n\n\t\tif (num_ac) wrought = obj->to_a;\n\t\telse if (num_hit && num_dam) {\n\t\t\t/* Greater enchantment tried BOTH bonuses, so the one\n\t\t\t * that resisted hardest is the one to name -- blaming\n\t\t\t * to-dam when a +14 to-hit was the real wall reads as\n\t\t\t * nonsense to anyone watching their own numbers. */\n\t\t\twrought = MAX(obj->to_h, obj->to_d);\n\t\t} else wrought = num_dam ? obj->to_d : obj->to_h;\n\n\t\tevent_signal(EVENT_INPUT_FLUSH);\n\n\t\t/* Message */\n\t\tif (wrought >= 9) {\n\t\t\tmsg(\"%s %s resist%s further enchantment, being already\"\n\t\t\t\t\" deeply wrought.\",\n\t\t\t\t(object_is_carried(player, obj) ? \"Your\" : \"The\"),\n\t\t\t\to_name, ((obj->number > 1) ? \"\" : \"s\"));\n\t\t} else {\n\t\t\tmsg(\"The enchantment failed.\");\n\t\t}\n\t}\n",
+      "note": "issue #15: a player read three to-dam scrolls at +10 -- 20% each, so a 51% chance of exactly that result -- and read the silence as a bug. Threshold 9 is where the upstream table falls to 30% and below. Mirrors the plural handling of the 'glows brightly' message directly above it. Names the HIGHER of the two bonuses when both were attempted (owner call, 2026-07-27) -- a greater read tries to_h and to_d together, so the failure belongs to whichever resisted hardest."
     }
   ]
 }
